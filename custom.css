@@ -1,0 +1,117 @@
+/* ==========================================
+   核心风格：深色磨砂玻璃 (Glassmorphism)
+   适用：Hexo Butterfly 等主流主题
+========================================== */
+
+/* 1. 滚动条：极简隐藏式，鼠标靠近才明显 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* 2. 文章卡片 & 侧边栏：核心的高级感来源 */
+#recent-posts .recent-post-item,
+.post-block,
+.card-widget {
+  /* 背景：深蓝黑 + 低透明度 */
+  background: rgba(16, 20, 28, 0.6);
+  /* 关键：毛玻璃模糊效果 (Safari兼容) */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  
+  /* 边框：极细的亮色描边，提升精致度 */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px; /* 圆角不要太大，适中更显专业 */
+  
+  /* 阴影：柔和的扩散阴影，不要纯黑 */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  
+  transition: all 0.3s ease-in-out;
+}
+
+/* 3. 悬停交互：微微上浮 + 光晕增强 */
+#recent-posts .recent-post-item:hover,
+.card-widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2); /* 边框变亮 */
+  background: rgba(22, 27, 38, 0.8);
+}
+
+/* 4. 标题文字：清晰且带点层次 */
+#recent-posts .recent-post-item .post-title,
+.post-title,
+.card-widget .item-headline {
+  color: #f1f5f9;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 链接悬停：渐变色文字效果（高级感利器） */
+a:hover {
+  color: #60a5fa; /* 兜底色 */
+}
+
+/* 5. 标签 (Tag) 胶囊：去线框，改用半透明色块 */
+.tag-cloud a,
+.card-tag-cloud a,
+.category-list a,
+.card-category-list a {
+  background: rgba(255, 255, 255, 0.05);
+  border: none; /* 去掉廉价的边框 */
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #94a3b8;
+  font-size: 0.85em;
+  transition: all 0.3s;
+}
+
+.tag-cloud a:hover,
+.card-tag-cloud a:hover {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6); /* 蓝紫渐变背景 */
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* 6. 页脚：彻底透明，文字淡化 */
+#footer,
+#footer-wrap {
+  background: transparent !important;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+#footer a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 7. (可选) 侧边栏头像微调：加个呼吸光环 */
+.card-widget .avatar-img {
+  transition: transform 0.5s;
+}
+.card-widget .avatar-img:hover {
+  transform: rotate(360deg);
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
+}
+body {
+  background-color: #020617 !important;     /* 深邃海军蓝 */
+  background-image: none !important;        /* 干掉主题里可能配置的渐变/图片 */
+}
+
+/* 页脚不要再单独铺一块颜色 */
+#footer,
+#footer-wrap {
+  background: transparent !important;
+}
