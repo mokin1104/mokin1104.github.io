@@ -1,0 +1,970 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AI English Vocabulary Notes — Prompt Engineering Terms | MOKIN · Storage SDET Notes</title><meta name="author" content="mokin"><meta name="copyright" content="mokin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="f8fafc"><meta name="description" content="Vocabulary notes from AI learning sessions — terms related to prompt engineering, context, and AI collaboration.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI English Vocabulary Notes — Prompt Engineering Terms">
+<meta property="og:url" content="https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/">
+<meta property="og:site_name" content="MOKIN · Storage SDET Notes">
+<meta property="og:description" content="Vocabulary notes from AI learning sessions — terms related to prompt engineering, context, and AI collaboration.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
+<meta property="article:published_time" content="2026-05-08T13:05:00.000Z">
+<meta property="article:modified_time" content="2026-05-08T15:49:22.344Z">
+<meta property="article:author" content="mokin">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="English">
+<meta property="article:tag" content="prompt engineering">
+<meta property="article:tag" content="vocabulary">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mokin1104.github.io/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI English Vocabulary Notes — Prompt Engineering Terms",
+  "url": "https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/",
+  "image": "https://mokin1104.github.io/img/avatar.svg",
+  "datePublished": "2026-05-08T13:05:00.000Z",
+  "dateModified": "2026-05-08T15:49:22.344Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "mokin",
+      "url": "https://mokin1104.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1117')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'f8fafc')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AI English Vocabulary Notes — Prompt Engineering Terms',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 8.1.1"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">AI English Vocabulary Notes — Prompt Engineering Terms</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">AI English Vocabulary Notes — Prompt Engineering Terms</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-05-08T13:05:00.000Z" title="Created 2026-05-08 21:05:00">2026-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-05-08T15:49:22.344Z" title="Updated 2026-05-08 23:49:22">2026-05-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/English-Learning/">English Learning</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>14mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><blockquote>
+<p>Topic: AI usage, Prompt Engineering, Context Engineering, Claude &#x2F; ChatGPT learning notes<br>Date: 2026-05-08<br>Repository Path: <code>notes/ai/english-vocabulary/ai-vocabulary-from-current-chat-2026-05-08.md</code></p>
+</blockquote>
+<hr>
+<h2 id="1-Core-AI-Vocabulary-Table"><a href="#1-Core-AI-Vocabulary-Table" class="headerlink" title="1. Core AI Vocabulary Table"></a>1. Core AI Vocabulary Table</h2><table>
+<thead>
+<tr>
+<th>English Term &#x2F; Phrase</th>
+<th>Chinese Meaning</th>
+<th>Practical Meaning in AI Context</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>prompt</strong></td>
+<td>提示词；任务说明</td>
+<td>The instruction or request you give to an AI model.</td>
+<td>A good prompt includes context, task, and rules.</td>
+</tr>
+<tr>
+<td><strong>effective prompt</strong></td>
+<td>有效 Prompt</td>
+<td>A prompt that helps AI produce useful, relevant, and well-structured output.</td>
+<td>Writing effective prompts improves response quality.</td>
+</tr>
+<tr>
+<td><strong>context</strong></td>
+<td>上下文；背景信息</td>
+<td>Background information that helps AI understand your needs.</td>
+<td>Uploading logs gives the model context.</td>
+</tr>
+<tr>
+<td><strong>shortcut</strong></td>
+<td>捷径；更快理解的方法</td>
+<td>Context acts as a faster path for AI to understand your needs.</td>
+<td>Documents are a shortcut to understanding the task.</td>
+</tr>
+<tr>
+<td><strong>background information</strong></td>
+<td>背景信息</td>
+<td>Supporting information about your situation, project, or goal.</td>
+<td>Provide background information before asking for analysis.</td>
+</tr>
+<tr>
+<td><strong>relevant documents</strong></td>
+<td>相关文档</td>
+<td>Documents directly related to the task.</td>
+<td>Upload relevant documents for better answers.</td>
+</tr>
+<tr>
+<td><strong>response</strong></td>
+<td>回答；响应</td>
+<td>The model’s output after receiving your prompt.</td>
+<td>The response was too generic.</td>
+</tr>
+<tr>
+<td><strong>coworker</strong></td>
+<td>同事</td>
+<td>A metaphor for how to communicate with AI naturally and clearly.</td>
+<td>Speak to Claude like you would a coworker.</td>
+</tr>
+<tr>
+<td><strong>naturally</strong></td>
+<td>自然地</td>
+<td>Use normal human language instead of rigid commands.</td>
+<td>Ask naturally, but still be clear.</td>
+</tr>
+<tr>
+<td><strong>concisely</strong></td>
+<td>简洁地</td>
+<td>Say enough, but avoid unnecessary words.</td>
+<td>Explain the task concisely.</td>
+</tr>
+<tr>
+<td><strong>conversationally</strong></td>
+<td>对话式地</td>
+<td>Communicate through natural back-and-forth interaction.</td>
+<td>Use conversational prompts to refine the answer.</td>
+</tr>
+<tr>
+<td><strong>setting the stage</strong></td>
+<td>设定背景；搭建场景</td>
+<td>Explain role, objective, audience, and context before the task.</td>
+<td>Setting the stage helps the model understand the situation.</td>
+</tr>
+<tr>
+<td><strong>role</strong></td>
+<td>角色</td>
+<td>The identity or perspective used to guide the model.</td>
+<td>You are a senior storage SDET.</td>
+</tr>
+<tr>
+<td><strong>objective</strong></td>
+<td>目标</td>
+<td>The final result you want to achieve.</td>
+<td>My objective is to identify the root cause.</td>
+</tr>
+<tr>
+<td><strong>defining the task</strong></td>
+<td>定义任务</td>
+<td>Specify the exact action you want the model to perform.</td>
+<td>Define whether you want AI to write, analyze, build, or review.</td>
+</tr>
+<tr>
+<td><strong>task</strong></td>
+<td>任务</td>
+<td>The concrete work you want AI to do.</td>
+<td>The task is to analyze the Jenkins log.</td>
+</tr>
+<tr>
+<td><strong>action</strong></td>
+<td>动作；操作</td>
+<td>The specific verb-driven operation requested from AI.</td>
+<td>Analyze, summarize, rewrite, debug, design.</td>
+</tr>
+<tr>
+<td><strong>specifying rules</strong></td>
+<td>指定规则</td>
+<td>Tell the model style, tone, constraints, and output requirements.</td>
+<td>Specify rules before asking for a report.</td>
+</tr>
+<tr>
+<td><strong>style</strong></td>
+<td>风格</td>
+<td>The way the output is written or organized.</td>
+<td>Use a formal and concise style.</td>
+</tr>
+<tr>
+<td><strong>tone</strong></td>
+<td>语气</td>
+<td>The emotional or professional attitude of the writing.</td>
+<td>Make the tone professional but apologetic.</td>
+</tr>
+<tr>
+<td><strong>example</strong></td>
+<td>示例</td>
+<td>A sample that shows the model what output should look like.</td>
+<td>Provide an example format.</td>
+</tr>
+<tr>
+<td><strong>output format</strong></td>
+<td>输出格式</td>
+<td>The required structure of the answer.</td>
+<td>Use Conclusion, Evidence, Risks, and Next Steps.</td>
+</tr>
+<tr>
+<td><strong>success criteria</strong></td>
+<td>成功标准</td>
+<td>What counts as a good answer.</td>
+<td>The answer should be suitable for a Jira comment.</td>
+</tr>
+<tr>
+<td><strong>AI coworker</strong></td>
+<td>AI 同事</td>
+<td>A mental model: treat AI as a capable collaborator that needs clear instructions.</td>
+<td>Prompt &#x3D; work order for an AI coworker.</td>
+</tr>
+<tr>
+<td><strong>collaborator</strong></td>
+<td>协作者</td>
+<td>Something or someone that works with you.</td>
+<td>AI can be a collaborator.</td>
+</tr>
+<tr>
+<td><strong>amplify capabilities</strong></td>
+<td>放大能力；增强能力</td>
+<td>AI helps you do more, faster, or better.</td>
+<td>AI amplifies your capabilities.</td>
+</tr>
+<tr>
+<td><strong>well-crafted response</strong></td>
+<td>精心组织的回答</td>
+<td>A carefully structured and polished answer.</td>
+<td>Ask for a well-crafted response.</td>
+</tr>
+<tr>
+<td><strong>conduct research</strong></td>
+<td>开展研究</td>
+<td>Perform systematic investigation.</td>
+<td>Claude can conduct comprehensive research.</td>
+</tr>
+<tr>
+<td><strong>comprehensive research</strong></td>
+<td>全面研究</td>
+<td>Research covering multiple important angles.</td>
+<td>Conduct comprehensive research before writing the report.</td>
+</tr>
+<tr>
+<td><strong>cited report</strong></td>
+<td>带引用来源的报告</td>
+<td>A report supported by source references.</td>
+<td>Produce a cited report.</td>
+</tr>
+<tr>
+<td><strong>citations</strong></td>
+<td>引用来源</td>
+<td>References that support claims.</td>
+<td>Use current web research with citations.</td>
+</tr>
+<tr>
+<td><strong>current web research</strong></td>
+<td>当前网页研究</td>
+<td>Research based on up-to-date web information.</td>
+<td>Use current web research for market analysis.</td>
+</tr>
+<tr>
+<td><strong>ground responses</strong></td>
+<td>让回答有事实依据</td>
+<td>Base AI output on evidence, sources, or current information.</td>
+<td>Enable web search to ground responses.</td>
+</tr>
+<tr>
+<td><strong>web search</strong></td>
+<td>网页搜索</td>
+<td>A tool for retrieving current information from the web.</td>
+<td>Enable web search for high-stakes facts.</td>
+</tr>
+<tr>
+<td><strong>multimodal</strong></td>
+<td>多模态</td>
+<td>Ability to process more than one type of input, such as text and images.</td>
+<td>Claude can analyze text and visual elements.</td>
+</tr>
+<tr>
+<td><strong>text elements</strong></td>
+<td>文本元素</td>
+<td>Written content in a document.</td>
+<td>PDF paragraphs are text elements.</td>
+</tr>
+<tr>
+<td><strong>visual elements</strong></td>
+<td>视觉元素</td>
+<td>Images, charts, graphics, or visual layout.</td>
+<td>Claude can analyze visual elements in PDFs.</td>
+</tr>
+<tr>
+<td><strong>images</strong></td>
+<td>图片</td>
+<td>Visual input such as PNG or JPEG files.</td>
+<td>Upload images for visual analysis.</td>
+</tr>
+<tr>
+<td><strong>charts</strong></td>
+<td>图表</td>
+<td>Visual data representations.</td>
+<td>The model can analyze charts in a PDF.</td>
+</tr>
+<tr>
+<td><strong>graphics</strong></td>
+<td>图形；图像元素</td>
+<td>Diagrams, illustrations, and non-text visuals.</td>
+<td>Graphics can provide context.</td>
+</tr>
+<tr>
+<td><strong>supported file types</strong></td>
+<td>支持的文件类型</td>
+<td>File formats accepted by the model.</td>
+<td>PDF, DOCX, CSV, TXT, PNG, JPEG.</td>
+</tr>
+<tr>
+<td><strong>iterative</strong></td>
+<td>迭代式的</td>
+<td>Improve step by step across multiple turns.</td>
+<td>Conversations with Claude are iterative.</td>
+</tr>
+<tr>
+<td><strong>chaining prompts</strong></td>
+<td>串联 Prompt</td>
+<td>Connecting multiple prompts to solve a larger task.</td>
+<td>Chain bite-sized prompts together.</td>
+</tr>
+<tr>
+<td><strong>bite-sized prompts</strong></td>
+<td>小块 Prompt</td>
+<td>Small, clear, manageable prompts.</td>
+<td>Use bite-sized prompts instead of one huge prompt.</td>
+</tr>
+<tr>
+<td><strong>natural dialogue</strong></td>
+<td>自然对话</td>
+<td>A back-and-forth conversation that evolves over turns.</td>
+<td>Iterative prompts create natural dialogue.</td>
+</tr>
+<tr>
+<td><strong>guide the conversation</strong></td>
+<td>引导对话</td>
+<td>Adjust direction based on model replies.</td>
+<td>Guide the conversation based on Claude’s replies.</td>
+</tr>
+<tr>
+<td><strong>replies</strong></td>
+<td>回复</td>
+<td>The model’s previous answers in a conversation.</td>
+<td>Use replies to decide the next prompt.</td>
+</tr>
+<tr>
+<td><strong>generic response</strong></td>
+<td>泛泛的回答</td>
+<td>An answer that is too general and not tailored to the situation.</td>
+<td>The response is too generic.</td>
+</tr>
+<tr>
+<td><strong>constraints</strong></td>
+<td>限制条件</td>
+<td>Requirements or boundaries that shape the output.</td>
+<td>Add constraints to improve specificity.</td>
+</tr>
+<tr>
+<td><strong>length requirement</strong></td>
+<td>长度要求</td>
+<td>Required answer length, such as word count or paragraph count.</td>
+<td>Keep this under 100 words.</td>
+</tr>
+<tr>
+<td><strong>format requirement</strong></td>
+<td>格式要求</td>
+<td>Required answer structure.</td>
+<td>Use bullet points with bold headers.</td>
+</tr>
+<tr>
+<td><strong>confident-sounding</strong></td>
+<td>听起来很自信的</td>
+<td>Output that sounds authoritative even if it may be wrong.</td>
+<td>Confident-sounding information can still be incorrect.</td>
+</tr>
+<tr>
+<td><strong>plausible</strong></td>
+<td>貌似合理的</td>
+<td>Seems reasonable but may not be true.</td>
+<td>AI may generate plausible but incorrect facts.</td>
+</tr>
+<tr>
+<td><strong>incorrect information</strong></td>
+<td>错误信息</td>
+<td>Information that is factually wrong.</td>
+<td>Verify incorrect or uncertain claims.</td>
+</tr>
+<tr>
+<td><strong>niche topics</strong></td>
+<td>小众&#x2F;专门领域话题</td>
+<td>Specialized domains where AI may be less reliable without context.</td>
+<td>Storage debugging can be a niche topic.</td>
+</tr>
+<tr>
+<td><strong>high-stakes work</strong></td>
+<td>高风险&#x2F;高影响工作</td>
+<td>Work where errors have serious consequences.</td>
+<td>Verify key facts for high-stakes work.</td>
+</tr>
+<tr>
+<td><strong>verify independently</strong></td>
+<td>独立验证</td>
+<td>Check facts using another reliable source.</td>
+<td>Verify key facts independently.</td>
+</tr>
+<tr>
+<td><strong>confidence level</strong></td>
+<td>置信度</td>
+<td>The model’s stated confidence in an answer.</td>
+<td>Ask Claude to indicate confidence level.</td>
+</tr>
+<tr>
+<td><strong>hallucination</strong></td>
+<td>幻觉；编造信息</td>
+<td>Plausible but unsupported or false AI output.</td>
+<td>Hallucination risk increases with missing context.</td>
+</tr>
+<tr>
+<td><strong>fact</strong></td>
+<td>事实</td>
+<td>A claim directly supported by evidence.</td>
+<td>Separate facts from assumptions.</td>
+</tr>
+<tr>
+<td><strong>assumption</strong></td>
+<td>假设</td>
+<td>Something treated as possible but not proven.</td>
+<td>Label assumptions clearly.</td>
+</tr>
+<tr>
+<td><strong>inference</strong></td>
+<td>推断</td>
+<td>A conclusion drawn from evidence.</td>
+<td>Rank inferences by evidence strength.</td>
+</tr>
+<tr>
+<td><strong>evidence chain</strong></td>
+<td>证据链</td>
+<td>A sequence of observations supporting a conclusion.</td>
+<td>Build an evidence chain for root cause analysis.</td>
+</tr>
+<tr>
+<td><strong>AI Fluency</strong></td>
+<td>AI 流利度；熟练使用 AI 的能力</td>
+<td>Competence in using AI efficiently, effectively, ethically, and safely.</td>
+<td>The 4D Framework supports AI Fluency.</td>
+</tr>
+<tr>
+<td><strong>4D Framework</strong></td>
+<td>4D 框架</td>
+<td>A framework with Delegation, Description, Discernment, and Diligence.</td>
+<td>The prompt framework is adapted from the 4D Framework.</td>
+</tr>
+<tr>
+<td><strong>Delegation</strong></td>
+<td>委派任务</td>
+<td>Knowing what task to give to AI.</td>
+<td>Delegation means asking AI to do the right work.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>描述清楚</td>
+<td>Explaining context, task, and constraints clearly.</td>
+<td>Description improves prompt quality.</td>
+</tr>
+<tr>
+<td><strong>Discernment</strong></td>
+<td>判断辨别</td>
+<td>Evaluating whether AI output is accurate, useful, and safe.</td>
+<td>Discernment is required for high-stakes work.</td>
+</tr>
+<tr>
+<td><strong>Diligence</strong></td>
+<td>审慎负责</td>
+<td>Using AI responsibly, ethically, and safely.</td>
+<td>Diligence prevents careless AI use.</td>
+</tr>
+<tr>
+<td><strong>effective AI use</strong></td>
+<td>有效使用 AI</td>
+<td>Using AI to achieve the intended outcome.</td>
+<td>Effective AI use requires clear prompts and verification.</td>
+</tr>
+<tr>
+<td><strong>ethical AI use</strong></td>
+<td>合乎伦理地使用 AI</td>
+<td>Using AI responsibly and fairly.</td>
+<td>Ethical AI use matters in professional contexts.</td>
+</tr>
+<tr>
+<td><strong>safe AI use</strong></td>
+<td>安全使用 AI</td>
+<td>Avoiding harmful, unsupported, or risky outputs.</td>
+<td>Safe AI use requires verification.</td>
+</tr>
+<tr>
+<td><strong>prompt debugging</strong></td>
+<td>Prompt 调试</td>
+<td>Improving prompts based on bad or unexpected outputs.</td>
+<td>Debug the prompt before blaming the model.</td>
+</tr>
+<tr>
+<td><strong>refine your approach</strong></td>
+<td>改进方法</td>
+<td>Improve how you ask or guide the model.</td>
+<td>A bad response is a chance to refine your approach.</td>
+</tr>
+<tr>
+<td><strong>audience</strong></td>
+<td>受众</td>
+<td>The people who will read the output.</td>
+<td>Specify the audience to control tone and depth.</td>
+</tr>
+<tr>
+<td><strong>authoritative</strong></td>
+<td>权威的；有分量的</td>
+<td>Formal, confident, and credible in tone.</td>
+<td>Make this authoritative and formal.</td>
+</tr>
+<tr>
+<td><strong>formal</strong></td>
+<td>正式的</td>
+<td>Professional and structured.</td>
+<td>Use a formal tone for client communication.</td>
+</tr>
+<tr>
+<td><strong>apologetic</strong></td>
+<td>带歉意的</td>
+<td>Expressing apology or regret.</td>
+<td>Keep it professional but apologetic.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="2-Core-Concepts-by-Category"><a href="#2-Core-Concepts-by-Category" class="headerlink" title="2. Core Concepts by Category"></a>2. Core Concepts by Category</h2><h3 id="2-1-Prompt-Construction"><a href="#2-1-Prompt-Construction" class="headerlink" title="2.1 Prompt Construction"></a>2.1 Prompt Construction</h3><p>A good prompt usually includes:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Role → Goal → Context → Task → Input → Rules → Output Format → Success Criteria</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Chinese</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Role</td>
+<td>角色</td>
+<td>Sets the model’s perspective.</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>目标</td>
+<td>Defines the final outcome.</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>背景</td>
+<td>Reduces guessing.</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>任务</td>
+<td>Defines the action.</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>输入材料</td>
+<td>Defines what evidence to use.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>规则</td>
+<td>Controls style, tone, constraints, and evidence discipline.</td>
+</tr>
+<tr>
+<td>Output Format</td>
+<td>输出格式</td>
+<td>Makes the answer reusable.</td>
+</tr>
+<tr>
+<td>Success Criteria</td>
+<td>成功标准</td>
+<td>Defines what a good answer should accomplish.</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="2-2-Context-as-a-Shortcut"><a href="#2-2-Context-as-a-Shortcut" class="headerlink" title="2.2 Context as a Shortcut"></a>2.2 Context as a Shortcut</h3><p>In AI usage, <strong>shortcut</strong> means:</p>
+<blockquote>
+<p>a faster path to understanding your needs.</p>
+</blockquote>
+<p>It does not mean a fragment or slice.</p>
+<p>When you upload documents, logs, screenshots, or background information, the model can understand your situation faster and with less back-and-forth clarification.</p>
+<p>Example:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Use the attached Jenkins log as context.</span><br><span class="line">Analyze the failure point and build an evidence chain.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-3-Multimodal-Understanding"><a href="#2-3-Multimodal-Understanding" class="headerlink" title="2.3 Multimodal Understanding"></a>2.3 Multimodal Understanding</h3><p><strong>Multimodal</strong> means the model can process multiple types of input.</p>
+<p>In the current learning material, it mainly refers to:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text + vision</span><br></pre></td></tr></table></figure>
+
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Modality</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text</td>
+<td>PDF text, DOCX, TXT, CSV</td>
+</tr>
+<tr>
+<td>Vision</td>
+<td>PNG, JPEG, charts, graphics, screenshots</td>
+</tr>
+</tbody></table>
+<p>Important nuance:</p>
+<blockquote>
+<p>Multimodal input understanding does not necessarily mean the model can generate every type of output such as image, audio, or video.</p>
+</blockquote>
+<hr>
+<h3 id="2-4-Iterative-Conversation"><a href="#2-4-Iterative-Conversation" class="headerlink" title="2.4 Iterative Conversation"></a>2.4 Iterative Conversation</h3><p><strong>Iterative</strong> means step-by-step improvement.</p>
+<p>AI conversation does not need one perfect giant prompt. A better pattern is:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ask → Read response → Refine → Ask again → Improve output</span><br></pre></td></tr></table></figure>
+
+<p><strong>Bite-sized prompts</strong> are small prompts that are easier for the model to handle.</p>
+<p>Example:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Step 1: Explain Prompt Engineering.</span><br><span class="line">Step 2: Compare Prompt, Context, and Harness Engineering.</span><br><span class="line">Step 3: Give me a reusable prompt template.</span><br><span class="line">Step 4: Save the final note to GitHub.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-5-Prompt-Debugging"><a href="#2-5-Prompt-Debugging" class="headerlink" title="2.5 Prompt Debugging"></a>2.5 Prompt Debugging</h3><p>When the answer is not good, diagnose the prompt gap.</p>
+<table>
+<thead>
+<tr>
+<th>Bad Output Symptom</th>
+<th>Likely Prompt Gap</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Too generic</td>
+<td>Missing context</td>
+<td>Add role, audience, situation, and constraints.</td>
+</tr>
+<tr>
+<td>Too long &#x2F; short</td>
+<td>Missing length requirement</td>
+<td>Specify word count, paragraph count, or depth.</td>
+</tr>
+<tr>
+<td>Wrong format</td>
+<td>Missing output structure</td>
+<td>Provide a format template.</td>
+</tr>
+<tr>
+<td>Confident but wrong</td>
+<td>Missing factual constraints</td>
+<td>Ask for citations, evidence, and fact&#x2F;assumption separation.</td>
+</tr>
+<tr>
+<td>Wrong tone</td>
+<td>Missing tone guidance</td>
+<td>Specify tone or provide examples.</td>
+</tr>
+</tbody></table>
+<p>Prompt debugging loop:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bad Output → Diagnose Prompt Gap → Add Context / Rules / Format / Examples → Retry</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-High-Value-Workplace-Collocations"><a href="#3-High-Value-Workplace-Collocations" class="headerlink" title="3. High-Value Workplace Collocations"></a>3. High-Value Workplace Collocations</h2><table>
+<thead>
+<tr>
+<th>Collocation</th>
+<th>Chinese Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>write effective prompts</td>
+<td>编写有效 Prompt</td>
+<td>I want to learn how to write effective prompts.</td>
+</tr>
+<tr>
+<td>provide enough context</td>
+<td>提供足够上下文</td>
+<td>Provide enough context before asking for analysis.</td>
+</tr>
+<tr>
+<td>set the stage</td>
+<td>设定背景</td>
+<td>Set the stage with your role and objective.</td>
+</tr>
+<tr>
+<td>define the task</td>
+<td>定义任务</td>
+<td>Define the task before specifying rules.</td>
+</tr>
+<tr>
+<td>specify rules</td>
+<td>指定规则</td>
+<td>Specify rules for tone and output format.</td>
+</tr>
+<tr>
+<td>guide the conversation</td>
+<td>引导对话</td>
+<td>Guide the conversation based on the model’s replies.</td>
+</tr>
+<tr>
+<td>chain bite-sized prompts</td>
+<td>串联小 Prompt</td>
+<td>Chain bite-sized prompts for complex projects.</td>
+</tr>
+<tr>
+<td>conduct comprehensive research</td>
+<td>开展全面研究</td>
+<td>Ask AI to conduct comprehensive research.</td>
+</tr>
+<tr>
+<td>produce a cited report</td>
+<td>产出带引用报告</td>
+<td>The model can produce a cited report.</td>
+</tr>
+<tr>
+<td>ground responses in current information</td>
+<td>让回答基于当前信息</td>
+<td>Use web search to ground responses in current information.</td>
+</tr>
+<tr>
+<td>verify key facts independently</td>
+<td>独立验证关键事实</td>
+<td>Verify key facts independently for high-stakes work.</td>
+</tr>
+<tr>
+<td>separate facts, assumptions, and inferences</td>
+<td>区分事实、假设和推断</td>
+<td>Separate facts, assumptions, and inferences in RCA.</td>
+</tr>
+<tr>
+<td>build an evidence chain</td>
+<td>建立证据链</td>
+<td>Build an evidence chain before claiming root cause.</td>
+</tr>
+<tr>
+<td>indicate confidence level</td>
+<td>标明置信度</td>
+<td>Ask the model to indicate confidence level.</td>
+</tr>
+<tr>
+<td>refine your approach</td>
+<td>改进你的方法</td>
+<td>Use bad outputs to refine your approach.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-Example-Prompts-Using-These-Terms"><a href="#4-Example-Prompts-Using-These-Terms" class="headerlink" title="4. Example Prompts Using These Terms"></a>4. Example Prompts Using These Terms</h2><h3 id="4-1-English-Learning-Prompt"><a href="#4-1-English-Learning-Prompt" class="headerlink" title="4.1 English Learning Prompt"></a>4.1 English Learning Prompt</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I am learning workplace English for AI usage.</span><br><span class="line">Please explain the phrase below in Chinese.</span><br><span class="line">Break down the key words, grammar, and practical AI context.</span><br><span class="line">Give me 3 workplace examples.</span><br><span class="line">Keep the answer structured and concise.</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-Prompt-Debugging-Prompt"><a href="#4-2-Prompt-Debugging-Prompt" class="headerlink" title="4.2 Prompt Debugging Prompt"></a>4.2 Prompt Debugging Prompt</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This response is too generic.</span><br><span class="line">Please revise it by adding more context about my role, objective, and constraints.</span><br><span class="line">Use Markdown headings and keep the tone formal, direct, and evidence-based.</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-Storage-SDET-Prompt"><a href="#4-3-Storage-SDET-Prompt" class="headerlink" title="4.3 Storage SDET Prompt"></a>4.3 Storage SDET Prompt</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">You are a senior storage SDET and debugging mentor.</span><br><span class="line">I am analyzing a Jenkins failure in an iSCSI environment.</span><br><span class="line">Please analyze the pasted log, identify the failure point, build an evidence chain, and suggest the next three debugging steps.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br><span class="line">Do not claim root cause unless supported by evidence.</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-Research-Prompt"><a href="#4-4-Research-Prompt" class="headerlink" title="4.4 Research Prompt"></a>4.4 Research Prompt</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Please conduct comprehensive research on this topic.</span><br><span class="line">Use current web research with citations.</span><br><span class="line">Structure the output as a professional report with an executive summary, analysis, risks, and recommendations.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-Quick-Memory-Rules"><a href="#5-Quick-Memory-Rules" class="headerlink" title="5. Quick Memory Rules"></a>5. Quick Memory Rules</h2><table>
+<thead>
+<tr>
+<th>English</th>
+<th>Memory Rule</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>prompt</td>
+<td>A task brief for AI.</td>
+</tr>
+<tr>
+<td>context</td>
+<td>Background that reduces guessing.</td>
+</tr>
+<tr>
+<td>shortcut</td>
+<td>A faster path to understanding.</td>
+</tr>
+<tr>
+<td>iterative</td>
+<td>Improve step by step.</td>
+</tr>
+<tr>
+<td>bite-sized</td>
+<td>Small enough to handle clearly.</td>
+</tr>
+<tr>
+<td>multimodal</td>
+<td>More than one input type, such as text and images.</td>
+</tr>
+<tr>
+<td>hallucination</td>
+<td>Fluent but unsupported or false output.</td>
+</tr>
+<tr>
+<td>citation</td>
+<td>Source reference.</td>
+</tr>
+<tr>
+<td>grounded response</td>
+<td>Answer based on evidence or current information.</td>
+</tr>
+<tr>
+<td>discernment</td>
+<td>Your ability to judge whether AI output is reliable.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="6-Final-Checklist-for-Review"><a href="#6-Final-Checklist-for-Review" class="headerlink" title="6. Final Checklist for Review"></a>6. Final Checklist for Review</h2><ul>
+<li><input disabled="" type="checkbox"> Can I explain what <strong>prompt</strong> means?</li>
+<li><input disabled="" type="checkbox"> Can I explain why <strong>context</strong> is a shortcut?</li>
+<li><input disabled="" type="checkbox"> Can I distinguish <strong>task</strong>, <strong>rules</strong>, and <strong>output format</strong>?</li>
+<li><input disabled="" type="checkbox"> Can I explain <strong>iterative conversation</strong> and <strong>bite-sized prompts</strong>?</li>
+<li><input disabled="" type="checkbox"> Can I explain what <strong>multimodal</strong> means?</li>
+<li><input disabled="" type="checkbox"> Can I explain why <strong>confident-sounding</strong> output may still be wrong?</li>
+<li><input disabled="" type="checkbox"> Can I use <strong>ground responses in current information</strong> in a sentence?</li>
+<li><input disabled="" type="checkbox"> Can I explain the 4D terms: <strong>Delegation, Description, Discernment, Diligence</strong>?</li>
+</ul>
+<hr>
+<h2 id="7-One-Sentence-Summary"><a href="#7-One-Sentence-Summary" class="headerlink" title="7. One-Sentence Summary"></a>7. One-Sentence Summary</h2><p>AI communication improves when you provide clear prompts, enough context, explicit rules, useful examples, and iterative corrections based on the model’s replies.</p>
+<p>中文：</p>
+<blockquote>
+<p>AI 沟通质量取决于清晰的 Prompt、足够的上下文、明确的规则、合适的示例，以及基于回答持续迭代修正的能力。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io">mokin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/">https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vocabulary/">vocabulary</a><a class="post-meta__tags" href="/tags/English/">English</a><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/prompt-engineering/">prompt engineering</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/05/08/english-vocabulary-from-chat-2026-05-08/" title="English Vocabulary Notes — Workplace &amp; AI Language"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">English Vocabulary Notes — Workplace & AI Language</div></div><div class="info-2"><div class="info-item-1">Curated English vocabulary from ChatGPT learning sessions — workplace English, AI/product language, business analysis, and QA/debugging terms.</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/08/english-vocabulary-from-chat-2026-05-08/" title="English Vocabulary Notes — Workplace &amp; AI Language"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">English Vocabulary Notes — Workplace &amp; AI Language</div></div><div class="info-2"><div class="info-item-1">Curated English vocabulary from ChatGPT learning sessions — workplace English, AI/product language, business analysis, and QA/debugging terms.</div></div></div></a><a class="pagination-related" href="/2026/05/08/prompt-components-framework-2026-05-08/" title="Prompt Components Framework: What Makes a Good Prompt"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">Prompt Components Framework: What Makes a Good Prompt</div></div><div class="info-2"><div class="info-item-1">Breaking down the anatomy of a good prompt: Stage, Task, and Rules — a structured framework for AI communication.</div></div></div></a><a class="pagination-related" href="/2026/05/08/prompt-debugging-common-challenges-2026-05-08/" title="Prompt Debugging: Common Challenges and How to Fix Them"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">Prompt Debugging: Common Challenges and How to Fix Them</div></div><div class="info-2"><div class="info-item-1">A practical prompt debugging guide: when AI output misses the mark, diagnose the gap — missing context, format, tone, or examples — and fix it.</div></div></div></a><a class="pagination-related" href="/2026/05/08/effective-prompt-framework-2026-05-08/" title="Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</div></div><div class="info-2"><div class="info-item-1">A practical framework for writing effective prompts — treat AI like a capable coworker: set context, define the task, and specify rules.</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">mokin</div><div class="author-info-description">System QA Engineer · Dell EMC PowerStore</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Working on Dell PowerStore system QA. Here I document storage, hardware debugging, automation tools, and learning notes.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Core-AI-Vocabulary-Table"><span class="toc-number">1.</span> <span class="toc-text">1. Core AI Vocabulary Table</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Core-Concepts-by-Category"><span class="toc-number">2.</span> <span class="toc-text">2. Core Concepts by Category</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Prompt-Construction"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Prompt Construction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Context-as-a-Shortcut"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Context as a Shortcut</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Multimodal-Understanding"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Multimodal Understanding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Iterative-Conversation"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Iterative Conversation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-Prompt-Debugging"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 Prompt Debugging</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-High-Value-Workplace-Collocations"><span class="toc-number">3.</span> <span class="toc-text">3. High-Value Workplace Collocations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Example-Prompts-Using-These-Terms"><span class="toc-number">4.</span> <span class="toc-text">4. Example Prompts Using These Terms</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-English-Learning-Prompt"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 English Learning Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Prompt-Debugging-Prompt"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Prompt Debugging Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Storage-SDET-Prompt"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Storage SDET Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Research-Prompt"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Research Prompt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Quick-Memory-Rules"><span class="toc-number">5.</span> <span class="toc-text">5. Quick Memory Rules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Final-Checklist-for-Review"><span class="toc-number">6.</span> <span class="toc-text">6. Final Checklist for Review</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-One-Sentence-Summary"><span class="toc-number">7.</span> <span class="toc-text">7. One-Sentence Summary</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/" title="AI English Vocabulary Notes — Prompt Engineering Terms">AI English Vocabulary Notes — Prompt Engineering Terms</a><time datetime="2026-05-08T13:05:00.000Z" title="Created 2026-05-08 21:05:00">2026-05-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/08/english-vocabulary-from-chat-2026-05-08/" title="English Vocabulary Notes — Workplace &amp; AI Language">English Vocabulary Notes — Workplace &amp; AI Language</a><time datetime="2026-05-08T13:00:00.000Z" title="Created 2026-05-08 21:00:00">2026-05-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/08/prompt-debugging-common-challenges-2026-05-08/" title="Prompt Debugging: Common Challenges and How to Fix Them">Prompt Debugging: Common Challenges and How to Fix Them</a><time datetime="2026-05-08T12:10:00.000Z" title="Created 2026-05-08 20:10:00">2026-05-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/08/prompt-components-framework-2026-05-08/" title="Prompt Components Framework: What Makes a Good Prompt">Prompt Components Framework: What Makes a Good Prompt</a><time datetime="2026-05-08T12:05:00.000Z" title="Created 2026-05-08 20:05:00">2026-05-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/08/effective-prompt-framework-2026-05-08/" title="Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency">Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</a><time datetime="2026-05-08T12:00:00.000Z" title="Created 2026-05-08 20:00:00">2026-05-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 - 2026 By mokin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search posts..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

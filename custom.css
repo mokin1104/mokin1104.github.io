@@ -1,117 +1,200 @@
-/* ==========================================
-   核心风格：深色磨砂玻璃 (Glassmorphism)
-   适用：Hexo Butterfly 等主流主题
-========================================== */
+/* ==========================================================
+   Custom styles for MOKIN's blog — Hexo Butterfly theme
+   Sky-blue tech theme · dark/light auto-switch
+   ========================================================== */
 
-/* 1. 滚动条：极简隐藏式，鼠标靠近才明显 */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
+/* ----------------------------------------------------------
+   Scrollbar — minimal, stays out of the way
+   ---------------------------------------------------------- */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(14, 165, 233, 0.4); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(14, 165, 233, 0.7); }
 
-/* 2. 文章卡片 & 侧边栏：核心的高级感来源 */
-#recent-posts .recent-post-item,
-.post-block,
-.card-widget {
-  /* 背景：深蓝黑 + 低透明度 */
-  background: rgba(16, 20, 28, 0.6);
-  /* 关键：毛玻璃模糊效果 (Safari兼容) */
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  
-  /* 边框：极细的亮色描边，提升精致度 */
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px; /* 圆角不要太大，适中更显专业 */
-  
-  /* 阴影：柔和的扩散阴影，不要纯黑 */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
-  
-  transition: all 0.3s ease-in-out;
+/* ----------------------------------------------------------
+   Global body background (dark mode)
+   ---------------------------------------------------------- */
+[data-theme="dark"] body {
+  background-color: #0d1117 !important;
+  background-image: none !important;
 }
 
-/* 3. 悬停交互：微微上浮 + 光晕增强 */
-#recent-posts .recent-post-item:hover,
-.card-widget:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.2); /* 边框变亮 */
-  background: rgba(22, 27, 38, 0.8);
+[data-theme="dark"] #footer,
+[data-theme="dark"] #footer-wrap {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.35);
 }
 
-/* 4. 标题文字：清晰且带点层次 */
-#recent-posts .recent-post-item .post-title,
-.post-title,
-.card-widget .item-headline {
-  color: #f1f5f9;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+[data-theme="dark"] #footer a {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-/* 链接悬停：渐变色文字效果（高级感利器） */
-a:hover {
-  color: #60a5fa; /* 兜底色 */
+/* ----------------------------------------------------------
+   Post cards & sidebar widgets — glassmorphism (dark only)
+   ---------------------------------------------------------- */
+[data-theme="dark"] #recent-posts .recent-post-item,
+[data-theme="dark"] .post-block,
+[data-theme="dark"] .card-widget {
+  background: rgba(16, 20, 32, 0.65);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* 5. 标签 (Tag) 胶囊：去线框，改用半透明色块 */
+[data-theme="dark"] #recent-posts .recent-post-item:hover,
+[data-theme="dark"] .card-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+/* Post cards — light mode */
+[data-theme="light"] #recent-posts .recent-post-item,
+[data-theme="light"] .card-widget {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+[data-theme="light"] #recent-posts .recent-post-item:hover,
+[data-theme="light"] .card-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+/* ----------------------------------------------------------
+   Navigation bar — tighter and cleaner
+   ---------------------------------------------------------- */
+#nav {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* ----------------------------------------------------------
+   Code blocks — Mac-style, dark regardless of mode
+   ---------------------------------------------------------- */
+figure.highlight,
+.highlight {
+  border-radius: 10px !important;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* ----------------------------------------------------------
+   Tables — clean, alternating rows
+   ---------------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  margin: 1.2em 0;
+}
+
+th {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 2px solid rgba(14, 165, 233, 0.3);
+}
+
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.15);
+}
+
+[data-theme="dark"] tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+[data-theme="light"] tr:nth-child(even) td {
+  background: rgba(14, 165, 233, 0.04);
+}
+
+/* ----------------------------------------------------------
+   Tags & categories — pill style
+   ---------------------------------------------------------- */
 .tag-cloud a,
 .card-tag-cloud a,
 .category-list a,
 .card-category-list a {
-  background: rgba(255, 255, 255, 0.05);
-  border: none; /* 去掉廉价的边框 */
-  padding: 4px 10px;
-  border-radius: 6px;
-  color: #94a3b8;
-  font-size: 0.85em;
-  transition: all 0.3s;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.82em;
+  transition: all 0.22s;
 }
 
 .tag-cloud a:hover,
-.card-tag-cloud a:hover {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6); /* 蓝紫渐变背景 */
-  color: #fff !important;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+.card-tag-cloud a:hover,
+.category-list a:hover {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  border-color: transparent;
+  color: #fff !important;
+  transform: scale(1.04);
+  box-shadow: 0 3px 10px rgba(14, 165, 233, 0.35);
 }
 
-/* 6. 页脚：彻底透明，文字淡化 */
-#footer,
-#footer-wrap {
-  background: transparent !important;
-  border: none;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 14px;
-}
-
-#footer a {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* 7. (可选) 侧边栏头像微调：加个呼吸光环 */
+/* ----------------------------------------------------------
+   Avatar — subtle spin on hover
+   ---------------------------------------------------------- */
 .card-widget .avatar-img {
-  transition: transform 0.5s;
-}
-.card-widget .avatar-img:hover {
-  transform: rotate(360deg);
-  box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
-}
-body {
-  background-color: #020617 !important;     /* 深邃海军蓝 */
-  background-image: none !important;        /* 干掉主题里可能配置的渐变/图片 */
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* 页脚不要再单独铺一块颜色 */
-#footer,
-#footer-wrap {
-  background: transparent !important;
+.card-widget .avatar-img:hover {
+  transform: rotate(8deg) scale(1.06);
+  box-shadow: 0 0 22px rgba(14, 165, 233, 0.5);
+}
+
+/* ----------------------------------------------------------
+   Post titles — link hover with color transition
+   ---------------------------------------------------------- */
+#recent-posts .recent-post-item .post-title a:hover,
+.post-title a:hover {
+  color: #0ea5e9;
+  transition: color 0.2s;
+}
+
+/* ----------------------------------------------------------
+   Blockquotes — left border accent
+   ---------------------------------------------------------- */
+blockquote {
+  border-left: 4px solid #0ea5e9;
+  border-radius: 0 6px 6px 0;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+  font-style: normal;
+}
+
+[data-theme="dark"] blockquote {
+  background: rgba(14, 165, 233, 0.07);
+}
+
+[data-theme="light"] blockquote {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+/* ----------------------------------------------------------
+   Footer
+   ---------------------------------------------------------- */
+#footer, #footer-wrap {
+  border: none;
+  font-size: 13px;
+}
+
+/* ----------------------------------------------------------
+   Reading progress bar color
+   ---------------------------------------------------------- */
+#progress-bar, .pace .pace-progress {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8) !important;
 }
