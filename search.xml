@@ -3,11 +3,7 @@
   <entry>
     <title>AI English Vocabulary Notes — Prompt Engineering Terms</title>
     <url>/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/</url>
-    <content><![CDATA[<blockquote>
-<p>Topic: AI usage, Prompt Engineering, Context Engineering, Claude &#x2F; ChatGPT learning notes<br>Date: 2026-05-08<br>Repository Path: <code>notes/ai/english-vocabulary/ai-vocabulary-from-current-chat-2026-05-08.md</code></p>
-</blockquote>
-<hr>
-<h2 id="1-Core-AI-Vocabulary-Table"><a href="#1-Core-AI-Vocabulary-Table" class="headerlink" title="1. Core AI Vocabulary Table"></a>1. Core AI Vocabulary Table</h2><table>
+    <content><![CDATA[<h2 id="1-Core-AI-Vocabulary-Table"><a href="#1-Core-AI-Vocabulary-Table" class="headerlink" title="1. Core AI Vocabulary Table"></a>1. Core AI Vocabulary Table</h2><table>
 <thead>
 <tr>
 <th>English Term &#x2F; Phrase</th>
@@ -794,53 +790,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python 小工具：时间戳秒数差值计算器（calculate_timestamp.py）</title>
-    <url>/2025/06/11/calculate_timestamp_post/</url>
-    <content><![CDATA[<p>在日常工作中，我经常遇到这样的场景：拿到一个日志时间戳（如 <code>250610-163134</code>），还需要结合某个以秒为单位的偏移值，还原真实发生的时间。</p>
-<p>为此，我编写了一个小脚本 <code>calculate_timestamp.py</code>，使用 Python 的标准库 <code>argparse</code> 和 <code>datetime</code>，帮助我快速完成转换。</p>
-<hr>
-<h2 id="📌-问题背景"><a href="#📌-问题背景" class="headerlink" title="📌 问题背景"></a>📌 问题背景</h2><p>日志分析或调试某些系统问题时，经常会遇到“时间戳 + 秒数差”这样的数据组合。手工换算效率低且容易出错，于是我决定用脚本来解决。</p>
-<hr>
-<h2 id="🛠️-脚本功能说明"><a href="#🛠️-脚本功能说明" class="headerlink" title="🛠️ 脚本功能说明"></a>🛠️ 脚本功能说明</h2><p>该脚本支持从命令行输入以下两个参数：</p>
-<ul>
-<li><code>--seconds</code> &#x2F; <code>-s</code>: 要减去的秒数（支持浮点数）</li>
-<li><code>--timestamp</code> &#x2F; <code>-t</code>: 原始时间戳，格式为 <code>YYMMDD-HHMMSS</code></li>
-</ul>
-<p>示例命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python calculate_timestamp.py --seconds 249890.63 --timestamp 250610-163134</span><br></pre></td></tr></table></figure>
-
-<p>脚本输出转换后的新时间戳（仍为 YYMMDD-HHMMSS 格式）。</p>
-<hr>
-<h2 id="🧩-核心代码展示"><a href="#🧩-核心代码展示" class="headerlink" title="🧩 核心代码展示"></a>🧩 核心代码展示</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=<span class="string">&quot;Subtract seconds from a timestamp and output the new timestamp in YYMMDD-HHMMSS format.&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--seconds&quot;</span>, <span class="string">&quot;-s&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">float</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Number of seconds to subtract (e.g., 249890.63)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--timestamp&quot;</span>, <span class="string">&quot;-t&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">str</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Original timestamp in YYMMDD-HHMMSS format (e.g., 250610-163134)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        original_time = datetime.strptime(args.timestamp, <span class="string">&quot;%y%m%d-%H%M%S&quot;</span>)</span><br><span class="line">        new_time = original_time - timedelta(seconds=args.seconds)</span><br><span class="line">        <span class="built_in">print</span>(new_time.strftime(<span class="string">&quot;%y%m%d-%H%M%S&quot;</span>))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="⚙️-踩坑与扩展想法"><a href="#⚙️-踩坑与扩展想法" class="headerlink" title="⚙️ 踩坑与扩展想法"></a>⚙️ 踩坑与扩展想法</h2><ul>
-<li>使用 <code>argparse</code> 设计参数更加规范，可扩展性好；</li>
-<li><code>datetime.strptime()</code> 格式需完全匹配，否则会抛错；</li>
-<li>可以进一步支持 ISO 8601 格式、毫秒精度或时区处理。</li>
-</ul>
-<hr>
-<h2 id="🔗-相关链接"><a href="#🔗-相关链接" class="headerlink" title="🔗 相关链接"></a>🔗 相关链接</h2><ul>
-<li>📦 项目仓库地址：<a href="https://github.com/mokin1104/little.tools">GitHub · little.tools</a></li>
-<li>📄 README 文件：<a href="https://github.com/mokin1104/little.tools/blob/main/README.md">查看 README</a></li>
-</ul>
-<hr>
-<h2 id="🧠-总结"><a href="#🧠-总结" class="headerlink" title="🧠 总结"></a>🧠 总结</h2><p>虽然只是一个小工具，但这个脚本解决了我在日志分析中一个具体的痛点。<br>用 Python 构建小工具的过程简单高效，也让我更熟悉了时间处理与命令行工具设计。</p>
-<blockquote>
-<p>Small tools, big impact. That’s what makes programming satisfying.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>工作中解决的问题</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>脚本工具</tag>
-        <tag>时间戳</tag>
-        <tag>工作自动化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>how to use date format in Linux/MacOS</title>
     <url>/2025/06/29/date%20format/</url>
     <content><![CDATA[<h2 id="✅-date-format-中格式符的大小写规则（基于macOS-Linux）"><a href="#✅-date-format-中格式符的大小写规则（基于macOS-Linux）" class="headerlink" title="✅ date &quot;+format&quot; 中格式符的大小写规则（基于macOS&#x2F;Linux）"></a>✅ <code>date &quot;+format&quot;</code> 中格式符的大小写规则（基于macOS&#x2F;Linux）</h2><table>
@@ -928,52 +877,9 @@
       </tags>
   </entry>
   <entry>
-    <title>NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium</title>
-    <url>/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/</url>
-    <content><![CDATA[<h2 id="当前手工执行流程"><a href="#当前手工执行流程" class="headerlink" title="当前手工执行流程"></a>当前手工执行流程</h2><ol>
-<li><p><strong>Lease 存储设备</strong></p>
-</li>
-<li><p><strong>获取并确认存储信息</strong>：查找存储设备的 MGMT IP；登录 GUI 界面，确认当前存储版本信息</p>
-</li>
-<li><p><strong>准备配套 Linux 环境</strong>：登录与该存储配套的 Linux 设备；确认是否与存储处于同一 VLAN；配置桌面环境，安装 Firefox</p>
-</li>
-<li><p><strong>下载升级安装包</strong>：使用 <code>wget</code> 下载最新安装包</p>
-</li>
-<li><p><strong>通过 VNC 进行图形化操作</strong>：使用 VNC 登录 Linux 桌面；通过 Firefox 访问存储 MGMT IP；GUI中上传最新安装包</p>
-</li>
-<li><p><strong>执行升级操作（NDU）</strong></p>
-</li>
-<li><p><strong>After NDU</strong>：能够升级完成；升级完成后是否存在异常告警信息；components的接入正常</p>
-</li>
-</ol>
-<hr>
-<h2 id="为何需要考虑自动化？"><a href="#为何需要考虑自动化？" class="headerlink" title="为何需要考虑自动化？"></a>为何需要考虑自动化？</h2><p>虽然频率是<strong>两个月一次</strong>，不算高频，但流程长、串步骤多，人工操作很耗时间；并且容易因为环境差异，准备环境时需要检查很多的配置，过于繁琐；无法做到“到点自动触发”，还需要人盯日程和版本节奏</p>
-<hr>
-<h2 id="工具方案对比：Selenium-vs-Playwright"><a href="#工具方案对比：Selenium-vs-Playwright" class="headerlink" title="工具方案对比：Selenium vs Playwright"></a>工具方案对比：Selenium vs Playwright</h2><p>目前主要考虑两条路线：<strong>Selenium</strong> 和 <strong>Playwright</strong></p>
-<p><strong>Selenium 现状</strong></p>
-<p>在现有用例中，Selenium 已经实现了部分 Configuration 的自动化配置</p>
-<p>但脚本维护成本较高，整体可维护性并不理想</p>
-<p><strong>Playwright 的优势</strong></p>
-<p>原生支持<strong>自动等待</strong>机制，极大减少显式等待、轮询这种“脚本噪音”</p>
-<p>稳定性在实践和社区反馈中普遍优于 Selenium</p>
-<p>对现代 Web 应用（尤其是前端异步加载较多的界面）更友好</p>
-<p>综合考虑当前脚本维护情况和后续扩展性，<strong>最终决定采用 Playwright 作为 NDU GUI test 的实现工具</strong>，并在此基础上进一步探索自动化触发与环境准备的简化方案</p>
-]]></content>
-      <categories>
-        <category>Testing &amp; Automation</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>English Vocabulary Notes — Workplace &amp; AI Language</title>
     <url>/2026/05/08/english-vocabulary-from-chat-2026-05-08/</url>
-    <content><![CDATA[<blockquote>
-<p>Source: Current ChatGPT vocabulary-learning page<br>Topic: workplace English, AI&#x2F;product language, business analysis, QA&#x2F;debugging language<br>Date: 2026-05-08</p>
-</blockquote>
-<hr>
-<h2 id="1-Core-Vocabulary-Table"><a href="#1-Core-Vocabulary-Table" class="headerlink" title="1. Core Vocabulary Table"></a>1. Core Vocabulary Table</h2><table>
+    <content><![CDATA[<h2 id="1-Core-Vocabulary-Table"><a href="#1-Core-Vocabulary-Table" class="headerlink" title="1. Core Vocabulary Table"></a>1. Core Vocabulary Table</h2><table>
 <thead>
 <tr>
 <th>Word &#x2F; Phrase</th>
@@ -1587,13 +1493,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Python 小工具：时间戳秒数差值计算器（calculate_timestamp.py）</title>
+    <url>/2025/06/11/calculate_timestamp_post/</url>
+    <content><![CDATA[<p>在日常工作中，我经常遇到这样的场景：拿到一个日志时间戳（如 <code>250610-163134</code>），还需要结合某个以秒为单位的偏移值，还原真实发生的时间。</p>
+<p>为此，我编写了一个小脚本 <code>calculate_timestamp.py</code>，使用 Python 的标准库 <code>argparse</code> 和 <code>datetime</code>，帮助我快速完成转换。</p>
+<hr>
+<h2 id="📌-问题背景"><a href="#📌-问题背景" class="headerlink" title="📌 问题背景"></a>📌 问题背景</h2><p>日志分析或调试某些系统问题时，经常会遇到“时间戳 + 秒数差”这样的数据组合。手工换算效率低且容易出错，于是我决定用脚本来解决。</p>
+<hr>
+<h2 id="🛠️-脚本功能说明"><a href="#🛠️-脚本功能说明" class="headerlink" title="🛠️ 脚本功能说明"></a>🛠️ 脚本功能说明</h2><p>该脚本支持从命令行输入以下两个参数：</p>
+<ul>
+<li><code>--seconds</code> &#x2F; <code>-s</code>: 要减去的秒数（支持浮点数）</li>
+<li><code>--timestamp</code> &#x2F; <code>-t</code>: 原始时间戳，格式为 <code>YYMMDD-HHMMSS</code></li>
+</ul>
+<p>示例命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python calculate_timestamp.py --seconds 249890.63 --timestamp 250610-163134</span><br></pre></td></tr></table></figure>
+
+<p>脚本输出转换后的新时间戳（仍为 YYMMDD-HHMMSS 格式）。</p>
+<hr>
+<h2 id="🧩-核心代码展示"><a href="#🧩-核心代码展示" class="headerlink" title="🧩 核心代码展示"></a>🧩 核心代码展示</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=<span class="string">&quot;Subtract seconds from a timestamp and output the new timestamp in YYMMDD-HHMMSS format.&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--seconds&quot;</span>, <span class="string">&quot;-s&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">float</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Number of seconds to subtract (e.g., 249890.63)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--timestamp&quot;</span>, <span class="string">&quot;-t&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">str</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Original timestamp in YYMMDD-HHMMSS format (e.g., 250610-163134)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        original_time = datetime.strptime(args.timestamp, <span class="string">&quot;%y%m%d-%H%M%S&quot;</span>)</span><br><span class="line">        new_time = original_time - timedelta(seconds=args.seconds)</span><br><span class="line">        <span class="built_in">print</span>(new_time.strftime(<span class="string">&quot;%y%m%d-%H%M%S&quot;</span>))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="⚙️-踩坑与扩展想法"><a href="#⚙️-踩坑与扩展想法" class="headerlink" title="⚙️ 踩坑与扩展想法"></a>⚙️ 踩坑与扩展想法</h2><ul>
+<li>使用 <code>argparse</code> 设计参数更加规范，可扩展性好；</li>
+<li><code>datetime.strptime()</code> 格式需完全匹配，否则会抛错；</li>
+<li>可以进一步支持 ISO 8601 格式、毫秒精度或时区处理。</li>
+</ul>
+<hr>
+<h2 id="🔗-相关链接"><a href="#🔗-相关链接" class="headerlink" title="🔗 相关链接"></a>🔗 相关链接</h2><ul>
+<li>📦 项目仓库地址：<a href="https://github.com/mokin1104/little.tools">GitHub · little.tools</a></li>
+<li>📄 README 文件：<a href="https://github.com/mokin1104/little.tools/blob/main/README.md">查看 README</a></li>
+</ul>
+<hr>
+<h2 id="🧠-总结"><a href="#🧠-总结" class="headerlink" title="🧠 总结"></a>🧠 总结</h2><p>虽然只是一个小工具，但这个脚本解决了我在日志分析中一个具体的痛点。<br>用 Python 构建小工具的过程简单高效，也让我更熟悉了时间处理与命令行工具设计。</p>
+<blockquote>
+<p>Small tools, big impact. That’s what makes programming satisfying.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>工作中解决的问题</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>脚本工具</tag>
+        <tag>时间戳</tag>
+        <tag>工作自动化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Prompt Components Framework: What Makes a Good Prompt</title>
     <url>/2026/05/08/prompt-components-framework-2026-05-08/</url>
-    <content><![CDATA[<blockquote>
-<p>Source UUID: <code>0196c19b-8f2a-7d62-9a7f-0e15ed4cfd21</code><br>Topic: Prompt Engineering &#x2F; Context Engineering &#x2F; AI Collaboration<br>Date: 2026-05-08<br>Repository Path: <code>notes/ai/prompt-engineering/prompt-components-framework-2026-05-08.md</code></p>
-</blockquote>
-<hr>
-<h2 id="Question-Restatement"><a href="#Question-Restatement" class="headerlink" title="Question Restatement"></a>Question Restatement</h2><p>基于这段内容，详细拆分：<strong>一个合适的 Prompt 应该由哪些组成部分构成？</strong></p>
+    <content><![CDATA[<h2 id="Question-Restatement"><a href="#Question-Restatement" class="headerlink" title="Question Restatement"></a>Question Restatement</h2><p>基于这段内容，详细拆分：<strong>一个合适的 Prompt 应该由哪些组成部分构成？</strong></p>
 <blockquote>
 <p>But you may ask, what is a good prompt? Before your next conversation with ChatGPT, consider a few things:</p>
 <p>Setting the stage: What is your role and what are your objectives? Is there context about your work that ChatGPT should know about?</p>
@@ -2074,13 +2023,426 @@
       </tags>
   </entry>
   <entry>
+    <title>左耳听风学习笔记：第三、四讲精要整理</title>
+    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%89%E3%80%81%E5%9B%9B%E8%AE%B2/</url>
+    <content><![CDATA[<h1 id="数据泄露攻击"><a href="#数据泄露攻击" class="headerlink" title="数据泄露攻击"></a>数据泄露攻击</h1><p>以这些公司为例，我们来看看这些攻击是怎样实现的：</p>
+<ol>
+<li>利用程序框架或库的已知漏洞。比如这次 Equifax 被攻击，就是通过 Apache Struts 的已知漏洞。RSA 被攻击，也利用了 Adobe Flash 的已知漏洞。还有之前的“心脏流血”也是使用了 OpenSSL 的漏洞……</li>
+<li>暴力破解密码。利用密码字典库或是已经泄露的密码来“撞库”</li>
+<li>代码注入。通过程序员代码的安全性问题，如 SQL 注入、XSS 攻击、CSRF 攻击等取得用户的权限</li>
+<li>利用程序日志不小心泄露的信息。携程的信息泄露就是本不应该能被读取的日志没有权限保护被读到了</li>
+<li>社会工程学。RSA 被攻击，第一道防线是人——RSA 的员工。只有员工的安全意识增强了，才能抵御此类攻击。其它的如钓鱼攻击也属于此类</li>
+</ol>
+<h1 id="数据管理上的问题"><a href="#数据管理上的问题" class="headerlink" title="数据管理上的问题"></a>数据管理上的问题</h1><ol>
+<li>只有一层安全。Equifax 只是被黑客攻破了管理面板和数据库，就造成了数据泄露。显然这样只有一层安全防护是不够的</li>
+<li>弱密码。Equifax 数据泄露事件绝对是管理问题。至少，密码系统应该不能让用户设置如此简单的密码，而且还要定期更换。最好的方式是通过数据证书、VPN、双因子验证的方式来登录</li>
+<li>向公网暴露了内部系统。在公司网络管理上出现了非常严重的问题</li>
+<li>对系统及时打安全补丁。监控业内的安全漏洞事件，及时作出响应，这是任何一个有高价值数据的公司都需要干的事</li>
+<li>安全日志被暴露。安全日志往往包含大量信息，被暴露是非常危险的。携程的 CVV 泄露就是从日志中被读到的</li>
+<li>保存了不必要保存的用户数据。携程保存了用户的信用卡号、有效期、姓名和 CVV 码，这些信息足以让人在网上盗刷信用卡。其实对于临时支付来说，这些信息完全可以不保存在磁盘上，临时在内存中处理完毕立即销毁，是最安全的做法。即便是快捷支付，也没有必要保存 CVV 码。安全日志也没有必要将所有信息都保存下来，比如可以只保存卡号后四位，也同样可以用于处理程序故障</li>
+<li>密码没有被合理地散列。以现代的安全观念来说，以明文方式保存密码是很不专业的做法。进一步的是只保存密码的散列值（用安全散列算法），LinkedIn 就是这样做的。但是，散列一则需要用目前公认安全的算法（比如 SHA-2 256），而已知被攻破的算法则最好不要使用（如 MD5，能人为找到碰撞，对密码验证来说问题不大），二则要加一个安全随机数作为盐（salt）。LinkedIn 的问题正在于没有加盐，导致密码可以通过预先计算的彩虹表（rainbow table）反查出明文。这些密码明文可以用来做什么事，就不好说了，撞库什么的都有可能了。对用户来说，最好是不同网站用不同密码</li>
+</ol>
+<h1 id="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践"><a href="#对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践" class="headerlink" title="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践"></a>对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践</h1><ol>
+<li>理解你的软件产品中使用了哪些支持性框架和库，它们的版本号分别是多少，时刻跟踪影响这些产品和版本的最新安全性声明</li>
+<li>建立一个流程，来快速地部署带有安全补丁的软件产品发布版，这样一旦需要因为安全方面的原因而更新支持性框架或库，就可以快速地发布。最好能在几个小时或几天内完成，而不是几周或几个月。我们发现，绝大多数被攻破的情况是因为几个月或几年都没有更新有漏洞的软件组件而引起的</li>
+<li>所有复杂的软件都有漏洞。不要基于“支持性软件产品没有安全性漏洞”这样的假设来建立安全策略</li>
+<li>建立多个安全层。在一个面向公网的表示层（比如 Apache Struts 框架）后面建立多级有安全防护的层次，是一种良好的软件工程实践。就算表示层被攻破，也不会直接提供出重要（或所有）后台信息资源的访问权</li>
+<li>针对公网资源，建立对异常访问模式的监控机制。现在有很多侦测这些行为模式的开源和商业化产品，一旦发现异常访问就能发出警报。作为一种良好的运维实践，我们建议针对关键业务的网页服务应用一定要有这些监控机制</li>
+</ol>
+<p>在吉伦提的第二点中说到，理想的更新时间是在几个小时到几天。我们知道，作为企业，部署了一个版本的程序库，在更新前需要在测试系统上测试各个业务模块，确保兼容以后才能上线</p>
+<p>否则，盲目上线一个新版本，一旦遇到不兼容的情况，业务会部分或全部停滞，给客户留下不良印象，经济损失将是不可避免的。因此，这个更新周期必须通过软件工程手段来保证</p>
+<p>自动化测试的重要性：</p>
+<ol>
+<li>对以数据库为基础的程序库，设置专门的、初始时全空的测试用数据库来进行 API 级别的测试</li>
+<li>对于 UI 框架，使用 UI 自动化测试工具进行自动化测试</li>
+<li>测试在原则上必须覆盖上层业务模块<strong>所有需要的功能</strong>，并对其兼容性加以验证</li>
+<li>业务模块要连同程序库一起做集成的自动化测试，同时也要有单元测试</li>
+<li>升级前的人工测试也有必要，但由于安全性更新的紧迫性，覆盖主要和重要路径即可</li>
+</ol>
+<p>如果测试发现不兼容性，无法立即升级，那么要考虑的第二点是缓解措施（mitigation）。</p>
+<p>比如：</p>
+<ol>
+<li>能否禁用有漏洞的部分而不影响业务？</li>
+<li>如果不可行，那么是否可以通过 WAF 的设置来把一定特征的攻击载荷挡在门外？</li>
+<li>这些都是临时解决方案，要到开发部门把业务程序更新为能用新版本库，才能上线新版本的应用程序</li>
+</ol>
+<h1 id="技术上的安全做法"><a href="#技术上的安全做法" class="headerlink" title="技术上的安全做法"></a>技术上的安全做法</h1><p>从技术上来说，安全防范最好是做到连自己内部员工都能防，因为无论是程序的 BUG 还是漏洞，都是为了取得系统的权限而获得数据</p>
+<p>如果我们连内部人都能防的话，那么就可以不用担心绝大多数的系统漏洞了</p>
+<p>所谓“家贼难防”，如果要做到这一点，一般来说，有如下的一些方式：</p>
+<ol>
+<li>我们需要把我们的关键数据定义出来，然后把这些关键数据隔离出来，隔离到一个安全级别非常高的地方，所谓<strong>安全级别非常高的地方，即这个地方需要有各种如安全审计、安全监控、安全访问的区域</strong></li>
+<li>一般来说，在这个区域内，这些<strong>敏感数据只进不出</strong>，通过提供服务接口来让别的系统只能在这个区域内操作这些数据，而不是把数据传出去，让别的系统在外部来操作这些数据</li>
+</ol>
+<p>举个例子，用户的手机号是敏感信息，如果有外部系统需要使用手机号，一般来说是想发个短信，**那么我们这个掌管手机号数据的系统就对外提供发短信的功能，而外部系统通过 UID 或是别的抽象字段来调用这个系统的发短信的 API。**信用卡也一样，提供信用卡的扣款 API 而不是把卡号返回给外部系统</p>
+<p>另外，如果业务必须返回用户的数据，一般来说，最终用户可能需要读取自己的数据，那么，对于像信用卡这样的关键数据是死也不能返回全部数据的，只能返回一个被“马赛克”了的数据（隐藏掉部分信息）</p>
+<p>就算需要返回一些数据（如用户的地址），那么也<strong>需要在传输层上加密返回</strong></p>
+<p>用户加密的算法一定要采用非对称加密的方式，而且还要加上密钥的自动化更换，比如：在外部系统调用 100 次或是第一个小时后就自动更换加密的密钥</p>
+<p>这样，整个系统在运行时就完全是自动化的了，而就算黑客得到了密钥，密匙也会过期，这样可以控制泄露范围</p>
+<p><strong>被加密的数据和用于加密的密钥是由不同的人来管理的</strong>，有密钥的人没有数据，有数据的人没有密钥，这两拨人可以有访问自己系统的权限，但是没有访问对方系统的权限。这样可以让这两拨人互相审计，互相牵制，从而提高数据的安全性</p>
+<p>而密钥一定要做到随机生成，最好是对于不同用户的数据有不同的密钥，并且时不时地就能自动化更新一下，这样就可以做到内部防范</p>
+<p>注明一下，按道理来说，用户自己的私钥应该由用户自己来保管，而公司的系统是不存的，而用户需要更新密钥时，需要对用户做身份鉴别，可以通过双因子认证，也可以通过更为严格的物理身份验证，例如，到银行柜台拿身份证重置密码</p>
+<p>每当这些关键信息传到外部系统，需要做通知，最好是通知用户和自己的管理员</p>
+<p>并且限制外部系统的数据访问量，超过访问量后，需要报警或是拒绝访问</p>
+<p>所谓的安全方案基本上来说就是能够把这个风险控制在一个很小的范围，对于在这个很小范围内出现的一些数据安全的泄露，我们可以通过“风控基金”来做业务上的补偿，比如赔偿用户损失，等等</p>
+<p>因为从经济利益上来说，如果风险可以控制在一个——我防范它的成本远高于我赔偿它的成本，那么，还不如赔偿了</p>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>左耳听风学习笔记：第一讲精要整理</title>
+    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/</url>
+    <content><![CDATA[<ol>
+<li><p>在工作当中，对于那些没什么技术含量的工作，基本上就像是在学生时代那样交作业就好了</p>
+</li>
+<li><p>想尽一切方法提高交作业的效率</p>
+</li>
+<li><p>目的：可以有更多的时间，去研究公司内外那些更为核心更有技术含量的技术了</p>
+</li>
+<li><p>英文技术文档通读一遍</p>
+</li>
+<li><p>分享做得真好，条理性很强，也很清楚，可以让别人学到很多东西</p>
+</li>
+<li><p>要去经历多数人经历不到的，要把学习时间花在那些比较难的地方</p>
+</li>
+<li><p>写文章就要写别人没有写过的，或者别人写过，但我能写的更好的</p>
+</li>
+<li><p>技术和知识完全是可以变现的</p>
+</li>
+<li><p>25~35 岁是每个人最宝贵的时光，应该用在刀刃上</p>
+</li>
+<li><p>将时间精力放在一些主流、高级和比较有挑战性的技术上</p>
+<ol>
+<li>这么做可以保持技术和技能的领先</li>
+<li>也可以保持对技术本质和趋势的敏感度</li>
+</ol>
+</li>
+<li><p>这个世界本来就没什么标准答案，或是说，一个题目本来就可以有若干个正确答案，而且这些“正确答案”还很矛盾</p>
+</li>
+<li><p>无论别人骂我也好，教育我也罢，他们都对我有帮助，大大地丰富了我思考问题的角度</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>左耳听风学习笔记：第二讲精要整理</title>
+    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/</url>
+    <content><![CDATA[<ol>
+<li><p>还是那句话，本质上来说，程序员是个手艺人，有手艺的人就能做出别人做不出来的东西，而付费也是一件很自然的事了</p>
+</li>
+<li><p>一旦你身边的人开始有求于你，或是向别人推荐你，你就会被外部的人注意到，一旦你的帮忙对别人来说有效果，那就会产生效益，无论是经济效益还是社会效益，都会为你开拓更大的空间</p>
+</li>
+<li><p>你也会因为这样的正向反馈而鼓励自己去学习和钻研更多的东西，从而得到一个正向的循环，而且这个正向循环，一旦开始就停不下来了</p>
+</li>
+<li><p>关注有价值的东西 - 供不应求，就有价值：不仅要看到市场，还要看到技术的趋势，能够分辨出什么是主流技术，什么是过渡式的技术，当你比别人有更好的嗅觉时，你就能启动得更快，也就比别人有先发优势</p>
+</li>
+<li><p>关于市场需求：</p>
+<ol>
+<li>你要看清市场，就需要看看各个公司都在做什么，他们的难题是什么，简单来说，现在的每家公司无论大小都缺人。但是真的缺人吗？真正缺的其实是有能力能够解决技术难题的人，能够提高团队人效的人</li>
+</ol>
+</li>
+<li><p>关于技术趋势：</p>
+<ol>
+<li>要看清技术趋势，你需要了解历史，就像一个球的运动一样，你要知道这个球未来运动的地方，是需要观察球已经完成运动的轨迹才知道的</li>
+<li>因此，了解技术发展轨迹是一件很重要的事</li>
+<li>要看一个新的技术是否顺应技术发展趋势，你需要将一些老技术的本质吃得很透</li>
+</ol>
+</li>
+<li><p>在学习技术的过程一定要多问自己两个问题：</p>
+<ol>
+<li>“一，这个技术解决什么问题？为什么别的同类技术做不到“</li>
+<li>“二，为什么是这样解决的？有没有更好的方式？”</li>
+</ol>
+</li>
+<li><p>如果一个新的技术顺应技术发展趋势，那么在这个新的技术出现时，后面一定会有大型的商业公司支持，这类公司支持得越多，就说明你越需要关注</p>
+</li>
+<li><p>第三，找到能体现价值的地方：在一家高速发展的公司中，技术人员的价值可以达到最大化</p>
+</li>
+<li><p>比较好的成长路径是：</p>
+</li>
+<li><p>先进入大公司学习大公司的技术和成功的经验方法，然后再找到高速成长的公司，这样你就可以实现自己更多的价值</p>
+</li>
+<li><p>当然，这里并不排除在大公司中找到高速发展的业务</p>
+</li>
+<li><p>第四，动手能力很重要：</p>
+<ol>
+<li>因为在解决任何一个具体问题的时候，有没有动手能力就成为了关键</li>
+<li>这也是我一直在写代码的原因，代码里全是细节，细节是魔鬼，只有了解了细节，你才能提出更好或是更靠谱、可以落地的解决方案，而不是一些笼统和模糊的东西</li>
+</ol>
+</li>
+<li><p>第五，关注技术付费点</p>
+<ol>
+<li>技术付费点基本体现在两个地方：<ol>
+<li>一个是，能帮别人“挣钱”的地方</li>
+<li>另一个是，能帮别人“省钱”的地方</li>
+<li>也就是说，能够帮助别人更流畅地挣钱，或是能够帮助别人提高效率，能节省更多的成本，越直接越好，而且这个技术或解决方案最好还是大多数人做不到的</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>第六，提升自己的能力和经历</p>
+<ol>
+<li>付费的前提是信任，只有你提升自己的能力和经历后，别人才会对你有一定的信任，才会觉得你靠谱，才会给你机会</li>
+<li>而这个信任需要用你的能力和经历来填补，比如，你是一个很知名的开源软件的核心开发人员，或者你是某知名公司核心项目的核心开发人员等等</li>
+</ol>
+</li>
+<li><p>第七，找到有价值的信息源：</p>
+<ol>
+<li>在信息社会，如果你比别人有更好的信息源，那么你就可以比别人成长得更快</li>
+<li>对于技术人员来说，我们知道，几乎所有的技术都源自西方世界，所以，你应该走到信息的源头去</li>
+</ol>
+</li>
+<li><p>不断提升英文能力</p>
+</li>
+<li><p>第八，输出观点和价值观：</p>
+<ol>
+<li>真正伟大的公司或是产品都是要输出价值观的，只有输出了更先进的价值观，才会获得真正的影响力</li>
+<li>但是，你要能输出观点和价值观，并不是一件容易的事，这需要你的积累和经历，而不是一朝之功</li>
+<li>因此，如果想要让你的技能变现，这本质上是一个厚积薄发的过程</li>
+</ol>
+</li>
+<li><p>第九，朋友圈很重要：</p>
+<ol>
+<li>一个人的朋友圈很重要，你在什么样的朋友圈，就会被什么样的朋友圈所影响，如果你的朋友圈比较优质，那么给你介绍过来的事儿和活儿也会好一些；</li>
+</ol>
+</li>
+<li><p>优质的朋友圈（或者说，优质的自己）</p>
+<ol>
+<li>比较有想法、有观点，经验也比较丰富；</li>
+<li>涉猎的面比较广；</li>
+<li>有或多或少的成功；</li>
+<li>都是喜欢折腾喜欢搞事的人；</li>
+<li>对现状有些不满，并想做一些改变；</li>
+<li>有一定的影响力；</li>
+</ol>
+</li>
+<li><p>宝贵的财富并不是钱，而是你的时间，时间比钱更宝贵，因为钱你不用还在那里，而时间你不用就浪费掉了。你把你的时间投资在哪些地方，就意味着你未来会走什么样的路</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>左耳听风学习笔记：第五讲精要整理</title>
+    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%94%E8%AE%B2/</url>
+    <content><![CDATA[<h1 id="何为技术领导力"><a href="#何为技术领导力" class="headerlink" title="何为技术领导力"></a>何为技术领导力</h1><p>技术领导力 - 指的是：技术上的领先，技术上的优势</p>
+<h2 id="技术重要吗？"><a href="#技术重要吗？" class="headerlink" title="技术重要吗？"></a>技术重要吗？</h2><p>关于中西方技术观点差异 </p>
+<ol>
+<li>国内技术目前停留在跑马圈地的阶段，停留在量和速度</li>
+<li>而国外的技术由于长时间的积累和发展，已经在精细化耕耘的阶段，有能力和时间去经营技术的高度和深度</li>
+</ol>
+<p>中国的基础技术还正在发展中，技术能力不足，所以，目前的状态下，销售、运营、地推等简单快速的业务手段显得更为有效一些，需要比拼的是如何拿到更多的“地”</p>
+<p>西方的“精耕细作”需要比拼的是在同样大小的一块田里，如何才能更快更多地种出“粮食”，这完全就是在拼技术了</p>
+<h2 id="从人类社会的发展过程中来看，基本上可以总结为几个发展阶段"><a href="#从人类社会的发展过程中来看，基本上可以总结为几个发展阶段" class="headerlink" title="从人类社会的发展过程中来看，基本上可以总结为几个发展阶段"></a>从人类社会的发展过程中来看，基本上可以总结为几个发展阶段</h2><ol>
+<li>野蛮开采：这个阶段的主要特点是资源过多，只需要开采就好了；</li>
+<li>资源整合：在这个阶段，资源已经被不同的人给占有了，但是需要对资源整合优化，提高利用率，这时通过管理手段就能实现</li>
+<li>精耕细作：这个阶段基本上是对第二阶段的精细化运作，并且通过科学的手段来达到</li>
+<li>发明创造：在这个阶段，人们利用已有不足的资源来创造更好的资源，并替代已有的马上要枯竭的资源，这就需要采用高科技来达到了</li>
+</ol>
+<p>尊重技术的公司和不尊重技术的公司在初期可能还不能显现，而长期来看，差距就很明显了</p>
+<p>无论是一个国家，一个公司，还是一个人，在今天这样技术浪潮一浪高过一浪的形势下，拥有技术不是问题，而问题是有没有拥有技术领导力，说得直白一点，技术领导力就是，你还在用大刀长矛打仗的时候，对方已经用上了洋枪大炮；你还在赶马车的时候，对方已经开上了汽车</p>
+<h2 id="什么是技术领导力？"><a href="#什么是技术领导力？" class="headerlink" title="什么是技术领导力？"></a>什么是技术领导力？</h2><p>技术领导力不仅仅是呈现出来的技术，而是一种可以获得绝对优势的技术能力；</p>
+<p>结合三次工业革命，我们可以看到的技术领导力是：</p>
+<ol>
+<li>尊重技术，追求核心基础技术</li>
+<li>追逐自动化的高效率的工具和技术，同时避免无效率的组织架构和管理</li>
+<li>解放生产力，追逐人效的提高</li>
+<li>开发抽象和高质量的可以重用的技术组件</li>
+<li>坚持高于社会主流的技术标准和要求</li>
+</ol>
+<h2 id="如何拥有技术领导力？"><a href="#如何拥有技术领导力？" class="headerlink" title="如何拥有技术领导力？"></a>如何拥有技术领导力？</h2><ol>
+<li>能够发现问题：能够发现现有方案的问题</li>
+<li>能够提供解决问题的思路和方案，并能比较这些方案的优缺点</li>
+<li>能够做出正确的技术决定：用什么样的技术、什么解决方案、怎样实现来完成一个项目</li>
+<li>能够用更优雅，更简单，更容易的方式来解决问题</li>
+<li>能够提高代码或软件的扩展性、重用性和可维护性</li>
+<li>能够用正确的方式管理团队。所谓正确的方式，一方面是，让正确的人做正确的事，并发挥每个人的潜力；另一方面是，可以提高团队的生产力和人效，找到最有价值的需求，用最少的成本实现之。并且，可以不断地提高自身和团队的标准</li>
+<li>创新能力：能够使用新的方法新的方式解决问题，追逐新的工具和技术</li>
+</ol>
+<p>目前的实际情况：在任何一个团队中，大多数人都是在提问题，而只有少数人在回答这些人的问题，或是在提供解决问题的思路和方案</p>
+<h2 id="总是在提供解决问题的思路和方案的人才是有技术领导力的人"><a href="#总是在提供解决问题的思路和方案的人才是有技术领导力的人" class="headerlink" title="总是在提供解决问题的思路和方案的人才是有技术领导力的人"></a>总是在提供解决问题的思路和方案的人才是有技术领导力的人</h2><p>如何让自己拥有技术领导力呢？</p>
+<ol>
+<li>扎实的基础技术</li>
+<li>非同一般的学习能力</li>
+<li>坚持做正确的事</li>
+<li>不断提高对自己的要求标准</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>左耳听风学习笔记：第六讲精要整理 - 如何才能拥有技术领导力</title>
+    <url>/2025/06/25/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E5%85%AD%E8%AE%B2/</url>
+    <content><![CDATA[<h1 id="如何才能拥有技术领导力？"><a href="#如何才能拥有技术领导力？" class="headerlink" title="如何才能拥有技术领导力？"></a>如何才能拥有技术领导力？</h1><ol>
+<li>要吃透基础技术，基础技术是各种上层技术共同的基础<ol>
+<li>吃透基础技术是为了更好理解程序的运行原理，并基于这些基础技术进化出更优化的产品</li>
+</ol>
+</li>
+<li>吃透基础技术的好处：<ol>
+<li>基础知识越扎实，走得就会越远</li>
+<li>计算机技术太多了，但是仔细分析你会发现，只是表现形式很多，而基础技术并不多，学好基础技术，能让你一通百通，更快地使用各种新技术，从而可以更轻松地与时代同行</li>
+<li>很多分布式系统架构，以及高可用、高性能、高并发的解决方案基本都可以在基础技术上找到它们的身影，所以，学习基础技术能让你更好地掌握更高维度的技术</li>
+</ol>
+</li>
+</ol>
+<h2 id="基础技术：编程和系统"><a href="#基础技术：编程和系统" class="headerlink" title="基础技术：编程和系统"></a>基础技术：编程和系统</h2><h3 id="编程部分"><a href="#编程部分" class="headerlink" title="编程部分"></a>编程部分</h3><ol>
+<li><p>C语言 - C 语言更接近底层，在具备跨平台能力的前提下，它可以比较容易地被人工翻译成相应的汇编代码，它的内存管理更为直接，可以让我们直接和内存地址打交道；学习好 C 语言的好处是能掌握程序的运行情况，并能进行应用程序和操作系统编程（操作系统一般是汇编和 C 语言），除了让你更为了解操作系统之外，学习 C 语言还能让你更清楚地知道程序是怎么精细控制底层资源的，比如内存管理、文件操作、网络通信……</p>
+</li>
+<li><p>汇编语言：如果你想更深入地了解计算机是怎么运作的，那么你是需要了解汇编语言的，虽然我们几乎不再用汇编语言编程了，但是如果你需要写一些如 lock free 之类高并发的东西，那么了解汇编语言，就能有助于你更好地理解和思考</p>
+</li>
+<li><p>编程范式：各种编程语言都有它们各自的编程范式，用于解决各种问题，比如：<strong>面向对象编程</strong>（C++、Java）、<strong>泛型编程</strong>（C++、Go、C#）、<strong>函数式编程</strong>（JavaScript、 Python、Lisp、Haskell、Erlang）等，学好编程范式，有助于培养你的抽象思维，同时也可以提高编程效率，提高程序的结构合理性、可读性和可维护性，降低代码的冗余度，进而提高代码的运行效率，要学习编程范式，你还可以多了解各种程序设计语言的功能特性</p>
+</li>
+<li><p>算法和数据结构：算法（及其相应的数据结构）是程序设计的有力支撑，适当地应用算法，可以有效地抽象问题，提高程序的合理性和执行效率，**算法是编程中最最重要的东西，也是计算机科学中最重要的基础。**任何有技术含量的软件中一定有高级的算法和数据结构</p>
+</li>
+</ol>
+<h3 id="系统部分"><a href="#系统部分" class="headerlink" title="系统部分"></a>系统部分</h3><ol>
+<li><p>计算机系统原理：</p>
+<ol>
+<li>CPU 的体系结构（指令集 [CISC&#x2F;RISC]、分支预测、缓存结构、总线、DMA、中断、陷阱、多任务、虚拟内存、虚拟化等）</li>
+<li>内存的原理与性能特点（SRAM、DRAM、DDR-SDRAM 等）</li>
+<li>磁盘的原理（机械硬盘 [盘面、磁头臂、磁头、启停区、寻道等]</li>
+<li>固态硬盘 [页映射、块的合并与回收算法、TRIM 指令等]）</li>
+<li>GPU 的原理等</li>
+</ol>
+<p>学习计算机系统原理的价值在于，除了能够了解计算机的原理之外，你还能举一反三地反推出高维度的分布式架构和高并发高可用的架构设计</p>
+<p>比如虚拟化内存就和今天云计算中的虚拟化的原理是相通的，计算机总线和分布式架构中的 ESB 也有相通之处，计算机指令调度、并发控制可以让你更好地理解并发编程和程序性能调优</p>
+</li>
+<li><p>操作系统原理和基础：</p>
+<ol>
+<li>进程、进程管理、线程、线程调度、多核的缓存一致性、信号量、物理内存管理、虚拟内存管理、内存分配、文件系统、磁盘管理等</li>
+<li>学习操作系统的价值在于：<ol>
+<li>理解程序是怎样被管理的</li>
+<li>操作系统对应用程序提供了怎样的支持</li>
+<li>抽象出怎样的编程接口（比如 POSIX&#x2F;Win32 API）</li>
+<li>性能特性如何（比如控制合理的上下文切换次数）</li>
+<li>怎样进行进程间通信（如管道、套接字、内存映射等），以便让不同的软件配合一起运行</li>
+</ol>
+</li>
+<li>要学习操作系统知识：<ol>
+<li>一是要仔细观察和探索当前使用的操作系统</li>
+<li>二是要阅读操作系统原理相关的图书</li>
+<li>三是要阅读 API 文档（如 man pages 和 MSDN Library），并编写调用操作系统功能的程序</li>
+</ol>
+</li>
+<li>学习操作系统基础原理的好处是：<ol>
+<li>这是所有程序运行的物理世界，无论上层是像 C&#x2F;C++ 这样编译成机器码的语言，还是像 Java 这样有 JVM 做中间层的语言，再或者像 Python&#x2F;PHP&#x2F;Perl&#x2F;Node.js 这样直接在运行时解释的语言，其在底层都逃离不了操作系统这个物理世界的“物理定律”</li>
+<li>了解操作系统的原理，可以让你更能从本质理解各种语言或是技术的底层原理，一眼看透本质可以让你更容易地掌握和使用高阶技术</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>网络基础：</p>
+<ol>
+<li>需要了解基本的网络层次结构（ISO&#x2F;OSI 模型、TCP&#x2F;IP 协议栈）：包括物理层、数据链路层（包含错误重发机制）、网络层（包含路由机制）、传输层（包含连接保持机制）、会话层、表示层、应用层（在 TCP&#x2F;IP 协议栈里，这三层可以并为一层）</li>
+<li>基础的网络协议，可以为我们的高维分布式架构中的一些技术问题提供很多的技术方案，比如 TCP 的滑动窗口限流，完全可以用于分布式服务中的限流方案</li>
+</ol>
+</li>
+<li><p>数据库原理：</p>
+<ol>
+<li>操作系统提供文件系统来管理文件数据，而文件比较适合保存连续的信息，如一篇文章、一个图片等。但有时需要保存一个名字等较短的信息。如果单个文件只保存名字这样的几个字节的信息的话，就会浪费大量的磁盘空间，而且无法方便地查询（除非使用索引服务）</li>
+<li>数据库更适合保存短的数据，而且可以方便地按字段进行查询</li>
+<li>现代流行的数据库管理系统有两大类：<ol>
+<li>SQL（基于 B+ 树，强一致性）</li>
+<li>NoSQL（较弱的一致性，较高的存取效率，基于哈希表或其他技术）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>分布式技术架构：</p>
+<ol>
+<li>数据库和应用程序服务器在应对互联网上数以亿计的访问量的时候，需要能进行横向扩展，这样才能提供足够高的性能，为了做到这一点，要学习分布式技术架构</li>
+<li>分布式技术架构包括：负载均衡、DNS 解析、多子域名、无状态应用层、缓存层、数据库分片、容错和恢复机制、Paxos、Map&#x2F;Reduce 操作、分布式 SQL 数据库一致性（以 Google Cloud Spanner 为代表）等知识点</li>
+<li>学习分布式技术架构的有效途径是参与到分布式项目的开发中去，并阅读相关论文</li>
+</ol>
+</li>
+</ol>
+<h2 id="提高学习能力"><a href="#提高学习能力" class="headerlink" title="提高学习能力"></a>提高学习能力</h2><p>所谓学习能力，就是能够很快地学习新技术，又能在关键技术上深入的能力</p>
+<h3 id="如何提升学习能力"><a href="#如何提升学习能力" class="headerlink" title="如何提升学习能力"></a>如何提升学习能力</h3><ol>
+<li><p>学习的信息源：常见的信息源有 Google 等搜索引擎，Stack Overflow、Quora 等社区，图书，API 文档，论文和博客等</p>
+</li>
+<li><p>与高手交流：程序员可以通过技术社区以及参加技术会议与高手交流，也可以通过参加开源项目来和高手切磋。常闻“听君一席话，胜读十年书”便是如此。与高手交流对程序员的学习和成长很有益处，不仅有助于了解热门的技术方向及关键的技术点，更可以通过观察和学习高手的技术思维及解决问题的方式，提高自己的技术前瞻性和技术决策力</p>
+</li>
+<li><p>举一反三的思考：</p>
+<ol>
+<li>了解了操作系统的缓存和网页缓存以后，你要思考其相同点和不同点</li>
+<li>了解了 C++ 语言的面向对象特性以后，思考 Java 面向对象的相同点和不同点</li>
+<li>遇到故障的时候，举一反三，把同类问题一次性地处理掉</li>
+</ol>
+</li>
+<li><p>不怕困难的态度：遇到难点，有时不花一番力气，是不可能突破的，此时如果没有不怕困难的态度，你就容易打退堂鼓，但如果能坚持住，多思考，多下功夫，往往就能找到出路，绝大多数人是害怕困难的，所以，如果你能够不怕困难，并可以找到解决困难的方法和路径，时间一长，你就能拥有别人所不能拥有的能力</p>
+</li>
+<li><p>开放的心态：实现一个目的通常有多种办法，带有开放的心态，不拘泥于一个平台、一种语言，往往能带来更多思考，也能得到更好的结果；而且，能在不同的方法和方案间做比较，比较它们的优缺点，那么你会知道在什么样的场景下用什么样的方案，你就会比一般人能够有更全面和更完整的思路</p>
+</li>
+</ol>
+<h2 id="坚持做正确的事情"><a href="#坚持做正确的事情" class="headerlink" title="坚持做正确的事情"></a>坚持做正确的事情</h2><p>做正确的事，比用正确的方式做事更重要，因为这样才始终会向目的地靠拢</p>
+<h3 id="哪些是正确的事呢？"><a href="#哪些是正确的事呢？" class="headerlink" title="哪些是正确的事呢？"></a>哪些是正确的事呢？</h3><ol>
+<li><p>提高效率的事：要学习和掌握良好的时间管理方式，管理好自己的时间，能显著提高自己的效率</p>
+</li>
+<li><p>自动化的事：程序员要充分利用自己的职业特质，当看见有可以自动化的步骤时，编写程序来自动化操作，可以显著提高效率</p>
+</li>
+<li><p>掌握前沿技术的事：掌握前沿的技术，有利于拓展自己的眼界，也有利于找到更好的工作；需要注意的是，有些技术虽然当下很火，但未必前沿，而是因为它比较易学易用，或者性价比高，由于学习一门技术需要花费不少时间，你应该选择自己最感兴趣的，有的放矢地去学习</p>
+</li>
+<li><p>知识密集型的事：知识密集型是相对于劳动密集型来说的，基本上，劳动密集型的事都能通过程序和机器来完成，而知识密集型的事却仍需要人来完成，所以人的价值此时就显现出来了；虽然现在人工智能似乎能做一些知识密集型的事（包括下围棋的 AlphaGo），但是在开放领域中相对于人的智能来说还是相去甚远，掌握了领域知识的人的价值依然很高</p>
+</li>
+<li><p>技术驱动的事：不仅是指用程序驱动的事，而且还包括一切技术改变生活的事，比如自动驾驶、火星登陆等，就算自己一时用不着，你也要了解这些，以便将来这些技术来临时能适应它们</p>
+</li>
+</ol>
+<h2 id="高标准要求自己"><a href="#高标准要求自己" class="headerlink" title="高标准要求自己"></a>高标准要求自己</h2><p>只有不断地提高标准 ，你才可能越走越高，所以，要以高标准要求自己，不断地反思、总结和审视自己，才能够提升自己</p>
+<ol>
+<li>Google 的自我评分卡</li>
+<li>敏锐的技术嗅觉：这是一个相对综合的能力，你需要充分利用信息源，GET 到新的技术动态，并通过参与技术社区的讨论，丰富自己了解技术的角度，思考一下是否是自己感兴趣的，能解决哪些实际问题，以及其背后的原因，新技术也好，旧技术的重大版本变化也罢</li>
+<li>强调实践，学以致用：学习知识，一定要实际用一用，可以是工作中的项目，也可以是自己的项目，不仅有利于吸收理解，更有利于深入到技术的本质，并可以与现有技术对比一下，同样的问题，用新技术解决有什么不同，带来了哪些优势，还有哪些有待改进的地方</li>
+<li>Lead by Example，永远在编程，不写代码，你就对技术细节不敏感，你无法做出可以实践的技术决策和方案</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>吃透基础技术、提高学习能力、坚持做正确的事、高标准要求自己，不仅会让你全面提升技术技能，还能很好地锻炼自己的技术思维，培养技术前瞻性和决策力，进而形成技术领导力</p>
+<p>然而，仅有技术还不够，作为一名合格的技术领导者，还需要有解决问题的各种软技能。比如，良好的沟通能力、组织能力、驱动力、团队协作能力等等</p>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Prompt Debugging: Common Challenges and How to Fix Them</title>
     <url>/2026/05/08/prompt-debugging-common-challenges-2026-05-08/</url>
-    <content><![CDATA[<blockquote>
-<p>Source UUID: <code>0196c1c3-7dc2-7a8b-97d7-81fd12dfd597</code><br>Topic: Prompt Engineering &#x2F; Prompt Debugging &#x2F; AI Collaboration<br>Date: 2026-05-08<br>Repository Path: <code>notes/ai/prompt-engineering/prompt-debugging-common-challenges-2026-05-08.md</code></p>
-</blockquote>
-<hr>
-<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>This material is essentially a <strong>Prompt Debugging Guide</strong>.</p>
+    <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>This material is essentially a <strong>Prompt Debugging Guide</strong>.</p>
 <p>When Claude or ChatGPT gives an answer that does not match your expectation, do not immediately assume that the model is weak. First check whether your prompt is missing one of these elements:</p>
 <ul>
 <li>context</li>
@@ -2608,430 +2970,9 @@
       </tags>
   </entry>
   <entry>
-    <title>左耳听风学习笔记：第三、四讲精要整理</title>
-    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%89%E3%80%81%E5%9B%9B%E8%AE%B2/</url>
-    <content><![CDATA[<h1 id="数据泄露攻击"><a href="#数据泄露攻击" class="headerlink" title="数据泄露攻击"></a>数据泄露攻击</h1><p>以这些公司为例，我们来看看这些攻击是怎样实现的：</p>
-<ol>
-<li>利用程序框架或库的已知漏洞。比如这次 Equifax 被攻击，就是通过 Apache Struts 的已知漏洞。RSA 被攻击，也利用了 Adobe Flash 的已知漏洞。还有之前的“心脏流血”也是使用了 OpenSSL 的漏洞……</li>
-<li>暴力破解密码。利用密码字典库或是已经泄露的密码来“撞库”</li>
-<li>代码注入。通过程序员代码的安全性问题，如 SQL 注入、XSS 攻击、CSRF 攻击等取得用户的权限</li>
-<li>利用程序日志不小心泄露的信息。携程的信息泄露就是本不应该能被读取的日志没有权限保护被读到了</li>
-<li>社会工程学。RSA 被攻击，第一道防线是人——RSA 的员工。只有员工的安全意识增强了，才能抵御此类攻击。其它的如钓鱼攻击也属于此类</li>
-</ol>
-<h1 id="数据管理上的问题"><a href="#数据管理上的问题" class="headerlink" title="数据管理上的问题"></a>数据管理上的问题</h1><ol>
-<li>只有一层安全。Equifax 只是被黑客攻破了管理面板和数据库，就造成了数据泄露。显然这样只有一层安全防护是不够的</li>
-<li>弱密码。Equifax 数据泄露事件绝对是管理问题。至少，密码系统应该不能让用户设置如此简单的密码，而且还要定期更换。最好的方式是通过数据证书、VPN、双因子验证的方式来登录</li>
-<li>向公网暴露了内部系统。在公司网络管理上出现了非常严重的问题</li>
-<li>对系统及时打安全补丁。监控业内的安全漏洞事件，及时作出响应，这是任何一个有高价值数据的公司都需要干的事</li>
-<li>安全日志被暴露。安全日志往往包含大量信息，被暴露是非常危险的。携程的 CVV 泄露就是从日志中被读到的</li>
-<li>保存了不必要保存的用户数据。携程保存了用户的信用卡号、有效期、姓名和 CVV 码，这些信息足以让人在网上盗刷信用卡。其实对于临时支付来说，这些信息完全可以不保存在磁盘上，临时在内存中处理完毕立即销毁，是最安全的做法。即便是快捷支付，也没有必要保存 CVV 码。安全日志也没有必要将所有信息都保存下来，比如可以只保存卡号后四位，也同样可以用于处理程序故障</li>
-<li>密码没有被合理地散列。以现代的安全观念来说，以明文方式保存密码是很不专业的做法。进一步的是只保存密码的散列值（用安全散列算法），LinkedIn 就是这样做的。但是，散列一则需要用目前公认安全的算法（比如 SHA-2 256），而已知被攻破的算法则最好不要使用（如 MD5，能人为找到碰撞，对密码验证来说问题不大），二则要加一个安全随机数作为盐（salt）。LinkedIn 的问题正在于没有加盐，导致密码可以通过预先计算的彩虹表（rainbow table）反查出明文。这些密码明文可以用来做什么事，就不好说了，撞库什么的都有可能了。对用户来说，最好是不同网站用不同密码</li>
-</ol>
-<h1 id="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践"><a href="#对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践" class="headerlink" title="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践"></a>对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践</h1><ol>
-<li>理解你的软件产品中使用了哪些支持性框架和库，它们的版本号分别是多少，时刻跟踪影响这些产品和版本的最新安全性声明</li>
-<li>建立一个流程，来快速地部署带有安全补丁的软件产品发布版，这样一旦需要因为安全方面的原因而更新支持性框架或库，就可以快速地发布。最好能在几个小时或几天内完成，而不是几周或几个月。我们发现，绝大多数被攻破的情况是因为几个月或几年都没有更新有漏洞的软件组件而引起的</li>
-<li>所有复杂的软件都有漏洞。不要基于“支持性软件产品没有安全性漏洞”这样的假设来建立安全策略</li>
-<li>建立多个安全层。在一个面向公网的表示层（比如 Apache Struts 框架）后面建立多级有安全防护的层次，是一种良好的软件工程实践。就算表示层被攻破，也不会直接提供出重要（或所有）后台信息资源的访问权</li>
-<li>针对公网资源，建立对异常访问模式的监控机制。现在有很多侦测这些行为模式的开源和商业化产品，一旦发现异常访问就能发出警报。作为一种良好的运维实践，我们建议针对关键业务的网页服务应用一定要有这些监控机制</li>
-</ol>
-<p>在吉伦提的第二点中说到，理想的更新时间是在几个小时到几天。我们知道，作为企业，部署了一个版本的程序库，在更新前需要在测试系统上测试各个业务模块，确保兼容以后才能上线</p>
-<p>否则，盲目上线一个新版本，一旦遇到不兼容的情况，业务会部分或全部停滞，给客户留下不良印象，经济损失将是不可避免的。因此，这个更新周期必须通过软件工程手段来保证</p>
-<p>自动化测试的重要性：</p>
-<ol>
-<li>对以数据库为基础的程序库，设置专门的、初始时全空的测试用数据库来进行 API 级别的测试</li>
-<li>对于 UI 框架，使用 UI 自动化测试工具进行自动化测试</li>
-<li>测试在原则上必须覆盖上层业务模块<strong>所有需要的功能</strong>，并对其兼容性加以验证</li>
-<li>业务模块要连同程序库一起做集成的自动化测试，同时也要有单元测试</li>
-<li>升级前的人工测试也有必要，但由于安全性更新的紧迫性，覆盖主要和重要路径即可</li>
-</ol>
-<p>如果测试发现不兼容性，无法立即升级，那么要考虑的第二点是缓解措施（mitigation）。</p>
-<p>比如：</p>
-<ol>
-<li>能否禁用有漏洞的部分而不影响业务？</li>
-<li>如果不可行，那么是否可以通过 WAF 的设置来把一定特征的攻击载荷挡在门外？</li>
-<li>这些都是临时解决方案，要到开发部门把业务程序更新为能用新版本库，才能上线新版本的应用程序</li>
-</ol>
-<h1 id="技术上的安全做法"><a href="#技术上的安全做法" class="headerlink" title="技术上的安全做法"></a>技术上的安全做法</h1><p>从技术上来说，安全防范最好是做到连自己内部员工都能防，因为无论是程序的 BUG 还是漏洞，都是为了取得系统的权限而获得数据</p>
-<p>如果我们连内部人都能防的话，那么就可以不用担心绝大多数的系统漏洞了</p>
-<p>所谓“家贼难防”，如果要做到这一点，一般来说，有如下的一些方式：</p>
-<ol>
-<li>我们需要把我们的关键数据定义出来，然后把这些关键数据隔离出来，隔离到一个安全级别非常高的地方，所谓<strong>安全级别非常高的地方，即这个地方需要有各种如安全审计、安全监控、安全访问的区域</strong></li>
-<li>一般来说，在这个区域内，这些<strong>敏感数据只进不出</strong>，通过提供服务接口来让别的系统只能在这个区域内操作这些数据，而不是把数据传出去，让别的系统在外部来操作这些数据</li>
-</ol>
-<p>举个例子，用户的手机号是敏感信息，如果有外部系统需要使用手机号，一般来说是想发个短信，**那么我们这个掌管手机号数据的系统就对外提供发短信的功能，而外部系统通过 UID 或是别的抽象字段来调用这个系统的发短信的 API。**信用卡也一样，提供信用卡的扣款 API 而不是把卡号返回给外部系统</p>
-<p>另外，如果业务必须返回用户的数据，一般来说，最终用户可能需要读取自己的数据，那么，对于像信用卡这样的关键数据是死也不能返回全部数据的，只能返回一个被“马赛克”了的数据（隐藏掉部分信息）</p>
-<p>就算需要返回一些数据（如用户的地址），那么也<strong>需要在传输层上加密返回</strong></p>
-<p>用户加密的算法一定要采用非对称加密的方式，而且还要加上密钥的自动化更换，比如：在外部系统调用 100 次或是第一个小时后就自动更换加密的密钥</p>
-<p>这样，整个系统在运行时就完全是自动化的了，而就算黑客得到了密钥，密匙也会过期，这样可以控制泄露范围</p>
-<p><strong>被加密的数据和用于加密的密钥是由不同的人来管理的</strong>，有密钥的人没有数据，有数据的人没有密钥，这两拨人可以有访问自己系统的权限，但是没有访问对方系统的权限。这样可以让这两拨人互相审计，互相牵制，从而提高数据的安全性</p>
-<p>而密钥一定要做到随机生成，最好是对于不同用户的数据有不同的密钥，并且时不时地就能自动化更新一下，这样就可以做到内部防范</p>
-<p>注明一下，按道理来说，用户自己的私钥应该由用户自己来保管，而公司的系统是不存的，而用户需要更新密钥时，需要对用户做身份鉴别，可以通过双因子认证，也可以通过更为严格的物理身份验证，例如，到银行柜台拿身份证重置密码</p>
-<p>每当这些关键信息传到外部系统，需要做通知，最好是通知用户和自己的管理员</p>
-<p>并且限制外部系统的数据访问量，超过访问量后，需要报警或是拒绝访问</p>
-<p>所谓的安全方案基本上来说就是能够把这个风险控制在一个很小的范围，对于在这个很小范围内出现的一些数据安全的泄露，我们可以通过“风控基金”来做业务上的补偿，比如赔偿用户损失，等等</p>
-<p>因为从经济利益上来说，如果风险可以控制在一个——我防范它的成本远高于我赔偿它的成本，那么，还不如赔偿了</p>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>左耳听风学习笔记：第二讲精要整理</title>
-    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/</url>
-    <content><![CDATA[<ol>
-<li><p>还是那句话，本质上来说，程序员是个手艺人，有手艺的人就能做出别人做不出来的东西，而付费也是一件很自然的事了</p>
-</li>
-<li><p>一旦你身边的人开始有求于你，或是向别人推荐你，你就会被外部的人注意到，一旦你的帮忙对别人来说有效果，那就会产生效益，无论是经济效益还是社会效益，都会为你开拓更大的空间</p>
-</li>
-<li><p>你也会因为这样的正向反馈而鼓励自己去学习和钻研更多的东西，从而得到一个正向的循环，而且这个正向循环，一旦开始就停不下来了</p>
-</li>
-<li><p>关注有价值的东西 - 供不应求，就有价值：不仅要看到市场，还要看到技术的趋势，能够分辨出什么是主流技术，什么是过渡式的技术，当你比别人有更好的嗅觉时，你就能启动得更快，也就比别人有先发优势</p>
-</li>
-<li><p>关于市场需求：</p>
-<ol>
-<li>你要看清市场，就需要看看各个公司都在做什么，他们的难题是什么，简单来说，现在的每家公司无论大小都缺人。但是真的缺人吗？真正缺的其实是有能力能够解决技术难题的人，能够提高团队人效的人</li>
-</ol>
-</li>
-<li><p>关于技术趋势：</p>
-<ol>
-<li>要看清技术趋势，你需要了解历史，就像一个球的运动一样，你要知道这个球未来运动的地方，是需要观察球已经完成运动的轨迹才知道的</li>
-<li>因此，了解技术发展轨迹是一件很重要的事</li>
-<li>要看一个新的技术是否顺应技术发展趋势，你需要将一些老技术的本质吃得很透</li>
-</ol>
-</li>
-<li><p>在学习技术的过程一定要多问自己两个问题：</p>
-<ol>
-<li>“一，这个技术解决什么问题？为什么别的同类技术做不到“</li>
-<li>“二，为什么是这样解决的？有没有更好的方式？”</li>
-</ol>
-</li>
-<li><p>如果一个新的技术顺应技术发展趋势，那么在这个新的技术出现时，后面一定会有大型的商业公司支持，这类公司支持得越多，就说明你越需要关注</p>
-</li>
-<li><p>第三，找到能体现价值的地方：在一家高速发展的公司中，技术人员的价值可以达到最大化</p>
-</li>
-<li><p>比较好的成长路径是：</p>
-</li>
-<li><p>先进入大公司学习大公司的技术和成功的经验方法，然后再找到高速成长的公司，这样你就可以实现自己更多的价值</p>
-</li>
-<li><p>当然，这里并不排除在大公司中找到高速发展的业务</p>
-</li>
-<li><p>第四，动手能力很重要：</p>
-<ol>
-<li>因为在解决任何一个具体问题的时候，有没有动手能力就成为了关键</li>
-<li>这也是我一直在写代码的原因，代码里全是细节，细节是魔鬼，只有了解了细节，你才能提出更好或是更靠谱、可以落地的解决方案，而不是一些笼统和模糊的东西</li>
-</ol>
-</li>
-<li><p>第五，关注技术付费点</p>
-<ol>
-<li>技术付费点基本体现在两个地方：<ol>
-<li>一个是，能帮别人“挣钱”的地方</li>
-<li>另一个是，能帮别人“省钱”的地方</li>
-<li>也就是说，能够帮助别人更流畅地挣钱，或是能够帮助别人提高效率，能节省更多的成本，越直接越好，而且这个技术或解决方案最好还是大多数人做不到的</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>第六，提升自己的能力和经历</p>
-<ol>
-<li>付费的前提是信任，只有你提升自己的能力和经历后，别人才会对你有一定的信任，才会觉得你靠谱，才会给你机会</li>
-<li>而这个信任需要用你的能力和经历来填补，比如，你是一个很知名的开源软件的核心开发人员，或者你是某知名公司核心项目的核心开发人员等等</li>
-</ol>
-</li>
-<li><p>第七，找到有价值的信息源：</p>
-<ol>
-<li>在信息社会，如果你比别人有更好的信息源，那么你就可以比别人成长得更快</li>
-<li>对于技术人员来说，我们知道，几乎所有的技术都源自西方世界，所以，你应该走到信息的源头去</li>
-</ol>
-</li>
-<li><p>不断提升英文能力</p>
-</li>
-<li><p>第八，输出观点和价值观：</p>
-<ol>
-<li>真正伟大的公司或是产品都是要输出价值观的，只有输出了更先进的价值观，才会获得真正的影响力</li>
-<li>但是，你要能输出观点和价值观，并不是一件容易的事，这需要你的积累和经历，而不是一朝之功</li>
-<li>因此，如果想要让你的技能变现，这本质上是一个厚积薄发的过程</li>
-</ol>
-</li>
-<li><p>第九，朋友圈很重要：</p>
-<ol>
-<li>一个人的朋友圈很重要，你在什么样的朋友圈，就会被什么样的朋友圈所影响，如果你的朋友圈比较优质，那么给你介绍过来的事儿和活儿也会好一些；</li>
-</ol>
-</li>
-<li><p>优质的朋友圈（或者说，优质的自己）</p>
-<ol>
-<li>比较有想法、有观点，经验也比较丰富；</li>
-<li>涉猎的面比较广；</li>
-<li>有或多或少的成功；</li>
-<li>都是喜欢折腾喜欢搞事的人；</li>
-<li>对现状有些不满，并想做一些改变；</li>
-<li>有一定的影响力；</li>
-</ol>
-</li>
-<li><p>宝贵的财富并不是钱，而是你的时间，时间比钱更宝贵，因为钱你不用还在那里，而时间你不用就浪费掉了。你把你的时间投资在哪些地方，就意味着你未来会走什么样的路</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>左耳听风学习笔记：第五讲精要整理</title>
-    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%94%E8%AE%B2/</url>
-    <content><![CDATA[<h1 id="何为技术领导力"><a href="#何为技术领导力" class="headerlink" title="何为技术领导力"></a>何为技术领导力</h1><p>技术领导力 - 指的是：技术上的领先，技术上的优势</p>
-<h2 id="技术重要吗？"><a href="#技术重要吗？" class="headerlink" title="技术重要吗？"></a>技术重要吗？</h2><p>关于中西方技术观点差异 </p>
-<ol>
-<li>国内技术目前停留在跑马圈地的阶段，停留在量和速度</li>
-<li>而国外的技术由于长时间的积累和发展，已经在精细化耕耘的阶段，有能力和时间去经营技术的高度和深度</li>
-</ol>
-<p>中国的基础技术还正在发展中，技术能力不足，所以，目前的状态下，销售、运营、地推等简单快速的业务手段显得更为有效一些，需要比拼的是如何拿到更多的“地”</p>
-<p>西方的“精耕细作”需要比拼的是在同样大小的一块田里，如何才能更快更多地种出“粮食”，这完全就是在拼技术了</p>
-<h2 id="从人类社会的发展过程中来看，基本上可以总结为几个发展阶段"><a href="#从人类社会的发展过程中来看，基本上可以总结为几个发展阶段" class="headerlink" title="从人类社会的发展过程中来看，基本上可以总结为几个发展阶段"></a>从人类社会的发展过程中来看，基本上可以总结为几个发展阶段</h2><ol>
-<li>野蛮开采：这个阶段的主要特点是资源过多，只需要开采就好了；</li>
-<li>资源整合：在这个阶段，资源已经被不同的人给占有了，但是需要对资源整合优化，提高利用率，这时通过管理手段就能实现</li>
-<li>精耕细作：这个阶段基本上是对第二阶段的精细化运作，并且通过科学的手段来达到</li>
-<li>发明创造：在这个阶段，人们利用已有不足的资源来创造更好的资源，并替代已有的马上要枯竭的资源，这就需要采用高科技来达到了</li>
-</ol>
-<p>尊重技术的公司和不尊重技术的公司在初期可能还不能显现，而长期来看，差距就很明显了</p>
-<p>无论是一个国家，一个公司，还是一个人，在今天这样技术浪潮一浪高过一浪的形势下，拥有技术不是问题，而问题是有没有拥有技术领导力，说得直白一点，技术领导力就是，你还在用大刀长矛打仗的时候，对方已经用上了洋枪大炮；你还在赶马车的时候，对方已经开上了汽车</p>
-<h2 id="什么是技术领导力？"><a href="#什么是技术领导力？" class="headerlink" title="什么是技术领导力？"></a>什么是技术领导力？</h2><p>技术领导力不仅仅是呈现出来的技术，而是一种可以获得绝对优势的技术能力；</p>
-<p>结合三次工业革命，我们可以看到的技术领导力是：</p>
-<ol>
-<li>尊重技术，追求核心基础技术</li>
-<li>追逐自动化的高效率的工具和技术，同时避免无效率的组织架构和管理</li>
-<li>解放生产力，追逐人效的提高</li>
-<li>开发抽象和高质量的可以重用的技术组件</li>
-<li>坚持高于社会主流的技术标准和要求</li>
-</ol>
-<h2 id="如何拥有技术领导力？"><a href="#如何拥有技术领导力？" class="headerlink" title="如何拥有技术领导力？"></a>如何拥有技术领导力？</h2><ol>
-<li>能够发现问题：能够发现现有方案的问题</li>
-<li>能够提供解决问题的思路和方案，并能比较这些方案的优缺点</li>
-<li>能够做出正确的技术决定：用什么样的技术、什么解决方案、怎样实现来完成一个项目</li>
-<li>能够用更优雅，更简单，更容易的方式来解决问题</li>
-<li>能够提高代码或软件的扩展性、重用性和可维护性</li>
-<li>能够用正确的方式管理团队。所谓正确的方式，一方面是，让正确的人做正确的事，并发挥每个人的潜力；另一方面是，可以提高团队的生产力和人效，找到最有价值的需求，用最少的成本实现之。并且，可以不断地提高自身和团队的标准</li>
-<li>创新能力：能够使用新的方法新的方式解决问题，追逐新的工具和技术</li>
-</ol>
-<p>目前的实际情况：在任何一个团队中，大多数人都是在提问题，而只有少数人在回答这些人的问题，或是在提供解决问题的思路和方案</p>
-<h2 id="总是在提供解决问题的思路和方案的人才是有技术领导力的人"><a href="#总是在提供解决问题的思路和方案的人才是有技术领导力的人" class="headerlink" title="总是在提供解决问题的思路和方案的人才是有技术领导力的人"></a>总是在提供解决问题的思路和方案的人才是有技术领导力的人</h2><p>如何让自己拥有技术领导力呢？</p>
-<ol>
-<li>扎实的基础技术</li>
-<li>非同一般的学习能力</li>
-<li>坚持做正确的事</li>
-<li>不断提高对自己的要求标准</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>左耳听风学习笔记：第六讲精要整理 - 如何才能拥有技术领导力</title>
-    <url>/2025/06/25/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E5%85%AD%E8%AE%B2/</url>
-    <content><![CDATA[<h1 id="如何才能拥有技术领导力？"><a href="#如何才能拥有技术领导力？" class="headerlink" title="如何才能拥有技术领导力？"></a>如何才能拥有技术领导力？</h1><ol>
-<li>要吃透基础技术，基础技术是各种上层技术共同的基础<ol>
-<li>吃透基础技术是为了更好理解程序的运行原理，并基于这些基础技术进化出更优化的产品</li>
-</ol>
-</li>
-<li>吃透基础技术的好处：<ol>
-<li>基础知识越扎实，走得就会越远</li>
-<li>计算机技术太多了，但是仔细分析你会发现，只是表现形式很多，而基础技术并不多，学好基础技术，能让你一通百通，更快地使用各种新技术，从而可以更轻松地与时代同行</li>
-<li>很多分布式系统架构，以及高可用、高性能、高并发的解决方案基本都可以在基础技术上找到它们的身影，所以，学习基础技术能让你更好地掌握更高维度的技术</li>
-</ol>
-</li>
-</ol>
-<h2 id="基础技术：编程和系统"><a href="#基础技术：编程和系统" class="headerlink" title="基础技术：编程和系统"></a>基础技术：编程和系统</h2><h3 id="编程部分"><a href="#编程部分" class="headerlink" title="编程部分"></a>编程部分</h3><ol>
-<li><p>C语言 - C 语言更接近底层，在具备跨平台能力的前提下，它可以比较容易地被人工翻译成相应的汇编代码，它的内存管理更为直接，可以让我们直接和内存地址打交道；学习好 C 语言的好处是能掌握程序的运行情况，并能进行应用程序和操作系统编程（操作系统一般是汇编和 C 语言），除了让你更为了解操作系统之外，学习 C 语言还能让你更清楚地知道程序是怎么精细控制底层资源的，比如内存管理、文件操作、网络通信……</p>
-</li>
-<li><p>汇编语言：如果你想更深入地了解计算机是怎么运作的，那么你是需要了解汇编语言的，虽然我们几乎不再用汇编语言编程了，但是如果你需要写一些如 lock free 之类高并发的东西，那么了解汇编语言，就能有助于你更好地理解和思考</p>
-</li>
-<li><p>编程范式：各种编程语言都有它们各自的编程范式，用于解决各种问题，比如：<strong>面向对象编程</strong>（C++、Java）、<strong>泛型编程</strong>（C++、Go、C#）、<strong>函数式编程</strong>（JavaScript、 Python、Lisp、Haskell、Erlang）等，学好编程范式，有助于培养你的抽象思维，同时也可以提高编程效率，提高程序的结构合理性、可读性和可维护性，降低代码的冗余度，进而提高代码的运行效率，要学习编程范式，你还可以多了解各种程序设计语言的功能特性</p>
-</li>
-<li><p>算法和数据结构：算法（及其相应的数据结构）是程序设计的有力支撑，适当地应用算法，可以有效地抽象问题，提高程序的合理性和执行效率，**算法是编程中最最重要的东西，也是计算机科学中最重要的基础。**任何有技术含量的软件中一定有高级的算法和数据结构</p>
-</li>
-</ol>
-<h3 id="系统部分"><a href="#系统部分" class="headerlink" title="系统部分"></a>系统部分</h3><ol>
-<li><p>计算机系统原理：</p>
-<ol>
-<li>CPU 的体系结构（指令集 [CISC&#x2F;RISC]、分支预测、缓存结构、总线、DMA、中断、陷阱、多任务、虚拟内存、虚拟化等）</li>
-<li>内存的原理与性能特点（SRAM、DRAM、DDR-SDRAM 等）</li>
-<li>磁盘的原理（机械硬盘 [盘面、磁头臂、磁头、启停区、寻道等]</li>
-<li>固态硬盘 [页映射、块的合并与回收算法、TRIM 指令等]）</li>
-<li>GPU 的原理等</li>
-</ol>
-<p>学习计算机系统原理的价值在于，除了能够了解计算机的原理之外，你还能举一反三地反推出高维度的分布式架构和高并发高可用的架构设计</p>
-<p>比如虚拟化内存就和今天云计算中的虚拟化的原理是相通的，计算机总线和分布式架构中的 ESB 也有相通之处，计算机指令调度、并发控制可以让你更好地理解并发编程和程序性能调优</p>
-</li>
-<li><p>操作系统原理和基础：</p>
-<ol>
-<li>进程、进程管理、线程、线程调度、多核的缓存一致性、信号量、物理内存管理、虚拟内存管理、内存分配、文件系统、磁盘管理等</li>
-<li>学习操作系统的价值在于：<ol>
-<li>理解程序是怎样被管理的</li>
-<li>操作系统对应用程序提供了怎样的支持</li>
-<li>抽象出怎样的编程接口（比如 POSIX&#x2F;Win32 API）</li>
-<li>性能特性如何（比如控制合理的上下文切换次数）</li>
-<li>怎样进行进程间通信（如管道、套接字、内存映射等），以便让不同的软件配合一起运行</li>
-</ol>
-</li>
-<li>要学习操作系统知识：<ol>
-<li>一是要仔细观察和探索当前使用的操作系统</li>
-<li>二是要阅读操作系统原理相关的图书</li>
-<li>三是要阅读 API 文档（如 man pages 和 MSDN Library），并编写调用操作系统功能的程序</li>
-</ol>
-</li>
-<li>学习操作系统基础原理的好处是：<ol>
-<li>这是所有程序运行的物理世界，无论上层是像 C&#x2F;C++ 这样编译成机器码的语言，还是像 Java 这样有 JVM 做中间层的语言，再或者像 Python&#x2F;PHP&#x2F;Perl&#x2F;Node.js 这样直接在运行时解释的语言，其在底层都逃离不了操作系统这个物理世界的“物理定律”</li>
-<li>了解操作系统的原理，可以让你更能从本质理解各种语言或是技术的底层原理，一眼看透本质可以让你更容易地掌握和使用高阶技术</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>网络基础：</p>
-<ol>
-<li>需要了解基本的网络层次结构（ISO&#x2F;OSI 模型、TCP&#x2F;IP 协议栈）：包括物理层、数据链路层（包含错误重发机制）、网络层（包含路由机制）、传输层（包含连接保持机制）、会话层、表示层、应用层（在 TCP&#x2F;IP 协议栈里，这三层可以并为一层）</li>
-<li>基础的网络协议，可以为我们的高维分布式架构中的一些技术问题提供很多的技术方案，比如 TCP 的滑动窗口限流，完全可以用于分布式服务中的限流方案</li>
-</ol>
-</li>
-<li><p>数据库原理：</p>
-<ol>
-<li>操作系统提供文件系统来管理文件数据，而文件比较适合保存连续的信息，如一篇文章、一个图片等。但有时需要保存一个名字等较短的信息。如果单个文件只保存名字这样的几个字节的信息的话，就会浪费大量的磁盘空间，而且无法方便地查询（除非使用索引服务）</li>
-<li>数据库更适合保存短的数据，而且可以方便地按字段进行查询</li>
-<li>现代流行的数据库管理系统有两大类：<ol>
-<li>SQL（基于 B+ 树，强一致性）</li>
-<li>NoSQL（较弱的一致性，较高的存取效率，基于哈希表或其他技术）</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>分布式技术架构：</p>
-<ol>
-<li>数据库和应用程序服务器在应对互联网上数以亿计的访问量的时候，需要能进行横向扩展，这样才能提供足够高的性能，为了做到这一点，要学习分布式技术架构</li>
-<li>分布式技术架构包括：负载均衡、DNS 解析、多子域名、无状态应用层、缓存层、数据库分片、容错和恢复机制、Paxos、Map&#x2F;Reduce 操作、分布式 SQL 数据库一致性（以 Google Cloud Spanner 为代表）等知识点</li>
-<li>学习分布式技术架构的有效途径是参与到分布式项目的开发中去，并阅读相关论文</li>
-</ol>
-</li>
-</ol>
-<h2 id="提高学习能力"><a href="#提高学习能力" class="headerlink" title="提高学习能力"></a>提高学习能力</h2><p>所谓学习能力，就是能够很快地学习新技术，又能在关键技术上深入的能力</p>
-<h3 id="如何提升学习能力"><a href="#如何提升学习能力" class="headerlink" title="如何提升学习能力"></a>如何提升学习能力</h3><ol>
-<li><p>学习的信息源：常见的信息源有 Google 等搜索引擎，Stack Overflow、Quora 等社区，图书，API 文档，论文和博客等</p>
-</li>
-<li><p>与高手交流：程序员可以通过技术社区以及参加技术会议与高手交流，也可以通过参加开源项目来和高手切磋。常闻“听君一席话，胜读十年书”便是如此。与高手交流对程序员的学习和成长很有益处，不仅有助于了解热门的技术方向及关键的技术点，更可以通过观察和学习高手的技术思维及解决问题的方式，提高自己的技术前瞻性和技术决策力</p>
-</li>
-<li><p>举一反三的思考：</p>
-<ol>
-<li>了解了操作系统的缓存和网页缓存以后，你要思考其相同点和不同点</li>
-<li>了解了 C++ 语言的面向对象特性以后，思考 Java 面向对象的相同点和不同点</li>
-<li>遇到故障的时候，举一反三，把同类问题一次性地处理掉</li>
-</ol>
-</li>
-<li><p>不怕困难的态度：遇到难点，有时不花一番力气，是不可能突破的，此时如果没有不怕困难的态度，你就容易打退堂鼓，但如果能坚持住，多思考，多下功夫，往往就能找到出路，绝大多数人是害怕困难的，所以，如果你能够不怕困难，并可以找到解决困难的方法和路径，时间一长，你就能拥有别人所不能拥有的能力</p>
-</li>
-<li><p>开放的心态：实现一个目的通常有多种办法，带有开放的心态，不拘泥于一个平台、一种语言，往往能带来更多思考，也能得到更好的结果；而且，能在不同的方法和方案间做比较，比较它们的优缺点，那么你会知道在什么样的场景下用什么样的方案，你就会比一般人能够有更全面和更完整的思路</p>
-</li>
-</ol>
-<h2 id="坚持做正确的事情"><a href="#坚持做正确的事情" class="headerlink" title="坚持做正确的事情"></a>坚持做正确的事情</h2><p>做正确的事，比用正确的方式做事更重要，因为这样才始终会向目的地靠拢</p>
-<h3 id="哪些是正确的事呢？"><a href="#哪些是正确的事呢？" class="headerlink" title="哪些是正确的事呢？"></a>哪些是正确的事呢？</h3><ol>
-<li><p>提高效率的事：要学习和掌握良好的时间管理方式，管理好自己的时间，能显著提高自己的效率</p>
-</li>
-<li><p>自动化的事：程序员要充分利用自己的职业特质，当看见有可以自动化的步骤时，编写程序来自动化操作，可以显著提高效率</p>
-</li>
-<li><p>掌握前沿技术的事：掌握前沿的技术，有利于拓展自己的眼界，也有利于找到更好的工作；需要注意的是，有些技术虽然当下很火，但未必前沿，而是因为它比较易学易用，或者性价比高，由于学习一门技术需要花费不少时间，你应该选择自己最感兴趣的，有的放矢地去学习</p>
-</li>
-<li><p>知识密集型的事：知识密集型是相对于劳动密集型来说的，基本上，劳动密集型的事都能通过程序和机器来完成，而知识密集型的事却仍需要人来完成，所以人的价值此时就显现出来了；虽然现在人工智能似乎能做一些知识密集型的事（包括下围棋的 AlphaGo），但是在开放领域中相对于人的智能来说还是相去甚远，掌握了领域知识的人的价值依然很高</p>
-</li>
-<li><p>技术驱动的事：不仅是指用程序驱动的事，而且还包括一切技术改变生活的事，比如自动驾驶、火星登陆等，就算自己一时用不着，你也要了解这些，以便将来这些技术来临时能适应它们</p>
-</li>
-</ol>
-<h2 id="高标准要求自己"><a href="#高标准要求自己" class="headerlink" title="高标准要求自己"></a>高标准要求自己</h2><p>只有不断地提高标准 ，你才可能越走越高，所以，要以高标准要求自己，不断地反思、总结和审视自己，才能够提升自己</p>
-<ol>
-<li>Google 的自我评分卡</li>
-<li>敏锐的技术嗅觉：这是一个相对综合的能力，你需要充分利用信息源，GET 到新的技术动态，并通过参与技术社区的讨论，丰富自己了解技术的角度，思考一下是否是自己感兴趣的，能解决哪些实际问题，以及其背后的原因，新技术也好，旧技术的重大版本变化也罢</li>
-<li>强调实践，学以致用：学习知识，一定要实际用一用，可以是工作中的项目，也可以是自己的项目，不仅有利于吸收理解，更有利于深入到技术的本质，并可以与现有技术对比一下，同样的问题，用新技术解决有什么不同，带来了哪些优势，还有哪些有待改进的地方</li>
-<li>Lead by Example，永远在编程，不写代码，你就对技术细节不敏感，你无法做出可以实践的技术决策和方案</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>吃透基础技术、提高学习能力、坚持做正确的事、高标准要求自己，不仅会让你全面提升技术技能，还能很好地锻炼自己的技术思维，培养技术前瞻性和决策力，进而形成技术领导力</p>
-<p>然而，仅有技术还不够，作为一名合格的技术领导者，还需要有解决问题的各种软技能。比如，良好的沟通能力、组织能力、驱动力、团队协作能力等等</p>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>左耳听风学习笔记：第一讲精要整理</title>
-    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/</url>
-    <content><![CDATA[<ol>
-<li><p>在工作当中，对于那些没什么技术含量的工作，基本上就像是在学生时代那样交作业就好了</p>
-</li>
-<li><p>想尽一切方法提高交作业的效率</p>
-</li>
-<li><p>目的：可以有更多的时间，去研究公司内外那些更为核心更有技术含量的技术了</p>
-</li>
-<li><p>英文技术文档通读一遍</p>
-</li>
-<li><p>分享做得真好，条理性很强，也很清楚，可以让别人学到很多东西</p>
-</li>
-<li><p>要去经历多数人经历不到的，要把学习时间花在那些比较难的地方</p>
-</li>
-<li><p>写文章就要写别人没有写过的，或者别人写过，但我能写的更好的</p>
-</li>
-<li><p>技术和知识完全是可以变现的</p>
-</li>
-<li><p>25~35 岁是每个人最宝贵的时光，应该用在刀刃上</p>
-</li>
-<li><p>将时间精力放在一些主流、高级和比较有挑战性的技术上</p>
-<ol>
-<li>这么做可以保持技术和技能的领先</li>
-<li>也可以保持对技术本质和趋势的敏感度</li>
-</ol>
-</li>
-<li><p>这个世界本来就没什么标准答案，或是说，一个题目本来就可以有若干个正确答案，而且这些“正确答案”还很矛盾</p>
-</li>
-<li><p>无论别人骂我也好，教育我也罢，他们都对我有帮助，大大地丰富了我思考问题的角度</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</title>
     <url>/2026/05/08/effective-prompt-framework-2026-05-08/</url>
-    <content><![CDATA[<blockquote>
-<p>Source UUID: <code>0196c1a7-95a4-7a8b-bff4-f0e31c1e8f8d</code><br>Related UUIDs: <code>0196c19b-8f2a-7d62-9a7f-0e15ed4cfd21</code>, <code>0196c190-55ac-7e41-9d6f-77c67aab4dd1</code>, <code>0196c18b-7c4f-7cc3-a6dd-1c08c15e4e0e</code>, <code>0196c195-2f18-76fc-9c2e-8c32d4a0b2a6</code><br>Topic: Prompt Engineering &#x2F; Context Engineering &#x2F; AI Collaboration &#x2F; AI Fluency<br>Date: 2026-05-08<br>Repository Path: <code>notes/ai/prompt-engineering/effective-prompt-framework-4d-ai-fluency-2026-05-08.md</code></p>
-</blockquote>
-<hr>
-<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>A good prompt is not a magic phrase. It is a <strong>clear task brief for an AI coworker</strong>.</p>
+    <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>A good prompt is not a magic phrase. It is a <strong>clear task brief for an AI coworker</strong>.</p>
 <p>The practical principle is:</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Speak to AI like a capable coworker:</span><br><span class="line">naturally, concisely, conversationally, and with enough context.</span><br></pre></td></tr></table></figure>
 
@@ -3550,6 +3491,45 @@
         <tag>prompt engineering</tag>
         <tag>ChatGPT</tag>
         <tag>productivity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium</title>
+    <url>/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/</url>
+    <content><![CDATA[<h2 id="当前手工执行流程"><a href="#当前手工执行流程" class="headerlink" title="当前手工执行流程"></a>当前手工执行流程</h2><ol>
+<li><p><strong>Lease 存储设备</strong></p>
+</li>
+<li><p><strong>获取并确认存储信息</strong>：查找存储设备的 MGMT IP；登录 GUI 界面，确认当前存储版本信息</p>
+</li>
+<li><p><strong>准备配套 Linux 环境</strong>：登录与该存储配套的 Linux 设备；确认是否与存储处于同一 VLAN；配置桌面环境，安装 Firefox</p>
+</li>
+<li><p><strong>下载升级安装包</strong>：使用 <code>wget</code> 下载最新安装包</p>
+</li>
+<li><p><strong>通过 VNC 进行图形化操作</strong>：使用 VNC 登录 Linux 桌面；通过 Firefox 访问存储 MGMT IP；GUI中上传最新安装包</p>
+</li>
+<li><p><strong>执行升级操作（NDU）</strong></p>
+</li>
+<li><p><strong>After NDU</strong>：能够升级完成；升级完成后是否存在异常告警信息；components的接入正常</p>
+</li>
+</ol>
+<hr>
+<h2 id="为何需要考虑自动化？"><a href="#为何需要考虑自动化？" class="headerlink" title="为何需要考虑自动化？"></a>为何需要考虑自动化？</h2><p>虽然频率是<strong>两个月一次</strong>，不算高频，但流程长、串步骤多，人工操作很耗时间；并且容易因为环境差异，准备环境时需要检查很多的配置，过于繁琐；无法做到“到点自动触发”，还需要人盯日程和版本节奏</p>
+<hr>
+<h2 id="工具方案对比：Selenium-vs-Playwright"><a href="#工具方案对比：Selenium-vs-Playwright" class="headerlink" title="工具方案对比：Selenium vs Playwright"></a>工具方案对比：Selenium vs Playwright</h2><p>目前主要考虑两条路线：<strong>Selenium</strong> 和 <strong>Playwright</strong></p>
+<p><strong>Selenium 现状</strong></p>
+<p>在现有用例中，Selenium 已经实现了部分 Configuration 的自动化配置</p>
+<p>但脚本维护成本较高，整体可维护性并不理想</p>
+<p><strong>Playwright 的优势</strong></p>
+<p>原生支持<strong>自动等待</strong>机制，极大减少显式等待、轮询这种“脚本噪音”</p>
+<p>稳定性在实践和社区反馈中普遍优于 Selenium</p>
+<p>对现代 Web 应用（尤其是前端异步加载较多的界面）更友好</p>
+<p>综合考虑当前脚本维护情况和后续扩展性，<strong>最终决定采用 Playwright 作为 NDU GUI test 的实现工具</strong>，并在此基础上进一步探索自动化触发与环境准备的简化方案</p>
+]]></content>
+      <categories>
+        <category>Testing &amp; Automation</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
       </tags>
   </entry>
 </search>
