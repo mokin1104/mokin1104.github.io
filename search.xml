@@ -1,6 +1,750 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>English Vocabulary Notes: instruction, introduction, effective, efficiency</title>
+    <url>/2026/05/11/2026-05-11-english-vocabulary-instruction-introduction-effective-efficiency/</url>
+    <content><![CDATA[<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><p>本文整理今天学习的四个核心词：<code>instruction</code>、<code>introduction</code>、<code>effective</code>、<code>efficiency</code>。重点不是只记中文意思，而是理解它们在真实工作、学习和技术表达中的使用边界。</p>
+<p>核心结论：</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>词性</th>
+<th>核心含义</th>
+<th>关注点</th>
+<th>常见中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>instruction</td>
+<td>noun</td>
+<td>telling someone what to do or how to do it</td>
+<td>怎么做 &#x2F; 要求做什么</td>
+<td>指令；说明；操作步骤</td>
+</tr>
+<tr>
+<td>introduction</td>
+<td>noun</td>
+<td>presenting basic information about a person, topic, or thing</td>
+<td>是什么 &#x2F; 背景 &#x2F; 入门</td>
+<td>介绍；引言；入门</td>
+</tr>
+<tr>
+<td>effective</td>
+<td>adjective</td>
+<td>producing the intended result</td>
+<td>有没有效果</td>
+<td>有效的</td>
+</tr>
+<tr>
+<td>efficiency</td>
+<td>noun</td>
+<td>how well time, cost, effort, or resources are used</td>
+<td>效率高不高</td>
+<td>效率</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="1-instruction"><a href="#1-instruction" class="headerlink" title="1. instruction"></a>1. instruction</h2><h3 id="1-1-核心含义"><a href="#1-1-核心含义" class="headerlink" title="1.1 核心含义"></a>1.1 核心含义</h3><p><code>instruction</code> 的核心是：<strong>告诉别人要做什么，或者怎么做。</strong></p>
+<p>它强调的是动作、要求、步骤、规则、命令或操作方法。</p>
+<p>可以理解为：</p>
+<blockquote>
+<p>instruction &#x3D; what someone tells you to do &#x2F; how to do something</p>
+</blockquote>
+<p>中文可以根据语境翻译为：</p>
+<ul>
+<li>指令</li>
+<li>指示</li>
+<li>说明</li>
+<li>操作步骤</li>
+<li>使用说明</li>
+<li>教学指导</li>
+</ul>
+<hr>
+<h3 id="1-2-常见搭配"><a href="#1-2-常见搭配" class="headerlink" title="1.2 常见搭配"></a>1.2 常见搭配</h3><table>
+<thead>
+<tr>
+<th>Collocation</th>
+<th>中文理解</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>follow the instructions</td>
+<td>按说明操作</td>
+<td>软件安装、测试步骤、实验流程</td>
+</tr>
+<tr>
+<td>give instructions</td>
+<td>下达指示 &#x2F; 给出说明</td>
+<td>经理、老师、系统提示</td>
+</tr>
+<tr>
+<td>clear instructions</td>
+<td>清晰的指令</td>
+<td>工作交接、测试流程</td>
+</tr>
+<tr>
+<td>step-by-step instructions</td>
+<td>分步骤说明</td>
+<td>教程、runbook、操作手册</td>
+</tr>
+<tr>
+<td>installation instructions</td>
+<td>安装说明</td>
+<td>软件、工具、环境部署</td>
+</tr>
+<tr>
+<td>user instructions</td>
+<td>用户指令</td>
+<td>AI、软件系统、自动化工具</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="1-3-例句"><a href="#1-3-例句" class="headerlink" title="1.3 例句"></a>1.3 例句</h3><blockquote>
+<p>Please follow the instructions carefully.</p>
+</blockquote>
+<p>请仔细按照说明操作。</p>
+<blockquote>
+<p>The manager gave clear instructions to the team.</p>
+</blockquote>
+<p>经理给团队下达了清晰的指示。</p>
+<blockquote>
+<p>The installation instructions are not clear enough.</p>
+</blockquote>
+<p>安装说明不够清楚。</p>
+<blockquote>
+<p>The model should follow the user’s instructions.</p>
+</blockquote>
+<p>模型应该遵循用户的指令。</p>
+<hr>
+<h3 id="1-4-工作场景理解"><a href="#1-4-工作场景理解" class="headerlink" title="1.4 工作场景理解"></a>1.4 工作场景理解</h3><p>在 QA &#x2F; SDET &#x2F; DevOps 场景里，<code>instruction</code> 经常用于以下内容：</p>
+<ul>
+<li>测试步骤</li>
+<li>操作手册</li>
+<li>runbook</li>
+<li>Jenkins job 使用说明</li>
+<li>AI Agent 的系统指令或用户指令</li>
+<li>自动化脚本的执行说明</li>
+</ul>
+<p>例如：</p>
+<blockquote>
+<p>The test instruction should clearly describe the expected input, execution steps, and expected result.</p>
+</blockquote>
+<p>测试说明应该清楚描述预期输入、执行步骤和预期结果。</p>
+<p>这里的 <code>instruction</code> 不是“介绍”，而是“具体怎么执行”。</p>
+<hr>
+<h2 id="2-introduction"><a href="#2-introduction" class="headerlink" title="2. introduction"></a>2. introduction</h2><h3 id="2-1-核心含义"><a href="#2-1-核心含义" class="headerlink" title="2.1 核心含义"></a>2.1 核心含义</h3><p><code>introduction</code> 的核心是：<strong>让别人第一次了解某人、某物或某个主题。</strong></p>
+<p>它强调背景、概览、入门、开场说明。</p>
+<p>可以理解为：</p>
+<blockquote>
+<p>introduction &#x3D; basic information that helps someone understand what something is about</p>
+</blockquote>
+<p>中文可以根据语境翻译为：</p>
+<ul>
+<li>介绍</li>
+<li>引言</li>
+<li>导论</li>
+<li>入门</li>
+<li>简介</li>
+<li>开场说明</li>
+</ul>
+<hr>
+<h3 id="2-2-常见搭配"><a href="#2-2-常见搭配" class="headerlink" title="2.2 常见搭配"></a>2.2 常见搭配</h3><table>
+<thead>
+<tr>
+<th>Collocation</th>
+<th>中文理解</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a brief introduction</td>
+<td>简短介绍</td>
+<td>会议、自我介绍、文档开头</td>
+</tr>
+<tr>
+<td>self-introduction</td>
+<td>自我介绍</td>
+<td>面试、会议、课堂</td>
+</tr>
+<tr>
+<td>introduction to Python</td>
+<td>Python 入门</td>
+<td>学习资料、课程标题</td>
+</tr>
+<tr>
+<td>product introduction</td>
+<td>产品介绍</td>
+<td>产品文档、市场材料</td>
+</tr>
+<tr>
+<td>project introduction</td>
+<td>项目介绍</td>
+<td>项目文档、汇报材料</td>
+</tr>
+<tr>
+<td>introduction section</td>
+<td>引言部分</td>
+<td>论文、报告、博客文章</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="2-3-例句"><a href="#2-3-例句" class="headerlink" title="2.3 例句"></a>2.3 例句</h3><blockquote>
+<p>Please give a brief introduction of yourself.</p>
+</blockquote>
+<p>请做一个简短的自我介绍。</p>
+<blockquote>
+<p>This book is a good introduction to computer networking.</p>
+</blockquote>
+<p>这本书是计算机网络很好的入门资料。</p>
+<blockquote>
+<p>The introduction explains the background of the project.</p>
+</blockquote>
+<p>引言部分解释了项目背景。</p>
+<blockquote>
+<p>The first chapter provides an introduction to storage systems.</p>
+</blockquote>
+<p>第一章提供了存储系统的入门介绍。</p>
+<hr>
+<h3 id="2-4-工作场景理解"><a href="#2-4-工作场景理解" class="headerlink" title="2.4 工作场景理解"></a>2.4 工作场景理解</h3><p>在技术博客或项目文档中，<code>introduction</code> 通常出现在开头，用于说明：</p>
+<ul>
+<li>这个主题是什么</li>
+<li>为什么要讨论它</li>
+<li>背景是什么</li>
+<li>读者需要先知道什么</li>
+<li>本文会覆盖哪些内容</li>
+</ul>
+<p>例如：</p>
+<blockquote>
+<p>This section gives a short introduction to the automation framework.</p>
+</blockquote>
+<p>这一节对自动化框架做一个简短介绍。</p>
+<p>这里的 <code>introduction</code> 不是“操作步骤”，而是“先让读者知道这个东西是什么”。</p>
+<hr>
+<h2 id="3-instruction-vs-introduction"><a href="#3-instruction-vs-introduction" class="headerlink" title="3. instruction vs introduction"></a>3. instruction vs introduction</h2><h3 id="3-1-核心区别"><a href="#3-1-核心区别" class="headerlink" title="3.1 核心区别"></a>3.1 核心区别</h3><table>
+<thead>
+<tr>
+<th>Word</th>
+<th>回答的问题</th>
+<th>重点</th>
+<th>中文直觉</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>instruction</td>
+<td>What should I do? &#x2F; How should I do it?</td>
+<td>动作、步骤、要求</td>
+<td>怎么做</td>
+</tr>
+<tr>
+<td>introduction</td>
+<td>What is this about?</td>
+<td>背景、概览、入门</td>
+<td>是什么</td>
+</tr>
+</tbody></table>
+<p>最简单的记忆方式：</p>
+<blockquote>
+<p>instruction &#x3D; how to do it<br>introduction &#x3D; what it is</p>
+</blockquote>
+<hr>
+<h3 id="3-2-对比例句"><a href="#3-2-对比例句" class="headerlink" title="3.2 对比例句"></a>3.2 对比例句</h3><table>
+<thead>
+<tr>
+<th>Sentence</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Read the instructions before running the script.</td>
+<td>运行脚本前先阅读操作说明。</td>
+</tr>
+<tr>
+<td>Read the introduction before studying the details.</td>
+<td>学习细节前先阅读引言。</td>
+</tr>
+<tr>
+<td>The instruction tells you how to install the tool.</td>
+<td>说明告诉你如何安装工具。</td>
+</tr>
+<tr>
+<td>The introduction tells you what the tool is used for.</td>
+<td>介绍告诉你这个工具是做什么用的。</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="3-3-技术文档中的典型结构"><a href="#3-3-技术文档中的典型结构" class="headerlink" title="3.3 技术文档中的典型结构"></a>3.3 技术文档中的典型结构</h3><p>一篇技术文档通常可以这样组织：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">1. Introduction</span><br><span class="line">   - Background</span><br><span class="line">   - Problem statement</span><br><span class="line">   - Purpose</span><br><span class="line"></span><br><span class="line">2. Instructions</span><br><span class="line">   - Prerequisites</span><br><span class="line">   - Step-by-step commands</span><br><span class="line">   - Expected result</span><br><span class="line">   - Troubleshooting</span><br></pre></td></tr></table></figure>
+
+<p>也就是说：</p>
+<ul>
+<li><code>Introduction</code> 帮助读者理解上下文。</li>
+<li><code>Instructions</code> 帮助读者完成具体操作。</li>
+</ul>
+<hr>
+<h2 id="4-effective"><a href="#4-effective" class="headerlink" title="4. effective"></a>4. effective</h2><h3 id="4-1-核心含义"><a href="#4-1-核心含义" class="headerlink" title="4.1 核心含义"></a>4.1 核心含义</h3><p><code>effective</code> 是形容词，核心意思是：<strong>有效的，能达到预期目标的。</strong></p>
+<p>它关注的是：</p>
+<blockquote>
+<p>Does it work?</p>
+</blockquote>
+<p>也就是：这个方法、方案、测试、药物、流程，是否真正产生了预期效果。</p>
+<hr>
+<h3 id="4-2-常见搭配"><a href="#4-2-常见搭配" class="headerlink" title="4.2 常见搭配"></a>4.2 常见搭配</h3><table>
+<thead>
+<tr>
+<th>Collocation</th>
+<th>中文理解</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>effective solution</td>
+<td>有效的解决方案</td>
+<td>问题处理、技术方案</td>
+</tr>
+<tr>
+<td>effective method</td>
+<td>有效的方法</td>
+<td>学习、测试、调试</td>
+</tr>
+<tr>
+<td>effective communication</td>
+<td>有效沟通</td>
+<td>工作协作</td>
+</tr>
+<tr>
+<td>effective test</td>
+<td>有效测试</td>
+<td>QA &#x2F; SDET</td>
+</tr>
+<tr>
+<td>effective strategy</td>
+<td>有效策略</td>
+<td>项目管理、学习计划</td>
+</tr>
+<tr>
+<td>cost-effective</td>
+<td>成本有效的 &#x2F; 性价比高的</td>
+<td>技术选型、资源投入</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="4-3-例句"><a href="#4-3-例句" class="headerlink" title="4.3 例句"></a>4.3 例句</h3><blockquote>
+<p>This solution is effective.</p>
+</blockquote>
+<p>这个方案是有效的。</p>
+<blockquote>
+<p>The medicine is effective.</p>
+</blockquote>
+<p>这个药有效。</p>
+<blockquote>
+<p>The test case is effective because it can catch real defects.</p>
+</blockquote>
+<p>这个测试用例是有效的，因为它能发现真实缺陷。</p>
+<blockquote>
+<p>The new monitoring strategy is more effective than manual checking.</p>
+</blockquote>
+<p>新的监控策略比人工检查更有效。</p>
+<hr>
+<h3 id="4-4-QA-SDET-场景理解"><a href="#4-4-QA-SDET-场景理解" class="headerlink" title="4.4 QA &#x2F; SDET 场景理解"></a>4.4 QA &#x2F; SDET 场景理解</h3><p>在测试领域，<code>effective</code> 关注的是测试有没有真正发现风险。</p>
+<p>例如：</p>
+<blockquote>
+<p>An effective test catches real bugs.</p>
+</blockquote>
+<p>一个有效的测试能发现真实 bug。</p>
+<p>一个测试可以执行得很快，但如果它不能发现问题，那么它不够 <code>effective</code>。</p>
+<p>例如：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">A test that runs in 5 seconds but never catches meaningful defects is efficient, but not effective.</span><br></pre></td></tr></table></figure>
+
+<p>这个测试运行很快，但发现不了有意义的缺陷，所以它是高效的，但不是有效的。</p>
+<hr>
+<h2 id="5-efficiency"><a href="#5-efficiency" class="headerlink" title="5. efficiency"></a>5. efficiency</h2><h3 id="5-1-核心含义"><a href="#5-1-核心含义" class="headerlink" title="5.1 核心含义"></a>5.1 核心含义</h3><p><code>efficiency</code> 是名词，核心意思是：<strong>效率，资源利用效率。</strong></p>
+<p>它关注的是：</p>
+<blockquote>
+<p>How well are resources used?</p>
+</blockquote>
+<p>这里的资源可以包括：</p>
+<ul>
+<li>时间</li>
+<li>人力</li>
+<li>成本</li>
+<li>机器资源</li>
+<li>网络资源</li>
+<li>维护成本</li>
+<li>执行成本</li>
+</ul>
+<hr>
+<h3 id="5-2-常见搭配"><a href="#5-2-常见搭配" class="headerlink" title="5.2 常见搭配"></a>5.2 常见搭配</h3><table>
+<thead>
+<tr>
+<th>Collocation</th>
+<th>中文理解</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>improve efficiency</td>
+<td>提高效率</td>
+<td>工作流程、自动化</td>
+</tr>
+<tr>
+<td>testing efficiency</td>
+<td>测试效率</td>
+<td>QA &#x2F; SDET</td>
+</tr>
+<tr>
+<td>operational efficiency</td>
+<td>运营效率</td>
+<td>团队、系统、流程</td>
+</tr>
+<tr>
+<td>resource efficiency</td>
+<td>资源利用效率</td>
+<td>存储、计算、基础设施</td>
+</tr>
+<tr>
+<td>high efficiency</td>
+<td>高效率</td>
+<td>系统、流程、工具</td>
+</tr>
+<tr>
+<td>low efficiency</td>
+<td>低效率</td>
+<td>流程问题、资源浪费</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="5-3-例句"><a href="#5-3-例句" class="headerlink" title="5.3 例句"></a>5.3 例句</h3><blockquote>
+<p>We need to improve testing efficiency.</p>
+</blockquote>
+<p>我们需要提高测试效率。</p>
+<blockquote>
+<p>Automation can improve efficiency.</p>
+</blockquote>
+<p>自动化可以提高效率。</p>
+<blockquote>
+<p>The new script improves the efficiency of log collection.</p>
+</blockquote>
+<p>新脚本提高了日志收集效率。</p>
+<blockquote>
+<p>The team improved operational efficiency by reducing manual steps.</p>
+</blockquote>
+<p>团队通过减少手动步骤提升了运营效率。</p>
+<hr>
+<h3 id="5-4-QA-DevOps-场景理解"><a href="#5-4-QA-DevOps-场景理解" class="headerlink" title="5.4 QA &#x2F; DevOps 场景理解"></a>5.4 QA &#x2F; DevOps 场景理解</h3><p>在 QA &#x2F; DevOps 场景中，<code>efficiency</code> 通常对应：</p>
+<ul>
+<li>更少的手动操作</li>
+<li>更短的执行时间</li>
+<li>更低的维护成本</li>
+<li>更稳定的自动化链路</li>
+<li>更少的重复劳动</li>
+</ul>
+<p>例如：</p>
+<blockquote>
+<p>The automation framework improved testing efficiency by reducing repetitive manual checks.</p>
+</blockquote>
+<p>自动化框架通过减少重复的手工检查提高了测试效率。</p>
+<hr>
+<h2 id="6-effective-vs-efficient-vs-efficiency"><a href="#6-effective-vs-efficient-vs-efficiency" class="headerlink" title="6. effective vs efficient vs efficiency"></a>6. effective vs efficient vs efficiency</h2><p>用户最初问的是 <code>effective</code> 和 <code>efficiency</code>，但学习时必须同时区分 <code>efficient</code>。</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>词性</th>
+<th>中文</th>
+<th>核心问题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>effective</td>
+<td>adjective</td>
+<td>有效的</td>
+<td>有没有达到目标？</td>
+</tr>
+<tr>
+<td>efficient</td>
+<td>adjective</td>
+<td>高效的</td>
+<td>是否节省资源？</td>
+</tr>
+<tr>
+<td>efficiency</td>
+<td>noun</td>
+<td>效率</td>
+<td>资源利用水平如何？</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="6-1-effective-vs-efficient"><a href="#6-1-effective-vs-efficient" class="headerlink" title="6.1 effective vs efficient"></a>6.1 effective vs efficient</h3><table>
+<thead>
+<tr>
+<th>Sentence</th>
+<th>中文</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The process is effective.</td>
+<td>这个流程有效。</td>
+<td>它能达到目标。</td>
+</tr>
+<tr>
+<td>The process is efficient.</td>
+<td>这个流程高效。</td>
+<td>它花费的时间、成本或资源少。</td>
+</tr>
+<tr>
+<td>The process has high efficiency.</td>
+<td>这个流程效率高。</td>
+<td><code>efficiency</code> 是名词。</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="6-2-四种组合"><a href="#6-2-四种组合" class="headerlink" title="6.2 四种组合"></a>6.2 四种组合</h3><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>effective and efficient</td>
+<td>又有效又高效</td>
+<td>自动化测试既能发现真实问题，又运行快、维护成本低。</td>
+</tr>
+<tr>
+<td>effective but not efficient</td>
+<td>有效但低效</td>
+<td>手工检查能发现问题，但耗时很长。</td>
+</tr>
+<tr>
+<td>efficient but not effective</td>
+<td>高效但无效</td>
+<td>脚本运行很快，但检查点不关键，发现不了问题。</td>
+</tr>
+<tr>
+<td>neither effective nor efficient</td>
+<td>既无效又低效</td>
+<td>流程慢，而且不能解决真实问题。</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-典型工作表达"><a href="#7-典型工作表达" class="headerlink" title="7. 典型工作表达"></a>7. 典型工作表达</h2><h3 id="7-1-测试相关"><a href="#7-1-测试相关" class="headerlink" title="7.1 测试相关"></a>7.1 测试相关</h3><blockquote>
+<p>This test case is effective because it validates the critical failure path.</p>
+</blockquote>
+<p>这个测试用例是有效的，因为它验证了关键失败路径。</p>
+<blockquote>
+<p>We should improve testing efficiency by reducing duplicate checks.</p>
+</blockquote>
+<p>我们应该通过减少重复检查来提高测试效率。</p>
+<blockquote>
+<p>The current regression suite is effective but not efficient.</p>
+</blockquote>
+<p>当前回归测试集有效，但效率不高。</p>
+<hr>
+<h3 id="7-2-自动化相关"><a href="#7-2-自动化相关" class="headerlink" title="7.2 自动化相关"></a>7.2 自动化相关</h3><blockquote>
+<p>Automation does not automatically make testing effective; it mainly improves efficiency.</p>
+</blockquote>
+<p>自动化不会自动让测试更有效；它主要提高效率。</p>
+<p>这句话很重要。很多人会误以为“自动化 &#x3D; 更有效”。更准确的理解是：</p>
+<ul>
+<li>自动化可以提升 <code>efficiency</code>。</li>
+<li>但是否 <code>effective</code> 取决于测试点是否正确、断言是否有效、覆盖的风险是否真实。</li>
+</ul>
+<hr>
+<h3 id="7-3-AI-Agent-Prompt-场景"><a href="#7-3-AI-Agent-Prompt-场景" class="headerlink" title="7.3 AI Agent &#x2F; Prompt 场景"></a>7.3 AI Agent &#x2F; Prompt 场景</h3><blockquote>
+<p>Clear instructions help the model produce more accurate results.</p>
+</blockquote>
+<p>清晰的指令有助于模型产生更准确的结果。</p>
+<blockquote>
+<p>The introduction gives the model the background context.</p>
+</blockquote>
+<p>介绍部分为模型提供背景上下文。</p>
+<blockquote>
+<p>An effective prompt makes the model understand the real goal.</p>
+</blockquote>
+<p>有效的提示词能让模型理解真实目标。</p>
+<blockquote>
+<p>A good harness improves execution efficiency and reliability.</p>
+</blockquote>
+<p>好的 harness 可以提高执行效率和可靠性。</p>
+<hr>
+<h2 id="8-记忆方法"><a href="#8-记忆方法" class="headerlink" title="8. 记忆方法"></a>8. 记忆方法</h2><h3 id="8-1-instruction-introduction"><a href="#8-1-instruction-introduction" class="headerlink" title="8.1 instruction &#x2F; introduction"></a>8.1 instruction &#x2F; introduction</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">instruction   = how to do it</span><br><span class="line">introduction  = what it is</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-effective-efficient-efficiency"><a href="#8-2-effective-efficient-efficiency" class="headerlink" title="8.2 effective &#x2F; efficient &#x2F; efficiency"></a>8.2 effective &#x2F; efficient &#x2F; efficiency</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">effective  = Does it work?</span><br><span class="line">efficient  = Does it save resources?</span><br><span class="line">efficiency = resource usage level</span><br></pre></td></tr></table></figure>
+
+<p>更口语化地记：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">effective  = 做得对，有效果</span><br><span class="line">efficient  = 做得快、省资源</span><br><span class="line">efficiency = 效率这个指标</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="9-小练习"><a href="#9-小练习" class="headerlink" title="9. 小练习"></a>9. 小练习</h2><h3 id="9-1-选择-instruction-还是-introduction"><a href="#9-1-选择-instruction-还是-introduction" class="headerlink" title="9.1 选择 instruction 还是 introduction"></a>9.1 选择 instruction 还是 introduction</h3><ol>
+<li>Please read the ______ before installing the software.  </li>
+<li>This chapter gives an ______ to computer architecture.  </li>
+<li>The Jenkins job needs clearer ______ for new users.  </li>
+<li>The report starts with a short ______ of the project background.</li>
+</ol>
+<p>答案：</p>
+<ol>
+<li>instructions</li>
+<li>introduction</li>
+<li>instructions</li>
+<li>introduction</li>
+</ol>
+<hr>
+<h3 id="9-2-选择-effective-efficient-efficiency"><a href="#9-2-选择-effective-efficient-efficiency" class="headerlink" title="9.2 选择 effective &#x2F; efficient &#x2F; efficiency"></a>9.2 选择 effective &#x2F; efficient &#x2F; efficiency</h3><ol>
+<li>The script is fast, so it is very ______.  </li>
+<li>The solution fixed the problem, so it is ______.  </li>
+<li>We need to improve testing ______.  </li>
+<li>The current process works, but it takes too much time. It is ______ but not ______.</li>
+</ol>
+<p>答案：</p>
+<ol>
+<li>efficient</li>
+<li>effective</li>
+<li>efficiency</li>
+<li>effective; efficient</li>
+</ol>
+<hr>
+<h2 id="10-总结"><a href="#10-总结" class="headerlink" title="10. 总结"></a>10. 总结</h2><p>今天的四个词可以形成一组非常实用的工作表达框架：</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>English</th>
+<th>Practical Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>说明别人怎么做</td>
+<td>instruction</td>
+<td>操作步骤、指令、要求</td>
+</tr>
+<tr>
+<td>让别人先理解背景</td>
+<td>introduction</td>
+<td>介绍、引言、入门</td>
+</tr>
+<tr>
+<td>判断有没有达到目标</td>
+<td>effective</td>
+<td>有效的</td>
+</tr>
+<tr>
+<td>判断资源使用是否合理</td>
+<td>efficiency</td>
+<td>效率</td>
+</tr>
+</tbody></table>
+<p>最终记忆句：</p>
+<blockquote>
+<p>Good documentation needs both an introduction and instructions.<br>Good testing should be both effective and efficient.</p>
+</blockquote>
+<p>中文理解：</p>
+<blockquote>
+<p>好的文档既需要介绍背景，也需要说明怎么操作。<br>好的测试既要有效，也要高效。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>English Learning</category>
+        <category>Vocabulary</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>Vocabulary</tag>
+        <tag>IELTS</tag>
+        <tag>Workplace English</tag>
+        <tag>Precision Writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 小工具：时间戳秒数差值计算器（calculate_timestamp.py）</title>
+    <url>/2025/06/11/calculate_timestamp_post/</url>
+    <content><![CDATA[<p>在日常工作中，我经常遇到这样的场景：拿到一个日志时间戳（如 <code>250610-163134</code>），还需要结合某个以秒为单位的偏移值，还原真实发生的时间。</p>
+<p>为此，我编写了一个小脚本 <code>calculate_timestamp.py</code>，使用 Python 的标准库 <code>argparse</code> 和 <code>datetime</code>，帮助我快速完成转换。</p>
+<hr>
+<h2 id="📌-问题背景"><a href="#📌-问题背景" class="headerlink" title="📌 问题背景"></a>📌 问题背景</h2><p>日志分析或调试某些系统问题时，经常会遇到“时间戳 + 秒数差”这样的数据组合。手工换算效率低且容易出错，于是我决定用脚本来解决。</p>
+<hr>
+<h2 id="🛠️-脚本功能说明"><a href="#🛠️-脚本功能说明" class="headerlink" title="🛠️ 脚本功能说明"></a>🛠️ 脚本功能说明</h2><p>该脚本支持从命令行输入以下两个参数：</p>
+<ul>
+<li><code>--seconds</code> &#x2F; <code>-s</code>: 要减去的秒数（支持浮点数）</li>
+<li><code>--timestamp</code> &#x2F; <code>-t</code>: 原始时间戳，格式为 <code>YYMMDD-HHMMSS</code></li>
+</ul>
+<p>示例命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python calculate_timestamp.py --seconds 249890.63 --timestamp 250610-163134</span><br></pre></td></tr></table></figure>
+
+<p>脚本输出转换后的新时间戳（仍为 YYMMDD-HHMMSS 格式）。</p>
+<hr>
+<h2 id="🧩-核心代码展示"><a href="#🧩-核心代码展示" class="headerlink" title="🧩 核心代码展示"></a>🧩 核心代码展示</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=<span class="string">&quot;Subtract seconds from a timestamp and output the new timestamp in YYMMDD-HHMMSS format.&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--seconds&quot;</span>, <span class="string">&quot;-s&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">float</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Number of seconds to subtract (e.g., 249890.63)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--timestamp&quot;</span>, <span class="string">&quot;-t&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">str</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Original timestamp in YYMMDD-HHMMSS format (e.g., 250610-163134)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        original_time = datetime.strptime(args.timestamp, <span class="string">&quot;%y%m%d-%H%M%S&quot;</span>)</span><br><span class="line">        new_time = original_time - timedelta(seconds=args.seconds)</span><br><span class="line">        <span class="built_in">print</span>(new_time.strftime(<span class="string">&quot;%y%m%d-%H%M%S&quot;</span>))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="⚙️-踩坑与扩展想法"><a href="#⚙️-踩坑与扩展想法" class="headerlink" title="⚙️ 踩坑与扩展想法"></a>⚙️ 踩坑与扩展想法</h2><ul>
+<li>使用 <code>argparse</code> 设计参数更加规范，可扩展性好；</li>
+<li><code>datetime.strptime()</code> 格式需完全匹配，否则会抛错；</li>
+<li>可以进一步支持 ISO 8601 格式、毫秒精度或时区处理。</li>
+</ul>
+<hr>
+<h2 id="🔗-相关链接"><a href="#🔗-相关链接" class="headerlink" title="🔗 相关链接"></a>🔗 相关链接</h2><ul>
+<li>📦 项目仓库地址：<a href="https://github.com/mokin1104/little.tools">GitHub · little.tools</a></li>
+<li>📄 README 文件：<a href="https://github.com/mokin1104/little.tools/blob/main/README.md">查看 README</a></li>
+</ul>
+<hr>
+<h2 id="🧠-总结"><a href="#🧠-总结" class="headerlink" title="🧠 总结"></a>🧠 总结</h2><p>虽然只是一个小工具，但这个脚本解决了我在日志分析中一个具体的痛点。<br>用 Python 构建小工具的过程简单高效，也让我更熟悉了时间处理与命令行工具设计。</p>
+<blockquote>
+<p>Small tools, big impact. That’s what makes programming satisfying.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>工作中解决的问题</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>脚本工具</tag>
+        <tag>时间戳</tag>
+        <tag>工作自动化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium</title>
+    <url>/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/</url>
+    <content><![CDATA[<h2 id="当前手工执行流程"><a href="#当前手工执行流程" class="headerlink" title="当前手工执行流程"></a>当前手工执行流程</h2><ol>
+<li><p><strong>Lease 存储设备</strong></p>
+</li>
+<li><p><strong>获取并确认存储信息</strong>：查找存储设备的 MGMT IP；登录 GUI 界面，确认当前存储版本信息</p>
+</li>
+<li><p><strong>准备配套 Linux 环境</strong>：登录与该存储配套的 Linux 设备；确认是否与存储处于同一 VLAN；配置桌面环境，安装 Firefox</p>
+</li>
+<li><p><strong>下载升级安装包</strong>：使用 <code>wget</code> 下载最新安装包</p>
+</li>
+<li><p><strong>通过 VNC 进行图形化操作</strong>：使用 VNC 登录 Linux 桌面；通过 Firefox 访问存储 MGMT IP；GUI中上传最新安装包</p>
+</li>
+<li><p><strong>执行升级操作（NDU）</strong></p>
+</li>
+<li><p><strong>After NDU</strong>：能够升级完成；升级完成后是否存在异常告警信息；components的接入正常</p>
+</li>
+</ol>
+<hr>
+<h2 id="为何需要考虑自动化？"><a href="#为何需要考虑自动化？" class="headerlink" title="为何需要考虑自动化？"></a>为何需要考虑自动化？</h2><p>虽然频率是<strong>两个月一次</strong>，不算高频，但流程长、串步骤多，人工操作很耗时间；并且容易因为环境差异，准备环境时需要检查很多的配置，过于繁琐；无法做到“到点自动触发”，还需要人盯日程和版本节奏</p>
+<hr>
+<h2 id="工具方案对比：Selenium-vs-Playwright"><a href="#工具方案对比：Selenium-vs-Playwright" class="headerlink" title="工具方案对比：Selenium vs Playwright"></a>工具方案对比：Selenium vs Playwright</h2><p>目前主要考虑两条路线：<strong>Selenium</strong> 和 <strong>Playwright</strong></p>
+<p><strong>Selenium 现状</strong></p>
+<p>在现有用例中，Selenium 已经实现了部分 Configuration 的自动化配置</p>
+<p>但脚本维护成本较高，整体可维护性并不理想</p>
+<p><strong>Playwright 的优势</strong></p>
+<p>原生支持<strong>自动等待</strong>机制，极大减少显式等待、轮询这种“脚本噪音”</p>
+<p>稳定性在实践和社区反馈中普遍优于 Selenium</p>
+<p>对现代 Web 应用（尤其是前端异步加载较多的界面）更友好</p>
+<p>综合考虑当前脚本维护情况和后续扩展性，<strong>最终决定采用 Playwright 作为 NDU GUI test 的实现工具</strong>，并在此基础上进一步探索自动化触发与环境准备的简化方案</p>
+]]></content>
+      <categories>
+        <category>Testing &amp; Automation</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AI English Vocabulary Notes — Prompt Engineering Terms</title>
     <url>/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/</url>
     <content><![CDATA[<h2 id="1-Core-AI-Vocabulary-Table"><a href="#1-Core-AI-Vocabulary-Table" class="headerlink" title="1. Core AI Vocabulary Table"></a>1. Core AI Vocabulary Table</h2><table>
@@ -783,10 +1527,534 @@
         <category>English Learning</category>
       </categories>
       <tags>
-        <tag>vocabulary</tag>
         <tag>English</tag>
+        <tag>vocabulary</tag>
         <tag>AI</tag>
         <tag>prompt engineering</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</title>
+    <url>/2026/05/08/effective-prompt-framework-2026-05-08/</url>
+    <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>A good prompt is not a magic phrase. It is a <strong>clear task brief for an AI coworker</strong>.</p>
+<p>The practical principle is:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Speak to AI like a capable coworker:</span><br><span class="line">naturally, concisely, conversationally, and with enough context.</span><br></pre></td></tr></table></figure>
+
+<p>The core framework is:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Setting the Stage → Defining the Task → Specifying Rules</span><br></pre></td></tr></table></figure>
+
+<p>In a more engineering-oriented form:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role + Goal + Context → Task + Input → Rules + Output Format + Success Criteria</span><br></pre></td></tr></table></figure>
+
+<p>A high-quality prompt tells the model:</p>
+<blockquote>
+<p>Who you are, what you want, what background matters, what action it should take, what materials it should use, what rules it should follow, what output format you need, and what counts as a good answer.</p>
+</blockquote>
+<hr>
+<h2 id="2-Why-Prompt-Context-Matter"><a href="#2-Why-Prompt-Context-Matter" class="headerlink" title="2. Why Prompt + Context Matter"></a>2. Why Prompt + Context Matter</h2><p>All interactions with Claude or ChatGPT begin with a <strong>prompt</strong>. But the answer is shaped not only by the prompt itself, but also by the surrounding <strong>context</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Prompt</td>
+<td>The direct instruction or question</td>
+<td>“Analyze this Jenkins failure.”</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Background, documents, logs, examples, constraints</td>
+<td>Jenkins logs, test environment, previous build status</td>
+</tr>
+<tr>
+<td>Output Rules</td>
+<td>How the answer should be shaped</td>
+<td>Markdown, concise, evidence-based, with risks</td>
+</tr>
+</tbody></table>
+<p>A weak prompt forces the model to guess.</p>
+<p>A strong prompt reduces guessing by providing enough context and clear instructions.</p>
+<hr>
+<h2 id="3-“Speak-Like-You-Would-a-Coworker”"><a href="#3-“Speak-Like-You-Would-a-Coworker”" class="headerlink" title="3. “Speak Like You Would a Coworker”"></a>3. “Speak Like You Would a Coworker”</h2><p>The phrase means:</p>
+<blockquote>
+<p>Do not write prompts like mysterious machine commands. Write them like clear work instructions for a competent colleague.</p>
+</blockquote>
+<p>It does <strong>not</strong> mean “say anything casually and expect a perfect answer.”</p>
+<p>It means:</p>
+<ul>
+<li>Be natural.</li>
+<li>Be concise.</li>
+<li>Be conversational.</li>
+<li>Be specific about the job.</li>
+<li>Provide necessary context.</li>
+<li>Define what good output looks like.</li>
+</ul>
+<h3 id="Weak-Example"><a href="#Weak-Example" class="headerlink" title="Weak Example"></a>Weak Example</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze this.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Better-Example"><a href="#Better-Example" class="headerlink" title="Better Example"></a>Better Example</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I am preparing a Jira comment for a Jenkins failure.</span><br><span class="line">Please analyze the pasted log, identify the most likely root cause, and give me a concise evidence chain.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br></pre></td></tr></table></figure>
+
+<p>The second version is better because it includes:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Present?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Context</td>
+<td>Yes — Jira comment for Jenkins failure</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Yes — analyze log and identify root cause</td>
+</tr>
+<tr>
+<td>Output expectation</td>
+<td>Yes — concise evidence chain</td>
+</tr>
+<tr>
+<td>Rule</td>
+<td>Yes — separate facts, assumptions, and inferences</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-The-Three-Core-Components"><a href="#4-The-Three-Core-Components" class="headerlink" title="4. The Three Core Components"></a>4. The Three Core Components</h2><h2 id="4-1-Setting-the-Stage"><a href="#4-1-Setting-the-Stage" class="headerlink" title="4.1 Setting the Stage"></a>4.1 Setting the Stage</h2><p><strong>Meaning:</strong> provide the role, objective, and relevant background.</p>
+<p>The model needs to know:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Who are you?</td>
+<td>Sets perspective</td>
+<td>I am a storage-focused SDET.</td>
+</tr>
+<tr>
+<td>What is your objective?</td>
+<td>Sets direction</td>
+<td>I need to identify the likely root cause.</td>
+</tr>
+<tr>
+<td>What context matters?</td>
+<td>Reduces guessing</td>
+<td>This failed during Jenkins pre-test setup.</td>
+</tr>
+<tr>
+<td>Who is the audience?</td>
+<td>Controls depth and tone</td>
+<td>This is for a Jira comment to the dev team.</td>
+</tr>
+</tbody></table>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I am a storage-focused SDET analyzing a Jenkins failure.</span><br><span class="line">My objective is to determine whether this failure is caused by environment setup, test logic, or product behavior.</span><br><span class="line">The failure happened during the pre-test setup stage in an iSCSI environment.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-2-Defining-the-Task"><a href="#4-2-Defining-the-Task" class="headerlink" title="4.2 Defining the Task"></a>4.2 Defining the Task</h2><p><strong>Meaning:</strong> tell the model exactly what action to take.</p>
+<p>The task should use clear action verbs.</p>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>explain</td>
+<td>Explain a concept, sentence, word, or mechanism</td>
+</tr>
+<tr>
+<td>analyze</td>
+<td>Analyze logs, articles, failures, systems, or trade-offs</td>
+</tr>
+<tr>
+<td>summarize</td>
+<td>Summarize documents, meetings, emails, or reports</td>
+</tr>
+<tr>
+<td>compare</td>
+<td>Compare tools, ideas, solutions, or designs</td>
+</tr>
+<tr>
+<td>rewrite</td>
+<td>Improve wording, tone, grammar, or professionalism</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>Diagnose errors, logs, code, or environment issues</td>
+</tr>
+<tr>
+<td>design</td>
+<td>Design architecture, test plans, workflows, or state machines</td>
+</tr>
+<tr>
+<td>review</td>
+<td>Review code, plans, English writing, or technical proposals</td>
+</tr>
+<tr>
+<td>build</td>
+<td>Create code, scripts, templates, or systems</td>
+</tr>
+</tbody></table>
+<h3 id="Weak-Task"><a href="#Weak-Task" class="headerlink" title="Weak Task"></a>Weak Task</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Help me with this issue.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Better-Task"><a href="#Better-Task" class="headerlink" title="Better Task"></a>Better Task</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze the failure log, identify the failure point, build an evidence chain, and suggest the next three debugging steps.</span><br></pre></td></tr></table></figure>
+
+<p>The better version defines concrete actions.</p>
+<hr>
+<h2 id="4-3-Specifying-Rules"><a href="#4-3-Specifying-Rules" class="headerlink" title="4.3 Specifying Rules"></a>4.3 Specifying Rules</h2><p><strong>Meaning:</strong> define style, tone, constraints, examples, and output format.</p>
+<p>Rules reduce output randomness and make the answer easier to reuse.</p>
+<table>
+<thead>
+<tr>
+<th>Rule Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Style</td>
+<td>Use a formal and concise style.</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>Be direct and evidence-based.</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>Use Markdown headings and tables.</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Cite sources where possible.</td>
+</tr>
+<tr>
+<td>Constraints</td>
+<td>Do not invent missing information.</td>
+</tr>
+<tr>
+<td>Reasoning discipline</td>
+<td>Separate facts, assumptions, and inferences.</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>Assume the reader is a junior QA engineer.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Keep the answer under 500 words.</td>
+</tr>
+<tr>
+<td>Example matching</td>
+<td>Follow the attached sample format.</td>
+</tr>
+</tbody></table>
+<h3 id="Example-Rules"><a href="#Example-Rules" class="headerlink" title="Example Rules"></a>Example Rules</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Be direct and evidence-based.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br><span class="line">Point out risks and gaps.</span><br><span class="line">Do not overclaim.</span><br><span class="line">Use Markdown tables where useful.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-Expanded-Engineering-Framework-8-Components"><a href="#5-Expanded-Engineering-Framework-8-Components" class="headerlink" title="5. Expanded Engineering Framework: 8 Components"></a>5. Expanded Engineering Framework: 8 Components</h2><p>For complex tasks, use this full structure:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role → Goal → Context → Task → Input → Rules → Output Format → Success Criteria</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Role</td>
+<td>Defines model perspective</td>
+<td>You are a senior storage SDET.</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Defines final objective</td>
+<td>Help me identify the likely root cause.</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Provides background</td>
+<td>This happened during Jenkins pre-test setup.</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Defines concrete action</td>
+<td>Analyze logs and build an evidence chain.</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>Defines source material</td>
+<td>Use the attached Jenkins log and summary.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Defines constraints</td>
+<td>Do not invent missing facts.</td>
+</tr>
+<tr>
+<td>Output Format</td>
+<td>Defines structure</td>
+<td>Conclusion → Evidence Chain → Next Steps</td>
+</tr>
+<tr>
+<td>Success Criteria</td>
+<td>Defines what “good” means</td>
+<td>The answer should be suitable for a Jira comment.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="6-Complete-Prompt-Template"><a href="#6-Complete-Prompt-Template" class="headerlink" title="6. Complete Prompt Template"></a>6. Complete Prompt Template</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Role</span><br><span class="line">You are a [role / expert perspective].</span><br><span class="line"></span><br><span class="line"># Goal</span><br><span class="line">My goal is to [final objective].</span><br><span class="line"></span><br><span class="line"># Context</span><br><span class="line">[Relevant background, current state, constraints, audience, and known facts.]</span><br><span class="line"></span><br><span class="line"># Task</span><br><span class="line">Please [specific action verbs: analyze / write / summarize / compare / debug / design / review].</span><br><span class="line">Focus on [specific points].</span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">Use [attached files / pasted logs / provided notes / screenshots] as the primary evidence.</span><br><span class="line"></span><br><span class="line"># Rules</span><br><span class="line">- Use [style and tone].</span><br><span class="line">- Separate facts, assumptions, and inferences.</span><br><span class="line">- Do not invent missing information.</span><br><span class="line">- Point out risks and gaps.</span><br><span class="line">- Ask for clarification only if the missing information blocks the task.</span><br><span class="line"></span><br><span class="line"># Output Format</span><br><span class="line">1. Conclusion</span><br><span class="line">2. Evidence / Analysis</span><br><span class="line">3. Risks / Gaps</span><br><span class="line">4. Next Steps</span><br><span class="line"></span><br><span class="line"># Success Criteria</span><br><span class="line">The answer should help me [decision or outcome].</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="7-Example-Storage-SDET-Jenkins-Failure"><a href="#7-Example-Storage-SDET-Jenkins-Failure" class="headerlink" title="7. Example: Storage SDET &#x2F; Jenkins Failure"></a>7. Example: Storage SDET &#x2F; Jenkins Failure</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Role</span><br><span class="line">You are a senior storage SDET and debugging mentor.</span><br><span class="line"></span><br><span class="line"># Goal</span><br><span class="line">My goal is to identify the most likely root cause and decide the next debugging step.</span><br><span class="line"></span><br><span class="line"># Context</span><br><span class="line">This failure happened during Jenkins pre-test setup.</span><br><span class="line">The environment uses iSCSI.</span><br><span class="line">The appliance is currently free, but no new Jenkins build was launched after the rerun request.</span><br><span class="line"></span><br><span class="line"># Task</span><br><span class="line">Analyze the provided log and summary.</span><br><span class="line">Identify the failure point.</span><br><span class="line">Build an evidence chain.</span><br><span class="line">Suggest the next three debugging steps.</span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">Use the pasted Jenkins log and dispatcher summary as the primary evidence.</span><br><span class="line"></span><br><span class="line"># Rules</span><br><span class="line">- Be direct and evidence-based.</span><br><span class="line">- Separate facts, assumptions, and inferences.</span><br><span class="line">- Do not invent missing information.</span><br><span class="line">- Point out risks and gaps.</span><br><span class="line">- Keep the answer suitable for a Jira comment.</span><br><span class="line"></span><br><span class="line"># Output Format</span><br><span class="line">1. Conclusion</span><br><span class="line">2. Evidence Chain</span><br><span class="line">3. Root Cause Hypotheses</span><br><span class="line">4. Risks / Gaps</span><br><span class="line">5. Next Steps</span><br><span class="line"></span><br><span class="line"># Success Criteria</span><br><span class="line">The answer should help me decide whether to rerun the test, check the environment, or escalate to development.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="8-Example-Market-Research-Prompt"><a href="#8-Example-Market-Research-Prompt" class="headerlink" title="8. Example: Market Research Prompt"></a>8. Example: Market Research Prompt</h2><p>Original example:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I&#x27;m the marketing lead at an indie streaming startup, and we&#x27;re preparing an investor pitch deck for Series A investors. Can you research the current state of the independent film streaming market and identify key trends, competitor positioning, and growth opportunities? Use current web research with citations and structure it as a professional report of up to 5 pages, with an executive summary, market analysis, competitive landscape, and growth opportunities.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Breakdown"><a href="#Breakdown" class="headerlink" title="Breakdown"></a>Breakdown</h3><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Text</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Setting the stage</td>
+<td>I’m the marketing lead at an indie streaming startup.</td>
+<td>Defines role and business context.</td>
+</tr>
+<tr>
+<td>Objective</td>
+<td>We’re preparing an investor pitch deck for Series A investors.</td>
+<td>Defines audience and goal.</td>
+</tr>
+<tr>
+<td>Defining the task</td>
+<td>Research the current state of the independent film streaming market.</td>
+<td>Defines the main action.</td>
+</tr>
+<tr>
+<td>Details</td>
+<td>Identify key trends, competitor positioning, and growth opportunities.</td>
+<td>Defines research focus.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Use current web research with citations.</td>
+<td>Defines evidence requirement.</td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>Professional report of up to 5 pages with specific sections.</td>
+<td>Defines structure and length.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="9-The-Role-of-Context-as-a-Shortcut"><a href="#9-The-Role-of-Context-as-a-Shortcut" class="headerlink" title="9. The Role of Context as a Shortcut"></a>9. The Role of Context as a Shortcut</h2><p>Context is a shortcut because it helps the model understand your needs faster.</p>
+<p>This does not mean “shortcut” as a fragment or slice. It means:</p>
+<blockquote>
+<p>A faster path to understanding.</p>
+</blockquote>
+<p>When you upload relevant documents, logs, examples, or background information, you reduce back-and-forth clarification.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Weak context:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This failed. Please check.</span><br></pre></td></tr></table></figure>
+
+<p>Better context:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This Jenkins job failed during pre-test setup.</span><br><span class="line">The failure appears after iSCSI configuration.</span><br><span class="line">The cluster is free, but no new build was launched after the rerun request.</span><br><span class="line">Please determine whether this is a dispatch issue, environment issue, or test logic issue.</span><br></pre></td></tr></table></figure>
+
+<p>The second version gives the model a shortcut to your intent.</p>
+<hr>
+<h2 id="10-Relation-to-4D-Framework-for-AI-Fluency"><a href="#10-Relation-to-4D-Framework-for-AI-Fluency" class="headerlink" title="10. Relation to 4D Framework for AI Fluency"></a>10. Relation to 4D Framework for AI Fluency</h2><p>The prompt framework is related to the broader 4D Framework for AI Fluency.</p>
+<table>
+<thead>
+<tr>
+<th>4D Competency</th>
+<th>Chinese Meaning</th>
+<th>Practical Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Delegation</td>
+<td>委派任务</td>
+<td>Know what to ask AI to do.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>描述清楚</td>
+<td>Explain background, task, and constraints clearly.</td>
+</tr>
+<tr>
+<td>Discernment</td>
+<td>判断辨别</td>
+<td>Evaluate whether AI output is correct, useful, and safe.</td>
+</tr>
+<tr>
+<td>Diligence</td>
+<td>审慎负责</td>
+<td>Use AI responsibly, ethically, and safely.</td>
+</tr>
+</tbody></table>
+<p>The three prompt elements mainly cover:</p>
+<table>
+<thead>
+<tr>
+<th>Prompt Element</th>
+<th>Related 4D Competency</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Setting the stage</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>Defining the task</td>
+<td>Delegation + Description</td>
+</tr>
+<tr>
+<td>Specifying rules</td>
+<td>Description + Discernment</td>
+</tr>
+<tr>
+<td>Checking the output</td>
+<td>Discernment</td>
+</tr>
+<tr>
+<td>Responsible use</td>
+<td>Diligence</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="11-Practical-Decision-Rule"><a href="#11-Practical-Decision-Rule" class="headerlink" title="11. Practical Decision Rule"></a>11. Practical Decision Rule</h2><p>Not every prompt needs the full 8-part structure.</p>
+<table>
+<thead>
+<tr>
+<th>Task Complexity</th>
+<th>Prompt Requirement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Word explanation</td>
+<td>Task only</td>
+</tr>
+<tr>
+<td>Sentence correction</td>
+<td>Task + tone</td>
+</tr>
+<tr>
+<td>Email rewrite</td>
+<td>Context + task + tone + audience</td>
+</tr>
+<tr>
+<td>Log analysis</td>
+<td>Context + input + task + evidence rules</td>
+</tr>
+<tr>
+<td>Report writing</td>
+<td>Role + goal + context + task + format</td>
+</tr>
+<tr>
+<td>System design</td>
+<td>Role + constraints + architecture requirements + success criteria</td>
+</tr>
+<tr>
+<td>High-stakes judgment</td>
+<td>Facts + assumptions + citations + limitations</td>
+</tr>
+</tbody></table>
+<p>Use the full framework when the task is complex, ambiguous, high-impact, or intended for reuse.</p>
+<hr>
+<h2 id="12-Common-Prompt-Failures"><a href="#12-Common-Prompt-Failures" class="headerlink" title="12. Common Prompt Failures"></a>12. Common Prompt Failures</h2><table>
+<thead>
+<tr>
+<th>Failure Mode</th>
+<th>Symptom</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No context</td>
+<td>Answer is generic</td>
+<td>Add role, objective, and background</td>
+</tr>
+<tr>
+<td>Vague task</td>
+<td>Model guesses what to do</td>
+<td>Use clear action verbs</td>
+</tr>
+<tr>
+<td>No input boundary</td>
+<td>Model may hallucinate</td>
+<td>Specify source material</td>
+</tr>
+<tr>
+<td>No output format</td>
+<td>Answer is hard to reuse</td>
+<td>Define sections or table format</td>
+</tr>
+<tr>
+<td>Too many rules</td>
+<td>Output becomes rigid</td>
+<td>Keep only useful constraints</td>
+</tr>
+<tr>
+<td>No success criteria</td>
+<td>Quality is hard to judge</td>
+<td>Define what decision the answer should support</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="13-Short-Formula"><a href="#13-Short-Formula" class="headerlink" title="13. Short Formula"></a>13. Short Formula</h2><p>For daily use:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Context → Task → Rules → Output Format</span><br></pre></td></tr></table></figure>
+
+<p>For engineering use:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role + Goal + Context → Task + Input → Rules + Output Format + Success Criteria</span><br></pre></td></tr></table></figure>
+
+<p>For memory:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Prompt = Work Order for an AI Coworker</span><br></pre></td></tr></table></figure>
+
+<p>Chinese version:</p>
+<blockquote>
+<p>Prompt 不是咒语，而是一份给 AI 同事的任务说明书。</p>
+</blockquote>
+<hr>
+<h2 id="14-Final-Checklist"><a href="#14-Final-Checklist" class="headerlink" title="14. Final Checklist"></a>14. Final Checklist</h2><p>Before sending a complex prompt, check:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Did I explain my role or perspective?</li>
+<li><input disabled="" type="checkbox"> Did I define my objective?</li>
+<li><input disabled="" type="checkbox"> Did I provide the necessary context?</li>
+<li><input disabled="" type="checkbox"> Did I specify the exact task?</li>
+<li><input disabled="" type="checkbox"> Did I identify the input material?</li>
+<li><input disabled="" type="checkbox"> Did I define rules or constraints?</li>
+<li><input disabled="" type="checkbox"> Did I specify output format?</li>
+<li><input disabled="" type="checkbox"> Did I define what good output should help me decide or accomplish?</li>
+</ul>
+<hr>
+<h2 id="15-One-Sentence-Summary"><a href="#15-One-Sentence-Summary" class="headerlink" title="15. One-Sentence Summary"></a>15. One-Sentence Summary</h2><p>Tell AI:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Who I am, what I need, what context matters, what action to take, what rules to follow, and what good output looks like.</span><br></pre></td></tr></table></figure>
+
+<p>中文：</p>
+<blockquote>
+<p>告诉 AI：我是谁、我要什么、哪些背景重要、你要做什么、要遵守什么规则，以及什么样的输出才算好。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>AI &amp; Prompt Engineering</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>prompt engineering</tag>
+        <tag>ChatGPT</tag>
+        <tag>productivity</tag>
       </tags>
   </entry>
   <entry>
@@ -874,6 +2142,536 @@
       <tags>
         <tag>tools collection</tag>
         <tag>Linux/macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Prompt Debugging: Common Challenges and How to Fix Them</title>
+    <url>/2026/05/08/prompt-debugging-common-challenges-2026-05-08/</url>
+    <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>This material is essentially a <strong>Prompt Debugging Guide</strong>.</p>
+<p>When Claude or ChatGPT gives an answer that does not match your expectation, do not immediately assume that the model is weak. First check whether your prompt is missing one of these elements:</p>
+<ul>
+<li>context</li>
+<li>length requirement</li>
+<li>output format</li>
+<li>factual constraints</li>
+<li>tone guidance</li>
+<li>examples</li>
+</ul>
+<p>A practical debugging loop is:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Bad Output → Diagnose Prompt Gap → Add Context / Rules / Format / Examples → Retry</span><br></pre></td></tr></table></figure>
+
+<p>This directly maps to the prompt framework:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Setting the Stage → Defining the Task → Specifying Rules</span><br></pre></td></tr></table></figure>
+
+<p>If the output is poor, usually one of these parts is underspecified.</p>
+<hr>
+<h2 id="2-Overall-Meaning"><a href="#2-Overall-Meaning" class="headerlink" title="2. Overall Meaning"></a>2. Overall Meaning</h2><p>The original text says that, when working with Claude, you will likely encounter moments where the response is not quite what you expected.</p>
+<p>This is normal.</p>
+<p>More importantly, it is an opportunity to refine the way you communicate with the model.</p>
+<p>AI interaction should be treated as an iterative process:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Prompt → Response → Evaluate → Refine Prompt → Better Response</span><br></pre></td></tr></table></figure>
+
+<p>This is the same logic as iterative debugging.</p>
+<hr>
+<h2 id="3-Challenge-1-The-Response-Is-Too-Generic"><a href="#3-Challenge-1-The-Response-Is-Too-Generic" class="headerlink" title="3. Challenge 1: The Response Is Too Generic"></a>3. Challenge 1: The Response Is Too Generic</h2><h3 id="Meaning"><a href="#Meaning" class="headerlink" title="Meaning"></a>Meaning</h3><p><strong>Generic</strong> means:</p>
+<blockquote>
+<p>too general, not specific enough, and not tailored to your actual situation.</p>
+</blockquote>
+<h3 id="What-Is-Happening"><a href="#What-Is-Happening" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>The prompt did not include enough context about the specific situation.</p>
+<p>For example:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Write an email about the project delay.</span><br></pre></td></tr></table></figure>
+
+<p>This is too generic because the model does not know:</p>
+<ul>
+<li>who the audience is</li>
+<li>how long the delay is</li>
+<li>why the delay happened</li>
+<li>whether the audience is already upset</li>
+<li>whether the tone should be formal, apologetic, or casual</li>
+<li>whether this is internal or external communication</li>
+</ul>
+<h3 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h3><p>Add details about:</p>
+<ul>
+<li>audience</li>
+<li>role</li>
+<li>business context</li>
+<li>constraints</li>
+<li>relationship status</li>
+<li>tone</li>
+</ul>
+<p>Better prompt:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Write an email to our enterprise client explaining that the software integration will be delayed by two weeks. They&#x27;ve been patient so far but this is the second delay. Keep it professional but apologetic.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Why-This-Is-Better"><a href="#Why-This-Is-Better" class="headerlink" title="Why This Is Better"></a>Why This Is Better</h3><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Audience</td>
+<td>enterprise client</td>
+</tr>
+<tr>
+<td>Situation</td>
+<td>software integration delayed</td>
+</tr>
+<tr>
+<td>Time impact</td>
+<td>two weeks</td>
+</tr>
+<tr>
+<td>Relationship context</td>
+<td>client has been patient</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>second delay</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>professional but apologetic</td>
+</tr>
+</tbody></table>
+<h3 id="Storage-QA-Analogy"><a href="#Storage-QA-Analogy" class="headerlink" title="Storage &#x2F; QA Analogy"></a>Storage &#x2F; QA Analogy</h3><p>Weak:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze this Jenkins failure.</span><br></pre></td></tr></table></figure>
+
+<p>Better:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I am a storage-focused SDET. This Jenkins job failed during pre-test setup in an iSCSI environment. Please analyze whether the likely cause is environment setup, test logic, or product behavior. Build an evidence chain and suggest the next three checks.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rule"><a href="#Rule" class="headerlink" title="Rule"></a>Rule</h3><p>If the answer is too generic, the prompt probably lacks context.</p>
+<hr>
+<h2 id="4-Challenge-2-The-Response-Is-Too-Long-or-Too-Short"><a href="#4-Challenge-2-The-Response-Is-Too-Long-or-Too-Short" class="headerlink" title="4. Challenge 2: The Response Is Too Long or Too Short"></a>4. Challenge 2: The Response Is Too Long or Too Short</h2><h3 id="What-Is-Happening-1"><a href="#What-Is-Happening-1" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude is guessing the appropriate length.</p>
+<p>If you do not specify length, the model has to infer whether you want:</p>
+<ul>
+<li>a short summary</li>
+<li>a detailed explanation</li>
+<li>a report</li>
+<li>an executive summary</li>
+<li>a Jira comment</li>
+<li>a full technical analysis</li>
+</ul>
+<h3 id="Fix-1"><a href="#Fix-1" class="headerlink" title="Fix"></a>Fix</h3><p>Be explicit about length.</p>
+<p>Examples:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Give me a two-paragraph summary.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Keep this under 100 words.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I need a comprehensive analysis. Length is not a concern.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Practical-Length-Controls"><a href="#Practical-Length-Controls" class="headerlink" title="Practical Length Controls"></a>Practical Length Controls</h3><table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Prompt Pattern</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Very short</td>
+<td>Keep it under 100 words.</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Give me a 3-paragraph explanation.</td>
+</tr>
+<tr>
+<td>Detailed</td>
+<td>Give me a detailed step-by-step analysis.</td>
+</tr>
+<tr>
+<td>No length limit</td>
+<td>Length is not a concern. Focus on completeness.</td>
+</tr>
+<tr>
+<td>IM-friendly</td>
+<td>Make it concise enough for an instant message.</td>
+</tr>
+<tr>
+<td>Report-style</td>
+<td>Structure it as a professional report.</td>
+</tr>
+</tbody></table>
+<h3 id="Storage-QA-Examples"><a href="#Storage-QA-Examples" class="headerlink" title="Storage &#x2F; QA Examples"></a>Storage &#x2F; QA Examples</h3><p>For Jira:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Summarize this failure in 3 bullet points for a Jira comment.</span><br></pre></td></tr></table></figure>
+
+<p>For root-cause analysis:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Give me a comprehensive root-cause analysis with evidence, assumptions, risks, and next debugging steps.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rule-1"><a href="#Rule-1" class="headerlink" title="Rule"></a>Rule</h3><p>If you do not specify length, the model will guess.</p>
+<hr>
+<h2 id="5-Challenge-3-Claude-Did-Not-Follow-the-Format"><a href="#5-Challenge-3-Claude-Did-Not-Follow-the-Format" class="headerlink" title="5. Challenge 3: Claude Did Not Follow the Format"></a>5. Challenge 3: Claude Did Not Follow the Format</h2><h3 id="What-Is-Happening-2"><a href="#What-Is-Happening-2" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude may understand what content you want, but not how you want it presented.</p>
+<p>There are two different layers:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content</td>
+<td>What the answer should include</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>How the answer should be organized</td>
+</tr>
+</tbody></table>
+<p>A prompt like this is underspecified:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze the issue.</span><br></pre></td></tr></table></figure>
+
+<p>The model may output long paragraphs, even if you actually wanted a structured format.</p>
+<h3 id="Fix-2"><a href="#Fix-2" class="headerlink" title="Fix"></a>Fix</h3><p>Use explicit formatting instructions.</p>
+<p>Example:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Use bullet points with bold headers for each section.</span><br></pre></td></tr></table></figure>
+
+<p>Stronger example:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Use this structure:</span><br><span class="line"></span><br><span class="line"># Conclusion</span><br><span class="line"># Evidence</span><br><span class="line"># Risks / Gaps</span><br><span class="line"># Next Steps</span><br></pre></td></tr></table></figure>
+
+<h3 id="Jira-Comment-Format"><a href="#Jira-Comment-Format" class="headerlink" title="Jira Comment Format"></a>Jira Comment Format</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Format the answer as a Jira comment:</span><br><span class="line"></span><br><span class="line">Summary:</span><br><span class="line">Evidence:</span><br><span class="line">Likely Root Cause:</span><br><span class="line">Impact:</span><br><span class="line">Next Action:</span><br></pre></td></tr></table></figure>
+
+<h3 id="Markdown-Note-Format"><a href="#Markdown-Note-Format" class="headerlink" title="Markdown Note Format"></a>Markdown Note Format</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Use Markdown headings, tables, and a final checklist.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rule-2"><a href="#Rule-2" class="headerlink" title="Rule"></a>Rule</h3><p>Content requirements and format requirements should be specified separately.</p>
+<hr>
+<h2 id="6-Challenge-4-Confident-Sounding-but-Wrong-Information"><a href="#6-Challenge-4-Confident-Sounding-but-Wrong-Information" class="headerlink" title="6. Challenge 4: Confident-Sounding but Wrong Information"></a>6. Challenge 4: Confident-Sounding but Wrong Information</h2><h3 id="Meaning-1"><a href="#Meaning-1" class="headerlink" title="Meaning"></a>Meaning</h3><p>The model gives information that sounds confident but later turns out to be wrong.</p>
+<p>This is often called hallucination.</p>
+<h3 id="Key-Terms"><a href="#Key-Terms" class="headerlink" title="Key Terms"></a>Key Terms</h3><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>confident-sounding</td>
+<td>sounds certain or authoritative</td>
+</tr>
+<tr>
+<td>turned out to be wrong</td>
+<td>later proved incorrect</td>
+</tr>
+<tr>
+<td>plausible</td>
+<td>seems reasonable</td>
+</tr>
+<tr>
+<td>incorrect</td>
+<td>wrong</td>
+</tr>
+<tr>
+<td>niche topics</td>
+<td>specialized or narrow topics</td>
+</tr>
+<tr>
+<td>high-stakes work</td>
+<td>work where mistakes have serious impact</td>
+</tr>
+</tbody></table>
+<h3 id="What-Is-Happening-3"><a href="#What-Is-Happening-3" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude or ChatGPT can occasionally generate plausible but incorrect information, especially when dealing with:</p>
+<ul>
+<li>specific facts</li>
+<li>niche technical domains</li>
+<li>current events</li>
+<li>exact product behavior</li>
+<li>legal, medical, or financial questions</li>
+<li>internal system details not provided in context</li>
+</ul>
+<h3 id="Fix-3"><a href="#Fix-3" class="headerlink" title="Fix"></a>Fix</h3><p>For high-stakes work:</p>
+<ol>
+<li>Verify key facts independently.</li>
+<li>Ask for citations or source references.</li>
+<li>Ask the model to separate facts from assumptions.</li>
+<li>Use web search or official documentation for current information.</li>
+<li>Do not trust confidence alone as evidence.</li>
+</ol>
+<h3 id="Better-Prompt-for-Technical-Analysis"><a href="#Better-Prompt-for-Technical-Analysis" class="headerlink" title="Better Prompt for Technical Analysis"></a>Better Prompt for Technical Analysis</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Separate facts, assumptions, and inferences.</span><br><span class="line">Do not claim root cause unless supported by evidence.</span><br><span class="line">If evidence is insufficient, state what data is missing.</span><br></pre></td></tr></table></figure>
+
+<p>Stricter version:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Only use the pasted logs as evidence.</span><br><span class="line">Do not invent environment details.</span><br><span class="line">Rank hypotheses by evidence strength.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Important-QA-Principle"><a href="#Important-QA-Principle" class="headerlink" title="Important QA Principle"></a>Important QA Principle</h3><p>A fluent answer is not the same as a correct answer.</p>
+<p>For debugging, the useful question is not:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Does the answer sound confident?</span><br></pre></td></tr></table></figure>
+
+<p>The useful question is:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Is the conclusion supported by evidence?</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rule-3"><a href="#Rule-3" class="headerlink" title="Rule"></a>Rule</h3><p>For high-impact facts, verify evidence instead of trusting fluency or confidence.</p>
+<hr>
+<h2 id="7-Challenge-5-The-Tone-Is-Not-Right"><a href="#7-Challenge-5-The-Tone-Is-Not-Right" class="headerlink" title="7. Challenge 5: The Tone Is Not Right"></a>7. Challenge 5: The Tone Is Not Right</h2><h3 id="What-Is-Happening-4"><a href="#What-Is-Happening-4" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude defaults to a helpful and professional tone. That may not match your actual need.</p>
+<p>Different scenarios require different tones.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Tone Needed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Apology to customer</td>
+<td>professional but apologetic</td>
+</tr>
+<tr>
+<td>Message to colleague</td>
+<td>casual, concise, polite</td>
+</tr>
+<tr>
+<td>Technical report</td>
+<td>formal and evidence-based</td>
+</tr>
+<tr>
+<td>Management summary</td>
+<td>executive, concise, business-focused</td>
+</tr>
+<tr>
+<td>Jira comment</td>
+<td>factual, direct, neutral</td>
+</tr>
+<tr>
+<td>Blog article</td>
+<td>educational and readable</td>
+</tr>
+</tbody></table>
+<h3 id="Fix-4"><a href="#Fix-4" class="headerlink" title="Fix"></a>Fix</h3><p>Describe the tone in plain language.</p>
+<p>Examples:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Make this more conversational.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This should sound authoritative and formal.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Rewrite this as a Jira comment. Make it factual, evidence-based, and neutral. Avoid emotional wording.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Rule-4"><a href="#Rule-4" class="headerlink" title="Rule"></a>Rule</h3><p>The model does not automatically know the tone you want. Specify it directly.</p>
+<hr>
+<h2 id="8-Prompt-Debugging-Table"><a href="#8-Prompt-Debugging-Table" class="headerlink" title="8. Prompt Debugging Table"></a>8. Prompt Debugging Table</h2><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Prompt Gap</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Too generic</td>
+<td>Missing context</td>
+<td>Add role, audience, constraints, and situation</td>
+</tr>
+<tr>
+<td>Too long &#x2F; too short</td>
+<td>Missing length requirement</td>
+<td>Specify word count, paragraph count, or depth</td>
+</tr>
+<tr>
+<td>Wrong format</td>
+<td>Missing output structure</td>
+<td>Provide a format template or example</td>
+</tr>
+<tr>
+<td>Confident but wrong</td>
+<td>Missing factual constraints</td>
+<td>Ask for citations, confidence level, and fact&#x2F;inference separation</td>
+</tr>
+<tr>
+<td>Wrong tone</td>
+<td>Missing tone guidance</td>
+<td>Describe the tone or provide an example</td>
+</tr>
+</tbody></table>
+<p>This is similar to software debugging:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Unexpected Output → Identify Missing Input / Constraint → Patch Prompt → Re-run</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="9-Relation-to-the-8-Part-Prompt-Framework"><a href="#9-Relation-to-the-8-Part-Prompt-Framework" class="headerlink" title="9. Relation to the 8-Part Prompt Framework"></a>9. Relation to the 8-Part Prompt Framework</h2><p>The previous full framework was:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role → Goal → Context → Task → Input → Rules → Output Format → Success Criteria</span><br></pre></td></tr></table></figure>
+
+<p>This guide explains what happens when one of those parts is missing.</p>
+<table>
+<thead>
+<tr>
+<th>Missing Component</th>
+<th>Common Failure</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Context</td>
+<td>Output too generic</td>
+</tr>
+<tr>
+<td>Output Format</td>
+<td>Format not followed</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Tone, length, and evidence quality become unstable</td>
+</tr>
+<tr>
+<td>Input Boundary</td>
+<td>Unsupported claims or hallucinations</td>
+</tr>
+<tr>
+<td>Success Criteria</td>
+<td>Answer may be correct but not useful</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="10-Practical-Prompt-Repair-Template"><a href="#10-Practical-Prompt-Repair-Template" class="headerlink" title="10. Practical Prompt Repair Template"></a>10. Practical Prompt Repair Template</h2><p>When the response is close but not good enough, use this follow-up prompt:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This is close, but please revise it with the following changes:</span><br><span class="line"></span><br><span class="line">1. Add more context about [specific background].</span><br><span class="line">2. Make it [shorter / longer / more detailed].</span><br><span class="line">3. Use this format: [format].</span><br><span class="line">4. Keep the tone [professional / concise / apologetic / formal].</span><br><span class="line">5. Separate facts, assumptions, and inferences.</span><br><span class="line">6. Do not include unsupported claims.</span><br></pre></td></tr></table></figure>
+
+<p>This is iterative prompting.</p>
+<hr>
+<h2 id="11-English-Learning-Notes"><a href="#11-English-Learning-Notes" class="headerlink" title="11. English Learning Notes"></a>11. English Learning Notes</h2><h3 id="Key-Vocabulary"><a href="#Key-Vocabulary" class="headerlink" title="Key Vocabulary"></a>Key Vocabulary</h3><table>
+<thead>
+<tr>
+<th>Word &#x2F; Phrase</th>
+<th>Chinese</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>common challenges</td>
+<td>常见挑战</td>
+<td>recurring problems</td>
+</tr>
+<tr>
+<td>how to fix them</td>
+<td>如何修复它们</td>
+<td>repair method</td>
+</tr>
+<tr>
+<td>encounter</td>
+<td>遇到</td>
+<td>meet or experience</td>
+</tr>
+<tr>
+<td>not quite what you expected</td>
+<td>不完全符合你的预期</td>
+<td>close, but not right</td>
+</tr>
+<tr>
+<td>refine your approach</td>
+<td>改进你的方法</td>
+<td>improve your method</td>
+</tr>
+<tr>
+<td>generic</td>
+<td>泛泛的，通用的</td>
+<td>not specific</td>
+</tr>
+<tr>
+<td>context</td>
+<td>上下文，背景</td>
+<td>situation information</td>
+</tr>
+<tr>
+<td>constraints</td>
+<td>限制条件</td>
+<td>requirements or boundaries</td>
+</tr>
+<tr>
+<td>enterprise client</td>
+<td>企业客户</td>
+<td>business customer</td>
+</tr>
+<tr>
+<td>apologetic</td>
+<td>带有歉意的</td>
+<td>expressing apology</td>
+</tr>
+<tr>
+<td>comprehensive analysis</td>
+<td>全面分析</td>
+<td>detailed and broad analysis</td>
+</tr>
+<tr>
+<td>confident-sounding</td>
+<td>听起来很自信的</td>
+<td>sounds certain</td>
+</tr>
+<tr>
+<td>plausible</td>
+<td>貌似合理的</td>
+<td>seems reasonable but may be wrong</td>
+</tr>
+<tr>
+<td>niche topics</td>
+<td>小众 &#x2F; 专门领域话题</td>
+<td>specialized topics</td>
+</tr>
+<tr>
+<td>high-stakes work</td>
+<td>高风险、高影响工作</td>
+<td>mistakes are costly</td>
+</tr>
+<tr>
+<td>independently verify</td>
+<td>独立验证</td>
+<td>check through another source</td>
+</tr>
+<tr>
+<td>cite sources</td>
+<td>引用来源</td>
+<td>provide references</td>
+</tr>
+<tr>
+<td>indicate confidence level</td>
+<td>标明置信度</td>
+<td>state confidence</td>
+</tr>
+<tr>
+<td>ground responses</td>
+<td>让回答有事实依据</td>
+<td>base answer on evidence</td>
+</tr>
+<tr>
+<td>tone</td>
+<td>语气</td>
+<td>writing attitude&#x2F;style</td>
+</tr>
+<tr>
+<td>authoritative</td>
+<td>权威的，有分量的</td>
+<td>confident and formal</td>
+</tr>
+</tbody></table>
+<h3 id="Useful-Collocations"><a href="#Useful-Collocations" class="headerlink" title="Useful Collocations"></a>Useful Collocations</h3><ul>
+<li>refine your approach</li>
+<li>provide enough context</li>
+<li>verify key facts independently</li>
+<li>ground responses in current information</li>
+<li>specify the output format</li>
+<li>separate facts, assumptions, and inferences</li>
+</ul>
+<hr>
+<h2 id="12-Risks-Gaps"><a href="#12-Risks-Gaps" class="headerlink" title="12. Risks &#x2F; Gaps"></a>12. Risks &#x2F; Gaps</h2><p>This guide is useful, but two risks should be noted.</p>
+<h3 id="Risk-1-Prompt-repair-cannot-compensate-for-poor-input-quality"><a href="#Risk-1-Prompt-repair-cannot-compensate-for-poor-input-quality" class="headerlink" title="Risk 1: Prompt repair cannot compensate for poor input quality"></a>Risk 1: Prompt repair cannot compensate for poor input quality</h3><p>If the logs, documents, screenshots, or facts are incomplete, even a strong prompt can only produce limited conclusions.</p>
+<h3 id="Risk-2-Model-confidence-is-not-evidence"><a href="#Risk-2-Model-confidence-is-not-evidence" class="headerlink" title="Risk 2: Model confidence is not evidence"></a>Risk 2: Model confidence is not evidence</h3><p>Asking for a confidence level can be useful, but confidence is not proof.</p>
+<p>Reliable evidence comes from:</p>
+<ul>
+<li>logs</li>
+<li>official documentation</li>
+<li>cited sources</li>
+<li>reproducible commands</li>
+<li>test results</li>
+<li>verifiable observations</li>
+</ul>
+<hr>
+<h2 id="13-Final-Rule"><a href="#13-Final-Rule" class="headerlink" title="13. Final Rule"></a>13. Final Rule</h2><p>When the answer is wrong, vague, too long, badly formatted, or wrong in tone:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Debug the prompt before blaming the model.</span><br></pre></td></tr></table></figure>
+
+<p>Chinese version:</p>
+<blockquote>
+<p>当回答不对、太泛、太长、格式不对或语气不对时，先调试 Prompt，再判断模型能力。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>AI &amp; Prompt Engineering</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>prompt engineering</tag>
+        <tag>ChatGPT</tag>
+        <tag>debugging</tag>
       </tags>
   </entry>
   <entry>
@@ -1486,57 +3284,445 @@
         <category>English Learning</category>
       </categories>
       <tags>
-        <tag>vocabulary</tag>
         <tag>English</tag>
+        <tag>vocabulary</tag>
         <tag>workplace English</tag>
         <tag>AI terms</tag>
       </tags>
   </entry>
   <entry>
-    <title>Python 小工具：时间戳秒数差值计算器（calculate_timestamp.py）</title>
-    <url>/2025/06/11/calculate_timestamp_post/</url>
-    <content><![CDATA[<p>在日常工作中，我经常遇到这样的场景：拿到一个日志时间戳（如 <code>250610-163134</code>），还需要结合某个以秒为单位的偏移值，还原真实发生的时间。</p>
-<p>为此，我编写了一个小脚本 <code>calculate_timestamp.py</code>，使用 Python 的标准库 <code>argparse</code> 和 <code>datetime</code>，帮助我快速完成转换。</p>
-<hr>
-<h2 id="📌-问题背景"><a href="#📌-问题背景" class="headerlink" title="📌 问题背景"></a>📌 问题背景</h2><p>日志分析或调试某些系统问题时，经常会遇到“时间戳 + 秒数差”这样的数据组合。手工换算效率低且容易出错，于是我决定用脚本来解决。</p>
-<hr>
-<h2 id="🛠️-脚本功能说明"><a href="#🛠️-脚本功能说明" class="headerlink" title="🛠️ 脚本功能说明"></a>🛠️ 脚本功能说明</h2><p>该脚本支持从命令行输入以下两个参数：</p>
-<ul>
-<li><code>--seconds</code> &#x2F; <code>-s</code>: 要减去的秒数（支持浮点数）</li>
-<li><code>--timestamp</code> &#x2F; <code>-t</code>: 原始时间戳，格式为 <code>YYMMDD-HHMMSS</code></li>
-</ul>
-<p>示例命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python calculate_timestamp.py --seconds 249890.63 --timestamp 250610-163134</span><br></pre></td></tr></table></figure>
-
-<p>脚本输出转换后的新时间戳（仍为 YYMMDD-HHMMSS 格式）。</p>
-<hr>
-<h2 id="🧩-核心代码展示"><a href="#🧩-核心代码展示" class="headerlink" title="🧩 核心代码展示"></a>🧩 核心代码展示</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    parser = argparse.ArgumentParser(</span><br><span class="line">        description=<span class="string">&quot;Subtract seconds from a timestamp and output the new timestamp in YYMMDD-HHMMSS format.&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--seconds&quot;</span>, <span class="string">&quot;-s&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">float</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Number of seconds to subtract (e.g., 249890.63)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    parser.add_argument(</span><br><span class="line">        <span class="string">&quot;--timestamp&quot;</span>, <span class="string">&quot;-t&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="built_in">str</span>,</span><br><span class="line">        required=<span class="literal">True</span>,</span><br><span class="line">        <span class="built_in">help</span>=<span class="string">&quot;Original timestamp in YYMMDD-HHMMSS format (e.g., 250610-163134)&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        original_time = datetime.strptime(args.timestamp, <span class="string">&quot;%y%m%d-%H%M%S&quot;</span>)</span><br><span class="line">        new_time = original_time - timedelta(seconds=args.seconds)</span><br><span class="line">        <span class="built_in">print</span>(new_time.strftime(<span class="string">&quot;%y%m%d-%H%M%S&quot;</span>))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="⚙️-踩坑与扩展想法"><a href="#⚙️-踩坑与扩展想法" class="headerlink" title="⚙️ 踩坑与扩展想法"></a>⚙️ 踩坑与扩展想法</h2><ul>
-<li>使用 <code>argparse</code> 设计参数更加规范，可扩展性好；</li>
-<li><code>datetime.strptime()</code> 格式需完全匹配，否则会抛错；</li>
-<li>可以进一步支持 ISO 8601 格式、毫秒精度或时区处理。</li>
-</ul>
-<hr>
-<h2 id="🔗-相关链接"><a href="#🔗-相关链接" class="headerlink" title="🔗 相关链接"></a>🔗 相关链接</h2><ul>
-<li>📦 项目仓库地址：<a href="https://github.com/mokin1104/little.tools">GitHub · little.tools</a></li>
-<li>📄 README 文件：<a href="https://github.com/mokin1104/little.tools/blob/main/README.md">查看 README</a></li>
-</ul>
-<hr>
-<h2 id="🧠-总结"><a href="#🧠-总结" class="headerlink" title="🧠 总结"></a>🧠 总结</h2><p>虽然只是一个小工具，但这个脚本解决了我在日志分析中一个具体的痛点。<br>用 Python 构建小工具的过程简单高效，也让我更熟悉了时间处理与命令行工具设计。</p>
-<blockquote>
-<p>Small tools, big impact. That’s what makes programming satisfying.</p>
-</blockquote>
+    <title>左耳听风学习笔记：第一讲精要整理</title>
+    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/</url>
+    <content><![CDATA[<ol>
+<li><p>在工作当中，对于那些没什么技术含量的工作，基本上就像是在学生时代那样交作业就好了</p>
+</li>
+<li><p>想尽一切方法提高交作业的效率</p>
+</li>
+<li><p>目的：可以有更多的时间，去研究公司内外那些更为核心更有技术含量的技术了</p>
+</li>
+<li><p>英文技术文档通读一遍</p>
+</li>
+<li><p>分享做得真好，条理性很强，也很清楚，可以让别人学到很多东西</p>
+</li>
+<li><p>要去经历多数人经历不到的，要把学习时间花在那些比较难的地方</p>
+</li>
+<li><p>写文章就要写别人没有写过的，或者别人写过，但我能写的更好的</p>
+</li>
+<li><p>技术和知识完全是可以变现的</p>
+</li>
+<li><p>25~35 岁是每个人最宝贵的时光，应该用在刀刃上</p>
+</li>
+<li><p>将时间精力放在一些主流、高级和比较有挑战性的技术上</p>
+<ol>
+<li>这么做可以保持技术和技能的领先</li>
+<li>也可以保持对技术本质和趋势的敏感度</li>
+</ol>
+</li>
+<li><p>这个世界本来就没什么标准答案，或是说，一个题目本来就可以有若干个正确答案，而且这些“正确答案”还很矛盾</p>
+</li>
+<li><p>无论别人骂我也好，教育我也罢，他们都对我有帮助，大大地丰富了我思考问题的角度</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>工作中解决的问题</category>
+        <category>学习与反思</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>脚本工具</tag>
-        <tag>时间戳</tag>
-        <tag>工作自动化</tag>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>competencies 和 abilities 的区别</title>
+    <url>/2026/05/11/english-competencies-vs-abilities/</url>
+    <content><![CDATA[<h1 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h1><p><strong>competencies 和 abilities 的区别是什么？</strong></p>
+<p>原句：</p>
+<blockquote>
+<p>identifies four core competencies that, when combined, can help you make the most of your AI interactions</p>
+</blockquote>
+<p>为什么这里使用 <strong>competencies</strong>，而不是 <strong>abilities</strong>？</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>这里用 <strong>competencies</strong> 更准确，因为它强调的是一组可以被培养、组合、应用到实际场景中的“综合能力模块”。</p>
+<p><strong>Abilities</strong> 更偏向“某人本身具备的能力或才能”，范围更宽，也更抽象。</p>
+<p><strong>Competencies</strong> 更偏向“在某个任务或领域中能有效完成工作的胜任力”，通常包括：</p>
+<ul>
+<li>knowledge：知识</li>
+<li>skills：技能</li>
+<li>behaviors：行为方式</li>
+<li>judgment：判断力</li>
+<li>practical application：实际应用能力</li>
+</ul>
+<p>所以：</p>
+<blockquote>
+<p>four core competencies</p>
+</blockquote>
+<p>更自然的理解不是简单的“四种能力”，而是“四项核心胜任力 &#x2F; 四个核心能力模块”。</p>
+<h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><h2 id="1-Abilities-的核心意思"><a href="#1-Abilities-的核心意思" class="headerlink" title="1. Abilities 的核心意思"></a>1. Abilities 的核心意思</h2><p><strong>Ability</strong> &#x3D; the ability to do something.</p>
+<p>重点是：<strong>你能不能做某事</strong>。</p>
+<p>常见搭配：</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>writing ability</td>
+<td>写作能力</td>
+</tr>
+<tr>
+<td>communication ability</td>
+<td>沟通能力</td>
+</tr>
+<tr>
+<td>problem-solving ability</td>
+<td>解决问题的能力</td>
+</tr>
+<tr>
+<td>ability to learn quickly</td>
+<td>快速学习的能力</td>
+</tr>
+</tbody></table>
+<p>例句：</p>
+<blockquote>
+<p>He has the ability to explain complex ideas clearly.</p>
+</blockquote>
+<p>意思是：</p>
+<blockquote>
+<p>他有能力把复杂概念解释清楚。</p>
+</blockquote>
+<p>这里强调的是“他能做到”。</p>
+<h2 id="2-Competencies-的核心意思"><a href="#2-Competencies-的核心意思" class="headerlink" title="2. Competencies 的核心意思"></a>2. Competencies 的核心意思</h2><p><strong>Competency</strong> &#x3D; proven capability in a professional or practical context.</p>
+<p>重点是：<strong>你在某个场景中是否具备可应用、可衡量、可训练的胜任力</strong>。</p>
+<p>它常用于：</p>
+<ul>
+<li>workplace：职场</li>
+<li>training：培训</li>
+<li>education：教育</li>
+<li>leadership：领导力</li>
+<li>AI literacy：AI 素养</li>
+<li>professional development：职业发展</li>
+</ul>
+<p>常见搭配：</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>core competencies</td>
+<td>核心胜任力 &#x2F; 核心能力模块</td>
+</tr>
+<tr>
+<td>technical competencies</td>
+<td>技术胜任力</td>
+</tr>
+<tr>
+<td>leadership competencies</td>
+<td>领导力胜任力</td>
+</tr>
+<tr>
+<td>AI competencies</td>
+<td>AI 使用 &#x2F; AI 协作胜任力</td>
+</tr>
+</tbody></table>
+<p>例句：</p>
+<blockquote>
+<p>Critical thinking is a core competency for working with AI.</p>
+</blockquote>
+<p>意思是：</p>
+<blockquote>
+<p>批判性思维是与 AI 协作的一项核心胜任力。</p>
+</blockquote>
+<p>这里不是说“你天生有没有这个能力”，而是说“你是否掌握了一个可训练、可应用的能力体系”。</p>
+<h1 id="Why-competencies-is-better-here"><a href="#Why-competencies-is-better-here" class="headerlink" title="Why competencies is better here"></a>Why competencies is better here</h1><p>原句：</p>
+<blockquote>
+<p>identifies four core competencies that, when combined, can help you make the most of your AI interactions</p>
+</blockquote>
+<p>这句话的逻辑是：</p>
+<blockquote>
+<p>这四个核心能力模块结合起来，可以帮助你最大化 AI 交互的价值。</p>
+</blockquote>
+<p>它强调的是一套 <strong>AI interaction skillset</strong>，不是单个抽象能力。</p>
+<p>如果改成：</p>
+<blockquote>
+<p>identifies four core abilities</p>
+</blockquote>
+<p>语法没有问题，但语感会弱一些。它听起来更像：</p>
+<blockquote>
+<p>识别出四种你本身拥有的能力。</p>
+</blockquote>
+<p>而不是：</p>
+<blockquote>
+<p>识别出四项你需要掌握、训练、组合使用的核心胜任力。</p>
+</blockquote>
+<p>因此，在培训、课程、方法论、职场能力模型中，<strong>competencies</strong> 比 <strong>abilities</strong> 更专业、更体系化。</p>
+<h1 id="Comparison"><a href="#Comparison" class="headerlink" title="Comparison"></a>Comparison</h1><table>
+<thead>
+<tr>
+<th>Word</th>
+<th>中文近似</th>
+<th>重点</th>
+<th>常见场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ability</td>
+<td>能力 &#x2F; 才能</td>
+<td>能不能做某事</td>
+<td>日常、通用表达</td>
+</tr>
+<tr>
+<td>competency</td>
+<td>胜任力 &#x2F; 能力模块</td>
+<td>能否在实际场景中有效完成任务</td>
+<td>职场、教育、培训、能力框架</td>
+</tr>
+</tbody></table>
+<h1 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h1><p>原句可以翻译为：</p>
+<blockquote>
+<p>它识别出了四项核心胜任力；当这些胜任力结合起来时，可以帮助你最大化与 AI 交互的价值。</p>
+</blockquote>
+<p>更自然一点：</p>
+<blockquote>
+<p>它总结了四个核心能力模块。把它们结合起来使用，可以帮助你更高效地与 AI 互动。</p>
+</blockquote>
+<h1 id="Workplace-Collocations"><a href="#Workplace-Collocations" class="headerlink" title="Workplace Collocations"></a>Workplace Collocations</h1><h2 id="1-core-competencies"><a href="#1-core-competencies" class="headerlink" title="1. core competencies"></a>1. core competencies</h2><p>核心胜任力 &#x2F; 核心能力模块</p>
+<p>Example:</p>
+<blockquote>
+<p>Prompting, context management, critical thinking, and result verification are core competencies for effective AI collaboration.</p>
+</blockquote>
+<h2 id="2-develop-competencies-in-AI-collaboration"><a href="#2-develop-competencies-in-AI-collaboration" class="headerlink" title="2. develop competencies in AI collaboration"></a>2. develop competencies in AI collaboration</h2><p>培养 AI 协作方面的胜任力</p>
+<p>Example:</p>
+<blockquote>
+<p>To work effectively with AI, we need to develop core competencies in prompting, context management, critical thinking, and result verification.</p>
+</blockquote>
+<h1 id="Key-Takeaway"><a href="#Key-Takeaway" class="headerlink" title="Key Takeaway"></a>Key Takeaway</h1><p>当你想表达“某人能不能做某事”时，用 <strong>ability</strong>。</p>
+<p>当你想表达“在某个专业场景中，能够稳定、有效、可训练地完成任务的一组能力”时，用 <strong>competency</strong>。</p>
+<p>在 AI 学习、职场培训、职业能力模型中，<strong>core competencies</strong> 是更准确、更正式的表达。</p>
+]]></content>
+      <categories>
+        <category>English Learning</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>Vocabulary</tag>
+        <tag>AI Literacy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>左耳听风学习笔记：第三、四讲精要整理</title>
+    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%89%E3%80%81%E5%9B%9B%E8%AE%B2/</url>
+    <content><![CDATA[<h1 id="数据泄露攻击"><a href="#数据泄露攻击" class="headerlink" title="数据泄露攻击"></a>数据泄露攻击</h1><p>以这些公司为例，我们来看看这些攻击是怎样实现的：</p>
+<ol>
+<li>利用程序框架或库的已知漏洞。比如这次 Equifax 被攻击，就是通过 Apache Struts 的已知漏洞。RSA 被攻击，也利用了 Adobe Flash 的已知漏洞。还有之前的“心脏流血”也是使用了 OpenSSL 的漏洞……</li>
+<li>暴力破解密码。利用密码字典库或是已经泄露的密码来“撞库”</li>
+<li>代码注入。通过程序员代码的安全性问题，如 SQL 注入、XSS 攻击、CSRF 攻击等取得用户的权限</li>
+<li>利用程序日志不小心泄露的信息。携程的信息泄露就是本不应该能被读取的日志没有权限保护被读到了</li>
+<li>社会工程学。RSA 被攻击，第一道防线是人——RSA 的员工。只有员工的安全意识增强了，才能抵御此类攻击。其它的如钓鱼攻击也属于此类</li>
+</ol>
+<h1 id="数据管理上的问题"><a href="#数据管理上的问题" class="headerlink" title="数据管理上的问题"></a>数据管理上的问题</h1><ol>
+<li>只有一层安全。Equifax 只是被黑客攻破了管理面板和数据库，就造成了数据泄露。显然这样只有一层安全防护是不够的</li>
+<li>弱密码。Equifax 数据泄露事件绝对是管理问题。至少，密码系统应该不能让用户设置如此简单的密码，而且还要定期更换。最好的方式是通过数据证书、VPN、双因子验证的方式来登录</li>
+<li>向公网暴露了内部系统。在公司网络管理上出现了非常严重的问题</li>
+<li>对系统及时打安全补丁。监控业内的安全漏洞事件，及时作出响应，这是任何一个有高价值数据的公司都需要干的事</li>
+<li>安全日志被暴露。安全日志往往包含大量信息，被暴露是非常危险的。携程的 CVV 泄露就是从日志中被读到的</li>
+<li>保存了不必要保存的用户数据。携程保存了用户的信用卡号、有效期、姓名和 CVV 码，这些信息足以让人在网上盗刷信用卡。其实对于临时支付来说，这些信息完全可以不保存在磁盘上，临时在内存中处理完毕立即销毁，是最安全的做法。即便是快捷支付，也没有必要保存 CVV 码。安全日志也没有必要将所有信息都保存下来，比如可以只保存卡号后四位，也同样可以用于处理程序故障</li>
+<li>密码没有被合理地散列。以现代的安全观念来说，以明文方式保存密码是很不专业的做法。进一步的是只保存密码的散列值（用安全散列算法），LinkedIn 就是这样做的。但是，散列一则需要用目前公认安全的算法（比如 SHA-2 256），而已知被攻破的算法则最好不要使用（如 MD5，能人为找到碰撞，对密码验证来说问题不大），二则要加一个安全随机数作为盐（salt）。LinkedIn 的问题正在于没有加盐，导致密码可以通过预先计算的彩虹表（rainbow table）反查出明文。这些密码明文可以用来做什么事，就不好说了，撞库什么的都有可能了。对用户来说，最好是不同网站用不同密码</li>
+</ol>
+<h1 id="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践"><a href="#对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践" class="headerlink" title="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践"></a>对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践</h1><ol>
+<li>理解你的软件产品中使用了哪些支持性框架和库，它们的版本号分别是多少，时刻跟踪影响这些产品和版本的最新安全性声明</li>
+<li>建立一个流程，来快速地部署带有安全补丁的软件产品发布版，这样一旦需要因为安全方面的原因而更新支持性框架或库，就可以快速地发布。最好能在几个小时或几天内完成，而不是几周或几个月。我们发现，绝大多数被攻破的情况是因为几个月或几年都没有更新有漏洞的软件组件而引起的</li>
+<li>所有复杂的软件都有漏洞。不要基于“支持性软件产品没有安全性漏洞”这样的假设来建立安全策略</li>
+<li>建立多个安全层。在一个面向公网的表示层（比如 Apache Struts 框架）后面建立多级有安全防护的层次，是一种良好的软件工程实践。就算表示层被攻破，也不会直接提供出重要（或所有）后台信息资源的访问权</li>
+<li>针对公网资源，建立对异常访问模式的监控机制。现在有很多侦测这些行为模式的开源和商业化产品，一旦发现异常访问就能发出警报。作为一种良好的运维实践，我们建议针对关键业务的网页服务应用一定要有这些监控机制</li>
+</ol>
+<p>在吉伦提的第二点中说到，理想的更新时间是在几个小时到几天。我们知道，作为企业，部署了一个版本的程序库，在更新前需要在测试系统上测试各个业务模块，确保兼容以后才能上线</p>
+<p>否则，盲目上线一个新版本，一旦遇到不兼容的情况，业务会部分或全部停滞，给客户留下不良印象，经济损失将是不可避免的。因此，这个更新周期必须通过软件工程手段来保证</p>
+<p>自动化测试的重要性：</p>
+<ol>
+<li>对以数据库为基础的程序库，设置专门的、初始时全空的测试用数据库来进行 API 级别的测试</li>
+<li>对于 UI 框架，使用 UI 自动化测试工具进行自动化测试</li>
+<li>测试在原则上必须覆盖上层业务模块<strong>所有需要的功能</strong>，并对其兼容性加以验证</li>
+<li>业务模块要连同程序库一起做集成的自动化测试，同时也要有单元测试</li>
+<li>升级前的人工测试也有必要，但由于安全性更新的紧迫性，覆盖主要和重要路径即可</li>
+</ol>
+<p>如果测试发现不兼容性，无法立即升级，那么要考虑的第二点是缓解措施（mitigation）。</p>
+<p>比如：</p>
+<ol>
+<li>能否禁用有漏洞的部分而不影响业务？</li>
+<li>如果不可行，那么是否可以通过 WAF 的设置来把一定特征的攻击载荷挡在门外？</li>
+<li>这些都是临时解决方案，要到开发部门把业务程序更新为能用新版本库，才能上线新版本的应用程序</li>
+</ol>
+<h1 id="技术上的安全做法"><a href="#技术上的安全做法" class="headerlink" title="技术上的安全做法"></a>技术上的安全做法</h1><p>从技术上来说，安全防范最好是做到连自己内部员工都能防，因为无论是程序的 BUG 还是漏洞，都是为了取得系统的权限而获得数据</p>
+<p>如果我们连内部人都能防的话，那么就可以不用担心绝大多数的系统漏洞了</p>
+<p>所谓“家贼难防”，如果要做到这一点，一般来说，有如下的一些方式：</p>
+<ol>
+<li>我们需要把我们的关键数据定义出来，然后把这些关键数据隔离出来，隔离到一个安全级别非常高的地方，所谓<strong>安全级别非常高的地方，即这个地方需要有各种如安全审计、安全监控、安全访问的区域</strong></li>
+<li>一般来说，在这个区域内，这些<strong>敏感数据只进不出</strong>，通过提供服务接口来让别的系统只能在这个区域内操作这些数据，而不是把数据传出去，让别的系统在外部来操作这些数据</li>
+</ol>
+<p>举个例子，用户的手机号是敏感信息，如果有外部系统需要使用手机号，一般来说是想发个短信，**那么我们这个掌管手机号数据的系统就对外提供发短信的功能，而外部系统通过 UID 或是别的抽象字段来调用这个系统的发短信的 API。**信用卡也一样，提供信用卡的扣款 API 而不是把卡号返回给外部系统</p>
+<p>另外，如果业务必须返回用户的数据，一般来说，最终用户可能需要读取自己的数据，那么，对于像信用卡这样的关键数据是死也不能返回全部数据的，只能返回一个被“马赛克”了的数据（隐藏掉部分信息）</p>
+<p>就算需要返回一些数据（如用户的地址），那么也<strong>需要在传输层上加密返回</strong></p>
+<p>用户加密的算法一定要采用非对称加密的方式，而且还要加上密钥的自动化更换，比如：在外部系统调用 100 次或是第一个小时后就自动更换加密的密钥</p>
+<p>这样，整个系统在运行时就完全是自动化的了，而就算黑客得到了密钥，密匙也会过期，这样可以控制泄露范围</p>
+<p><strong>被加密的数据和用于加密的密钥是由不同的人来管理的</strong>，有密钥的人没有数据，有数据的人没有密钥，这两拨人可以有访问自己系统的权限，但是没有访问对方系统的权限。这样可以让这两拨人互相审计，互相牵制，从而提高数据的安全性</p>
+<p>而密钥一定要做到随机生成，最好是对于不同用户的数据有不同的密钥，并且时不时地就能自动化更新一下，这样就可以做到内部防范</p>
+<p>注明一下，按道理来说，用户自己的私钥应该由用户自己来保管，而公司的系统是不存的，而用户需要更新密钥时，需要对用户做身份鉴别，可以通过双因子认证，也可以通过更为严格的物理身份验证，例如，到银行柜台拿身份证重置密码</p>
+<p>每当这些关键信息传到外部系统，需要做通知，最好是通知用户和自己的管理员</p>
+<p>并且限制外部系统的数据访问量，超过访问量后，需要报警或是拒绝访问</p>
+<p>所谓的安全方案基本上来说就是能够把这个风险控制在一个很小的范围，对于在这个很小范围内出现的一些数据安全的泄露，我们可以通过“风控基金”来做业务上的补偿，比如赔偿用户损失，等等</p>
+<p>因为从经济利益上来说，如果风险可以控制在一个——我防范它的成本远高于我赔偿它的成本，那么，还不如赔偿了</p>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>左耳听风学习笔记：第六讲精要整理 - 如何才能拥有技术领导力</title>
+    <url>/2025/06/25/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E5%85%AD%E8%AE%B2/</url>
+    <content><![CDATA[<h1 id="如何才能拥有技术领导力？"><a href="#如何才能拥有技术领导力？" class="headerlink" title="如何才能拥有技术领导力？"></a>如何才能拥有技术领导力？</h1><ol>
+<li>要吃透基础技术，基础技术是各种上层技术共同的基础<ol>
+<li>吃透基础技术是为了更好理解程序的运行原理，并基于这些基础技术进化出更优化的产品</li>
+</ol>
+</li>
+<li>吃透基础技术的好处：<ol>
+<li>基础知识越扎实，走得就会越远</li>
+<li>计算机技术太多了，但是仔细分析你会发现，只是表现形式很多，而基础技术并不多，学好基础技术，能让你一通百通，更快地使用各种新技术，从而可以更轻松地与时代同行</li>
+<li>很多分布式系统架构，以及高可用、高性能、高并发的解决方案基本都可以在基础技术上找到它们的身影，所以，学习基础技术能让你更好地掌握更高维度的技术</li>
+</ol>
+</li>
+</ol>
+<h2 id="基础技术：编程和系统"><a href="#基础技术：编程和系统" class="headerlink" title="基础技术：编程和系统"></a>基础技术：编程和系统</h2><h3 id="编程部分"><a href="#编程部分" class="headerlink" title="编程部分"></a>编程部分</h3><ol>
+<li><p>C语言 - C 语言更接近底层，在具备跨平台能力的前提下，它可以比较容易地被人工翻译成相应的汇编代码，它的内存管理更为直接，可以让我们直接和内存地址打交道；学习好 C 语言的好处是能掌握程序的运行情况，并能进行应用程序和操作系统编程（操作系统一般是汇编和 C 语言），除了让你更为了解操作系统之外，学习 C 语言还能让你更清楚地知道程序是怎么精细控制底层资源的，比如内存管理、文件操作、网络通信……</p>
+</li>
+<li><p>汇编语言：如果你想更深入地了解计算机是怎么运作的，那么你是需要了解汇编语言的，虽然我们几乎不再用汇编语言编程了，但是如果你需要写一些如 lock free 之类高并发的东西，那么了解汇编语言，就能有助于你更好地理解和思考</p>
+</li>
+<li><p>编程范式：各种编程语言都有它们各自的编程范式，用于解决各种问题，比如：<strong>面向对象编程</strong>（C++、Java）、<strong>泛型编程</strong>（C++、Go、C#）、<strong>函数式编程</strong>（JavaScript、 Python、Lisp、Haskell、Erlang）等，学好编程范式，有助于培养你的抽象思维，同时也可以提高编程效率，提高程序的结构合理性、可读性和可维护性，降低代码的冗余度，进而提高代码的运行效率，要学习编程范式，你还可以多了解各种程序设计语言的功能特性</p>
+</li>
+<li><p>算法和数据结构：算法（及其相应的数据结构）是程序设计的有力支撑，适当地应用算法，可以有效地抽象问题，提高程序的合理性和执行效率，**算法是编程中最最重要的东西，也是计算机科学中最重要的基础。**任何有技术含量的软件中一定有高级的算法和数据结构</p>
+</li>
+</ol>
+<h3 id="系统部分"><a href="#系统部分" class="headerlink" title="系统部分"></a>系统部分</h3><ol>
+<li><p>计算机系统原理：</p>
+<ol>
+<li>CPU 的体系结构（指令集 [CISC&#x2F;RISC]、分支预测、缓存结构、总线、DMA、中断、陷阱、多任务、虚拟内存、虚拟化等）</li>
+<li>内存的原理与性能特点（SRAM、DRAM、DDR-SDRAM 等）</li>
+<li>磁盘的原理（机械硬盘 [盘面、磁头臂、磁头、启停区、寻道等]</li>
+<li>固态硬盘 [页映射、块的合并与回收算法、TRIM 指令等]）</li>
+<li>GPU 的原理等</li>
+</ol>
+<p>学习计算机系统原理的价值在于，除了能够了解计算机的原理之外，你还能举一反三地反推出高维度的分布式架构和高并发高可用的架构设计</p>
+<p>比如虚拟化内存就和今天云计算中的虚拟化的原理是相通的，计算机总线和分布式架构中的 ESB 也有相通之处，计算机指令调度、并发控制可以让你更好地理解并发编程和程序性能调优</p>
+</li>
+<li><p>操作系统原理和基础：</p>
+<ol>
+<li>进程、进程管理、线程、线程调度、多核的缓存一致性、信号量、物理内存管理、虚拟内存管理、内存分配、文件系统、磁盘管理等</li>
+<li>学习操作系统的价值在于：<ol>
+<li>理解程序是怎样被管理的</li>
+<li>操作系统对应用程序提供了怎样的支持</li>
+<li>抽象出怎样的编程接口（比如 POSIX&#x2F;Win32 API）</li>
+<li>性能特性如何（比如控制合理的上下文切换次数）</li>
+<li>怎样进行进程间通信（如管道、套接字、内存映射等），以便让不同的软件配合一起运行</li>
+</ol>
+</li>
+<li>要学习操作系统知识：<ol>
+<li>一是要仔细观察和探索当前使用的操作系统</li>
+<li>二是要阅读操作系统原理相关的图书</li>
+<li>三是要阅读 API 文档（如 man pages 和 MSDN Library），并编写调用操作系统功能的程序</li>
+</ol>
+</li>
+<li>学习操作系统基础原理的好处是：<ol>
+<li>这是所有程序运行的物理世界，无论上层是像 C&#x2F;C++ 这样编译成机器码的语言，还是像 Java 这样有 JVM 做中间层的语言，再或者像 Python&#x2F;PHP&#x2F;Perl&#x2F;Node.js 这样直接在运行时解释的语言，其在底层都逃离不了操作系统这个物理世界的“物理定律”</li>
+<li>了解操作系统的原理，可以让你更能从本质理解各种语言或是技术的底层原理，一眼看透本质可以让你更容易地掌握和使用高阶技术</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>网络基础：</p>
+<ol>
+<li>需要了解基本的网络层次结构（ISO&#x2F;OSI 模型、TCP&#x2F;IP 协议栈）：包括物理层、数据链路层（包含错误重发机制）、网络层（包含路由机制）、传输层（包含连接保持机制）、会话层、表示层、应用层（在 TCP&#x2F;IP 协议栈里，这三层可以并为一层）</li>
+<li>基础的网络协议，可以为我们的高维分布式架构中的一些技术问题提供很多的技术方案，比如 TCP 的滑动窗口限流，完全可以用于分布式服务中的限流方案</li>
+</ol>
+</li>
+<li><p>数据库原理：</p>
+<ol>
+<li>操作系统提供文件系统来管理文件数据，而文件比较适合保存连续的信息，如一篇文章、一个图片等。但有时需要保存一个名字等较短的信息。如果单个文件只保存名字这样的几个字节的信息的话，就会浪费大量的磁盘空间，而且无法方便地查询（除非使用索引服务）</li>
+<li>数据库更适合保存短的数据，而且可以方便地按字段进行查询</li>
+<li>现代流行的数据库管理系统有两大类：<ol>
+<li>SQL（基于 B+ 树，强一致性）</li>
+<li>NoSQL（较弱的一致性，较高的存取效率，基于哈希表或其他技术）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>分布式技术架构：</p>
+<ol>
+<li>数据库和应用程序服务器在应对互联网上数以亿计的访问量的时候，需要能进行横向扩展，这样才能提供足够高的性能，为了做到这一点，要学习分布式技术架构</li>
+<li>分布式技术架构包括：负载均衡、DNS 解析、多子域名、无状态应用层、缓存层、数据库分片、容错和恢复机制、Paxos、Map&#x2F;Reduce 操作、分布式 SQL 数据库一致性（以 Google Cloud Spanner 为代表）等知识点</li>
+<li>学习分布式技术架构的有效途径是参与到分布式项目的开发中去，并阅读相关论文</li>
+</ol>
+</li>
+</ol>
+<h2 id="提高学习能力"><a href="#提高学习能力" class="headerlink" title="提高学习能力"></a>提高学习能力</h2><p>所谓学习能力，就是能够很快地学习新技术，又能在关键技术上深入的能力</p>
+<h3 id="如何提升学习能力"><a href="#如何提升学习能力" class="headerlink" title="如何提升学习能力"></a>如何提升学习能力</h3><ol>
+<li><p>学习的信息源：常见的信息源有 Google 等搜索引擎，Stack Overflow、Quora 等社区，图书，API 文档，论文和博客等</p>
+</li>
+<li><p>与高手交流：程序员可以通过技术社区以及参加技术会议与高手交流，也可以通过参加开源项目来和高手切磋。常闻“听君一席话，胜读十年书”便是如此。与高手交流对程序员的学习和成长很有益处，不仅有助于了解热门的技术方向及关键的技术点，更可以通过观察和学习高手的技术思维及解决问题的方式，提高自己的技术前瞻性和技术决策力</p>
+</li>
+<li><p>举一反三的思考：</p>
+<ol>
+<li>了解了操作系统的缓存和网页缓存以后，你要思考其相同点和不同点</li>
+<li>了解了 C++ 语言的面向对象特性以后，思考 Java 面向对象的相同点和不同点</li>
+<li>遇到故障的时候，举一反三，把同类问题一次性地处理掉</li>
+</ol>
+</li>
+<li><p>不怕困难的态度：遇到难点，有时不花一番力气，是不可能突破的，此时如果没有不怕困难的态度，你就容易打退堂鼓，但如果能坚持住，多思考，多下功夫，往往就能找到出路，绝大多数人是害怕困难的，所以，如果你能够不怕困难，并可以找到解决困难的方法和路径，时间一长，你就能拥有别人所不能拥有的能力</p>
+</li>
+<li><p>开放的心态：实现一个目的通常有多种办法，带有开放的心态，不拘泥于一个平台、一种语言，往往能带来更多思考，也能得到更好的结果；而且，能在不同的方法和方案间做比较，比较它们的优缺点，那么你会知道在什么样的场景下用什么样的方案，你就会比一般人能够有更全面和更完整的思路</p>
+</li>
+</ol>
+<h2 id="坚持做正确的事情"><a href="#坚持做正确的事情" class="headerlink" title="坚持做正确的事情"></a>坚持做正确的事情</h2><p>做正确的事，比用正确的方式做事更重要，因为这样才始终会向目的地靠拢</p>
+<h3 id="哪些是正确的事呢？"><a href="#哪些是正确的事呢？" class="headerlink" title="哪些是正确的事呢？"></a>哪些是正确的事呢？</h3><ol>
+<li><p>提高效率的事：要学习和掌握良好的时间管理方式，管理好自己的时间，能显著提高自己的效率</p>
+</li>
+<li><p>自动化的事：程序员要充分利用自己的职业特质，当看见有可以自动化的步骤时，编写程序来自动化操作，可以显著提高效率</p>
+</li>
+<li><p>掌握前沿技术的事：掌握前沿的技术，有利于拓展自己的眼界，也有利于找到更好的工作；需要注意的是，有些技术虽然当下很火，但未必前沿，而是因为它比较易学易用，或者性价比高，由于学习一门技术需要花费不少时间，你应该选择自己最感兴趣的，有的放矢地去学习</p>
+</li>
+<li><p>知识密集型的事：知识密集型是相对于劳动密集型来说的，基本上，劳动密集型的事都能通过程序和机器来完成，而知识密集型的事却仍需要人来完成，所以人的价值此时就显现出来了；虽然现在人工智能似乎能做一些知识密集型的事（包括下围棋的 AlphaGo），但是在开放领域中相对于人的智能来说还是相去甚远，掌握了领域知识的人的价值依然很高</p>
+</li>
+<li><p>技术驱动的事：不仅是指用程序驱动的事，而且还包括一切技术改变生活的事，比如自动驾驶、火星登陆等，就算自己一时用不着，你也要了解这些，以便将来这些技术来临时能适应它们</p>
+</li>
+</ol>
+<h2 id="高标准要求自己"><a href="#高标准要求自己" class="headerlink" title="高标准要求自己"></a>高标准要求自己</h2><p>只有不断地提高标准 ，你才可能越走越高，所以，要以高标准要求自己，不断地反思、总结和审视自己，才能够提升自己</p>
+<ol>
+<li>Google 的自我评分卡</li>
+<li>敏锐的技术嗅觉：这是一个相对综合的能力，你需要充分利用信息源，GET 到新的技术动态，并通过参与技术社区的讨论，丰富自己了解技术的角度，思考一下是否是自己感兴趣的，能解决哪些实际问题，以及其背后的原因，新技术也好，旧技术的重大版本变化也罢</li>
+<li>强调实践，学以致用：学习知识，一定要实际用一用，可以是工作中的项目，也可以是自己的项目，不仅有利于吸收理解，更有利于深入到技术的本质，并可以与现有技术对比一下，同样的问题，用新技术解决有什么不同，带来了哪些优势，还有哪些有待改进的地方</li>
+<li>Lead by Example，永远在编程，不写代码，你就对技术细节不敏感，你无法做出可以实践的技术决策和方案</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>吃透基础技术、提高学习能力、坚持做正确的事、高标准要求自己，不仅会让你全面提升技术技能，还能很好地锻炼自己的技术思维，培养技术前瞻性和决策力，进而形成技术领导力</p>
+<p>然而，仅有技术还不够，作为一名合格的技术领导者，还需要有解决问题的各种软技能。比如，良好的沟通能力、组织能力、驱动力、团队协作能力等等</p>
+]]></content>
+      <categories>
+        <category>学习与反思</category>
+      </categories>
+      <tags>
+        <tag>技术成长</tag>
+        <tag>安全实践</tag>
+        <tag>技术领导力</tag>
+        <tag>左耳听风</tag>
       </tags>
   </entry>
   <entry>
@@ -2023,124 +4209,6 @@
       </tags>
   </entry>
   <entry>
-    <title>左耳听风学习笔记：第三、四讲精要整理</title>
-    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%89%E3%80%81%E5%9B%9B%E8%AE%B2/</url>
-    <content><![CDATA[<h1 id="数据泄露攻击"><a href="#数据泄露攻击" class="headerlink" title="数据泄露攻击"></a>数据泄露攻击</h1><p>以这些公司为例，我们来看看这些攻击是怎样实现的：</p>
-<ol>
-<li>利用程序框架或库的已知漏洞。比如这次 Equifax 被攻击，就是通过 Apache Struts 的已知漏洞。RSA 被攻击，也利用了 Adobe Flash 的已知漏洞。还有之前的“心脏流血”也是使用了 OpenSSL 的漏洞……</li>
-<li>暴力破解密码。利用密码字典库或是已经泄露的密码来“撞库”</li>
-<li>代码注入。通过程序员代码的安全性问题，如 SQL 注入、XSS 攻击、CSRF 攻击等取得用户的权限</li>
-<li>利用程序日志不小心泄露的信息。携程的信息泄露就是本不应该能被读取的日志没有权限保护被读到了</li>
-<li>社会工程学。RSA 被攻击，第一道防线是人——RSA 的员工。只有员工的安全意识增强了，才能抵御此类攻击。其它的如钓鱼攻击也属于此类</li>
-</ol>
-<h1 id="数据管理上的问题"><a href="#数据管理上的问题" class="headerlink" title="数据管理上的问题"></a>数据管理上的问题</h1><ol>
-<li>只有一层安全。Equifax 只是被黑客攻破了管理面板和数据库，就造成了数据泄露。显然这样只有一层安全防护是不够的</li>
-<li>弱密码。Equifax 数据泄露事件绝对是管理问题。至少，密码系统应该不能让用户设置如此简单的密码，而且还要定期更换。最好的方式是通过数据证书、VPN、双因子验证的方式来登录</li>
-<li>向公网暴露了内部系统。在公司网络管理上出现了非常严重的问题</li>
-<li>对系统及时打安全补丁。监控业内的安全漏洞事件，及时作出响应，这是任何一个有高价值数据的公司都需要干的事</li>
-<li>安全日志被暴露。安全日志往往包含大量信息，被暴露是非常危险的。携程的 CVV 泄露就是从日志中被读到的</li>
-<li>保存了不必要保存的用户数据。携程保存了用户的信用卡号、有效期、姓名和 CVV 码，这些信息足以让人在网上盗刷信用卡。其实对于临时支付来说，这些信息完全可以不保存在磁盘上，临时在内存中处理完毕立即销毁，是最安全的做法。即便是快捷支付，也没有必要保存 CVV 码。安全日志也没有必要将所有信息都保存下来，比如可以只保存卡号后四位，也同样可以用于处理程序故障</li>
-<li>密码没有被合理地散列。以现代的安全观念来说，以明文方式保存密码是很不专业的做法。进一步的是只保存密码的散列值（用安全散列算法），LinkedIn 就是这样做的。但是，散列一则需要用目前公认安全的算法（比如 SHA-2 256），而已知被攻破的算法则最好不要使用（如 MD5，能人为找到碰撞，对密码验证来说问题不大），二则要加一个安全随机数作为盐（salt）。LinkedIn 的问题正在于没有加盐，导致密码可以通过预先计算的彩虹表（rainbow table）反查出明文。这些密码明文可以用来做什么事，就不好说了，撞库什么的都有可能了。对用户来说，最好是不同网站用不同密码</li>
-</ol>
-<h1 id="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践"><a href="#对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的-5-条最佳实践" class="headerlink" title="对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践"></a>对于使用了开源或闭源的支持性程序库的软件产品或服务，建议如下的 5 条最佳实践</h1><ol>
-<li>理解你的软件产品中使用了哪些支持性框架和库，它们的版本号分别是多少，时刻跟踪影响这些产品和版本的最新安全性声明</li>
-<li>建立一个流程，来快速地部署带有安全补丁的软件产品发布版，这样一旦需要因为安全方面的原因而更新支持性框架或库，就可以快速地发布。最好能在几个小时或几天内完成，而不是几周或几个月。我们发现，绝大多数被攻破的情况是因为几个月或几年都没有更新有漏洞的软件组件而引起的</li>
-<li>所有复杂的软件都有漏洞。不要基于“支持性软件产品没有安全性漏洞”这样的假设来建立安全策略</li>
-<li>建立多个安全层。在一个面向公网的表示层（比如 Apache Struts 框架）后面建立多级有安全防护的层次，是一种良好的软件工程实践。就算表示层被攻破，也不会直接提供出重要（或所有）后台信息资源的访问权</li>
-<li>针对公网资源，建立对异常访问模式的监控机制。现在有很多侦测这些行为模式的开源和商业化产品，一旦发现异常访问就能发出警报。作为一种良好的运维实践，我们建议针对关键业务的网页服务应用一定要有这些监控机制</li>
-</ol>
-<p>在吉伦提的第二点中说到，理想的更新时间是在几个小时到几天。我们知道，作为企业，部署了一个版本的程序库，在更新前需要在测试系统上测试各个业务模块，确保兼容以后才能上线</p>
-<p>否则，盲目上线一个新版本，一旦遇到不兼容的情况，业务会部分或全部停滞，给客户留下不良印象，经济损失将是不可避免的。因此，这个更新周期必须通过软件工程手段来保证</p>
-<p>自动化测试的重要性：</p>
-<ol>
-<li>对以数据库为基础的程序库，设置专门的、初始时全空的测试用数据库来进行 API 级别的测试</li>
-<li>对于 UI 框架，使用 UI 自动化测试工具进行自动化测试</li>
-<li>测试在原则上必须覆盖上层业务模块<strong>所有需要的功能</strong>，并对其兼容性加以验证</li>
-<li>业务模块要连同程序库一起做集成的自动化测试，同时也要有单元测试</li>
-<li>升级前的人工测试也有必要，但由于安全性更新的紧迫性，覆盖主要和重要路径即可</li>
-</ol>
-<p>如果测试发现不兼容性，无法立即升级，那么要考虑的第二点是缓解措施（mitigation）。</p>
-<p>比如：</p>
-<ol>
-<li>能否禁用有漏洞的部分而不影响业务？</li>
-<li>如果不可行，那么是否可以通过 WAF 的设置来把一定特征的攻击载荷挡在门外？</li>
-<li>这些都是临时解决方案，要到开发部门把业务程序更新为能用新版本库，才能上线新版本的应用程序</li>
-</ol>
-<h1 id="技术上的安全做法"><a href="#技术上的安全做法" class="headerlink" title="技术上的安全做法"></a>技术上的安全做法</h1><p>从技术上来说，安全防范最好是做到连自己内部员工都能防，因为无论是程序的 BUG 还是漏洞，都是为了取得系统的权限而获得数据</p>
-<p>如果我们连内部人都能防的话，那么就可以不用担心绝大多数的系统漏洞了</p>
-<p>所谓“家贼难防”，如果要做到这一点，一般来说，有如下的一些方式：</p>
-<ol>
-<li>我们需要把我们的关键数据定义出来，然后把这些关键数据隔离出来，隔离到一个安全级别非常高的地方，所谓<strong>安全级别非常高的地方，即这个地方需要有各种如安全审计、安全监控、安全访问的区域</strong></li>
-<li>一般来说，在这个区域内，这些<strong>敏感数据只进不出</strong>，通过提供服务接口来让别的系统只能在这个区域内操作这些数据，而不是把数据传出去，让别的系统在外部来操作这些数据</li>
-</ol>
-<p>举个例子，用户的手机号是敏感信息，如果有外部系统需要使用手机号，一般来说是想发个短信，**那么我们这个掌管手机号数据的系统就对外提供发短信的功能，而外部系统通过 UID 或是别的抽象字段来调用这个系统的发短信的 API。**信用卡也一样，提供信用卡的扣款 API 而不是把卡号返回给外部系统</p>
-<p>另外，如果业务必须返回用户的数据，一般来说，最终用户可能需要读取自己的数据，那么，对于像信用卡这样的关键数据是死也不能返回全部数据的，只能返回一个被“马赛克”了的数据（隐藏掉部分信息）</p>
-<p>就算需要返回一些数据（如用户的地址），那么也<strong>需要在传输层上加密返回</strong></p>
-<p>用户加密的算法一定要采用非对称加密的方式，而且还要加上密钥的自动化更换，比如：在外部系统调用 100 次或是第一个小时后就自动更换加密的密钥</p>
-<p>这样，整个系统在运行时就完全是自动化的了，而就算黑客得到了密钥，密匙也会过期，这样可以控制泄露范围</p>
-<p><strong>被加密的数据和用于加密的密钥是由不同的人来管理的</strong>，有密钥的人没有数据，有数据的人没有密钥，这两拨人可以有访问自己系统的权限，但是没有访问对方系统的权限。这样可以让这两拨人互相审计，互相牵制，从而提高数据的安全性</p>
-<p>而密钥一定要做到随机生成，最好是对于不同用户的数据有不同的密钥，并且时不时地就能自动化更新一下，这样就可以做到内部防范</p>
-<p>注明一下，按道理来说，用户自己的私钥应该由用户自己来保管，而公司的系统是不存的，而用户需要更新密钥时，需要对用户做身份鉴别，可以通过双因子认证，也可以通过更为严格的物理身份验证，例如，到银行柜台拿身份证重置密码</p>
-<p>每当这些关键信息传到外部系统，需要做通知，最好是通知用户和自己的管理员</p>
-<p>并且限制外部系统的数据访问量，超过访问量后，需要报警或是拒绝访问</p>
-<p>所谓的安全方案基本上来说就是能够把这个风险控制在一个很小的范围，对于在这个很小范围内出现的一些数据安全的泄露，我们可以通过“风控基金”来做业务上的补偿，比如赔偿用户损失，等等</p>
-<p>因为从经济利益上来说，如果风险可以控制在一个——我防范它的成本远高于我赔偿它的成本，那么，还不如赔偿了</p>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>左耳听风学习笔记：第一讲精要整理</title>
-    <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/</url>
-    <content><![CDATA[<ol>
-<li><p>在工作当中，对于那些没什么技术含量的工作，基本上就像是在学生时代那样交作业就好了</p>
-</li>
-<li><p>想尽一切方法提高交作业的效率</p>
-</li>
-<li><p>目的：可以有更多的时间，去研究公司内外那些更为核心更有技术含量的技术了</p>
-</li>
-<li><p>英文技术文档通读一遍</p>
-</li>
-<li><p>分享做得真好，条理性很强，也很清楚，可以让别人学到很多东西</p>
-</li>
-<li><p>要去经历多数人经历不到的，要把学习时间花在那些比较难的地方</p>
-</li>
-<li><p>写文章就要写别人没有写过的，或者别人写过，但我能写的更好的</p>
-</li>
-<li><p>技术和知识完全是可以变现的</p>
-</li>
-<li><p>25~35 岁是每个人最宝贵的时光，应该用在刀刃上</p>
-</li>
-<li><p>将时间精力放在一些主流、高级和比较有挑战性的技术上</p>
-<ol>
-<li>这么做可以保持技术和技能的领先</li>
-<li>也可以保持对技术本质和趋势的敏感度</li>
-</ol>
-</li>
-<li><p>这个世界本来就没什么标准答案，或是说，一个题目本来就可以有若干个正确答案，而且这些“正确答案”还很矛盾</p>
-</li>
-<li><p>无论别人骂我也好，教育我也罢，他们都对我有帮助，大大地丰富了我思考问题的角度</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>左耳听风学习笔记：第二讲精要整理</title>
     <url>/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/</url>
     <content><![CDATA[<ol>
@@ -2300,1236 +4368,6 @@
         <tag>安全实践</tag>
         <tag>技术领导力</tag>
         <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>左耳听风学习笔记：第六讲精要整理 - 如何才能拥有技术领导力</title>
-    <url>/2025/06/25/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E5%85%AD%E8%AE%B2/</url>
-    <content><![CDATA[<h1 id="如何才能拥有技术领导力？"><a href="#如何才能拥有技术领导力？" class="headerlink" title="如何才能拥有技术领导力？"></a>如何才能拥有技术领导力？</h1><ol>
-<li>要吃透基础技术，基础技术是各种上层技术共同的基础<ol>
-<li>吃透基础技术是为了更好理解程序的运行原理，并基于这些基础技术进化出更优化的产品</li>
-</ol>
-</li>
-<li>吃透基础技术的好处：<ol>
-<li>基础知识越扎实，走得就会越远</li>
-<li>计算机技术太多了，但是仔细分析你会发现，只是表现形式很多，而基础技术并不多，学好基础技术，能让你一通百通，更快地使用各种新技术，从而可以更轻松地与时代同行</li>
-<li>很多分布式系统架构，以及高可用、高性能、高并发的解决方案基本都可以在基础技术上找到它们的身影，所以，学习基础技术能让你更好地掌握更高维度的技术</li>
-</ol>
-</li>
-</ol>
-<h2 id="基础技术：编程和系统"><a href="#基础技术：编程和系统" class="headerlink" title="基础技术：编程和系统"></a>基础技术：编程和系统</h2><h3 id="编程部分"><a href="#编程部分" class="headerlink" title="编程部分"></a>编程部分</h3><ol>
-<li><p>C语言 - C 语言更接近底层，在具备跨平台能力的前提下，它可以比较容易地被人工翻译成相应的汇编代码，它的内存管理更为直接，可以让我们直接和内存地址打交道；学习好 C 语言的好处是能掌握程序的运行情况，并能进行应用程序和操作系统编程（操作系统一般是汇编和 C 语言），除了让你更为了解操作系统之外，学习 C 语言还能让你更清楚地知道程序是怎么精细控制底层资源的，比如内存管理、文件操作、网络通信……</p>
-</li>
-<li><p>汇编语言：如果你想更深入地了解计算机是怎么运作的，那么你是需要了解汇编语言的，虽然我们几乎不再用汇编语言编程了，但是如果你需要写一些如 lock free 之类高并发的东西，那么了解汇编语言，就能有助于你更好地理解和思考</p>
-</li>
-<li><p>编程范式：各种编程语言都有它们各自的编程范式，用于解决各种问题，比如：<strong>面向对象编程</strong>（C++、Java）、<strong>泛型编程</strong>（C++、Go、C#）、<strong>函数式编程</strong>（JavaScript、 Python、Lisp、Haskell、Erlang）等，学好编程范式，有助于培养你的抽象思维，同时也可以提高编程效率，提高程序的结构合理性、可读性和可维护性，降低代码的冗余度，进而提高代码的运行效率，要学习编程范式，你还可以多了解各种程序设计语言的功能特性</p>
-</li>
-<li><p>算法和数据结构：算法（及其相应的数据结构）是程序设计的有力支撑，适当地应用算法，可以有效地抽象问题，提高程序的合理性和执行效率，**算法是编程中最最重要的东西，也是计算机科学中最重要的基础。**任何有技术含量的软件中一定有高级的算法和数据结构</p>
-</li>
-</ol>
-<h3 id="系统部分"><a href="#系统部分" class="headerlink" title="系统部分"></a>系统部分</h3><ol>
-<li><p>计算机系统原理：</p>
-<ol>
-<li>CPU 的体系结构（指令集 [CISC&#x2F;RISC]、分支预测、缓存结构、总线、DMA、中断、陷阱、多任务、虚拟内存、虚拟化等）</li>
-<li>内存的原理与性能特点（SRAM、DRAM、DDR-SDRAM 等）</li>
-<li>磁盘的原理（机械硬盘 [盘面、磁头臂、磁头、启停区、寻道等]</li>
-<li>固态硬盘 [页映射、块的合并与回收算法、TRIM 指令等]）</li>
-<li>GPU 的原理等</li>
-</ol>
-<p>学习计算机系统原理的价值在于，除了能够了解计算机的原理之外，你还能举一反三地反推出高维度的分布式架构和高并发高可用的架构设计</p>
-<p>比如虚拟化内存就和今天云计算中的虚拟化的原理是相通的，计算机总线和分布式架构中的 ESB 也有相通之处，计算机指令调度、并发控制可以让你更好地理解并发编程和程序性能调优</p>
-</li>
-<li><p>操作系统原理和基础：</p>
-<ol>
-<li>进程、进程管理、线程、线程调度、多核的缓存一致性、信号量、物理内存管理、虚拟内存管理、内存分配、文件系统、磁盘管理等</li>
-<li>学习操作系统的价值在于：<ol>
-<li>理解程序是怎样被管理的</li>
-<li>操作系统对应用程序提供了怎样的支持</li>
-<li>抽象出怎样的编程接口（比如 POSIX&#x2F;Win32 API）</li>
-<li>性能特性如何（比如控制合理的上下文切换次数）</li>
-<li>怎样进行进程间通信（如管道、套接字、内存映射等），以便让不同的软件配合一起运行</li>
-</ol>
-</li>
-<li>要学习操作系统知识：<ol>
-<li>一是要仔细观察和探索当前使用的操作系统</li>
-<li>二是要阅读操作系统原理相关的图书</li>
-<li>三是要阅读 API 文档（如 man pages 和 MSDN Library），并编写调用操作系统功能的程序</li>
-</ol>
-</li>
-<li>学习操作系统基础原理的好处是：<ol>
-<li>这是所有程序运行的物理世界，无论上层是像 C&#x2F;C++ 这样编译成机器码的语言，还是像 Java 这样有 JVM 做中间层的语言，再或者像 Python&#x2F;PHP&#x2F;Perl&#x2F;Node.js 这样直接在运行时解释的语言，其在底层都逃离不了操作系统这个物理世界的“物理定律”</li>
-<li>了解操作系统的原理，可以让你更能从本质理解各种语言或是技术的底层原理，一眼看透本质可以让你更容易地掌握和使用高阶技术</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>网络基础：</p>
-<ol>
-<li>需要了解基本的网络层次结构（ISO&#x2F;OSI 模型、TCP&#x2F;IP 协议栈）：包括物理层、数据链路层（包含错误重发机制）、网络层（包含路由机制）、传输层（包含连接保持机制）、会话层、表示层、应用层（在 TCP&#x2F;IP 协议栈里，这三层可以并为一层）</li>
-<li>基础的网络协议，可以为我们的高维分布式架构中的一些技术问题提供很多的技术方案，比如 TCP 的滑动窗口限流，完全可以用于分布式服务中的限流方案</li>
-</ol>
-</li>
-<li><p>数据库原理：</p>
-<ol>
-<li>操作系统提供文件系统来管理文件数据，而文件比较适合保存连续的信息，如一篇文章、一个图片等。但有时需要保存一个名字等较短的信息。如果单个文件只保存名字这样的几个字节的信息的话，就会浪费大量的磁盘空间，而且无法方便地查询（除非使用索引服务）</li>
-<li>数据库更适合保存短的数据，而且可以方便地按字段进行查询</li>
-<li>现代流行的数据库管理系统有两大类：<ol>
-<li>SQL（基于 B+ 树，强一致性）</li>
-<li>NoSQL（较弱的一致性，较高的存取效率，基于哈希表或其他技术）</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>分布式技术架构：</p>
-<ol>
-<li>数据库和应用程序服务器在应对互联网上数以亿计的访问量的时候，需要能进行横向扩展，这样才能提供足够高的性能，为了做到这一点，要学习分布式技术架构</li>
-<li>分布式技术架构包括：负载均衡、DNS 解析、多子域名、无状态应用层、缓存层、数据库分片、容错和恢复机制、Paxos、Map&#x2F;Reduce 操作、分布式 SQL 数据库一致性（以 Google Cloud Spanner 为代表）等知识点</li>
-<li>学习分布式技术架构的有效途径是参与到分布式项目的开发中去，并阅读相关论文</li>
-</ol>
-</li>
-</ol>
-<h2 id="提高学习能力"><a href="#提高学习能力" class="headerlink" title="提高学习能力"></a>提高学习能力</h2><p>所谓学习能力，就是能够很快地学习新技术，又能在关键技术上深入的能力</p>
-<h3 id="如何提升学习能力"><a href="#如何提升学习能力" class="headerlink" title="如何提升学习能力"></a>如何提升学习能力</h3><ol>
-<li><p>学习的信息源：常见的信息源有 Google 等搜索引擎，Stack Overflow、Quora 等社区，图书，API 文档，论文和博客等</p>
-</li>
-<li><p>与高手交流：程序员可以通过技术社区以及参加技术会议与高手交流，也可以通过参加开源项目来和高手切磋。常闻“听君一席话，胜读十年书”便是如此。与高手交流对程序员的学习和成长很有益处，不仅有助于了解热门的技术方向及关键的技术点，更可以通过观察和学习高手的技术思维及解决问题的方式，提高自己的技术前瞻性和技术决策力</p>
-</li>
-<li><p>举一反三的思考：</p>
-<ol>
-<li>了解了操作系统的缓存和网页缓存以后，你要思考其相同点和不同点</li>
-<li>了解了 C++ 语言的面向对象特性以后，思考 Java 面向对象的相同点和不同点</li>
-<li>遇到故障的时候，举一反三，把同类问题一次性地处理掉</li>
-</ol>
-</li>
-<li><p>不怕困难的态度：遇到难点，有时不花一番力气，是不可能突破的，此时如果没有不怕困难的态度，你就容易打退堂鼓，但如果能坚持住，多思考，多下功夫，往往就能找到出路，绝大多数人是害怕困难的，所以，如果你能够不怕困难，并可以找到解决困难的方法和路径，时间一长，你就能拥有别人所不能拥有的能力</p>
-</li>
-<li><p>开放的心态：实现一个目的通常有多种办法，带有开放的心态，不拘泥于一个平台、一种语言，往往能带来更多思考，也能得到更好的结果；而且，能在不同的方法和方案间做比较，比较它们的优缺点，那么你会知道在什么样的场景下用什么样的方案，你就会比一般人能够有更全面和更完整的思路</p>
-</li>
-</ol>
-<h2 id="坚持做正确的事情"><a href="#坚持做正确的事情" class="headerlink" title="坚持做正确的事情"></a>坚持做正确的事情</h2><p>做正确的事，比用正确的方式做事更重要，因为这样才始终会向目的地靠拢</p>
-<h3 id="哪些是正确的事呢？"><a href="#哪些是正确的事呢？" class="headerlink" title="哪些是正确的事呢？"></a>哪些是正确的事呢？</h3><ol>
-<li><p>提高效率的事：要学习和掌握良好的时间管理方式，管理好自己的时间，能显著提高自己的效率</p>
-</li>
-<li><p>自动化的事：程序员要充分利用自己的职业特质，当看见有可以自动化的步骤时，编写程序来自动化操作，可以显著提高效率</p>
-</li>
-<li><p>掌握前沿技术的事：掌握前沿的技术，有利于拓展自己的眼界，也有利于找到更好的工作；需要注意的是，有些技术虽然当下很火，但未必前沿，而是因为它比较易学易用，或者性价比高，由于学习一门技术需要花费不少时间，你应该选择自己最感兴趣的，有的放矢地去学习</p>
-</li>
-<li><p>知识密集型的事：知识密集型是相对于劳动密集型来说的，基本上，劳动密集型的事都能通过程序和机器来完成，而知识密集型的事却仍需要人来完成，所以人的价值此时就显现出来了；虽然现在人工智能似乎能做一些知识密集型的事（包括下围棋的 AlphaGo），但是在开放领域中相对于人的智能来说还是相去甚远，掌握了领域知识的人的价值依然很高</p>
-</li>
-<li><p>技术驱动的事：不仅是指用程序驱动的事，而且还包括一切技术改变生活的事，比如自动驾驶、火星登陆等，就算自己一时用不着，你也要了解这些，以便将来这些技术来临时能适应它们</p>
-</li>
-</ol>
-<h2 id="高标准要求自己"><a href="#高标准要求自己" class="headerlink" title="高标准要求自己"></a>高标准要求自己</h2><p>只有不断地提高标准 ，你才可能越走越高，所以，要以高标准要求自己，不断地反思、总结和审视自己，才能够提升自己</p>
-<ol>
-<li>Google 的自我评分卡</li>
-<li>敏锐的技术嗅觉：这是一个相对综合的能力，你需要充分利用信息源，GET 到新的技术动态，并通过参与技术社区的讨论，丰富自己了解技术的角度，思考一下是否是自己感兴趣的，能解决哪些实际问题，以及其背后的原因，新技术也好，旧技术的重大版本变化也罢</li>
-<li>强调实践，学以致用：学习知识，一定要实际用一用，可以是工作中的项目，也可以是自己的项目，不仅有利于吸收理解，更有利于深入到技术的本质，并可以与现有技术对比一下，同样的问题，用新技术解决有什么不同，带来了哪些优势，还有哪些有待改进的地方</li>
-<li>Lead by Example，永远在编程，不写代码，你就对技术细节不敏感，你无法做出可以实践的技术决策和方案</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>吃透基础技术、提高学习能力、坚持做正确的事、高标准要求自己，不仅会让你全面提升技术技能，还能很好地锻炼自己的技术思维，培养技术前瞻性和决策力，进而形成技术领导力</p>
-<p>然而，仅有技术还不够，作为一名合格的技术领导者，还需要有解决问题的各种软技能。比如，良好的沟通能力、组织能力、驱动力、团队协作能力等等</p>
-]]></content>
-      <categories>
-        <category>学习与反思</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
-        <tag>安全实践</tag>
-        <tag>技术领导力</tag>
-        <tag>左耳听风</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Prompt Debugging: Common Challenges and How to Fix Them</title>
-    <url>/2026/05/08/prompt-debugging-common-challenges-2026-05-08/</url>
-    <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>This material is essentially a <strong>Prompt Debugging Guide</strong>.</p>
-<p>When Claude or ChatGPT gives an answer that does not match your expectation, do not immediately assume that the model is weak. First check whether your prompt is missing one of these elements:</p>
-<ul>
-<li>context</li>
-<li>length requirement</li>
-<li>output format</li>
-<li>factual constraints</li>
-<li>tone guidance</li>
-<li>examples</li>
-</ul>
-<p>A practical debugging loop is:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Bad Output → Diagnose Prompt Gap → Add Context / Rules / Format / Examples → Retry</span><br></pre></td></tr></table></figure>
-
-<p>This directly maps to the prompt framework:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Setting the Stage → Defining the Task → Specifying Rules</span><br></pre></td></tr></table></figure>
-
-<p>If the output is poor, usually one of these parts is underspecified.</p>
-<hr>
-<h2 id="2-Overall-Meaning"><a href="#2-Overall-Meaning" class="headerlink" title="2. Overall Meaning"></a>2. Overall Meaning</h2><p>The original text says that, when working with Claude, you will likely encounter moments where the response is not quite what you expected.</p>
-<p>This is normal.</p>
-<p>More importantly, it is an opportunity to refine the way you communicate with the model.</p>
-<p>AI interaction should be treated as an iterative process:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Prompt → Response → Evaluate → Refine Prompt → Better Response</span><br></pre></td></tr></table></figure>
-
-<p>This is the same logic as iterative debugging.</p>
-<hr>
-<h2 id="3-Challenge-1-The-Response-Is-Too-Generic"><a href="#3-Challenge-1-The-Response-Is-Too-Generic" class="headerlink" title="3. Challenge 1: The Response Is Too Generic"></a>3. Challenge 1: The Response Is Too Generic</h2><h3 id="Meaning"><a href="#Meaning" class="headerlink" title="Meaning"></a>Meaning</h3><p><strong>Generic</strong> means:</p>
-<blockquote>
-<p>too general, not specific enough, and not tailored to your actual situation.</p>
-</blockquote>
-<h3 id="What-Is-Happening"><a href="#What-Is-Happening" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>The prompt did not include enough context about the specific situation.</p>
-<p>For example:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Write an email about the project delay.</span><br></pre></td></tr></table></figure>
-
-<p>This is too generic because the model does not know:</p>
-<ul>
-<li>who the audience is</li>
-<li>how long the delay is</li>
-<li>why the delay happened</li>
-<li>whether the audience is already upset</li>
-<li>whether the tone should be formal, apologetic, or casual</li>
-<li>whether this is internal or external communication</li>
-</ul>
-<h3 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h3><p>Add details about:</p>
-<ul>
-<li>audience</li>
-<li>role</li>
-<li>business context</li>
-<li>constraints</li>
-<li>relationship status</li>
-<li>tone</li>
-</ul>
-<p>Better prompt:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Write an email to our enterprise client explaining that the software integration will be delayed by two weeks. They&#x27;ve been patient so far but this is the second delay. Keep it professional but apologetic.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Why-This-Is-Better"><a href="#Why-This-Is-Better" class="headerlink" title="Why This Is Better"></a>Why This Is Better</h3><table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Content</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Audience</td>
-<td>enterprise client</td>
-</tr>
-<tr>
-<td>Situation</td>
-<td>software integration delayed</td>
-</tr>
-<tr>
-<td>Time impact</td>
-<td>two weeks</td>
-</tr>
-<tr>
-<td>Relationship context</td>
-<td>client has been patient</td>
-</tr>
-<tr>
-<td>Risk</td>
-<td>second delay</td>
-</tr>
-<tr>
-<td>Tone</td>
-<td>professional but apologetic</td>
-</tr>
-</tbody></table>
-<h3 id="Storage-QA-Analogy"><a href="#Storage-QA-Analogy" class="headerlink" title="Storage &#x2F; QA Analogy"></a>Storage &#x2F; QA Analogy</h3><p>Weak:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze this Jenkins failure.</span><br></pre></td></tr></table></figure>
-
-<p>Better:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I am a storage-focused SDET. This Jenkins job failed during pre-test setup in an iSCSI environment. Please analyze whether the likely cause is environment setup, test logic, or product behavior. Build an evidence chain and suggest the next three checks.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Rule"><a href="#Rule" class="headerlink" title="Rule"></a>Rule</h3><p>If the answer is too generic, the prompt probably lacks context.</p>
-<hr>
-<h2 id="4-Challenge-2-The-Response-Is-Too-Long-or-Too-Short"><a href="#4-Challenge-2-The-Response-Is-Too-Long-or-Too-Short" class="headerlink" title="4. Challenge 2: The Response Is Too Long or Too Short"></a>4. Challenge 2: The Response Is Too Long or Too Short</h2><h3 id="What-Is-Happening-1"><a href="#What-Is-Happening-1" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude is guessing the appropriate length.</p>
-<p>If you do not specify length, the model has to infer whether you want:</p>
-<ul>
-<li>a short summary</li>
-<li>a detailed explanation</li>
-<li>a report</li>
-<li>an executive summary</li>
-<li>a Jira comment</li>
-<li>a full technical analysis</li>
-</ul>
-<h3 id="Fix-1"><a href="#Fix-1" class="headerlink" title="Fix"></a>Fix</h3><p>Be explicit about length.</p>
-<p>Examples:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Give me a two-paragraph summary.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Keep this under 100 words.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I need a comprehensive analysis. Length is not a concern.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Practical-Length-Controls"><a href="#Practical-Length-Controls" class="headerlink" title="Practical Length Controls"></a>Practical Length Controls</h3><table>
-<thead>
-<tr>
-<th>Need</th>
-<th>Prompt Pattern</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Very short</td>
-<td>Keep it under 100 words.</td>
-</tr>
-<tr>
-<td>Medium</td>
-<td>Give me a 3-paragraph explanation.</td>
-</tr>
-<tr>
-<td>Detailed</td>
-<td>Give me a detailed step-by-step analysis.</td>
-</tr>
-<tr>
-<td>No length limit</td>
-<td>Length is not a concern. Focus on completeness.</td>
-</tr>
-<tr>
-<td>IM-friendly</td>
-<td>Make it concise enough for an instant message.</td>
-</tr>
-<tr>
-<td>Report-style</td>
-<td>Structure it as a professional report.</td>
-</tr>
-</tbody></table>
-<h3 id="Storage-QA-Examples"><a href="#Storage-QA-Examples" class="headerlink" title="Storage &#x2F; QA Examples"></a>Storage &#x2F; QA Examples</h3><p>For Jira:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Summarize this failure in 3 bullet points for a Jira comment.</span><br></pre></td></tr></table></figure>
-
-<p>For root-cause analysis:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Give me a comprehensive root-cause analysis with evidence, assumptions, risks, and next debugging steps.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Rule-1"><a href="#Rule-1" class="headerlink" title="Rule"></a>Rule</h3><p>If you do not specify length, the model will guess.</p>
-<hr>
-<h2 id="5-Challenge-3-Claude-Did-Not-Follow-the-Format"><a href="#5-Challenge-3-Claude-Did-Not-Follow-the-Format" class="headerlink" title="5. Challenge 3: Claude Did Not Follow the Format"></a>5. Challenge 3: Claude Did Not Follow the Format</h2><h3 id="What-Is-Happening-2"><a href="#What-Is-Happening-2" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude may understand what content you want, but not how you want it presented.</p>
-<p>There are two different layers:</p>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Content</td>
-<td>What the answer should include</td>
-</tr>
-<tr>
-<td>Format</td>
-<td>How the answer should be organized</td>
-</tr>
-</tbody></table>
-<p>A prompt like this is underspecified:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze the issue.</span><br></pre></td></tr></table></figure>
-
-<p>The model may output long paragraphs, even if you actually wanted a structured format.</p>
-<h3 id="Fix-2"><a href="#Fix-2" class="headerlink" title="Fix"></a>Fix</h3><p>Use explicit formatting instructions.</p>
-<p>Example:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Use bullet points with bold headers for each section.</span><br></pre></td></tr></table></figure>
-
-<p>Stronger example:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Use this structure:</span><br><span class="line"></span><br><span class="line"># Conclusion</span><br><span class="line"># Evidence</span><br><span class="line"># Risks / Gaps</span><br><span class="line"># Next Steps</span><br></pre></td></tr></table></figure>
-
-<h3 id="Jira-Comment-Format"><a href="#Jira-Comment-Format" class="headerlink" title="Jira Comment Format"></a>Jira Comment Format</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Format the answer as a Jira comment:</span><br><span class="line"></span><br><span class="line">Summary:</span><br><span class="line">Evidence:</span><br><span class="line">Likely Root Cause:</span><br><span class="line">Impact:</span><br><span class="line">Next Action:</span><br></pre></td></tr></table></figure>
-
-<h3 id="Markdown-Note-Format"><a href="#Markdown-Note-Format" class="headerlink" title="Markdown Note Format"></a>Markdown Note Format</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Use Markdown headings, tables, and a final checklist.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Rule-2"><a href="#Rule-2" class="headerlink" title="Rule"></a>Rule</h3><p>Content requirements and format requirements should be specified separately.</p>
-<hr>
-<h2 id="6-Challenge-4-Confident-Sounding-but-Wrong-Information"><a href="#6-Challenge-4-Confident-Sounding-but-Wrong-Information" class="headerlink" title="6. Challenge 4: Confident-Sounding but Wrong Information"></a>6. Challenge 4: Confident-Sounding but Wrong Information</h2><h3 id="Meaning-1"><a href="#Meaning-1" class="headerlink" title="Meaning"></a>Meaning</h3><p>The model gives information that sounds confident but later turns out to be wrong.</p>
-<p>This is often called hallucination.</p>
-<h3 id="Key-Terms"><a href="#Key-Terms" class="headerlink" title="Key Terms"></a>Key Terms</h3><table>
-<thead>
-<tr>
-<th>Term</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>confident-sounding</td>
-<td>sounds certain or authoritative</td>
-</tr>
-<tr>
-<td>turned out to be wrong</td>
-<td>later proved incorrect</td>
-</tr>
-<tr>
-<td>plausible</td>
-<td>seems reasonable</td>
-</tr>
-<tr>
-<td>incorrect</td>
-<td>wrong</td>
-</tr>
-<tr>
-<td>niche topics</td>
-<td>specialized or narrow topics</td>
-</tr>
-<tr>
-<td>high-stakes work</td>
-<td>work where mistakes have serious impact</td>
-</tr>
-</tbody></table>
-<h3 id="What-Is-Happening-3"><a href="#What-Is-Happening-3" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude or ChatGPT can occasionally generate plausible but incorrect information, especially when dealing with:</p>
-<ul>
-<li>specific facts</li>
-<li>niche technical domains</li>
-<li>current events</li>
-<li>exact product behavior</li>
-<li>legal, medical, or financial questions</li>
-<li>internal system details not provided in context</li>
-</ul>
-<h3 id="Fix-3"><a href="#Fix-3" class="headerlink" title="Fix"></a>Fix</h3><p>For high-stakes work:</p>
-<ol>
-<li>Verify key facts independently.</li>
-<li>Ask for citations or source references.</li>
-<li>Ask the model to separate facts from assumptions.</li>
-<li>Use web search or official documentation for current information.</li>
-<li>Do not trust confidence alone as evidence.</li>
-</ol>
-<h3 id="Better-Prompt-for-Technical-Analysis"><a href="#Better-Prompt-for-Technical-Analysis" class="headerlink" title="Better Prompt for Technical Analysis"></a>Better Prompt for Technical Analysis</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Separate facts, assumptions, and inferences.</span><br><span class="line">Do not claim root cause unless supported by evidence.</span><br><span class="line">If evidence is insufficient, state what data is missing.</span><br></pre></td></tr></table></figure>
-
-<p>Stricter version:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Only use the pasted logs as evidence.</span><br><span class="line">Do not invent environment details.</span><br><span class="line">Rank hypotheses by evidence strength.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Important-QA-Principle"><a href="#Important-QA-Principle" class="headerlink" title="Important QA Principle"></a>Important QA Principle</h3><p>A fluent answer is not the same as a correct answer.</p>
-<p>For debugging, the useful question is not:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Does the answer sound confident?</span><br></pre></td></tr></table></figure>
-
-<p>The useful question is:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Is the conclusion supported by evidence?</span><br></pre></td></tr></table></figure>
-
-<h3 id="Rule-3"><a href="#Rule-3" class="headerlink" title="Rule"></a>Rule</h3><p>For high-impact facts, verify evidence instead of trusting fluency or confidence.</p>
-<hr>
-<h2 id="7-Challenge-5-The-Tone-Is-Not-Right"><a href="#7-Challenge-5-The-Tone-Is-Not-Right" class="headerlink" title="7. Challenge 5: The Tone Is Not Right"></a>7. Challenge 5: The Tone Is Not Right</h2><h3 id="What-Is-Happening-4"><a href="#What-Is-Happening-4" class="headerlink" title="What Is Happening"></a>What Is Happening</h3><p>Claude defaults to a helpful and professional tone. That may not match your actual need.</p>
-<p>Different scenarios require different tones.</p>
-<table>
-<thead>
-<tr>
-<th>Scenario</th>
-<th>Tone Needed</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Apology to customer</td>
-<td>professional but apologetic</td>
-</tr>
-<tr>
-<td>Message to colleague</td>
-<td>casual, concise, polite</td>
-</tr>
-<tr>
-<td>Technical report</td>
-<td>formal and evidence-based</td>
-</tr>
-<tr>
-<td>Management summary</td>
-<td>executive, concise, business-focused</td>
-</tr>
-<tr>
-<td>Jira comment</td>
-<td>factual, direct, neutral</td>
-</tr>
-<tr>
-<td>Blog article</td>
-<td>educational and readable</td>
-</tr>
-</tbody></table>
-<h3 id="Fix-4"><a href="#Fix-4" class="headerlink" title="Fix"></a>Fix</h3><p>Describe the tone in plain language.</p>
-<p>Examples:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Make this more conversational.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This should sound authoritative and formal.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Rewrite this as a Jira comment. Make it factual, evidence-based, and neutral. Avoid emotional wording.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Rule-4"><a href="#Rule-4" class="headerlink" title="Rule"></a>Rule</h3><p>The model does not automatically know the tone you want. Specify it directly.</p>
-<hr>
-<h2 id="8-Prompt-Debugging-Table"><a href="#8-Prompt-Debugging-Table" class="headerlink" title="8. Prompt Debugging Table"></a>8. Prompt Debugging Table</h2><table>
-<thead>
-<tr>
-<th>Symptom</th>
-<th>Likely Prompt Gap</th>
-<th>Fix</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Too generic</td>
-<td>Missing context</td>
-<td>Add role, audience, constraints, and situation</td>
-</tr>
-<tr>
-<td>Too long &#x2F; too short</td>
-<td>Missing length requirement</td>
-<td>Specify word count, paragraph count, or depth</td>
-</tr>
-<tr>
-<td>Wrong format</td>
-<td>Missing output structure</td>
-<td>Provide a format template or example</td>
-</tr>
-<tr>
-<td>Confident but wrong</td>
-<td>Missing factual constraints</td>
-<td>Ask for citations, confidence level, and fact&#x2F;inference separation</td>
-</tr>
-<tr>
-<td>Wrong tone</td>
-<td>Missing tone guidance</td>
-<td>Describe the tone or provide an example</td>
-</tr>
-</tbody></table>
-<p>This is similar to software debugging:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Unexpected Output → Identify Missing Input / Constraint → Patch Prompt → Re-run</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="9-Relation-to-the-8-Part-Prompt-Framework"><a href="#9-Relation-to-the-8-Part-Prompt-Framework" class="headerlink" title="9. Relation to the 8-Part Prompt Framework"></a>9. Relation to the 8-Part Prompt Framework</h2><p>The previous full framework was:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role → Goal → Context → Task → Input → Rules → Output Format → Success Criteria</span><br></pre></td></tr></table></figure>
-
-<p>This guide explains what happens when one of those parts is missing.</p>
-<table>
-<thead>
-<tr>
-<th>Missing Component</th>
-<th>Common Failure</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Context</td>
-<td>Output too generic</td>
-</tr>
-<tr>
-<td>Output Format</td>
-<td>Format not followed</td>
-</tr>
-<tr>
-<td>Rules</td>
-<td>Tone, length, and evidence quality become unstable</td>
-</tr>
-<tr>
-<td>Input Boundary</td>
-<td>Unsupported claims or hallucinations</td>
-</tr>
-<tr>
-<td>Success Criteria</td>
-<td>Answer may be correct but not useful</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="10-Practical-Prompt-Repair-Template"><a href="#10-Practical-Prompt-Repair-Template" class="headerlink" title="10. Practical Prompt Repair Template"></a>10. Practical Prompt Repair Template</h2><p>When the response is close but not good enough, use this follow-up prompt:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This is close, but please revise it with the following changes:</span><br><span class="line"></span><br><span class="line">1. Add more context about [specific background].</span><br><span class="line">2. Make it [shorter / longer / more detailed].</span><br><span class="line">3. Use this format: [format].</span><br><span class="line">4. Keep the tone [professional / concise / apologetic / formal].</span><br><span class="line">5. Separate facts, assumptions, and inferences.</span><br><span class="line">6. Do not include unsupported claims.</span><br></pre></td></tr></table></figure>
-
-<p>This is iterative prompting.</p>
-<hr>
-<h2 id="11-English-Learning-Notes"><a href="#11-English-Learning-Notes" class="headerlink" title="11. English Learning Notes"></a>11. English Learning Notes</h2><h3 id="Key-Vocabulary"><a href="#Key-Vocabulary" class="headerlink" title="Key Vocabulary"></a>Key Vocabulary</h3><table>
-<thead>
-<tr>
-<th>Word &#x2F; Phrase</th>
-<th>Chinese</th>
-<th>Note</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>common challenges</td>
-<td>常见挑战</td>
-<td>recurring problems</td>
-</tr>
-<tr>
-<td>how to fix them</td>
-<td>如何修复它们</td>
-<td>repair method</td>
-</tr>
-<tr>
-<td>encounter</td>
-<td>遇到</td>
-<td>meet or experience</td>
-</tr>
-<tr>
-<td>not quite what you expected</td>
-<td>不完全符合你的预期</td>
-<td>close, but not right</td>
-</tr>
-<tr>
-<td>refine your approach</td>
-<td>改进你的方法</td>
-<td>improve your method</td>
-</tr>
-<tr>
-<td>generic</td>
-<td>泛泛的，通用的</td>
-<td>not specific</td>
-</tr>
-<tr>
-<td>context</td>
-<td>上下文，背景</td>
-<td>situation information</td>
-</tr>
-<tr>
-<td>constraints</td>
-<td>限制条件</td>
-<td>requirements or boundaries</td>
-</tr>
-<tr>
-<td>enterprise client</td>
-<td>企业客户</td>
-<td>business customer</td>
-</tr>
-<tr>
-<td>apologetic</td>
-<td>带有歉意的</td>
-<td>expressing apology</td>
-</tr>
-<tr>
-<td>comprehensive analysis</td>
-<td>全面分析</td>
-<td>detailed and broad analysis</td>
-</tr>
-<tr>
-<td>confident-sounding</td>
-<td>听起来很自信的</td>
-<td>sounds certain</td>
-</tr>
-<tr>
-<td>plausible</td>
-<td>貌似合理的</td>
-<td>seems reasonable but may be wrong</td>
-</tr>
-<tr>
-<td>niche topics</td>
-<td>小众 &#x2F; 专门领域话题</td>
-<td>specialized topics</td>
-</tr>
-<tr>
-<td>high-stakes work</td>
-<td>高风险、高影响工作</td>
-<td>mistakes are costly</td>
-</tr>
-<tr>
-<td>independently verify</td>
-<td>独立验证</td>
-<td>check through another source</td>
-</tr>
-<tr>
-<td>cite sources</td>
-<td>引用来源</td>
-<td>provide references</td>
-</tr>
-<tr>
-<td>indicate confidence level</td>
-<td>标明置信度</td>
-<td>state confidence</td>
-</tr>
-<tr>
-<td>ground responses</td>
-<td>让回答有事实依据</td>
-<td>base answer on evidence</td>
-</tr>
-<tr>
-<td>tone</td>
-<td>语气</td>
-<td>writing attitude&#x2F;style</td>
-</tr>
-<tr>
-<td>authoritative</td>
-<td>权威的，有分量的</td>
-<td>confident and formal</td>
-</tr>
-</tbody></table>
-<h3 id="Useful-Collocations"><a href="#Useful-Collocations" class="headerlink" title="Useful Collocations"></a>Useful Collocations</h3><ul>
-<li>refine your approach</li>
-<li>provide enough context</li>
-<li>verify key facts independently</li>
-<li>ground responses in current information</li>
-<li>specify the output format</li>
-<li>separate facts, assumptions, and inferences</li>
-</ul>
-<hr>
-<h2 id="12-Risks-Gaps"><a href="#12-Risks-Gaps" class="headerlink" title="12. Risks &#x2F; Gaps"></a>12. Risks &#x2F; Gaps</h2><p>This guide is useful, but two risks should be noted.</p>
-<h3 id="Risk-1-Prompt-repair-cannot-compensate-for-poor-input-quality"><a href="#Risk-1-Prompt-repair-cannot-compensate-for-poor-input-quality" class="headerlink" title="Risk 1: Prompt repair cannot compensate for poor input quality"></a>Risk 1: Prompt repair cannot compensate for poor input quality</h3><p>If the logs, documents, screenshots, or facts are incomplete, even a strong prompt can only produce limited conclusions.</p>
-<h3 id="Risk-2-Model-confidence-is-not-evidence"><a href="#Risk-2-Model-confidence-is-not-evidence" class="headerlink" title="Risk 2: Model confidence is not evidence"></a>Risk 2: Model confidence is not evidence</h3><p>Asking for a confidence level can be useful, but confidence is not proof.</p>
-<p>Reliable evidence comes from:</p>
-<ul>
-<li>logs</li>
-<li>official documentation</li>
-<li>cited sources</li>
-<li>reproducible commands</li>
-<li>test results</li>
-<li>verifiable observations</li>
-</ul>
-<hr>
-<h2 id="13-Final-Rule"><a href="#13-Final-Rule" class="headerlink" title="13. Final Rule"></a>13. Final Rule</h2><p>When the answer is wrong, vague, too long, badly formatted, or wrong in tone:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Debug the prompt before blaming the model.</span><br></pre></td></tr></table></figure>
-
-<p>Chinese version:</p>
-<blockquote>
-<p>当回答不对、太泛、太长、格式不对或语气不对时，先调试 Prompt，再判断模型能力。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>AI &amp; Prompt Engineering</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>prompt engineering</tag>
-        <tag>ChatGPT</tag>
-        <tag>debugging</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</title>
-    <url>/2026/05/08/effective-prompt-framework-2026-05-08/</url>
-    <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>A good prompt is not a magic phrase. It is a <strong>clear task brief for an AI coworker</strong>.</p>
-<p>The practical principle is:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Speak to AI like a capable coworker:</span><br><span class="line">naturally, concisely, conversationally, and with enough context.</span><br></pre></td></tr></table></figure>
-
-<p>The core framework is:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Setting the Stage → Defining the Task → Specifying Rules</span><br></pre></td></tr></table></figure>
-
-<p>In a more engineering-oriented form:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role + Goal + Context → Task + Input → Rules + Output Format + Success Criteria</span><br></pre></td></tr></table></figure>
-
-<p>A high-quality prompt tells the model:</p>
-<blockquote>
-<p>Who you are, what you want, what background matters, what action it should take, what materials it should use, what rules it should follow, what output format you need, and what counts as a good answer.</p>
-</blockquote>
-<hr>
-<h2 id="2-Why-Prompt-Context-Matter"><a href="#2-Why-Prompt-Context-Matter" class="headerlink" title="2. Why Prompt + Context Matter"></a>2. Why Prompt + Context Matter</h2><p>All interactions with Claude or ChatGPT begin with a <strong>prompt</strong>. But the answer is shaped not only by the prompt itself, but also by the surrounding <strong>context</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Element</th>
-<th>Meaning</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Prompt</td>
-<td>The direct instruction or question</td>
-<td>“Analyze this Jenkins failure.”</td>
-</tr>
-<tr>
-<td>Context</td>
-<td>Background, documents, logs, examples, constraints</td>
-<td>Jenkins logs, test environment, previous build status</td>
-</tr>
-<tr>
-<td>Output Rules</td>
-<td>How the answer should be shaped</td>
-<td>Markdown, concise, evidence-based, with risks</td>
-</tr>
-</tbody></table>
-<p>A weak prompt forces the model to guess.</p>
-<p>A strong prompt reduces guessing by providing enough context and clear instructions.</p>
-<hr>
-<h2 id="3-“Speak-Like-You-Would-a-Coworker”"><a href="#3-“Speak-Like-You-Would-a-Coworker”" class="headerlink" title="3. “Speak Like You Would a Coworker”"></a>3. “Speak Like You Would a Coworker”</h2><p>The phrase means:</p>
-<blockquote>
-<p>Do not write prompts like mysterious machine commands. Write them like clear work instructions for a competent colleague.</p>
-</blockquote>
-<p>It does <strong>not</strong> mean “say anything casually and expect a perfect answer.”</p>
-<p>It means:</p>
-<ul>
-<li>Be natural.</li>
-<li>Be concise.</li>
-<li>Be conversational.</li>
-<li>Be specific about the job.</li>
-<li>Provide necessary context.</li>
-<li>Define what good output looks like.</li>
-</ul>
-<h3 id="Weak-Example"><a href="#Weak-Example" class="headerlink" title="Weak Example"></a>Weak Example</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze this.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Better-Example"><a href="#Better-Example" class="headerlink" title="Better Example"></a>Better Example</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I am preparing a Jira comment for a Jenkins failure.</span><br><span class="line">Please analyze the pasted log, identify the most likely root cause, and give me a concise evidence chain.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br></pre></td></tr></table></figure>
-
-<p>The second version is better because it includes:</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Present?</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Context</td>
-<td>Yes — Jira comment for Jenkins failure</td>
-</tr>
-<tr>
-<td>Task</td>
-<td>Yes — analyze log and identify root cause</td>
-</tr>
-<tr>
-<td>Output expectation</td>
-<td>Yes — concise evidence chain</td>
-</tr>
-<tr>
-<td>Rule</td>
-<td>Yes — separate facts, assumptions, and inferences</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="4-The-Three-Core-Components"><a href="#4-The-Three-Core-Components" class="headerlink" title="4. The Three Core Components"></a>4. The Three Core Components</h2><h2 id="4-1-Setting-the-Stage"><a href="#4-1-Setting-the-Stage" class="headerlink" title="4.1 Setting the Stage"></a>4.1 Setting the Stage</h2><p><strong>Meaning:</strong> provide the role, objective, and relevant background.</p>
-<p>The model needs to know:</p>
-<table>
-<thead>
-<tr>
-<th>Question</th>
-<th>Purpose</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Who are you?</td>
-<td>Sets perspective</td>
-<td>I am a storage-focused SDET.</td>
-</tr>
-<tr>
-<td>What is your objective?</td>
-<td>Sets direction</td>
-<td>I need to identify the likely root cause.</td>
-</tr>
-<tr>
-<td>What context matters?</td>
-<td>Reduces guessing</td>
-<td>This failed during Jenkins pre-test setup.</td>
-</tr>
-<tr>
-<td>Who is the audience?</td>
-<td>Controls depth and tone</td>
-<td>This is for a Jira comment to the dev team.</td>
-</tr>
-</tbody></table>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I am a storage-focused SDET analyzing a Jenkins failure.</span><br><span class="line">My objective is to determine whether this failure is caused by environment setup, test logic, or product behavior.</span><br><span class="line">The failure happened during the pre-test setup stage in an iSCSI environment.</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="4-2-Defining-the-Task"><a href="#4-2-Defining-the-Task" class="headerlink" title="4.2 Defining the Task"></a>4.2 Defining the Task</h2><p><strong>Meaning:</strong> tell the model exactly what action to take.</p>
-<p>The task should use clear action verbs.</p>
-<table>
-<thead>
-<tr>
-<th>Verb</th>
-<th>Use Case</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>explain</td>
-<td>Explain a concept, sentence, word, or mechanism</td>
-</tr>
-<tr>
-<td>analyze</td>
-<td>Analyze logs, articles, failures, systems, or trade-offs</td>
-</tr>
-<tr>
-<td>summarize</td>
-<td>Summarize documents, meetings, emails, or reports</td>
-</tr>
-<tr>
-<td>compare</td>
-<td>Compare tools, ideas, solutions, or designs</td>
-</tr>
-<tr>
-<td>rewrite</td>
-<td>Improve wording, tone, grammar, or professionalism</td>
-</tr>
-<tr>
-<td>debug</td>
-<td>Diagnose errors, logs, code, or environment issues</td>
-</tr>
-<tr>
-<td>design</td>
-<td>Design architecture, test plans, workflows, or state machines</td>
-</tr>
-<tr>
-<td>review</td>
-<td>Review code, plans, English writing, or technical proposals</td>
-</tr>
-<tr>
-<td>build</td>
-<td>Create code, scripts, templates, or systems</td>
-</tr>
-</tbody></table>
-<h3 id="Weak-Task"><a href="#Weak-Task" class="headerlink" title="Weak Task"></a>Weak Task</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Help me with this issue.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Better-Task"><a href="#Better-Task" class="headerlink" title="Better Task"></a>Better Task</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Analyze the failure log, identify the failure point, build an evidence chain, and suggest the next three debugging steps.</span><br></pre></td></tr></table></figure>
-
-<p>The better version defines concrete actions.</p>
-<hr>
-<h2 id="4-3-Specifying-Rules"><a href="#4-3-Specifying-Rules" class="headerlink" title="4.3 Specifying Rules"></a>4.3 Specifying Rules</h2><p><strong>Meaning:</strong> define style, tone, constraints, examples, and output format.</p>
-<p>Rules reduce output randomness and make the answer easier to reuse.</p>
-<table>
-<thead>
-<tr>
-<th>Rule Type</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Style</td>
-<td>Use a formal and concise style.</td>
-</tr>
-<tr>
-<td>Tone</td>
-<td>Be direct and evidence-based.</td>
-</tr>
-<tr>
-<td>Structure</td>
-<td>Use Markdown headings and tables.</td>
-</tr>
-<tr>
-<td>Evidence</td>
-<td>Cite sources where possible.</td>
-</tr>
-<tr>
-<td>Constraints</td>
-<td>Do not invent missing information.</td>
-</tr>
-<tr>
-<td>Reasoning discipline</td>
-<td>Separate facts, assumptions, and inferences.</td>
-</tr>
-<tr>
-<td>Audience</td>
-<td>Assume the reader is a junior QA engineer.</td>
-</tr>
-<tr>
-<td>Length</td>
-<td>Keep the answer under 500 words.</td>
-</tr>
-<tr>
-<td>Example matching</td>
-<td>Follow the attached sample format.</td>
-</tr>
-</tbody></table>
-<h3 id="Example-Rules"><a href="#Example-Rules" class="headerlink" title="Example Rules"></a>Example Rules</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Be direct and evidence-based.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br><span class="line">Point out risks and gaps.</span><br><span class="line">Do not overclaim.</span><br><span class="line">Use Markdown tables where useful.</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="5-Expanded-Engineering-Framework-8-Components"><a href="#5-Expanded-Engineering-Framework-8-Components" class="headerlink" title="5. Expanded Engineering Framework: 8 Components"></a>5. Expanded Engineering Framework: 8 Components</h2><p>For complex tasks, use this full structure:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role → Goal → Context → Task → Input → Rules → Output Format → Success Criteria</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Purpose</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Role</td>
-<td>Defines model perspective</td>
-<td>You are a senior storage SDET.</td>
-</tr>
-<tr>
-<td>Goal</td>
-<td>Defines final objective</td>
-<td>Help me identify the likely root cause.</td>
-</tr>
-<tr>
-<td>Context</td>
-<td>Provides background</td>
-<td>This happened during Jenkins pre-test setup.</td>
-</tr>
-<tr>
-<td>Task</td>
-<td>Defines concrete action</td>
-<td>Analyze logs and build an evidence chain.</td>
-</tr>
-<tr>
-<td>Input</td>
-<td>Defines source material</td>
-<td>Use the attached Jenkins log and summary.</td>
-</tr>
-<tr>
-<td>Rules</td>
-<td>Defines constraints</td>
-<td>Do not invent missing facts.</td>
-</tr>
-<tr>
-<td>Output Format</td>
-<td>Defines structure</td>
-<td>Conclusion → Evidence Chain → Next Steps</td>
-</tr>
-<tr>
-<td>Success Criteria</td>
-<td>Defines what “good” means</td>
-<td>The answer should be suitable for a Jira comment.</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="6-Complete-Prompt-Template"><a href="#6-Complete-Prompt-Template" class="headerlink" title="6. Complete Prompt Template"></a>6. Complete Prompt Template</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Role</span><br><span class="line">You are a [role / expert perspective].</span><br><span class="line"></span><br><span class="line"># Goal</span><br><span class="line">My goal is to [final objective].</span><br><span class="line"></span><br><span class="line"># Context</span><br><span class="line">[Relevant background, current state, constraints, audience, and known facts.]</span><br><span class="line"></span><br><span class="line"># Task</span><br><span class="line">Please [specific action verbs: analyze / write / summarize / compare / debug / design / review].</span><br><span class="line">Focus on [specific points].</span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">Use [attached files / pasted logs / provided notes / screenshots] as the primary evidence.</span><br><span class="line"></span><br><span class="line"># Rules</span><br><span class="line">- Use [style and tone].</span><br><span class="line">- Separate facts, assumptions, and inferences.</span><br><span class="line">- Do not invent missing information.</span><br><span class="line">- Point out risks and gaps.</span><br><span class="line">- Ask for clarification only if the missing information blocks the task.</span><br><span class="line"></span><br><span class="line"># Output Format</span><br><span class="line">1. Conclusion</span><br><span class="line">2. Evidence / Analysis</span><br><span class="line">3. Risks / Gaps</span><br><span class="line">4. Next Steps</span><br><span class="line"></span><br><span class="line"># Success Criteria</span><br><span class="line">The answer should help me [decision or outcome].</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="7-Example-Storage-SDET-Jenkins-Failure"><a href="#7-Example-Storage-SDET-Jenkins-Failure" class="headerlink" title="7. Example: Storage SDET &#x2F; Jenkins Failure"></a>7. Example: Storage SDET &#x2F; Jenkins Failure</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Role</span><br><span class="line">You are a senior storage SDET and debugging mentor.</span><br><span class="line"></span><br><span class="line"># Goal</span><br><span class="line">My goal is to identify the most likely root cause and decide the next debugging step.</span><br><span class="line"></span><br><span class="line"># Context</span><br><span class="line">This failure happened during Jenkins pre-test setup.</span><br><span class="line">The environment uses iSCSI.</span><br><span class="line">The appliance is currently free, but no new Jenkins build was launched after the rerun request.</span><br><span class="line"></span><br><span class="line"># Task</span><br><span class="line">Analyze the provided log and summary.</span><br><span class="line">Identify the failure point.</span><br><span class="line">Build an evidence chain.</span><br><span class="line">Suggest the next three debugging steps.</span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">Use the pasted Jenkins log and dispatcher summary as the primary evidence.</span><br><span class="line"></span><br><span class="line"># Rules</span><br><span class="line">- Be direct and evidence-based.</span><br><span class="line">- Separate facts, assumptions, and inferences.</span><br><span class="line">- Do not invent missing information.</span><br><span class="line">- Point out risks and gaps.</span><br><span class="line">- Keep the answer suitable for a Jira comment.</span><br><span class="line"></span><br><span class="line"># Output Format</span><br><span class="line">1. Conclusion</span><br><span class="line">2. Evidence Chain</span><br><span class="line">3. Root Cause Hypotheses</span><br><span class="line">4. Risks / Gaps</span><br><span class="line">5. Next Steps</span><br><span class="line"></span><br><span class="line"># Success Criteria</span><br><span class="line">The answer should help me decide whether to rerun the test, check the environment, or escalate to development.</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="8-Example-Market-Research-Prompt"><a href="#8-Example-Market-Research-Prompt" class="headerlink" title="8. Example: Market Research Prompt"></a>8. Example: Market Research Prompt</h2><p>Original example:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">I&#x27;m the marketing lead at an indie streaming startup, and we&#x27;re preparing an investor pitch deck for Series A investors. Can you research the current state of the independent film streaming market and identify key trends, competitor positioning, and growth opportunities? Use current web research with citations and structure it as a professional report of up to 5 pages, with an executive summary, market analysis, competitive landscape, and growth opportunities.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Breakdown"><a href="#Breakdown" class="headerlink" title="Breakdown"></a>Breakdown</h3><table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Text</th>
-<th>Function</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Setting the stage</td>
-<td>I’m the marketing lead at an indie streaming startup.</td>
-<td>Defines role and business context.</td>
-</tr>
-<tr>
-<td>Objective</td>
-<td>We’re preparing an investor pitch deck for Series A investors.</td>
-<td>Defines audience and goal.</td>
-</tr>
-<tr>
-<td>Defining the task</td>
-<td>Research the current state of the independent film streaming market.</td>
-<td>Defines the main action.</td>
-</tr>
-<tr>
-<td>Details</td>
-<td>Identify key trends, competitor positioning, and growth opportunities.</td>
-<td>Defines research focus.</td>
-</tr>
-<tr>
-<td>Rules</td>
-<td>Use current web research with citations.</td>
-<td>Defines evidence requirement.</td>
-</tr>
-<tr>
-<td>Output format</td>
-<td>Professional report of up to 5 pages with specific sections.</td>
-<td>Defines structure and length.</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="9-The-Role-of-Context-as-a-Shortcut"><a href="#9-The-Role-of-Context-as-a-Shortcut" class="headerlink" title="9. The Role of Context as a Shortcut"></a>9. The Role of Context as a Shortcut</h2><p>Context is a shortcut because it helps the model understand your needs faster.</p>
-<p>This does not mean “shortcut” as a fragment or slice. It means:</p>
-<blockquote>
-<p>A faster path to understanding.</p>
-</blockquote>
-<p>When you upload relevant documents, logs, examples, or background information, you reduce back-and-forth clarification.</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Weak context:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This failed. Please check.</span><br></pre></td></tr></table></figure>
-
-<p>Better context:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">This Jenkins job failed during pre-test setup.</span><br><span class="line">The failure appears after iSCSI configuration.</span><br><span class="line">The cluster is free, but no new build was launched after the rerun request.</span><br><span class="line">Please determine whether this is a dispatch issue, environment issue, or test logic issue.</span><br></pre></td></tr></table></figure>
-
-<p>The second version gives the model a shortcut to your intent.</p>
-<hr>
-<h2 id="10-Relation-to-4D-Framework-for-AI-Fluency"><a href="#10-Relation-to-4D-Framework-for-AI-Fluency" class="headerlink" title="10. Relation to 4D Framework for AI Fluency"></a>10. Relation to 4D Framework for AI Fluency</h2><p>The prompt framework is related to the broader 4D Framework for AI Fluency.</p>
-<table>
-<thead>
-<tr>
-<th>4D Competency</th>
-<th>Chinese Meaning</th>
-<th>Practical Meaning</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Delegation</td>
-<td>委派任务</td>
-<td>Know what to ask AI to do.</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>描述清楚</td>
-<td>Explain background, task, and constraints clearly.</td>
-</tr>
-<tr>
-<td>Discernment</td>
-<td>判断辨别</td>
-<td>Evaluate whether AI output is correct, useful, and safe.</td>
-</tr>
-<tr>
-<td>Diligence</td>
-<td>审慎负责</td>
-<td>Use AI responsibly, ethically, and safely.</td>
-</tr>
-</tbody></table>
-<p>The three prompt elements mainly cover:</p>
-<table>
-<thead>
-<tr>
-<th>Prompt Element</th>
-<th>Related 4D Competency</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Setting the stage</td>
-<td>Description</td>
-</tr>
-<tr>
-<td>Defining the task</td>
-<td>Delegation + Description</td>
-</tr>
-<tr>
-<td>Specifying rules</td>
-<td>Description + Discernment</td>
-</tr>
-<tr>
-<td>Checking the output</td>
-<td>Discernment</td>
-</tr>
-<tr>
-<td>Responsible use</td>
-<td>Diligence</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="11-Practical-Decision-Rule"><a href="#11-Practical-Decision-Rule" class="headerlink" title="11. Practical Decision Rule"></a>11. Practical Decision Rule</h2><p>Not every prompt needs the full 8-part structure.</p>
-<table>
-<thead>
-<tr>
-<th>Task Complexity</th>
-<th>Prompt Requirement</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Word explanation</td>
-<td>Task only</td>
-</tr>
-<tr>
-<td>Sentence correction</td>
-<td>Task + tone</td>
-</tr>
-<tr>
-<td>Email rewrite</td>
-<td>Context + task + tone + audience</td>
-</tr>
-<tr>
-<td>Log analysis</td>
-<td>Context + input + task + evidence rules</td>
-</tr>
-<tr>
-<td>Report writing</td>
-<td>Role + goal + context + task + format</td>
-</tr>
-<tr>
-<td>System design</td>
-<td>Role + constraints + architecture requirements + success criteria</td>
-</tr>
-<tr>
-<td>High-stakes judgment</td>
-<td>Facts + assumptions + citations + limitations</td>
-</tr>
-</tbody></table>
-<p>Use the full framework when the task is complex, ambiguous, high-impact, or intended for reuse.</p>
-<hr>
-<h2 id="12-Common-Prompt-Failures"><a href="#12-Common-Prompt-Failures" class="headerlink" title="12. Common Prompt Failures"></a>12. Common Prompt Failures</h2><table>
-<thead>
-<tr>
-<th>Failure Mode</th>
-<th>Symptom</th>
-<th>Fix</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>No context</td>
-<td>Answer is generic</td>
-<td>Add role, objective, and background</td>
-</tr>
-<tr>
-<td>Vague task</td>
-<td>Model guesses what to do</td>
-<td>Use clear action verbs</td>
-</tr>
-<tr>
-<td>No input boundary</td>
-<td>Model may hallucinate</td>
-<td>Specify source material</td>
-</tr>
-<tr>
-<td>No output format</td>
-<td>Answer is hard to reuse</td>
-<td>Define sections or table format</td>
-</tr>
-<tr>
-<td>Too many rules</td>
-<td>Output becomes rigid</td>
-<td>Keep only useful constraints</td>
-</tr>
-<tr>
-<td>No success criteria</td>
-<td>Quality is hard to judge</td>
-<td>Define what decision the answer should support</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="13-Short-Formula"><a href="#13-Short-Formula" class="headerlink" title="13. Short Formula"></a>13. Short Formula</h2><p>For daily use:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Context → Task → Rules → Output Format</span><br></pre></td></tr></table></figure>
-
-<p>For engineering use:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Role + Goal + Context → Task + Input → Rules + Output Format + Success Criteria</span><br></pre></td></tr></table></figure>
-
-<p>For memory:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Prompt = Work Order for an AI Coworker</span><br></pre></td></tr></table></figure>
-
-<p>Chinese version:</p>
-<blockquote>
-<p>Prompt 不是咒语，而是一份给 AI 同事的任务说明书。</p>
-</blockquote>
-<hr>
-<h2 id="14-Final-Checklist"><a href="#14-Final-Checklist" class="headerlink" title="14. Final Checklist"></a>14. Final Checklist</h2><p>Before sending a complex prompt, check:</p>
-<ul>
-<li><input disabled="" type="checkbox"> Did I explain my role or perspective?</li>
-<li><input disabled="" type="checkbox"> Did I define my objective?</li>
-<li><input disabled="" type="checkbox"> Did I provide the necessary context?</li>
-<li><input disabled="" type="checkbox"> Did I specify the exact task?</li>
-<li><input disabled="" type="checkbox"> Did I identify the input material?</li>
-<li><input disabled="" type="checkbox"> Did I define rules or constraints?</li>
-<li><input disabled="" type="checkbox"> Did I specify output format?</li>
-<li><input disabled="" type="checkbox"> Did I define what good output should help me decide or accomplish?</li>
-</ul>
-<hr>
-<h2 id="15-One-Sentence-Summary"><a href="#15-One-Sentence-Summary" class="headerlink" title="15. One-Sentence Summary"></a>15. One-Sentence Summary</h2><p>Tell AI:</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Who I am, what I need, what context matters, what action to take, what rules to follow, and what good output looks like.</span><br></pre></td></tr></table></figure>
-
-<p>中文：</p>
-<blockquote>
-<p>告诉 AI：我是谁、我要什么、哪些背景重要、你要做什么、要遵守什么规则，以及什么样的输出才算好。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>AI &amp; Prompt Engineering</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>prompt engineering</tag>
-        <tag>ChatGPT</tag>
-        <tag>productivity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium</title>
-    <url>/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/</url>
-    <content><![CDATA[<h2 id="当前手工执行流程"><a href="#当前手工执行流程" class="headerlink" title="当前手工执行流程"></a>当前手工执行流程</h2><ol>
-<li><p><strong>Lease 存储设备</strong></p>
-</li>
-<li><p><strong>获取并确认存储信息</strong>：查找存储设备的 MGMT IP；登录 GUI 界面，确认当前存储版本信息</p>
-</li>
-<li><p><strong>准备配套 Linux 环境</strong>：登录与该存储配套的 Linux 设备；确认是否与存储处于同一 VLAN；配置桌面环境，安装 Firefox</p>
-</li>
-<li><p><strong>下载升级安装包</strong>：使用 <code>wget</code> 下载最新安装包</p>
-</li>
-<li><p><strong>通过 VNC 进行图形化操作</strong>：使用 VNC 登录 Linux 桌面；通过 Firefox 访问存储 MGMT IP；GUI中上传最新安装包</p>
-</li>
-<li><p><strong>执行升级操作（NDU）</strong></p>
-</li>
-<li><p><strong>After NDU</strong>：能够升级完成；升级完成后是否存在异常告警信息；components的接入正常</p>
-</li>
-</ol>
-<hr>
-<h2 id="为何需要考虑自动化？"><a href="#为何需要考虑自动化？" class="headerlink" title="为何需要考虑自动化？"></a>为何需要考虑自动化？</h2><p>虽然频率是<strong>两个月一次</strong>，不算高频，但流程长、串步骤多，人工操作很耗时间；并且容易因为环境差异，准备环境时需要检查很多的配置，过于繁琐；无法做到“到点自动触发”，还需要人盯日程和版本节奏</p>
-<hr>
-<h2 id="工具方案对比：Selenium-vs-Playwright"><a href="#工具方案对比：Selenium-vs-Playwright" class="headerlink" title="工具方案对比：Selenium vs Playwright"></a>工具方案对比：Selenium vs Playwright</h2><p>目前主要考虑两条路线：<strong>Selenium</strong> 和 <strong>Playwright</strong></p>
-<p><strong>Selenium 现状</strong></p>
-<p>在现有用例中，Selenium 已经实现了部分 Configuration 的自动化配置</p>
-<p>但脚本维护成本较高，整体可维护性并不理想</p>
-<p><strong>Playwright 的优势</strong></p>
-<p>原生支持<strong>自动等待</strong>机制，极大减少显式等待、轮询这种“脚本噪音”</p>
-<p>稳定性在实践和社区反馈中普遍优于 Selenium</p>
-<p>对现代 Web 应用（尤其是前端异步加载较多的界面）更友好</p>
-<p>综合考虑当前脚本维护情况和后续扩展性，<strong>最终决定采用 Playwright 作为 NDU GUI test 的实现工具</strong>，并在此基础上进一步探索自动化触发与环境准备的简化方案</p>
-]]></content>
-      <categories>
-        <category>Testing &amp; Automation</category>
-      </categories>
-      <tags>
-        <tag>技术成长</tag>
       </tags>
   </entry>
 </search>
