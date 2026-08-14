@@ -7,7 +7,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
 <meta property="article:published_time" content="2026-08-14T02:30:00.000Z">
-<meta property="article:modified_time" content="2026-08-14T02:17:47.729Z">
+<meta property="article:modified_time" content="2026-08-14T02:51:51.634Z">
 <meta property="article:author" content="Mokin">
 <meta property="article:tag" content="Agent Harness">
 <meta property="article:tag" content="Cordis">
@@ -23,7 +23,7 @@
   "url": "https://mokin1104.github.io/2026/08/14/spatiotemporal-composability-architecture-review/",
   "image": "https://mokin1104.github.io/img/avatar.svg",
   "datePublished": "2026-08-14T02:30:00.000Z",
-  "dateModified": "2026-08-14T02:17:47.729Z",
+  "dateModified": "2026-08-14T02:51:51.634Z",
   "author": [
     {
       "@type": "Person",
@@ -191,7 +191,7 @@ btf.addGlobalFn('pjaxSend', () => {
   Pace.restart()
 }, 'pace_restart')
 
-</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">架构师解读：A Programming Paradigm for Spatiotemporal Composability</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">架构师解读：A Programming Paradigm for Spatiotemporal Composability</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-14T02:17:47.729Z" title="Updated 2026-08-14 10:17:47">2026-08-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Software-Architecture/">Software Architecture</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Software-Architecture/Programming-Paradigms/">Programming Paradigms</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">5.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>18mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="架构师解读：A-Programming-Paradigm-for-Spatiotemporal-Composability"><a href="#架构师解读：A-Programming-Paradigm-for-Spatiotemporal-Composability" class="headerlink" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability"></a>架构师解读：A Programming Paradigm for Spatiotemporal Composability</h1><h2 id="结论先行"><a href="#结论先行" class="headerlink" title="结论先行"></a>结论先行</h2><p>这篇论文提出的不是一个“更好的插件 API”，而是一种面向动态系统的运行时编程范式：</p>
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">架构师解读：A Programming Paradigm for Spatiotemporal Composability</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">架构师解读：A Programming Paradigm for Spatiotemporal Composability</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-14T02:51:51.634Z" title="Updated 2026-08-14 10:51:51">2026-08-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Software-Architecture/">Software Architecture</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Software-Architecture/Programming-Paradigms/">Programming Paradigms</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">5.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>18mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="架构师解读：A-Programming-Paradigm-for-Spatiotemporal-Composability"><a href="#架构师解读：A-Programming-Paradigm-for-Spatiotemporal-Composability" class="headerlink" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability"></a>架构师解读：A Programming Paradigm for Spatiotemporal Composability</h1><h2 id="结论先行"><a href="#结论先行" class="headerlink" title="结论先行"></a>结论先行</h2><p>这篇论文提出的不是一个“更好的插件 API”，而是一种面向动态系统的运行时编程范式：</p>
 <blockquote>
 <p>把组件对环境的修改建模为“带逆操作的 Effect”，把组件对环境的需求建模为“可响应的 Coeffect”，再由统一的 Context Runtime 管理组件的加载、卸载、依赖变化、异步执行、失败恢复和热更新。</p>
 </blockquote>
@@ -239,7 +239,45 @@ btf.addGlobalFn('pjaxSend', () => {
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Effect   = 组件对世界做了什么</span><br><span class="line">Coeffect = 世界必须为组件提供什么</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-架构全景"><a href="#2-架构全景" class="headerlink" title="2. 架构全景"></a>2. 架构全景</h2><p>论文的整体架构可以压缩为：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Declarative Configuration / HMR</span><br><span class="line">              │</span><br><span class="line">              ▼</span><br><span class="line">      Loader / Reconciler</span><br><span class="line">              │</span><br><span class="line">              ▼</span><br><span class="line"> Fiber Registry + Lifecycle Runtime</span><br><span class="line"> target view / committed view / accumulator</span><br><span class="line">              │</span><br><span class="line">              ▼</span><br><span class="line">         Unified Context</span><br><span class="line">       ┌────────────┴────────────┐</span><br><span class="line">       ▼                         ▼</span><br><span class="line">Revertible Effects        Reactive Coeffects</span><br><span class="line">action + inverse          inject / provide</span><br><span class="line">LIFO accumulator          notify / resolve</span><br><span class="line">       │                         │</span><br><span class="line">       └────────────┬────────────┘</span><br><span class="line">                    ▼</span><br><span class="line">          Files, routes, timers,</span><br><span class="line">       services, tools, connections...</span><br></pre></td></tr></table></figure>
+<div class="stc-architecture" role="img" aria-label="声明式配置经过 Loader 协调 Fiber 生命周期，由统一 Context 同时管理可撤销 Effects 与响应式 Coeffects，最终控制文件、路由、定时器、服务、工具和连接">
+  <div class="stc-architecture-node stc-architecture-primary">
+    <strong>Declarative Configuration / HMR</strong>
+    <span>声明式配置与热更新入口</span>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node">
+    <strong>Loader / Reconciler</strong>
+    <span>计算组件的增加、退休与替换</span>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node">
+    <strong>Fiber Registry + Lifecycle Runtime</strong>
+    <span>target view · committed view · accumulator</span>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node stc-architecture-context">
+    <strong>Unified Context</strong>
+    <span>统一管理环境交互</span>
+  </div>
+  <div class="stc-flow-caption">同时管理</div>
+  <div class="stc-architecture-branches">
+    <div class="stc-architecture-node stc-architecture-effect">
+      <strong>Revertible Effects</strong>
+      <span>action + inverse</span>
+      <span>LIFO accumulator</span>
+    </div>
+    <div class="stc-architecture-node stc-architecture-coeffect">
+      <strong>Reactive Coeffects</strong>
+      <span>inject / provide</span>
+      <span>notify / resolve</span>
+    </div>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node stc-architecture-output">
+    <strong>Managed Environment</strong>
+    <span>Files · routes · timers · services · tools · connections</span>
+  </div>
+</div>
 
 <p>从架构分层看：</p>
 <ol>
@@ -251,23 +289,23 @@ btf.addGlobalFn('pjaxSend', () => {
 <li><strong>HMR</strong> 在此基础上完成模块级替换。</li>
 </ol>
 <h2 id="3-Revertible-Effects：让副作用可撤销"><a href="#3-Revertible-Effects：让副作用可撤销" class="headerlink" title="3. Revertible Effects：让副作用可撤销"></a>3. Revertible Effects：让副作用可撤销</h2><h3 id="3-1-普通-Effect-为什么不够"><a href="#3-1-普通-Effect-为什么不够" class="headerlink" title="3.1 普通 Effect 为什么不够"></a>3.1 普通 Effect 为什么不够</h3><p>传统副作用可以抽象为：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f: Γ -&gt; Γ</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="f maps Gamma to Gamma"><span><var>f</var>: Γ → Γ</span></div>
 
-<p>其中 <code>Γ</code> 表示整个可观察环境。</p>
+<p>其中 <span class="stc-math-inline">Γ</span> 表示整个可观察环境。</p>
 <p>但仅知道“环境发生了变化”不能支持卸载。论文把 Effect 改成：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e: Γ -&gt; Γ × (Γ -&gt; Γ)</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="e maps Gamma to Gamma paired with a function from Gamma to Gamma"><span><var>e</var>: Γ → Γ × (Γ → Γ)</span></div>
 
 <p>执行一次 Effect 时返回：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e(γ) = (δ, g)</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="e of gamma equals the pair delta and g"><span><var>e</var>(γ) = (δ, <var>g</var>)</span></div>
 
 <p>其中：</p>
 <ul>
-<li><code>γ</code>：执行前状态；</li>
-<li><code>δ</code>：执行后状态；</li>
-<li><code>g</code>：本次执行产生的 inverse；</li>
-<li>要求 <code>g(δ) ≃ γ</code>。</li>
+<li><span class="stc-math-inline">γ</span>：执行前状态；</li>
+<li><span class="stc-math-inline">δ</span>：执行后状态；</li>
+<li><span class="stc-math-inline"><var>g</var></span>：本次执行产生的 inverse；</li>
+<li>要求 <span class="stc-math-inline"><var>g</var>(δ) ≃ γ</span>。</li>
 </ul>
-<p>这里的 <code>≃</code> 是观察等价，而不要求物理状态逐字节相同。</p>
+<p>这里的 <span class="stc-math-inline">≃</span> 是观察等价，而不要求物理状态逐字节相同。</p>
 <p>重要的是，inverse 在 Effect 执行时产生，而不是预先写死。例如：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">registerRoute(&quot;/report&quot;, handler)</span><br><span class="line">    -&gt; unregisterRoute(&quot;/report&quot;, handler)</span><br><span class="line"></span><br><span class="line">setInterval(job, 1000)</span><br><span class="line">    -&gt; clearInterval(timerId)</span><br><span class="line"></span><br><span class="line">openConnection(config)</span><br><span class="line">    -&gt; closeConnection(connection)</span><br></pre></td></tr></table></figure>
 
@@ -311,7 +349,7 @@ btf.addGlobalFn('pjaxSend', () => {
 <p>可交换的部分交给 Effects；不可交换的部分必须通过 Coeffects 显式建立顺序。</p>
 </blockquote>
 <h2 id="4-Reactive-Coeffects：让依赖能够响应变化"><a href="#4-Reactive-Coeffects：让依赖能够响应变化" class="headerlink" title="4. Reactive Coeffects：让依赖能够响应变化"></a>4. Reactive Coeffects：让依赖能够响应变化</h2><h3 id="4-1-Coeffect-不只是另一个-DI-名字"><a href="#4-1-Coeffect-不只是另一个-DI-名字" class="headerlink" title="4.1 Coeffect 不只是另一个 DI 名字"></a>4.1 Coeffect 不只是另一个 DI 名字</h3><p>论文把依赖环境定义成一个带类型的有限映射：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Σ = (k: K) ⇀ V_k</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="Sigma is a partial mapping from keys k of K to values V sub k"><span>Σ = (<var>k</var>: K) ⇀ V<sub><var>k</var></sub></span></div>
 
 <p>意思是：</p>
 <ul>
@@ -368,7 +406,7 @@ btf.addGlobalFn('pjaxSend', () => {
 <p>provider 在每次调用时检查这些 metadata。它适合权限、tracing、quota、tenant 信息和只读数据库访问。</p>
 <p>由于 interception 不改变 provider identity，修改策略不一定需要 reload consumer。</p>
 <h2 id="5-Effects-与-Coeffects-如何统一"><a href="#5-Effects-与-Coeffects-如何统一" class="headerlink" title="5. Effects 与 Coeffects 如何统一"></a>5. Effects 与 Coeffects 如何统一</h2><p>论文提出递归 Context：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Γ∞ = μΓ. Γ × (Γ -&gt; Γ) × Σ</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="Gamma infinity equals mu Gamma dot Gamma times a function from Gamma to Gamma times Sigma"><span>Γ<sub>∞</sub> = μΓ. Γ × (Γ → Γ) × Σ</span></div>
 
 <p>直观理解，每层 Context 同时保存：</p>
 <ul>
@@ -556,7 +594,7 @@ btf.addGlobalFn('pjaxSend', () => {
 </blockquote>
 <p>在普通 JavaScript&#x2F;TypeScript 中，组件仍然可以绕过 Context。除非配合 lint、代码审查、受限 runtime 或 sandbox，否则这首先是一种架构纪律。</p>
 <h3 id="11-2-Inverse-正确性没有自动验证"><a href="#11-2-Inverse-正确性没有自动验证" class="headerlink" title="11.2 Inverse 正确性没有自动验证"></a>11.2 Inverse 正确性没有自动验证</h3><p>Cordis 接受 disposer，但不会证明：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inverse(effect(state)) ≃ state</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="inverse of effect of state is observationally equivalent to state"><span>inverse(effect(state)) ≃ state</span></div>
 
 <p>如果 inverse 忘记清理、清理错对象、重复执行不安全、自身抛异常，形式保证就会断裂。</p>
 <p>论文建模了 activation failure，但没有完整建模 inverse&#x2F;disposal 本身失败后的恢复协议。</p>
