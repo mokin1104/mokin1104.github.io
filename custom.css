@@ -76,8 +76,26 @@
 }
 
 /* ----------------------------------------------------------
-   Code blocks — high contrast, without decorative shadows
+   Code blocks — follow the page's light/dark color mode
    ---------------------------------------------------------- */
+[data-theme="light"] {
+  --hl-color: #334155;
+  --hl-bg: #f8fafc;
+  --hltools-bg: #e2e8f0;
+  --hltools-color: #334155;
+  --hlnumber-bg: #f1f5f9;
+  --hlnumber-color: #5f6f85;
+  --hlscrollbar-bg: #cbd5e1;
+  --hlexpand-bg: linear-gradient(180deg, rgba(248, 250, 252, 0.6), rgba(226, 232, 240, 0.95));
+  --code-block-border: #cbd5e1;
+  --code-block-divider: #cbd5e1;
+}
+
+[data-theme="dark"] {
+  --code-block-border: #334155;
+  --code-block-divider: #334155;
+}
+
 figure.highlight,
 .highlight {
   border-radius: 10px !important;
@@ -86,24 +104,113 @@ figure.highlight,
 }
 
 #article-container figure.highlight {
-  border: 1px solid #334155;
-  background: #0f172a;
+  border: 1px solid var(--code-block-border);
+  background: var(--hl-bg);
   box-shadow: none !important;
   text-shadow: none !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 #article-container figure.highlight table {
   margin: 0;
 }
 
+#article-container figure.highlight .highlight-tools {
+  border-bottom: 1px solid var(--code-block-divider);
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
 #article-container figure.highlight .code pre {
-  background: #0f172a;
-  color: #e2e8f0;
+  background: var(--hl-bg);
+  color: var(--hl-color);
 }
 
 #article-container figure.highlight .gutter pre {
-  background: #111827;
-  color: #94a3b8;
+  background: var(--hlnumber-bg);
+  color: var(--hlnumber-color);
+}
+
+/* The bundled syntax palette targets a dark background; replace it only in light mode. */
+[data-theme="light"] #article-container figure.highlight pre .deletion {
+  color: #be123c;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .addition {
+  color: #166534;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .meta {
+  color: #7e22ce;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .comment {
+  color: #64748b;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .variable,
+  .attribute,
+  .regexp,
+  .tag .name,
+  .css .id,
+  .css .class,
+  .css .pseudo
+) {
+  color: #b91c1c;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .tag {
+  color: #075985;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .number,
+  .preprocessor,
+  .literal,
+  .params,
+  .constant,
+  .command
+) {
+  color: #c2410c;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .built_in {
+  color: #854d0e;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .special,
+  .formula
+) {
+  color: #15803d;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .keyword,
+  .title,
+  .css .hexcolor
+) {
+  color: #0369a1;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .function,
+  .python .decorator,
+  .javascript .title,
+  .coffeescript .title
+) {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .tag .attr,
+  .javascript .function
+) {
+  color: #7e22ce;
 }
 
 /* Inline code must remain readable in both color modes. */
