@@ -1,387 +1,452 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <url>
-    <loc>https://mokin1104.github.io/2026/05/11/2026-05-11-english-vocabulary-instruction-introduction-effective-efficiency/</loc>
-    
-    <lastmod>2026-05-11</lastmod>
-    
+    <loc>https://mokin1104.github.io/2026/08/14/spatiotemporal-composability-architecture-review/</loc>
+
+    <lastmod>2026-08-14</lastmod>
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/2026/05/11/english-competencies-vs-abilities/</loc>
-    
-    <lastmod>2026-05-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/2026/05/08/prompt-debugging-common-challenges-2026-05-08/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/2026/05/08/english-vocabulary-from-chat-2026-05-08/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/2026/05/08/prompt-components-framework-2026-05-08/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/about/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
+
+    <lastmod>2026-08-14</lastmod>
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
+  <url>
+    <loc>https://mokin1104.github.io/about/</loc>
+
+    <lastmod>2026-08-14</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://mokin1104.github.io/categories/</loc>
-    
-    <lastmod>2026-05-08</lastmod>
-    
+
+    <lastmod>2026-08-14</lastmod>
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/11/2026-05-11-english-vocabulary-instruction-introduction-effective-efficiency/</loc>
+
+    <lastmod>2026-05-11</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/11/english-competencies-vs-abilities/</loc>
+
+    <lastmod>2026-05-11</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/</loc>
+
+    <lastmod>2026-05-08</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/</loc>
+
+    <lastmod>2026-05-08</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/08/english-vocabulary-from-chat-2026-05-08/</loc>
+
+    <lastmod>2026-05-08</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/08/prompt-components-framework-2026-05-08/</loc>
+
+    <lastmod>2026-05-08</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/08/prompt-debugging-common-challenges-2026-05-08/</loc>
+
+    <lastmod>2026-05-08</lastmod>
+
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://mokin1104.github.io/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/</loc>
-    
+
     <lastmod>2025-11-25</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%94%E8%AE%B2/</loc>
-    
+
     <lastmod>2025-11-22</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/</loc>
-    
+
     <lastmod>2025-11-22</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%89%E3%80%81%E5%9B%9B%E8%AE%B2/</loc>
-    
+
     <lastmod>2025-11-22</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/29/date%20format/</loc>
-    
+
     <lastmod>2025-06-29</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/25/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E5%85%AD%E8%AE%B2/</loc>
-    
+
     <lastmod>2025-06-26</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/</loc>
-    
+
     <lastmod>2025-06-24</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/2025/06/11/calculate_timestamp_post/</loc>
-    
+
     <lastmod>2025-06-11</lastmod>
-    
+
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
 
   <url>
     <loc>https://mokin1104.github.io/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/English/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/Vocabulary/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/IELTS/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/Workplace-English/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/Precision-Writing/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/Python/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/%E6%97%B6%E9%97%B4%E6%88%B3/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/%E5%B7%A5%E4%BD%9C%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/vocabulary/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/AI/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/prompt-engineering/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
-    <loc>https://mokin1104.github.io/tags/ChatGPT/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://mokin1104.github.io/tags/Python/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
-    <loc>https://mokin1104.github.io/tags/productivity/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://mokin1104.github.io/tags/%E8%84%9A%E6%9C%AC%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/%E6%97%B6%E9%97%B4%E6%88%B3/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/%E5%B7%A5%E4%BD%9C%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
   <url>
     <loc>https://mokin1104.github.io/tags/tools-collection/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/Linux-macOS/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
-    <loc>https://mokin1104.github.io/tags/debugging/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://mokin1104.github.io/tags/ChatGPT/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
-    <loc>https://mokin1104.github.io/tags/workplace-English/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://mokin1104.github.io/tags/productivity/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/AI-terms/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/%E6%8A%80%E6%9C%AF%E9%A2%86%E5%AF%BC%E5%8A%9B/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/tags/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/tags/AI-Literacy/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
 
-  
+  <url>
+    <loc>https://mokin1104.github.io/tags/workplace-English/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/AI-terms/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/debugging/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/Software-Architecture/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/Dynamic-Composition/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/Effect-Systems/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/Plugin-Systems/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/Agent-Harness/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/Cordis/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/%E6%8A%80%E6%9C%AF%E9%A2%86%E5%AF%BC%E5%8A%9B/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://mokin1104.github.io/tags/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+
+
   <url>
     <loc>https://mokin1104.github.io/categories/English-Learning/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-  <url>
-    <loc>https://mokin1104.github.io/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/categories/Testing-Automation/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
+  <url>
+    <loc>https://mokin1104.github.io/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
   <url>
     <loc>https://mokin1104.github.io/categories/English-Learning/Vocabulary/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
   <url>
     <loc>https://mokin1104.github.io/categories/AI-Prompt-Engineering/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
+  <url>
+    <loc>https://mokin1104.github.io/categories/Software-Architecture/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
   <url>
     <loc>https://mokin1104.github.io/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%8F%8D%E6%80%9D/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
+
+  <url>
+    <loc>https://mokin1104.github.io/categories/Software-Architecture/Programming-Paradigms/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
 </urlset>
