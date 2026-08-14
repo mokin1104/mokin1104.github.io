@@ -215,47 +215,48 @@ figure.highlight,
   letter-spacing: 0.08em;
 }
 
-#article-container .stc-formula {
+#article-container .paper-formula {
   box-sizing: border-box;
   max-width: 100%;
-  margin: 1rem 0 1.4rem;
-  padding: 0.9rem 1rem;
-  overflow-x: auto;
+  margin: 1.2rem 0 1.6rem;
+  padding: 0.7rem;
   border: 1px solid #cbd5e1;
-  border-left: 4px solid #0284c7;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #f8fafc;
-  color: #0f172a;
   box-shadow: none;
-  text-align: center;
-  text-shadow: none;
-  white-space: nowrap;
 }
 
-#article-container .stc-formula > span,
-#article-container .stc-math-inline {
-  font-family: "STIX Two Math", "Cambria Math", "Noto Sans Math", "DejaVu Serif", "Times New Roman", serif;
-  font-variant-ligatures: none;
+#article-container .paper-formula-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  -webkit-overflow-scrolling: touch;
 }
 
-#article-container .stc-formula > span {
-  font-size: clamp(1.05rem, 3vw, 1.28rem);
-  font-weight: 500;
-  letter-spacing: 0.01em;
+#article-container .paper-formula a {
+  display: block;
+  width: 100%;
+  min-width: 720px;
 }
 
-#article-container .stc-math-inline {
-  display: inline-block;
-  padding: 0.05em 0.3em;
-  border: 1px solid #bae6fd;
-  border-radius: 4px;
-  background: #e0f2fe;
-  color: #0c4a6e;
-  font-size: 1.04em;
-  font-weight: 600;
-  line-height: 1.35;
-  box-shadow: none;
-  text-shadow: none;
+#article-container .paper-formula img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  background: #ffffff;
+}
+
+#article-container .paper-formula figcaption {
+  margin-top: 0.6rem;
+  color: #475569;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  text-align: left;
 }
 
 [data-theme="dark"] #article-container .stc-architecture {
@@ -302,17 +303,17 @@ figure.highlight,
   color: #7dd3fc;
 }
 
-[data-theme="dark"] #article-container .stc-formula {
+[data-theme="dark"] #article-container .paper-formula {
   border-color: #475569;
-  border-left-color: #38bdf8;
-  background: #111827;
-  color: #f8fafc;
+  background: #0f172a;
 }
 
-[data-theme="dark"] #article-container .stc-math-inline {
-  border-color: #0e7490;
-  background: #164e63;
-  color: #e0f2fe;
+[data-theme="dark"] #article-container .paper-formula-scroll {
+  border-color: #64748b;
+}
+
+[data-theme="dark"] #article-container .paper-formula figcaption {
+  color: #cbd5e1;
 }
 
 @media (max-width: 640px) {
@@ -324,8 +325,12 @@ figure.highlight,
     padding: 0.75rem;
   }
 
-  #article-container .stc-formula {
-    text-align: left;
+  #article-container .paper-formula {
+    padding: 0.5rem;
+  }
+
+  #article-container .paper-formula a {
+    min-width: 760px;
   }
 }
 
