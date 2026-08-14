@@ -1534,94 +1534,6 @@
       </tags>
   </entry>
   <entry>
-    <title>how to use date format in Linux/MacOS</title>
-    <url>/2025/06/29/date%20format/</url>
-    <content><![CDATA[<h2 id="✅-date-format-中格式符的大小写规则（基于macOS-Linux）"><a href="#✅-date-format-中格式符的大小写规则（基于macOS-Linux）" class="headerlink" title="✅ date &quot;+format&quot; 中格式符的大小写规则（基于macOS&#x2F;Linux）"></a>✅ <code>date &quot;+format&quot;</code> 中格式符的大小写规则（基于macOS&#x2F;Linux）</h2><table>
-<thead>
-<tr>
-<th>时间单位</th>
-<th>格式符</th>
-<th>是否大小写敏感</th>
-<th>含义</th>
-<th>示例值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>年</td>
-<td><code>%Y</code></td>
-<td>是</td>
-<td>四位数年份</td>
-<td><code>2025</code></td>
-</tr>
-<tr>
-<td>年</td>
-<td><code>%y</code></td>
-<td>是</td>
-<td>两位数年份</td>
-<td><code>25</code></td>
-</tr>
-<tr>
-<td>月</td>
-<td><code>%m</code></td>
-<td>是</td>
-<td>数字月份（01-12）</td>
-<td><code>06</code></td>
-</tr>
-<tr>
-<td>日</td>
-<td><code>%d</code></td>
-<td>是</td>
-<td>数字日（01-31）</td>
-<td><code>29</code></td>
-</tr>
-<tr>
-<td>小时</td>
-<td><code>%H</code></td>
-<td>是</td>
-<td>24小时制（00–23）</td>
-<td><code>15</code></td>
-</tr>
-<tr>
-<td>小时</td>
-<td><code>%I</code></td>
-<td>是</td>
-<td>12小时制（01–12）</td>
-<td><code>03</code></td>
-</tr>
-<tr>
-<td>分钟</td>
-<td><code>%M</code></td>
-<td>是</td>
-<td>分钟（00–59）</td>
-<td><code>48</code></td>
-</tr>
-<tr>
-<td>秒</td>
-<td><code>%S</code></td>
-<td>是</td>
-<td>秒数（00–59）</td>
-<td><code>59</code></td>
-</tr>
-</tbody></table>
-<h2 id="🔎-结论"><a href="#🔎-结论" class="headerlink" title="🔎 结论"></a>🔎 结论</h2><blockquote>
-<p> ✅ <strong>年份：大小写都有（%Y, %y，注意含义不同）</strong><br> ✅ <strong>月份和日期：统一用小写（%m, %d）</strong><br> ✅ <strong>时分秒：统一用大写（%H, %M, %S）</strong><br> 🚫 错误用法：大小写错误会导致解析失败或输出错误（比如 <code>%h</code> 无效）</p>
-</blockquote>
-<h2 id="🧠-附加说明（技术背景）"><a href="#🧠-附加说明（技术背景）" class="headerlink" title="🧠 附加说明（技术背景）"></a>🧠 附加说明（技术背景）</h2><ol>
-<li><p><code>%Y</code> 和 <code>%y</code> 是不同的字段，不是大小写等价</p>
-</li>
-<li><p><code>%m</code>, <code>%d</code>, <code>%H</code>, <code>%M</code>, <code>%S</code> 都是固定大小写的规范格式</p>
-</li>
-<li><p><code>date</code> 命令遵循 POSIX 标准或 GNU date 格式说明文档（可查 man page）</p>
-</li>
-</ol>
-<h2 id="✅-值得背下的常用格式模板："><a href="#✅-值得背下的常用格式模板：" class="headerlink" title="✅ 值得背下的常用格式模板："></a>✅ 值得背下的常用格式模板：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">date</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>    <span class="comment"># 2025-06-29 15:50:49</span></span><br><span class="line"><span class="built_in">date</span> <span class="string">&quot;+%y%m%d-%H%M%S&quot;</span>        <span class="comment"># 250629-155049</span></span><br><span class="line"><span class="built_in">date</span> -u <span class="string">&quot;+%Y%m%dT%H%M%SZ&quot;</span>    <span class="comment"># 20250629T075049Z （UTC ISO格式）</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>tools collection</tag>
-        <tag>Linux/macOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</title>
     <url>/2026/05/08/effective-prompt-framework-2026-05-08/</url>
     <content><![CDATA[<h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>A good prompt is not a magic phrase. It is a <strong>clear task brief for an AI coworker</strong>.</p>
@@ -2143,6 +2055,94 @@
         <tag>prompt engineering</tag>
         <tag>ChatGPT</tag>
         <tag>productivity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>how to use date format in Linux/MacOS</title>
+    <url>/2025/06/29/date%20format/</url>
+    <content><![CDATA[<h2 id="✅-date-format-中格式符的大小写规则（基于macOS-Linux）"><a href="#✅-date-format-中格式符的大小写规则（基于macOS-Linux）" class="headerlink" title="✅ date &quot;+format&quot; 中格式符的大小写规则（基于macOS&#x2F;Linux）"></a>✅ <code>date &quot;+format&quot;</code> 中格式符的大小写规则（基于macOS&#x2F;Linux）</h2><table>
+<thead>
+<tr>
+<th>时间单位</th>
+<th>格式符</th>
+<th>是否大小写敏感</th>
+<th>含义</th>
+<th>示例值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>年</td>
+<td><code>%Y</code></td>
+<td>是</td>
+<td>四位数年份</td>
+<td><code>2025</code></td>
+</tr>
+<tr>
+<td>年</td>
+<td><code>%y</code></td>
+<td>是</td>
+<td>两位数年份</td>
+<td><code>25</code></td>
+</tr>
+<tr>
+<td>月</td>
+<td><code>%m</code></td>
+<td>是</td>
+<td>数字月份（01-12）</td>
+<td><code>06</code></td>
+</tr>
+<tr>
+<td>日</td>
+<td><code>%d</code></td>
+<td>是</td>
+<td>数字日（01-31）</td>
+<td><code>29</code></td>
+</tr>
+<tr>
+<td>小时</td>
+<td><code>%H</code></td>
+<td>是</td>
+<td>24小时制（00–23）</td>
+<td><code>15</code></td>
+</tr>
+<tr>
+<td>小时</td>
+<td><code>%I</code></td>
+<td>是</td>
+<td>12小时制（01–12）</td>
+<td><code>03</code></td>
+</tr>
+<tr>
+<td>分钟</td>
+<td><code>%M</code></td>
+<td>是</td>
+<td>分钟（00–59）</td>
+<td><code>48</code></td>
+</tr>
+<tr>
+<td>秒</td>
+<td><code>%S</code></td>
+<td>是</td>
+<td>秒数（00–59）</td>
+<td><code>59</code></td>
+</tr>
+</tbody></table>
+<h2 id="🔎-结论"><a href="#🔎-结论" class="headerlink" title="🔎 结论"></a>🔎 结论</h2><blockquote>
+<p> ✅ <strong>年份：大小写都有（%Y, %y，注意含义不同）</strong><br> ✅ <strong>月份和日期：统一用小写（%m, %d）</strong><br> ✅ <strong>时分秒：统一用大写（%H, %M, %S）</strong><br> 🚫 错误用法：大小写错误会导致解析失败或输出错误（比如 <code>%h</code> 无效）</p>
+</blockquote>
+<h2 id="🧠-附加说明（技术背景）"><a href="#🧠-附加说明（技术背景）" class="headerlink" title="🧠 附加说明（技术背景）"></a>🧠 附加说明（技术背景）</h2><ol>
+<li><p><code>%Y</code> 和 <code>%y</code> 是不同的字段，不是大小写等价</p>
+</li>
+<li><p><code>%m</code>, <code>%d</code>, <code>%H</code>, <code>%M</code>, <code>%S</code> 都是固定大小写的规范格式</p>
+</li>
+<li><p><code>date</code> 命令遵循 POSIX 标准或 GNU date 格式说明文档（可查 man page）</p>
+</li>
+</ol>
+<h2 id="✅-值得背下的常用格式模板："><a href="#✅-值得背下的常用格式模板：" class="headerlink" title="✅ 值得背下的常用格式模板："></a>✅ 值得背下的常用格式模板：</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">date</span> <span class="string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>    <span class="comment"># 2025-06-29 15:50:49</span></span><br><span class="line"><span class="built_in">date</span> <span class="string">&quot;+%y%m%d-%H%M%S&quot;</span>        <span class="comment"># 250629-155049</span></span><br><span class="line"><span class="built_in">date</span> -u <span class="string">&quot;+%Y%m%dT%H%M%SZ&quot;</span>    <span class="comment"># 20250629T075049Z （UTC ISO格式）</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>tools collection</tag>
+        <tag>Linux/macOS</tag>
       </tags>
   </entry>
   <entry>
@@ -4005,7 +4005,45 @@
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Effect   = 组件对世界做了什么</span><br><span class="line">Coeffect = 世界必须为组件提供什么</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-架构全景"><a href="#2-架构全景" class="headerlink" title="2. 架构全景"></a>2. 架构全景</h2><p>论文的整体架构可以压缩为：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Declarative Configuration / HMR</span><br><span class="line">              │</span><br><span class="line">              ▼</span><br><span class="line">      Loader / Reconciler</span><br><span class="line">              │</span><br><span class="line">              ▼</span><br><span class="line"> Fiber Registry + Lifecycle Runtime</span><br><span class="line"> target view / committed view / accumulator</span><br><span class="line">              │</span><br><span class="line">              ▼</span><br><span class="line">         Unified Context</span><br><span class="line">       ┌────────────┴────────────┐</span><br><span class="line">       ▼                         ▼</span><br><span class="line">Revertible Effects        Reactive Coeffects</span><br><span class="line">action + inverse          inject / provide</span><br><span class="line">LIFO accumulator          notify / resolve</span><br><span class="line">       │                         │</span><br><span class="line">       └────────────┬────────────┘</span><br><span class="line">                    ▼</span><br><span class="line">          Files, routes, timers,</span><br><span class="line">       services, tools, connections...</span><br></pre></td></tr></table></figure>
+<div class="stc-architecture" role="img" aria-label="声明式配置经过 Loader 协调 Fiber 生命周期，由统一 Context 同时管理可撤销 Effects 与响应式 Coeffects，最终控制文件、路由、定时器、服务、工具和连接">
+  <div class="stc-architecture-node stc-architecture-primary">
+    <strong>Declarative Configuration / HMR</strong>
+    <span>声明式配置与热更新入口</span>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node">
+    <strong>Loader / Reconciler</strong>
+    <span>计算组件的增加、退休与替换</span>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node">
+    <strong>Fiber Registry + Lifecycle Runtime</strong>
+    <span>target view · committed view · accumulator</span>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node stc-architecture-context">
+    <strong>Unified Context</strong>
+    <span>统一管理环境交互</span>
+  </div>
+  <div class="stc-flow-caption">同时管理</div>
+  <div class="stc-architecture-branches">
+    <div class="stc-architecture-node stc-architecture-effect">
+      <strong>Revertible Effects</strong>
+      <span>action + inverse</span>
+      <span>LIFO accumulator</span>
+    </div>
+    <div class="stc-architecture-node stc-architecture-coeffect">
+      <strong>Reactive Coeffects</strong>
+      <span>inject / provide</span>
+      <span>notify / resolve</span>
+    </div>
+  </div>
+  <div class="stc-flow-arrow" aria-hidden="true">↓</div>
+  <div class="stc-architecture-node stc-architecture-output">
+    <strong>Managed Environment</strong>
+    <span>Files · routes · timers · services · tools · connections</span>
+  </div>
+</div>
 
 <p>从架构分层看：</p>
 <ol>
@@ -4017,23 +4055,23 @@
 <li><strong>HMR</strong> 在此基础上完成模块级替换。</li>
 </ol>
 <h2 id="3-Revertible-Effects：让副作用可撤销"><a href="#3-Revertible-Effects：让副作用可撤销" class="headerlink" title="3. Revertible Effects：让副作用可撤销"></a>3. Revertible Effects：让副作用可撤销</h2><h3 id="3-1-普通-Effect-为什么不够"><a href="#3-1-普通-Effect-为什么不够" class="headerlink" title="3.1 普通 Effect 为什么不够"></a>3.1 普通 Effect 为什么不够</h3><p>传统副作用可以抽象为：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">f: Γ -&gt; Γ</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="f maps Gamma to Gamma"><span><var>f</var>: Γ → Γ</span></div>
 
-<p>其中 <code>Γ</code> 表示整个可观察环境。</p>
+<p>其中 <span class="stc-math-inline">Γ</span> 表示整个可观察环境。</p>
 <p>但仅知道“环境发生了变化”不能支持卸载。论文把 Effect 改成：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">e: Γ -&gt; Γ × (Γ -&gt; Γ)</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="e maps Gamma to Gamma paired with a function from Gamma to Gamma"><span><var>e</var>: Γ → Γ × (Γ → Γ)</span></div>
 
 <p>执行一次 Effect 时返回：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">e(γ) = (δ, g)</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="e of gamma equals the pair delta and g"><span><var>e</var>(γ) = (δ, <var>g</var>)</span></div>
 
 <p>其中：</p>
 <ul>
-<li><code>γ</code>：执行前状态；</li>
-<li><code>δ</code>：执行后状态；</li>
-<li><code>g</code>：本次执行产生的 inverse；</li>
-<li>要求 <code>g(δ) ≃ γ</code>。</li>
+<li><span class="stc-math-inline">γ</span>：执行前状态；</li>
+<li><span class="stc-math-inline">δ</span>：执行后状态；</li>
+<li><span class="stc-math-inline"><var>g</var></span>：本次执行产生的 inverse；</li>
+<li>要求 <span class="stc-math-inline"><var>g</var>(δ) ≃ γ</span>。</li>
 </ul>
-<p>这里的 <code>≃</code> 是观察等价，而不要求物理状态逐字节相同。</p>
+<p>这里的 <span class="stc-math-inline">≃</span> 是观察等价，而不要求物理状态逐字节相同。</p>
 <p>重要的是，inverse 在 Effect 执行时产生，而不是预先写死。例如：</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">registerRoute(&quot;/report&quot;, handler)</span><br><span class="line">    -&gt; unregisterRoute(&quot;/report&quot;, handler)</span><br><span class="line"></span><br><span class="line">setInterval(job, 1000)</span><br><span class="line">    -&gt; clearInterval(timerId)</span><br><span class="line"></span><br><span class="line">openConnection(config)</span><br><span class="line">    -&gt; closeConnection(connection)</span><br></pre></td></tr></table></figure>
 
@@ -4077,7 +4115,7 @@
 <p>可交换的部分交给 Effects；不可交换的部分必须通过 Coeffects 显式建立顺序。</p>
 </blockquote>
 <h2 id="4-Reactive-Coeffects：让依赖能够响应变化"><a href="#4-Reactive-Coeffects：让依赖能够响应变化" class="headerlink" title="4. Reactive Coeffects：让依赖能够响应变化"></a>4. Reactive Coeffects：让依赖能够响应变化</h2><h3 id="4-1-Coeffect-不只是另一个-DI-名字"><a href="#4-1-Coeffect-不只是另一个-DI-名字" class="headerlink" title="4.1 Coeffect 不只是另一个 DI 名字"></a>4.1 Coeffect 不只是另一个 DI 名字</h3><p>论文把依赖环境定义成一个带类型的有限映射：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Σ = (k: K) ⇀ V_k</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="Sigma is a partial mapping from keys k of K to values V sub k"><span>Σ = (<var>k</var>: K) ⇀ V<sub><var>k</var></sub></span></div>
 
 <p>意思是：</p>
 <ul>
@@ -4134,7 +4172,7 @@
 <p>provider 在每次调用时检查这些 metadata。它适合权限、tracing、quota、tenant 信息和只读数据库访问。</p>
 <p>由于 interception 不改变 provider identity，修改策略不一定需要 reload consumer。</p>
 <h2 id="5-Effects-与-Coeffects-如何统一"><a href="#5-Effects-与-Coeffects-如何统一" class="headerlink" title="5. Effects 与 Coeffects 如何统一"></a>5. Effects 与 Coeffects 如何统一</h2><p>论文提出递归 Context：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Γ∞ = μΓ. Γ × (Γ -&gt; Γ) × Σ</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="Gamma infinity equals mu Gamma dot Gamma times a function from Gamma to Gamma times Sigma"><span>Γ<sub>∞</sub> = μΓ. Γ × (Γ → Γ) × Σ</span></div>
 
 <p>直观理解，每层 Context 同时保存：</p>
 <ul>
@@ -4322,7 +4360,7 @@
 </blockquote>
 <p>在普通 JavaScript&#x2F;TypeScript 中，组件仍然可以绕过 Context。除非配合 lint、代码审查、受限 runtime 或 sandbox，否则这首先是一种架构纪律。</p>
 <h3 id="11-2-Inverse-正确性没有自动验证"><a href="#11-2-Inverse-正确性没有自动验证" class="headerlink" title="11.2 Inverse 正确性没有自动验证"></a>11.2 Inverse 正确性没有自动验证</h3><p>Cordis 接受 disposer，但不会证明：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">inverse(effect(state)) ≃ state</span><br></pre></td></tr></table></figure>
+<div class="stc-formula" role="math" aria-label="inverse of effect of state is observationally equivalent to state"><span>inverse(effect(state)) ≃ state</span></div>
 
 <p>如果 inverse 忘记清理、清理错对象、重复执行不安全、自身抛异常，形式保证就会断裂。</p>
 <p>论文建模了 activation failure，但没有完整建模 inverse&#x2F;disposal 本身失败后的恢复协议。</p>
