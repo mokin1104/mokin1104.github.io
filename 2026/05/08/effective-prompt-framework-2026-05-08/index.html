@@ -1,0 +1,702 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency | MOKIN · Storage SDET Notes</title><meta name="author" content="Mokin"><meta name="copyright" content="Mokin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="f8fafc"><meta name="description" content="A practical framework for writing effective prompts — treat AI like a capable coworker: set context, define the task, and specify rules.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency">
+<meta property="og:url" content="https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/">
+<meta property="og:site_name" content="MOKIN · Storage SDET Notes">
+<meta property="og:description" content="A practical framework for writing effective prompts — treat AI like a capable coworker: set context, define the task, and specify rules.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
+<meta property="article:published_time" content="2026-05-08T12:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-14T02:11:28.376Z">
+<meta property="article:author" content="Mokin">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="ChatGPT">
+<meta property="article:tag" content="productivity">
+<meta property="article:tag" content="prompt engineering">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mokin1104.github.io/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency",
+  "url": "https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/",
+  "image": "https://mokin1104.github.io/img/avatar.svg",
+  "datePublished": "2026-05-08T12:00:00.000Z",
+  "dateModified": "2026-08-14T02:11:28.376Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mokin",
+      "url": "https://mokin1104.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1117')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'f8fafc')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="MOKIN · Storage SDET Notes" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Effective Prompt Framework: From Coworker-Style Communication to 4D AI Fluency</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-05-08T12:00:00.000Z" title="Created 2026-05-08 20:00:00">2026-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-14T02:11:28.376Z" title="Updated 2026-08-14 10:11:28">2026-08-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI-Prompt-Engineering/">AI &amp; Prompt Engineering</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>10mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h2 id="1-Core-Conclusion"><a href="#1-Core-Conclusion" class="headerlink" title="1. Core Conclusion"></a>1. Core Conclusion</h2><p>A good prompt is not a magic phrase. It is a <strong>clear task brief for an AI coworker</strong>.</p>
+<p>The practical principle is:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Speak to AI like a capable coworker:</span><br><span class="line">naturally, concisely, conversationally, and with enough context.</span><br></pre></td></tr></table></figure>
+
+<p>The core framework is:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Setting the Stage → Defining the Task → Specifying Rules</span><br></pre></td></tr></table></figure>
+
+<p>In a more engineering-oriented form:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Role + Goal + Context → Task + Input → Rules + Output Format + Success Criteria</span><br></pre></td></tr></table></figure>
+
+<p>A high-quality prompt tells the model:</p>
+<blockquote>
+<p>Who you are, what you want, what background matters, what action it should take, what materials it should use, what rules it should follow, what output format you need, and what counts as a good answer.</p>
+</blockquote>
+<hr>
+<h2 id="2-Why-Prompt-Context-Matter"><a href="#2-Why-Prompt-Context-Matter" class="headerlink" title="2. Why Prompt + Context Matter"></a>2. Why Prompt + Context Matter</h2><p>All interactions with Claude or ChatGPT begin with a <strong>prompt</strong>. But the answer is shaped not only by the prompt itself, but also by the surrounding <strong>context</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Prompt</td>
+<td>The direct instruction or question</td>
+<td>“Analyze this Jenkins failure.”</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Background, documents, logs, examples, constraints</td>
+<td>Jenkins logs, test environment, previous build status</td>
+</tr>
+<tr>
+<td>Output Rules</td>
+<td>How the answer should be shaped</td>
+<td>Markdown, concise, evidence-based, with risks</td>
+</tr>
+</tbody></table>
+<p>A weak prompt forces the model to guess.</p>
+<p>A strong prompt reduces guessing by providing enough context and clear instructions.</p>
+<hr>
+<h2 id="3-“Speak-Like-You-Would-a-Coworker”"><a href="#3-“Speak-Like-You-Would-a-Coworker”" class="headerlink" title="3. “Speak Like You Would a Coworker”"></a>3. “Speak Like You Would a Coworker”</h2><p>The phrase means:</p>
+<blockquote>
+<p>Do not write prompts like mysterious machine commands. Write them like clear work instructions for a competent colleague.</p>
+</blockquote>
+<p>It does <strong>not</strong> mean “say anything casually and expect a perfect answer.”</p>
+<p>It means:</p>
+<ul>
+<li>Be natural.</li>
+<li>Be concise.</li>
+<li>Be conversational.</li>
+<li>Be specific about the job.</li>
+<li>Provide necessary context.</li>
+<li>Define what good output looks like.</li>
+</ul>
+<h3 id="Weak-Example"><a href="#Weak-Example" class="headerlink" title="Weak Example"></a>Weak Example</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Analyze this.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Better-Example"><a href="#Better-Example" class="headerlink" title="Better Example"></a>Better Example</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I am preparing a Jira comment for a Jenkins failure.</span><br><span class="line">Please analyze the pasted log, identify the most likely root cause, and give me a concise evidence chain.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br></pre></td></tr></table></figure>
+
+<p>The second version is better because it includes:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Present?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Context</td>
+<td>Yes — Jira comment for Jenkins failure</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Yes — analyze log and identify root cause</td>
+</tr>
+<tr>
+<td>Output expectation</td>
+<td>Yes — concise evidence chain</td>
+</tr>
+<tr>
+<td>Rule</td>
+<td>Yes — separate facts, assumptions, and inferences</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-The-Three-Core-Components"><a href="#4-The-Three-Core-Components" class="headerlink" title="4. The Three Core Components"></a>4. The Three Core Components</h2><h2 id="4-1-Setting-the-Stage"><a href="#4-1-Setting-the-Stage" class="headerlink" title="4.1 Setting the Stage"></a>4.1 Setting the Stage</h2><p><strong>Meaning:</strong> provide the role, objective, and relevant background.</p>
+<p>The model needs to know:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Who are you?</td>
+<td>Sets perspective</td>
+<td>I am a storage-focused SDET.</td>
+</tr>
+<tr>
+<td>What is your objective?</td>
+<td>Sets direction</td>
+<td>I need to identify the likely root cause.</td>
+</tr>
+<tr>
+<td>What context matters?</td>
+<td>Reduces guessing</td>
+<td>This failed during Jenkins pre-test setup.</td>
+</tr>
+<tr>
+<td>Who is the audience?</td>
+<td>Controls depth and tone</td>
+<td>This is for a Jira comment to the dev team.</td>
+</tr>
+</tbody></table>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I am a storage-focused SDET analyzing a Jenkins failure.</span><br><span class="line">My objective is to determine whether this failure is caused by environment setup, test logic, or product behavior.</span><br><span class="line">The failure happened during the pre-test setup stage in an iSCSI environment.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-2-Defining-the-Task"><a href="#4-2-Defining-the-Task" class="headerlink" title="4.2 Defining the Task"></a>4.2 Defining the Task</h2><p><strong>Meaning:</strong> tell the model exactly what action to take.</p>
+<p>The task should use clear action verbs.</p>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>explain</td>
+<td>Explain a concept, sentence, word, or mechanism</td>
+</tr>
+<tr>
+<td>analyze</td>
+<td>Analyze logs, articles, failures, systems, or trade-offs</td>
+</tr>
+<tr>
+<td>summarize</td>
+<td>Summarize documents, meetings, emails, or reports</td>
+</tr>
+<tr>
+<td>compare</td>
+<td>Compare tools, ideas, solutions, or designs</td>
+</tr>
+<tr>
+<td>rewrite</td>
+<td>Improve wording, tone, grammar, or professionalism</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>Diagnose errors, logs, code, or environment issues</td>
+</tr>
+<tr>
+<td>design</td>
+<td>Design architecture, test plans, workflows, or state machines</td>
+</tr>
+<tr>
+<td>review</td>
+<td>Review code, plans, English writing, or technical proposals</td>
+</tr>
+<tr>
+<td>build</td>
+<td>Create code, scripts, templates, or systems</td>
+</tr>
+</tbody></table>
+<h3 id="Weak-Task"><a href="#Weak-Task" class="headerlink" title="Weak Task"></a>Weak Task</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Help me with this issue.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Better-Task"><a href="#Better-Task" class="headerlink" title="Better Task"></a>Better Task</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Analyze the failure log, identify the failure point, build an evidence chain, and suggest the next three debugging steps.</span><br></pre></td></tr></table></figure>
+
+<p>The better version defines concrete actions.</p>
+<hr>
+<h2 id="4-3-Specifying-Rules"><a href="#4-3-Specifying-Rules" class="headerlink" title="4.3 Specifying Rules"></a>4.3 Specifying Rules</h2><p><strong>Meaning:</strong> define style, tone, constraints, examples, and output format.</p>
+<p>Rules reduce output randomness and make the answer easier to reuse.</p>
+<table>
+<thead>
+<tr>
+<th>Rule Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Style</td>
+<td>Use a formal and concise style.</td>
+</tr>
+<tr>
+<td>Tone</td>
+<td>Be direct and evidence-based.</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>Use Markdown headings and tables.</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Cite sources where possible.</td>
+</tr>
+<tr>
+<td>Constraints</td>
+<td>Do not invent missing information.</td>
+</tr>
+<tr>
+<td>Reasoning discipline</td>
+<td>Separate facts, assumptions, and inferences.</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>Assume the reader is a junior QA engineer.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Keep the answer under 500 words.</td>
+</tr>
+<tr>
+<td>Example matching</td>
+<td>Follow the attached sample format.</td>
+</tr>
+</tbody></table>
+<h3 id="Example-Rules"><a href="#Example-Rules" class="headerlink" title="Example Rules"></a>Example Rules</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Be direct and evidence-based.</span><br><span class="line">Separate facts, assumptions, and inferences.</span><br><span class="line">Point out risks and gaps.</span><br><span class="line">Do not overclaim.</span><br><span class="line">Use Markdown tables where useful.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-Expanded-Engineering-Framework-8-Components"><a href="#5-Expanded-Engineering-Framework-8-Components" class="headerlink" title="5. Expanded Engineering Framework: 8 Components"></a>5. Expanded Engineering Framework: 8 Components</h2><p>For complex tasks, use this full structure:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Role → Goal → Context → Task → Input → Rules → Output Format → Success Criteria</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Role</td>
+<td>Defines model perspective</td>
+<td>You are a senior storage SDET.</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Defines final objective</td>
+<td>Help me identify the likely root cause.</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Provides background</td>
+<td>This happened during Jenkins pre-test setup.</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>Defines concrete action</td>
+<td>Analyze logs and build an evidence chain.</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>Defines source material</td>
+<td>Use the attached Jenkins log and summary.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Defines constraints</td>
+<td>Do not invent missing facts.</td>
+</tr>
+<tr>
+<td>Output Format</td>
+<td>Defines structure</td>
+<td>Conclusion → Evidence Chain → Next Steps</td>
+</tr>
+<tr>
+<td>Success Criteria</td>
+<td>Defines what “good” means</td>
+<td>The answer should be suitable for a Jira comment.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="6-Complete-Prompt-Template"><a href="#6-Complete-Prompt-Template" class="headerlink" title="6. Complete Prompt Template"></a>6. Complete Prompt Template</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># Role</span><br><span class="line">You are a [role / expert perspective].</span><br><span class="line"></span><br><span class="line"># Goal</span><br><span class="line">My goal is to [final objective].</span><br><span class="line"></span><br><span class="line"># Context</span><br><span class="line">[Relevant background, current state, constraints, audience, and known facts.]</span><br><span class="line"></span><br><span class="line"># Task</span><br><span class="line">Please [specific action verbs: analyze / write / summarize / compare / debug / design / review].</span><br><span class="line">Focus on [specific points].</span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">Use [attached files / pasted logs / provided notes / screenshots] as the primary evidence.</span><br><span class="line"></span><br><span class="line"># Rules</span><br><span class="line">- Use [style and tone].</span><br><span class="line">- Separate facts, assumptions, and inferences.</span><br><span class="line">- Do not invent missing information.</span><br><span class="line">- Point out risks and gaps.</span><br><span class="line">- Ask for clarification only if the missing information blocks the task.</span><br><span class="line"></span><br><span class="line"># Output Format</span><br><span class="line">1. Conclusion</span><br><span class="line">2. Evidence / Analysis</span><br><span class="line">3. Risks / Gaps</span><br><span class="line">4. Next Steps</span><br><span class="line"></span><br><span class="line"># Success Criteria</span><br><span class="line">The answer should help me [decision or outcome].</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="7-Example-Storage-SDET-Jenkins-Failure"><a href="#7-Example-Storage-SDET-Jenkins-Failure" class="headerlink" title="7. Example: Storage SDET &#x2F; Jenkins Failure"></a>7. Example: Storage SDET &#x2F; Jenkins Failure</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># Role</span><br><span class="line">You are a senior storage SDET and debugging mentor.</span><br><span class="line"></span><br><span class="line"># Goal</span><br><span class="line">My goal is to identify the most likely root cause and decide the next debugging step.</span><br><span class="line"></span><br><span class="line"># Context</span><br><span class="line">This failure happened during Jenkins pre-test setup.</span><br><span class="line">The environment uses iSCSI.</span><br><span class="line">The appliance is currently free, but no new Jenkins build was launched after the rerun request.</span><br><span class="line"></span><br><span class="line"># Task</span><br><span class="line">Analyze the provided log and summary.</span><br><span class="line">Identify the failure point.</span><br><span class="line">Build an evidence chain.</span><br><span class="line">Suggest the next three debugging steps.</span><br><span class="line"></span><br><span class="line"># Input</span><br><span class="line">Use the pasted Jenkins log and dispatcher summary as the primary evidence.</span><br><span class="line"></span><br><span class="line"># Rules</span><br><span class="line">- Be direct and evidence-based.</span><br><span class="line">- Separate facts, assumptions, and inferences.</span><br><span class="line">- Do not invent missing information.</span><br><span class="line">- Point out risks and gaps.</span><br><span class="line">- Keep the answer suitable for a Jira comment.</span><br><span class="line"></span><br><span class="line"># Output Format</span><br><span class="line">1. Conclusion</span><br><span class="line">2. Evidence Chain</span><br><span class="line">3. Root Cause Hypotheses</span><br><span class="line">4. Risks / Gaps</span><br><span class="line">5. Next Steps</span><br><span class="line"></span><br><span class="line"># Success Criteria</span><br><span class="line">The answer should help me decide whether to rerun the test, check the environment, or escalate to development.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="8-Example-Market-Research-Prompt"><a href="#8-Example-Market-Research-Prompt" class="headerlink" title="8. Example: Market Research Prompt"></a>8. Example: Market Research Prompt</h2><p>Original example:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I&#x27;m the marketing lead at an indie streaming startup, and we&#x27;re preparing an investor pitch deck for Series A investors. Can you research the current state of the independent film streaming market and identify key trends, competitor positioning, and growth opportunities? Use current web research with citations and structure it as a professional report of up to 5 pages, with an executive summary, market analysis, competitive landscape, and growth opportunities.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Breakdown"><a href="#Breakdown" class="headerlink" title="Breakdown"></a>Breakdown</h3><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Text</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Setting the stage</td>
+<td>I’m the marketing lead at an indie streaming startup.</td>
+<td>Defines role and business context.</td>
+</tr>
+<tr>
+<td>Objective</td>
+<td>We’re preparing an investor pitch deck for Series A investors.</td>
+<td>Defines audience and goal.</td>
+</tr>
+<tr>
+<td>Defining the task</td>
+<td>Research the current state of the independent film streaming market.</td>
+<td>Defines the main action.</td>
+</tr>
+<tr>
+<td>Details</td>
+<td>Identify key trends, competitor positioning, and growth opportunities.</td>
+<td>Defines research focus.</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Use current web research with citations.</td>
+<td>Defines evidence requirement.</td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>Professional report of up to 5 pages with specific sections.</td>
+<td>Defines structure and length.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="9-The-Role-of-Context-as-a-Shortcut"><a href="#9-The-Role-of-Context-as-a-Shortcut" class="headerlink" title="9. The Role of Context as a Shortcut"></a>9. The Role of Context as a Shortcut</h2><p>Context is a shortcut because it helps the model understand your needs faster.</p>
+<p>This does not mean “shortcut” as a fragment or slice. It means:</p>
+<blockquote>
+<p>A faster path to understanding.</p>
+</blockquote>
+<p>When you upload relevant documents, logs, examples, or background information, you reduce back-and-forth clarification.</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Weak context:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This failed. Please check.</span><br></pre></td></tr></table></figure>
+
+<p>Better context:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">This Jenkins job failed during pre-test setup.</span><br><span class="line">The failure appears after iSCSI configuration.</span><br><span class="line">The cluster is free, but no new build was launched after the rerun request.</span><br><span class="line">Please determine whether this is a dispatch issue, environment issue, or test logic issue.</span><br></pre></td></tr></table></figure>
+
+<p>The second version gives the model a shortcut to your intent.</p>
+<hr>
+<h2 id="10-Relation-to-4D-Framework-for-AI-Fluency"><a href="#10-Relation-to-4D-Framework-for-AI-Fluency" class="headerlink" title="10. Relation to 4D Framework for AI Fluency"></a>10. Relation to 4D Framework for AI Fluency</h2><p>The prompt framework is related to the broader 4D Framework for AI Fluency.</p>
+<table>
+<thead>
+<tr>
+<th>4D Competency</th>
+<th>Chinese Meaning</th>
+<th>Practical Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Delegation</td>
+<td>委派任务</td>
+<td>Know what to ask AI to do.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>描述清楚</td>
+<td>Explain background, task, and constraints clearly.</td>
+</tr>
+<tr>
+<td>Discernment</td>
+<td>判断辨别</td>
+<td>Evaluate whether AI output is correct, useful, and safe.</td>
+</tr>
+<tr>
+<td>Diligence</td>
+<td>审慎负责</td>
+<td>Use AI responsibly, ethically, and safely.</td>
+</tr>
+</tbody></table>
+<p>The three prompt elements mainly cover:</p>
+<table>
+<thead>
+<tr>
+<th>Prompt Element</th>
+<th>Related 4D Competency</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Setting the stage</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>Defining the task</td>
+<td>Delegation + Description</td>
+</tr>
+<tr>
+<td>Specifying rules</td>
+<td>Description + Discernment</td>
+</tr>
+<tr>
+<td>Checking the output</td>
+<td>Discernment</td>
+</tr>
+<tr>
+<td>Responsible use</td>
+<td>Diligence</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="11-Practical-Decision-Rule"><a href="#11-Practical-Decision-Rule" class="headerlink" title="11. Practical Decision Rule"></a>11. Practical Decision Rule</h2><p>Not every prompt needs the full 8-part structure.</p>
+<table>
+<thead>
+<tr>
+<th>Task Complexity</th>
+<th>Prompt Requirement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Word explanation</td>
+<td>Task only</td>
+</tr>
+<tr>
+<td>Sentence correction</td>
+<td>Task + tone</td>
+</tr>
+<tr>
+<td>Email rewrite</td>
+<td>Context + task + tone + audience</td>
+</tr>
+<tr>
+<td>Log analysis</td>
+<td>Context + input + task + evidence rules</td>
+</tr>
+<tr>
+<td>Report writing</td>
+<td>Role + goal + context + task + format</td>
+</tr>
+<tr>
+<td>System design</td>
+<td>Role + constraints + architecture requirements + success criteria</td>
+</tr>
+<tr>
+<td>High-stakes judgment</td>
+<td>Facts + assumptions + citations + limitations</td>
+</tr>
+</tbody></table>
+<p>Use the full framework when the task is complex, ambiguous, high-impact, or intended for reuse.</p>
+<hr>
+<h2 id="12-Common-Prompt-Failures"><a href="#12-Common-Prompt-Failures" class="headerlink" title="12. Common Prompt Failures"></a>12. Common Prompt Failures</h2><table>
+<thead>
+<tr>
+<th>Failure Mode</th>
+<th>Symptom</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No context</td>
+<td>Answer is generic</td>
+<td>Add role, objective, and background</td>
+</tr>
+<tr>
+<td>Vague task</td>
+<td>Model guesses what to do</td>
+<td>Use clear action verbs</td>
+</tr>
+<tr>
+<td>No input boundary</td>
+<td>Model may hallucinate</td>
+<td>Specify source material</td>
+</tr>
+<tr>
+<td>No output format</td>
+<td>Answer is hard to reuse</td>
+<td>Define sections or table format</td>
+</tr>
+<tr>
+<td>Too many rules</td>
+<td>Output becomes rigid</td>
+<td>Keep only useful constraints</td>
+</tr>
+<tr>
+<td>No success criteria</td>
+<td>Quality is hard to judge</td>
+<td>Define what decision the answer should support</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="13-Short-Formula"><a href="#13-Short-Formula" class="headerlink" title="13. Short Formula"></a>13. Short Formula</h2><p>For daily use:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Context → Task → Rules → Output Format</span><br></pre></td></tr></table></figure>
+
+<p>For engineering use:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Role + Goal + Context → Task + Input → Rules + Output Format + Success Criteria</span><br></pre></td></tr></table></figure>
+
+<p>For memory:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Prompt = Work Order for an AI Coworker</span><br></pre></td></tr></table></figure>
+
+<p>Chinese version:</p>
+<blockquote>
+<p>Prompt 不是咒语，而是一份给 AI 同事的任务说明书。</p>
+</blockquote>
+<hr>
+<h2 id="14-Final-Checklist"><a href="#14-Final-Checklist" class="headerlink" title="14. Final Checklist"></a>14. Final Checklist</h2><p>Before sending a complex prompt, check:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Did I explain my role or perspective?</li>
+<li><input disabled="" type="checkbox"> Did I define my objective?</li>
+<li><input disabled="" type="checkbox"> Did I provide the necessary context?</li>
+<li><input disabled="" type="checkbox"> Did I specify the exact task?</li>
+<li><input disabled="" type="checkbox"> Did I identify the input material?</li>
+<li><input disabled="" type="checkbox"> Did I define rules or constraints?</li>
+<li><input disabled="" type="checkbox"> Did I specify output format?</li>
+<li><input disabled="" type="checkbox"> Did I define what good output should help me decide or accomplish?</li>
+</ul>
+<hr>
+<h2 id="15-One-Sentence-Summary"><a href="#15-One-Sentence-Summary" class="headerlink" title="15. One-Sentence Summary"></a>15. One-Sentence Summary</h2><p>Tell AI:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Who I am, what I need, what context matters, what action to take, what rules to follow, and what good output looks like.</span><br></pre></td></tr></table></figure>
+
+<p>中文：</p>
+<blockquote>
+<p>告诉 AI：我是谁、我要什么、哪些背景重要、你要做什么、要遵守什么规则，以及什么样的输出才算好。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io">Mokin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/">https://mokin1104.github.io/2026/05/08/effective-prompt-framework-2026-05-08/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/prompt-engineering/">prompt engineering</a><a class="post-meta__tags" href="/tags/ChatGPT/">ChatGPT</a><a class="post-meta__tags" href="/tags/productivity/">productivity</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/" title="NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium</div></div><div class="info-2"><div class="info-item-1">目前，每两个月需要执行一次 NDU GUI 升级测试（NDU manual GUI test），虽然频率不算高，但流程步骤多、容易出错，如果能实现自动化触发，能明显降低人工成本、提升一致性</div></div></div></a><a class="pagination-related" href="/2026/05/08/prompt-components-framework-2026-05-08/" title="Prompt Components Framework: What Makes a Good Prompt"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Prompt Components Framework: What Makes a Good Prompt</div></div><div class="info-2"><div class="info-item-1">Breaking down the anatomy of a good prompt: Stage, Task, and Rules — a structured framework for AI communication.</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/08/prompt-components-framework-2026-05-08/" title="Prompt Components Framework: What Makes a Good Prompt"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">Prompt Components Framework: What Makes a Good Prompt</div></div><div class="info-2"><div class="info-item-1">Breaking down the anatomy of a good prompt: Stage, Task, and Rules — a structured framework for AI communication.</div></div></div></a><a class="pagination-related" href="/2026/05/08/prompt-debugging-common-challenges-2026-05-08/" title="Prompt Debugging: Common Challenges and How to Fix Them"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">Prompt Debugging: Common Challenges and How to Fix Them</div></div><div class="info-2"><div class="info-item-1">A practical prompt debugging guide: when AI output misses the mark, diagnose the gap — missing context, format, tone, or examples — and fix it.</div></div></div></a><a class="pagination-related" href="/2026/05/08/ai-vocabulary-from-current-chat-2026-05-08/" title="AI English Vocabulary Notes — Prompt Engineering Terms"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-08</div><div class="info-item-2">AI English Vocabulary Notes — Prompt Engineering Terms</div></div><div class="info-2"><div class="info-item-1">Vocabulary notes from AI learning sessions — terms related to prompt engineering, context, and AI collaboration.</div></div></div></a><a class="pagination-related" href="/2026/05/13/2026-05-13-excel-at/" title="English Vocabulary: excel at"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">English Vocabulary: excel at</div></div><div class="info-2"><div class="info-item-1">English Vocabulary: excel atSource Sentence Claude might excel at drafting marketing copy but need more guidance for technical documentation in your specific domain.  Core MeaningHere, excel is a verb. It means:  to be very good at something; to perform especially well in...</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-contained-workspace-constrain-guardrail/" title="Contained Workspace, Constrain, and Guardrail"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Contained Workspace, Constrain, and Guardrail</div></div><div class="info-2"><div class="info-item-1">Contained Workspace, Constrain, and GuardrailUUID019e2515-c249-7304-9de4-9dcb80c15462 Question a contained workspace limited to the folders you shareconstrainguardrail  Do these three expressions all mean “restriction”?In the first sentence, does contain mean “include”?   ConclusionYes, all...</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-cowork-claude-code-vocabulary/" title="Cowork and Claude Code Vocabulary Notes"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Cowork and Claude Code Vocabulary Notes</div></div><div class="info-2"><div class="info-item-1">Cowork and Claude Code Vocabulary NotesUUID019e207d-8e02-72a1-8b5a-9ab657edb528 Source Sentences With Cowork, Claude has the reach and the room to do more. This broader scope allows it to conduct more thorough research and analysis, and produce more complex documents and deliverables.   Cowork...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Mokin</div><div class="author-info-description">System QA Engineer · Dell EMC PowerStore</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Working on Dell PowerStore system QA. Here I document storage, hardware debugging, automation tools, and learning notes.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Core-Conclusion"><span class="toc-number">1.</span> <span class="toc-text">1. Core Conclusion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Why-Prompt-Context-Matter"><span class="toc-number">2.</span> <span class="toc-text">2. Why Prompt + Context Matter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E2%80%9CSpeak-Like-You-Would-a-Coworker%E2%80%9D"><span class="toc-number">3.</span> <span class="toc-text">3. “Speak Like You Would a Coworker”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Weak-Example"><span class="toc-number">3.1.</span> <span class="toc-text">Weak Example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Better-Example"><span class="toc-number">3.2.</span> <span class="toc-text">Better Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-The-Three-Core-Components"><span class="toc-number">4.</span> <span class="toc-text">4. The Three Core Components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Setting-the-Stage"><span class="toc-number">5.</span> <span class="toc-text">4.1 Setting the Stage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-number">5.1.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Defining-the-Task"><span class="toc-number">6.</span> <span class="toc-text">4.2 Defining the Task</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Weak-Task"><span class="toc-number">6.1.</span> <span class="toc-text">Weak Task</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Better-Task"><span class="toc-number">6.2.</span> <span class="toc-text">Better Task</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Specifying-Rules"><span class="toc-number">7.</span> <span class="toc-text">4.3 Specifying Rules</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-Rules"><span class="toc-number">7.1.</span> <span class="toc-text">Example Rules</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Expanded-Engineering-Framework-8-Components"><span class="toc-number">8.</span> <span class="toc-text">5. Expanded Engineering Framework: 8 Components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Complete-Prompt-Template"><span class="toc-number">9.</span> <span class="toc-text">6. Complete Prompt Template</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Example-Storage-SDET-Jenkins-Failure"><span class="toc-number">10.</span> <span class="toc-text">7. Example: Storage SDET &#x2F; Jenkins Failure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Example-Market-Research-Prompt"><span class="toc-number">11.</span> <span class="toc-text">8. Example: Market Research Prompt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Breakdown"><span class="toc-number">11.1.</span> <span class="toc-text">Breakdown</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-The-Role-of-Context-as-a-Shortcut"><span class="toc-number">12.</span> <span class="toc-text">9. The Role of Context as a Shortcut</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-1"><span class="toc-number">12.1.</span> <span class="toc-text">Example</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Relation-to-4D-Framework-for-AI-Fluency"><span class="toc-number">13.</span> <span class="toc-text">10. Relation to 4D Framework for AI Fluency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Practical-Decision-Rule"><span class="toc-number">14.</span> <span class="toc-text">11. Practical Decision Rule</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Common-Prompt-Failures"><span class="toc-number">15.</span> <span class="toc-text">12. Common Prompt Failures</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-Short-Formula"><span class="toc-number">16.</span> <span class="toc-text">13. Short Formula</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Final-Checklist"><span class="toc-number">17.</span> <span class="toc-text">14. Final Checklist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-One-Sentence-Summary"><span class="toc-number">18.</span> <span class="toc-text">15. One-Sentence Summary</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/17/local-llm-qwen38-27b-on-24gb-macbook/" title="在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构">在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构</a><time datetime="2026-08-17T04:40:00.000Z" title="Created 2026-08-17 12:40:00">2026-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/spatiotemporal-composability-architecture-review/" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability">架构师解读：A Programming Paradigm for Spatiotemporal Composability</a><time datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/date%20format/" title="how to use date format in Linux/MacOS">how to use date format in Linux/MacOS</a><time datetime="2026-08-14T02:11:28.376Z" title="Created 2026-08-14 10:11:28">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/18/claude-101-skills-folder-structure-analysis/" title="Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解</a><time datetime="2026-05-17T16:00:00.000Z" title="Created 2026-05-18 00:00:00">2026-05-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/15/software-design-philosophy/aposd-00-learning-strategy/" title="A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力</a><time datetime="2026-05-14T17:45:00.000Z" title="Created 2026-05-15 01:45:00">2026-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 - 2026 By Mokin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search posts..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

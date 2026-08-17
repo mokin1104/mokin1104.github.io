@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>左耳听风学习笔记：第一讲精要整理 | MOKIN · Storage SDET Notes</title><meta name="author" content="Mokin"><meta name="copyright" content="Mokin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="f8fafc"><meta name="description" content="陈皓《左耳听风》播客前五讲精要整理，涵盖技术成长路径、安全防护实践与技术领导力的深度理解，适用于技术从业者的长期发展思考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="左耳听风学习笔记：第一讲精要整理">
+<meta property="og:url" content="https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+<meta property="og:site_name" content="MOKIN · Storage SDET Notes">
+<meta property="og:description" content="陈皓《左耳听风》播客前五讲精要整理，涵盖技术成长路径、安全防护实践与技术领导力的深度理解，适用于技术从业者的长期发展思考。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
+<meta property="article:published_time" content="2025-06-24T14:01:00.000Z">
+<meta property="article:modified_time" content="2026-08-14T02:11:28.376Z">
+<meta property="article:author" content="Mokin">
+<meta property="article:tag" content="安全实践">
+<meta property="article:tag" content="左耳听风">
+<meta property="article:tag" content="技术成长">
+<meta property="article:tag" content="技术领导力">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mokin1104.github.io/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "左耳听风学习笔记：第一讲精要整理",
+  "url": "https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/",
+  "image": "https://mokin1104.github.io/img/avatar.svg",
+  "datePublished": "2025-06-24T14:01:00.000Z",
+  "dateModified": "2026-08-14T02:11:28.376Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mokin",
+      "url": "https://mokin1104.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1117')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'f8fafc')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '左耳听风学习笔记：第一讲精要整理',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="MOKIN · Storage SDET Notes" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">左耳听风学习笔记：第一讲精要整理</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">左耳听风学习笔记：第一讲精要整理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-06-24T14:01:00.000Z" title="Created 2025-06-24 22:01:00">2025-06-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-14T02:11:28.376Z" title="Updated 2026-08-14 10:11:28">2026-08-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%8F%8D%E6%80%9D/">学习与反思</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">346</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>1mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><ol>
+<li><p>在工作当中，对于那些没什么技术含量的工作，基本上就像是在学生时代那样交作业就好了</p>
+</li>
+<li><p>想尽一切方法提高交作业的效率</p>
+</li>
+<li><p>目的：可以有更多的时间，去研究公司内外那些更为核心更有技术含量的技术了</p>
+</li>
+<li><p>英文技术文档通读一遍</p>
+</li>
+<li><p>分享做得真好，条理性很强，也很清楚，可以让别人学到很多东西</p>
+</li>
+<li><p>要去经历多数人经历不到的，要把学习时间花在那些比较难的地方</p>
+</li>
+<li><p>写文章就要写别人没有写过的，或者别人写过，但我能写的更好的</p>
+</li>
+<li><p>技术和知识完全是可以变现的</p>
+</li>
+<li><p>25~35 岁是每个人最宝贵的时光，应该用在刀刃上</p>
+</li>
+<li><p>将时间精力放在一些主流、高级和比较有挑战性的技术上</p>
+<ol>
+<li>这么做可以保持技术和技能的领先</li>
+<li>也可以保持对技术本质和趋势的敏感度</li>
+</ol>
+</li>
+<li><p>这个世界本来就没什么标准答案，或是说，一个题目本来就可以有若干个正确答案，而且这些“正确答案”还很矛盾</p>
+</li>
+<li><p>无论别人骂我也好，教育我也罢，他们都对我有帮助，大大地丰富了我思考问题的角度</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io">Mokin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">https://mokin1104.github.io/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%80%E8%AE%B2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF%E6%88%90%E9%95%BF/">技术成长</a><a class="post-meta__tags" href="/tags/%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5/">安全实践</a><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF%E9%A2%86%E5%AF%BC%E5%8A%9B/">技术领导力</a><a class="post-meta__tags" href="/tags/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E/">左耳听风</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/06/11/calculate_timestamp_post/" title="Python 小工具：时间戳秒数差值计算器（calculate_timestamp.py）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Python 小工具：时间戳秒数差值计算器（calculate_timestamp.py）</div></div><div class="info-2"><div class="info-item-1">记录一个使用 Python 编写的小工具 calculate_timestamp.py，用于将秒数差还原为实际时间戳。</div></div></div></a><a class="pagination-related" href="/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/" title="左耳听风学习笔记：第二讲精要整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">左耳听风学习笔记：第二讲精要整理</div></div><div class="info-2"><div class="info-item-1">陈皓《左耳听风》播客前五讲精要整理，涵盖技术成长路径、安全防护实践与技术领导力的深度理解，适用于技术从业者的长期发展思考。</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%B8%89%E3%80%81%E5%9B%9B%E8%AE%B2/" title="左耳听风学习笔记：第三、四讲精要整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-24</div><div class="info-item-2">左耳听风学习笔记：第三、四讲精要整理</div></div><div class="info-2"><div class="info-item-1">陈皓《左耳听风》播客前五讲精要整理，涵盖技术成长路径、安全防护实践与技术领导力的深度理解，适用于技术从业者的长期发展思考。</div></div></div></a><a class="pagination-related" href="/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/" title="左耳听风学习笔记：第二讲精要整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-24</div><div class="info-item-2">左耳听风学习笔记：第二讲精要整理</div></div><div class="info-2"><div class="info-item-1">陈皓《左耳听风》播客前五讲精要整理，涵盖技术成长路径、安全防护实践与技术领导力的深度理解，适用于技术从业者的长期发展思考。</div></div></div></a><a class="pagination-related" href="/2025/06/24/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E4%BA%94%E8%AE%B2/" title="左耳听风学习笔记：第五讲精要整理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-24</div><div class="info-item-2">左耳听风学习笔记：第五讲精要整理</div></div><div class="info-2"><div class="info-item-1">陈皓《左耳听风》播客前五讲精要整理，涵盖技术成长路径、安全防护实践与技术领导力的深度理解，适用于技术从业者的长期发展思考。</div></div></div></a><a class="pagination-related" href="/2025/06/25/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%20-%20%E7%AC%AC%E5%85%AD%E8%AE%B2/" title="左耳听风学习笔记：第六讲精要整理 - 如何才能拥有技术领导力"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-25</div><div class="info-item-2">左耳听风学习笔记：第六讲精要整理 - 如何才能拥有技术领导力</div></div><div class="info-2"><div class="info-item-1">这是我觉得很重要的一个章节，和我目前所处的境遇很相仿，希望可以从中汲取知识，不断丰富自己，提高自己的能力，成为一个出色的人</div></div></div></a><a class="pagination-related" href="/2025/11/25/NDU%20Manual%20GUI%20Test%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%9D%E8%B7%AF%E6%95%B4%E7%90%86%20--%20Playwright%20or%20Selenium/" title="NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-11-25</div><div class="info-item-2">NDU Manual GUI Test 自动化思路整理 -- Playwright or Selenium</div></div><div class="info-2"><div class="info-item-1">目前，每两个月需要执行一次 NDU GUI 升级测试（NDU manual GUI test），虽然频率不算高，但流程步骤多、容易出错，如果能实现自动化触发，能明显降低人工成本、提升一致性</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Mokin</div><div class="author-info-description">System QA Engineer · Dell EMC PowerStore</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Working on Dell PowerStore system QA. Here I document storage, hardware debugging, automation tools, and learning notes.</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/17/local-llm-qwen38-27b-on-24gb-macbook/" title="在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构">在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构</a><time datetime="2026-08-17T04:40:00.000Z" title="Created 2026-08-17 12:40:00">2026-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/spatiotemporal-composability-architecture-review/" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability">架构师解读：A Programming Paradigm for Spatiotemporal Composability</a><time datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/date%20format/" title="how to use date format in Linux/MacOS">how to use date format in Linux/MacOS</a><time datetime="2026-08-14T02:11:28.376Z" title="Created 2026-08-14 10:11:28">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/18/claude-101-skills-folder-structure-analysis/" title="Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解</a><time datetime="2026-05-17T16:00:00.000Z" title="Created 2026-05-18 00:00:00">2026-05-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/15/software-design-philosophy/aposd-00-learning-strategy/" title="A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力</a><time datetime="2026-05-14T17:45:00.000Z" title="Created 2026-05-15 01:45:00">2026-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 - 2026 By Mokin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search posts..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

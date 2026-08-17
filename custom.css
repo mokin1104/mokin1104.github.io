@@ -1,0 +1,556 @@
+/* ==========================================================
+   Custom styles for MOKIN's blog — Hexo Butterfly theme
+   Sky-blue tech theme · dark/light auto-switch
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   Scrollbar — minimal, stays out of the way
+   ---------------------------------------------------------- */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(14, 165, 233, 0.4); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(14, 165, 233, 0.7); }
+
+/* ----------------------------------------------------------
+   Global body background (dark mode)
+   ---------------------------------------------------------- */
+[data-theme="dark"] body {
+  background-color: #0d1117 !important;
+  background-image: none !important;
+}
+
+[data-theme="dark"] #footer,
+[data-theme="dark"] #footer-wrap {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="dark"] #footer a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ----------------------------------------------------------
+   Post cards & sidebar widgets — glassmorphism (dark only)
+   ---------------------------------------------------------- */
+[data-theme="dark"] #recent-posts .recent-post-item,
+[data-theme="dark"] .post-block,
+[data-theme="dark"] .card-widget {
+  background: rgba(16, 20, 32, 0.65);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme="dark"] #recent-posts .recent-post-item:hover,
+[data-theme="dark"] .card-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+/* Post cards — light mode */
+[data-theme="light"] #recent-posts .recent-post-item,
+[data-theme="light"] .card-widget {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+[data-theme="light"] #recent-posts .recent-post-item:hover,
+[data-theme="light"] .card-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+/* ----------------------------------------------------------
+   Navigation bar — tighter and cleaner
+   ---------------------------------------------------------- */
+#nav {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* ----------------------------------------------------------
+   Code blocks — follow the page's light/dark color mode
+   ---------------------------------------------------------- */
+[data-theme="light"] {
+  --hl-color: #334155;
+  --hl-bg: #f8fafc;
+  --hltools-bg: #e2e8f0;
+  --hltools-color: #334155;
+  --hlnumber-bg: #f1f5f9;
+  --hlnumber-color: #5f6f85;
+  --hlscrollbar-bg: #cbd5e1;
+  --hlexpand-bg: linear-gradient(180deg, rgba(248, 250, 252, 0.6), rgba(226, 232, 240, 0.95));
+  --code-block-border: #cbd5e1;
+  --code-block-divider: #cbd5e1;
+}
+
+[data-theme="dark"] {
+  --code-block-border: #334155;
+  --code-block-divider: #334155;
+}
+
+figure.highlight,
+.highlight {
+  border-radius: 10px !important;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+#article-container figure.highlight {
+  border: 1px solid var(--code-block-border);
+  background: var(--hl-bg);
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#article-container figure.highlight table {
+  margin: 0;
+}
+
+#article-container figure.highlight .highlight-tools {
+  border-bottom: 1px solid var(--code-block-divider);
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+#article-container figure.highlight .code pre {
+  background: var(--hl-bg);
+  color: var(--hl-color);
+}
+
+#article-container figure.highlight .gutter pre {
+  background: var(--hlnumber-bg);
+  color: var(--hlnumber-color);
+}
+
+/* The bundled syntax palette targets a dark background; replace it only in light mode. */
+[data-theme="light"] #article-container figure.highlight pre .deletion {
+  color: #be123c;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .addition {
+  color: #166534;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .meta {
+  color: #7e22ce;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .comment {
+  color: #64748b;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .variable,
+  .attribute,
+  .regexp,
+  .tag .name,
+  .css .id,
+  .css .class,
+  .css .pseudo
+) {
+  color: #b91c1c;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .tag {
+  color: #075985;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .number,
+  .preprocessor,
+  .literal,
+  .params,
+  .constant,
+  .command
+) {
+  color: #c2410c;
+}
+
+[data-theme="light"] #article-container figure.highlight pre .built_in {
+  color: #854d0e;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .special,
+  .formula
+) {
+  color: #15803d;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .keyword,
+  .title,
+  .css .hexcolor
+) {
+  color: #0369a1;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .function,
+  .python .decorator,
+  .javascript .title,
+  .coffeescript .title
+) {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] #article-container figure.highlight pre :is(
+  .tag .attr,
+  .javascript .function
+) {
+  color: #7e22ce;
+}
+
+/* Inline code must remain readable in both color modes. */
+[data-theme="light"] #article-container :not(pre) > code {
+  border: 1px solid #bae6fd;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+[data-theme="dark"] #article-container :not(pre) > code {
+  border: 1px solid #0e7490;
+  background: #164e63;
+  color: #e0f2fe;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* ----------------------------------------------------------
+   Spatiotemporal composability article — diagrams and math
+   ---------------------------------------------------------- */
+#article-container .stc-architecture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1.5rem 0 2rem;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #0f172a;
+  box-shadow: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+#article-container .stc-architecture-node {
+  box-sizing: border-box;
+  width: min(100%, 42rem);
+  padding: 0.85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #0f172a;
+  text-align: center;
+}
+
+#article-container .stc-architecture-node strong,
+#article-container .stc-architecture-node span {
+  display: block;
+}
+
+#article-container .stc-architecture-node strong {
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#article-container .stc-architecture-node span {
+  margin-top: 0.25rem;
+  color: #475569;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+#article-container .stc-architecture-primary,
+#article-container .stc-architecture-context {
+  border-color: #38bdf8;
+  background: #e0f2fe;
+}
+
+#article-container .stc-architecture-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  width: min(100%, 42rem);
+}
+
+#article-container .stc-architecture-branches .stc-architecture-node {
+  width: 100%;
+  height: 100%;
+}
+
+#article-container .stc-architecture-effect {
+  border-top: 4px solid #0284c7;
+}
+
+#article-container .stc-architecture-coeffect {
+  border-top: 4px solid #0f766e;
+}
+
+#article-container .stc-architecture-output {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+#article-container .stc-flow-arrow {
+  color: #0369a1;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#article-container .stc-flow-caption {
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+#article-container .paper-formula {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 1.2rem 0 1.6rem;
+  padding: 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  box-shadow: none;
+}
+
+#article-container .paper-formula-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  -webkit-overflow-scrolling: touch;
+}
+
+#article-container .paper-formula a {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+}
+
+#article-container .paper-formula img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  background: #ffffff;
+}
+
+#article-container .paper-formula figcaption {
+  margin-top: 0.6rem;
+  color: #475569;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+[data-theme="dark"] #article-container .stc-architecture {
+  border-color: #334155;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-node {
+  border-color: #475569;
+  background: #111827;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-node strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-node span,
+[data-theme="dark"] #article-container .stc-flow-caption {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-primary,
+[data-theme="dark"] #article-container .stc-architecture-context {
+  border-color: #38bdf8;
+  background: #0c4a6e;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-effect {
+  border-top-color: #38bdf8;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-coeffect {
+  border-top-color: #2dd4bf;
+}
+
+[data-theme="dark"] #article-container .stc-architecture-output {
+  border-color: #64748b;
+  background: #1e293b;
+}
+
+[data-theme="dark"] #article-container .stc-flow-arrow {
+  color: #7dd3fc;
+}
+
+[data-theme="dark"] #article-container .paper-formula {
+  border-color: #475569;
+  background: #0f172a;
+}
+
+[data-theme="dark"] #article-container .paper-formula-scroll {
+  border-color: #64748b;
+}
+
+[data-theme="dark"] #article-container .paper-formula figcaption {
+  color: #cbd5e1;
+}
+
+@media (max-width: 640px) {
+  #article-container .stc-architecture-branches {
+    grid-template-columns: 1fr;
+  }
+
+  #article-container .stc-architecture-node {
+    padding: 0.75rem;
+  }
+
+  #article-container .paper-formula {
+    padding: 0.5rem;
+  }
+
+  #article-container .paper-formula a {
+    min-width: 760px;
+  }
+}
+
+/* ----------------------------------------------------------
+   Tables — clean, alternating rows
+   ---------------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  margin: 1.2em 0;
+}
+
+th {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 2px solid rgba(14, 165, 233, 0.3);
+}
+
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.15);
+}
+
+[data-theme="dark"] tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+[data-theme="light"] tr:nth-child(even) td {
+  background: rgba(14, 165, 233, 0.04);
+}
+
+/* ----------------------------------------------------------
+   Tags & categories — pill style
+   ---------------------------------------------------------- */
+.tag-cloud a,
+.card-tag-cloud a,
+.category-list a,
+.card-category-list a {
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.82em;
+  transition: all 0.22s;
+}
+
+.tag-cloud a:hover,
+.card-tag-cloud a:hover,
+.category-list a:hover {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  border-color: transparent;
+  color: #fff !important;
+  transform: scale(1.04);
+  box-shadow: 0 3px 10px rgba(14, 165, 233, 0.35);
+}
+
+/* ----------------------------------------------------------
+   Avatar — subtle spin on hover
+   ---------------------------------------------------------- */
+.card-widget .avatar-img {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-widget .avatar-img:hover {
+  transform: rotate(8deg) scale(1.06);
+  box-shadow: 0 0 22px rgba(14, 165, 233, 0.5);
+}
+
+/* ----------------------------------------------------------
+   Post titles — link hover with color transition
+   ---------------------------------------------------------- */
+#recent-posts .recent-post-item .post-title a:hover,
+.post-title a:hover {
+  color: #0ea5e9;
+  transition: color 0.2s;
+}
+
+/* ----------------------------------------------------------
+   Blockquotes — left border accent
+   ---------------------------------------------------------- */
+blockquote {
+  border-left: 4px solid #0ea5e9;
+  border-radius: 0 6px 6px 0;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+  font-style: normal;
+}
+
+[data-theme="dark"] blockquote {
+  background: rgba(14, 165, 233, 0.07);
+}
+
+[data-theme="light"] blockquote {
+  background: rgba(14, 165, 233, 0.05);
+}
+
+/* ----------------------------------------------------------
+   Footer
+   ---------------------------------------------------------- */
+#footer, #footer-wrap {
+  border: none;
+  font-size: 13px;
+}
+
+/* ----------------------------------------------------------
+   Reading progress bar color
+   ---------------------------------------------------------- */
+#progress-bar, .pace .pace-progress {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8) !important;
+}

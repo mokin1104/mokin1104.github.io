@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Claude Evals: A Simple Evaluation Approach | MOKIN · Storage SDET Notes</title><meta name="author" content="Mokin"><meta name="copyright" content="Mokin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="f8fafc"><meta name="description" content="Claude Evals: A Simple Evaluation ApproachSource Text Why evals matterYour work is unique. Claude might excel at drafting marketing copy but need more guidance for technical documentation in your spec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Evals: A Simple Evaluation Approach">
+<meta property="og:url" content="https://mokin1104.github.io/2026/05/13/2026-05-13-claude-simple-evals/">
+<meta property="og:site_name" content="MOKIN · Storage SDET Notes">
+<meta property="og:description" content="Claude Evals: A Simple Evaluation ApproachSource Text Why evals matterYour work is unique. Claude might excel at drafting marketing copy but need more guidance for technical documentation in your spec">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
+<meta property="article:published_time" content="2026-05-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-14T02:11:28.376Z">
+<meta property="article:author" content="Mokin">
+<meta property="article:tag" content="AI Workflow">
+<meta property="article:tag" content="Claude">
+<meta property="article:tag" content="Context Engineering">
+<meta property="article:tag" content="Evals">
+<meta property="article:tag" content="Prompt Engineering">
+<meta property="article:tag" content="QA">
+<meta property="article:tag" content="SDET">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mokin1104.github.io/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Claude Evals: A Simple Evaluation Approach",
+  "url": "https://mokin1104.github.io/2026/05/13/2026-05-13-claude-simple-evals/",
+  "image": "https://mokin1104.github.io/img/avatar.svg",
+  "datePublished": "2026-05-12T16:00:00.000Z",
+  "dateModified": "2026-08-14T02:11:28.376Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mokin",
+      "url": "https://mokin1104.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://mokin1104.github.io/2026/05/13/2026-05-13-claude-simple-evals/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1117')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'f8fafc')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Claude Evals: A Simple Evaluation Approach',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="MOKIN · Storage SDET Notes" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">Claude Evals: A Simple Evaluation Approach</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Claude Evals: A Simple Evaluation Approach</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-05-12T16:00:00.000Z" title="Created 2026-05-13 00:00:00">2026-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-14T02:11:28.376Z" title="Updated 2026-08-14 10:11:28">2026-08-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI/">AI</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI/English/">English</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI/English/Workflow/">Workflow</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>8mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="Claude-Evals-A-Simple-Evaluation-Approach"><a href="#Claude-Evals-A-Simple-Evaluation-Approach" class="headerlink" title="Claude Evals: A Simple Evaluation Approach"></a>Claude Evals: A Simple Evaluation Approach</h1><h2 id="Source-Text"><a href="#Source-Text" class="headerlink" title="Source Text"></a>Source Text</h2><blockquote>
+<p>Why evals matter<br>Your work is unique. Claude might excel at drafting marketing copy but need more guidance for technical documentation in your specific domain. Running simple evals helps you:</p>
+<ul>
+<li>Understand where Claude adds the most value in your workflow</li>
+<li>Identify tasks where you’ll need to provide more context or examples</li>
+<li>Build confidence in Claude’s outputs for recurring tasks</li>
+</ul>
+<p>A simple eval approach<br>You don’t need complex infrastructure to evaluate Claude. Here’s a practical approach:</p>
+<ul>
+<li>Gather examples.</li>
+<li>Create test prompts.</li>
+<li>Compare outputs.</li>
+<li>Refine your approach.</li>
+</ul>
+</blockquote>
+<h2 id="Core-Understanding"><a href="#Core-Understanding" class="headerlink" title="Core Understanding"></a>Core Understanding</h2><p>The key idea is:</p>
+<blockquote>
+<p>Evals are lightweight evaluations used to test whether Claude performs well in your specific workflow, not just in general tasks.</p>
+</blockquote>
+<p>中文理解：</p>
+<blockquote>
+<p>evals 是一种轻量级评估方法，用来验证 Claude 在你的真实工作流中是否可靠，而不是只看它在通用场景下是否强大。</p>
+</blockquote>
+<p>Claude may be strong at general writing, such as marketing copy, but may require more domain-specific context when working on technical documentation, QA analysis, storage-system debugging, Jenkins failure triage, or internal engineering communication.</p>
+<h2 id="What-Does-evals-Mean"><a href="#What-Does-evals-Mean" class="headerlink" title="What Does evals Mean?"></a>What Does <code>evals</code> Mean?</h2><p><code>evals</code> is short for <code>evaluations</code>.</p>
+<p>In AI workflow usage, it means:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evals = evaluations = 评估 / 测试 / 验证</span><br></pre></td></tr></table></figure>
+
+<p>A simple eval means:</p>
+<blockquote>
+<p>Give Claude a real task sample, compare its output with a known good example, then decide whether the output is reliable enough for your workflow.</p>
+</blockquote>
+<p>From a QA&#x2F;SDET perspective:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evals = test cases for AI workflow quality</span><br></pre></td></tr></table></figure>
+
+<p>You are not only testing the model. You are testing the whole combination:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Model + Prompt + Context + Output Criteria + Human Review</span><br></pre></td></tr></table></figure>
+
+<h2 id="Why-Evals-Matter"><a href="#Why-Evals-Matter" class="headerlink" title="Why Evals Matter"></a>Why Evals Matter</h2><h3 id="1-Your-Work-Is-Unique"><a href="#1-Your-Work-Is-Unique" class="headerlink" title="1. Your Work Is Unique"></a>1. Your Work Is Unique</h3><p>The sentence:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your work is unique.</span><br></pre></td></tr></table></figure>
+
+<p>means your work has domain-specific context, standards, vocabulary, and judgment criteria.</p>
+<p>For example, in a storage-focused QA&#x2F;SDET workflow, Claude may need to understand:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- PowerStore terminology</span><br><span class="line">- iSCSI login flow</span><br><span class="line">- BMC status checks</span><br><span class="line">- Jenkins job failures</span><br><span class="line">- RHEL host requirements</span><br><span class="line">- appliance and host mapping</span><br><span class="line">- ticket triage expectations</span><br><span class="line">- team communication style</span><br></pre></td></tr></table></figure>
+
+<p>Without this context, Claude may produce output that sounds fluent but is incomplete, too generic, or technically unsafe.</p>
+<h3 id="2-Claude-May-Excel-in-One-Task-but-Need-Guidance-in-Another"><a href="#2-Claude-May-Excel-in-One-Task-but-Need-Guidance-in-Another" class="headerlink" title="2. Claude May Excel in One Task but Need Guidance in Another"></a>2. Claude May Excel in One Task but Need Guidance in Another</h3><p>The sentence:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Claude might excel at drafting marketing copy but need more guidance for technical documentation in your specific domain.</span><br></pre></td></tr></table></figure>
+
+<p>means:</p>
+<blockquote>
+<p>Claude may be very good at writing marketing text, but for specialized technical documentation, it may need clearer instructions, examples, terminology, constraints, and review criteria.</p>
+</blockquote>
+<p>Important vocabulary:</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>excel at</td>
+<td>擅长；表现出色</td>
+</tr>
+<tr>
+<td>drafting</td>
+<td>起草；写初稿</td>
+</tr>
+<tr>
+<td>marketing copy</td>
+<td>营销文案 &#x2F; 广告宣传文案</td>
+</tr>
+<tr>
+<td>technical documentation</td>
+<td>技术文档</td>
+</tr>
+<tr>
+<td>specific domain</td>
+<td>特定领域</td>
+</tr>
+<tr>
+<td>guidance</td>
+<td>指导；约束；上下文</td>
+</tr>
+</tbody></table>
+<h2 id="What-Simple-Evals-Help-You-Do"><a href="#What-Simple-Evals-Help-You-Do" class="headerlink" title="What Simple Evals Help You Do"></a>What Simple Evals Help You Do</h2><h3 id="1-Understand-Where-Claude-Adds-the-Most-Value"><a href="#1-Understand-Where-Claude-Adds-the-Most-Value" class="headerlink" title="1. Understand Where Claude Adds the Most Value"></a>1. Understand Where Claude Adds the Most Value</h3><p>You can identify which parts of your workflow are suitable for Claude.</p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th align="right">Claude Value</th>
+<th align="right">Risk Level</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>English email polishing</td>
+<td align="right">High</td>
+<td align="right">Low</td>
+</tr>
+<tr>
+<td>Meeting summary</td>
+<td align="right">High</td>
+<td align="right">Low-Medium</td>
+</tr>
+<tr>
+<td>Ticket summary</td>
+<td align="right">High</td>
+<td align="right">Medium</td>
+</tr>
+<tr>
+<td>Jenkins failure triage</td>
+<td align="right">Medium-High</td>
+<td align="right">Medium</td>
+</tr>
+<tr>
+<td>Root cause judgment</td>
+<td align="right">Medium</td>
+<td align="right">High</td>
+</tr>
+<tr>
+<td>Production script modification</td>
+<td align="right">Medium</td>
+<td align="right">High</td>
+</tr>
+</tbody></table>
+<p>The goal is not to use Claude everywhere. The goal is to identify where Claude creates reliable leverage.</p>
+<h3 id="2-Identify-Where-More-Context-or-Examples-Are-Needed"><a href="#2-Identify-Where-More-Context-or-Examples-Are-Needed" class="headerlink" title="2. Identify Where More Context or Examples Are Needed"></a>2. Identify Where More Context or Examples Are Needed</h3><p>If Claude’s output is too generic or misses key details, the problem may not be the model alone. It may be a context problem.</p>
+<p>You may need to provide:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- background</span><br><span class="line">- logs</span><br><span class="line">- expected output format</span><br><span class="line">- good examples</span><br><span class="line">- bad examples</span><br><span class="line">- domain terminology</span><br><span class="line">- constraints</span><br><span class="line">- audience</span><br><span class="line">- review criteria</span><br></pre></td></tr></table></figure>
+
+<p>This is the connection between evals and context engineering:</p>
+<blockquote>
+<p>Evals reveal where context is missing.</p>
+</blockquote>
+<h3 id="3-Build-Confidence-for-Recurring-Tasks"><a href="#3-Build-Confidence-for-Recurring-Tasks" class="headerlink" title="3. Build Confidence for Recurring Tasks"></a>3. Build Confidence for Recurring Tasks</h3><p>Recurring tasks are tasks you do repeatedly, such as:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- weekly status reports</span><br><span class="line">- Jenkins failure summaries</span><br><span class="line">- ticket triage notes</span><br><span class="line">- lab issue escalation emails</span><br><span class="line">- test report drafts</span><br><span class="line">- technical documentation drafts</span><br></pre></td></tr></table></figure>
+
+<p>If Claude performs well across several samples, you can gradually trust it for that task, while still keeping human review where needed.</p>
+<h2 id="A-Simple-Eval-Approach"><a href="#A-Simple-Eval-Approach" class="headerlink" title="A Simple Eval Approach"></a>A Simple Eval Approach</h2><p>You do not need complex infrastructure at the beginning.</p>
+<p>You can start with a small manual process:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Collect examples -&gt; Write test prompts -&gt; Compare outputs -&gt; Refine prompts/context</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-1-Gather-Examples"><a href="#Step-1-Gather-Examples" class="headerlink" title="Step 1: Gather Examples"></a>Step 1: Gather Examples</h2><p>Collect 5-10 examples of a task you do regularly.</p>
+<p>Examples:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- emails you have written</span><br><span class="line">- reports you have created</span><br><span class="line">- analyses you have done</span><br><span class="line">- ticket triage summaries</span><br><span class="line">- Jenkins failure investigations</span><br><span class="line">- technical documentation drafts</span><br></pre></td></tr></table></figure>
+
+<p>These examples become your baseline or golden samples.</p>
+<p>In testing terms:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">existing human output = expected result / baseline / golden sample</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-2-Create-Test-Prompts"><a href="#Step-2-Create-Test-Prompts" class="headerlink" title="Step 2: Create Test Prompts"></a>Step 2: Create Test Prompts</h2><p>Write prompts that ask Claude to generate similar outputs.</p>
+<p>A good test prompt should include the context you would naturally have when doing the task yourself.</p>
+<p>Example:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Analyze the following Jenkins failure log.</span><br><span class="line">Separate facts from assumptions.</span><br><span class="line">List likely root causes.</span><br><span class="line">Suggest verification steps.</span><br><span class="line">Use a concise QA triage format.</span><br><span class="line">Do not invent information that is not present in the log.</span><br></pre></td></tr></table></figure>
+
+<p>Better prompt with more context:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">You are helping with a Dell storage system test triage.</span><br><span class="line">The environment contains PowerStore appliances, hosts, Jenkins jobs, and lab resources.</span><br><span class="line">Analyze the following failure log.</span><br><span class="line">Output format:</span><br><span class="line">1. Summary</span><br><span class="line">2. Facts</span><br><span class="line">3. Assumptions</span><br><span class="line">4. Likely Root Causes</span><br><span class="line">5. Verification Steps</span><br><span class="line">6. Recommended Next Owner</span><br><span class="line">Do not invent missing data.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-3-Compare-Outputs"><a href="#Step-3-Compare-Outputs" class="headerlink" title="Step 3: Compare Outputs"></a>Step 3: Compare Outputs</h2><p>Run the prompt and compare Claude’s response against your original example.</p>
+<p>Ask three key questions:</p>
+<h3 id="Does-Claude-Capture-the-Key-Information"><a href="#Does-Claude-Capture-the-Key-Information" class="headerlink" title="Does Claude Capture the Key Information?"></a>Does Claude Capture the Key Information?</h3><p>Check whether Claude correctly captures:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- failure stage</span><br><span class="line">- error message</span><br><span class="line">- affected system</span><br><span class="line">- important timestamps</span><br><span class="line">- suspected component</span><br><span class="line">- missing information</span><br><span class="line">- required verification steps</span><br></pre></td></tr></table></figure>
+
+<h3 id="Is-the-Tone-and-Style-Appropriate"><a href="#Is-the-Tone-and-Style-Appropriate" class="headerlink" title="Is the Tone and Style Appropriate?"></a>Is the Tone and Style Appropriate?</h3><p>For workplace communication, check whether the output is:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- professional</span><br><span class="line">- concise</span><br><span class="line">- clear</span><br><span class="line">- not too aggressive</span><br><span class="line">- not too casual</span><br><span class="line">- suitable for internal engineering communication</span><br></pre></td></tr></table></figure>
+
+<p>Bad example:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Give me more info ASAP.</span><br></pre></td></tr></table></figure>
+
+<p>Better example:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Could you please provide more details about the hardware or networking issue so that the lab team can investigate further?</span><br></pre></td></tr></table></figure>
+
+<h3 id="What-Is-Missing-or-Could-Be-Improved"><a href="#What-Is-Missing-or-Could-Be-Improved" class="headerlink" title="What Is Missing or Could Be Improved?"></a>What Is Missing or Could Be Improved?</h3><p>Common issues:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- missing key facts</span><br><span class="line">- unsupported assumptions</span><br><span class="line">- vague root causes</span><br><span class="line">- no verification steps</span><br><span class="line">- wrong tone</span><br><span class="line">- too much generic content</span><br><span class="line">- not following the expected format</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-4-Refine-Your-Approach"><a href="#Step-4-Refine-Your-Approach" class="headerlink" title="Step 4: Refine Your Approach"></a>Step 4: Refine Your Approach</h2><p>Based on the comparison, improve your prompt or context.</p>
+<p>Possible refinements:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- add a fixed output template</span><br><span class="line">- provide good examples</span><br><span class="line">- provide bad examples</span><br><span class="line">- define pass/fail criteria</span><br><span class="line">- specify the target audience</span><br><span class="line">- force separation between facts and assumptions</span><br><span class="line">- require verification steps</span><br><span class="line">- require confidence level</span><br></pre></td></tr></table></figure>
+
+<p>The phrase <code>what good looks like</code> means:</p>
+<blockquote>
+<p>好结果应该是什么样。</p>
+</blockquote>
+<p>You can show Claude a good example and say:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Here is a good example. Follow this structure, tone, and level of detail.</span><br></pre></td></tr></table></figure>
+
+<h2 id="QA-SDET-Analogy"><a href="#QA-SDET-Analogy" class="headerlink" title="QA&#x2F;SDET Analogy"></a>QA&#x2F;SDET Analogy</h2><p>This eval approach is very similar to software testing.</p>
+<table>
+<thead>
+<tr>
+<th>AI Eval Concept</th>
+<th>QA&#x2F;SDET Concept</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>examples</td>
+<td>historical test data</td>
+</tr>
+<tr>
+<td>test prompts</td>
+<td>test cases</td>
+</tr>
+<tr>
+<td>Claude outputs</td>
+<td>actual results</td>
+</tr>
+<tr>
+<td>previous human examples</td>
+<td>expected results</td>
+</tr>
+<tr>
+<td>compare outputs</td>
+<td>assertion &#x2F; review</td>
+</tr>
+<tr>
+<td>refine prompts</td>
+<td>improve test input or system behavior</td>
+</tr>
+<tr>
+<td>human review</td>
+<td>manual verification gate</td>
+</tr>
+<tr>
+<td>recurring evals</td>
+<td>regression testing</td>
+</tr>
+</tbody></table>
+<p>A practical mental model:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Prompt is not enough.</span><br><span class="line">Context is not enough.</span><br><span class="line">You need evals to verify whether Prompt + Context actually works.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lightweight-Scoring-Rubric"><a href="#Lightweight-Scoring-Rubric" class="headerlink" title="Lightweight Scoring Rubric"></a>Lightweight Scoring Rubric</h2><p>You can score each Claude output from 1 to 5.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Question</th>
+<th align="right">Score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Accuracy</td>
+<td>Is the output factually correct?</td>
+<td align="right">1-5</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>Does it include all key information?</td>
+<td align="right">1-5</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>Does it answer the actual task?</td>
+<td align="right">1-5</td>
+</tr>
+<tr>
+<td>Style</td>
+<td>Is the tone appropriate?</td>
+<td align="right">1-5</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>Is the format usable?</td>
+<td align="right">1-5</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Does it avoid unsupported assumptions?</td>
+<td align="right">1-5</td>
+</tr>
+</tbody></table>
+<p>Suggested interpretation:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Average Score</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">4.5-5.0</td>
+<td>Reliable</td>
+<td>Can be reused with light review</td>
+</tr>
+<tr>
+<td align="right">3.5-4.4</td>
+<td>Useful but imperfect</td>
+<td>Add context&#x2F;template&#x2F;examples</td>
+</tr>
+<tr>
+<td align="right">2.5-3.4</td>
+<td>Risky</td>
+<td>Human review required</td>
+</tr>
+<tr>
+<td align="right">Below 2.5</td>
+<td>Not ready</td>
+<td>Do not automate yet</td>
+</tr>
+</tbody></table>
+<h2 id="Practical-Eval-Template"><a href="#Practical-Eval-Template" class="headerlink" title="Practical Eval Template"></a>Practical Eval Template</h2><p>You can use this template for your own Claude evals.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Eval Case</span></span><br><span class="line"></span><br><span class="line"><span class="section">## Task Type</span></span><br><span class="line">Example: Jenkins failure triage / English email polishing / technical documentation</span><br><span class="line"></span><br><span class="line"><span class="section">## Input Context</span></span><br><span class="line">Paste the real context, logs, ticket information, or background here.</span><br><span class="line"></span><br><span class="line"><span class="section">## Prompt Used</span></span><br><span class="line">Paste the prompt here.</span><br><span class="line"></span><br><span class="line"><span class="section">## Claude Output</span></span><br><span class="line">Paste Claude&#x27;s output here.</span><br><span class="line"></span><br><span class="line"><span class="section">## Baseline / Good Human Example</span></span><br><span class="line">Paste your previous good example here.</span><br><span class="line"></span><br><span class="line"><span class="section">## Evaluation</span></span><br><span class="line"><span class="bullet">-</span> Accuracy: 1-5</span><br><span class="line"><span class="bullet">-</span> Completeness: 1-5</span><br><span class="line"><span class="bullet">-</span> Relevance: 1-5</span><br><span class="line"><span class="bullet">-</span> Style: 1-5</span><br><span class="line"><span class="bullet">-</span> Structure: 1-5</span><br><span class="line"><span class="bullet">-</span> Safety: 1-5</span><br><span class="line"></span><br><span class="line"><span class="section">## Findings</span></span><br><span class="line"><span class="bullet">-</span> What did Claude do well?</span><br><span class="line"><span class="bullet">-</span> What was missing?</span><br><span class="line"><span class="bullet">-</span> What needs more context?</span><br><span class="line"><span class="bullet">-</span> Is human review required?</span><br><span class="line"></span><br><span class="line"><span class="section">## Prompt Refinement</span></span><br><span class="line">Write the improved prompt here.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Final-Summary"><a href="#Final-Summary" class="headerlink" title="Final Summary"></a>Final Summary</h2><p>The full idea can be summarized as:</p>
+<blockquote>
+<p>Use real work samples to test Claude, compare its output with your own high-quality examples, then refine prompts and context until you know which tasks are safe, valuable, and repeatable.</p>
+</blockquote>
+<p>For technical work, especially QA&#x2F;SDET and storage-system analysis, the most important rule is:</p>
+<blockquote>
+<p>Do not trust fluent output by default. Build confidence through evals.</p>
+</blockquote>
+<h2 id="One-Sentence-Takeaway"><a href="#One-Sentence-Takeaway" class="headerlink" title="One-Sentence Takeaway"></a>One-Sentence Takeaway</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Evals turn AI usage from subjective feeling into evidence-based workflow validation.</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io">Mokin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io/2026/05/13/2026-05-13-claude-simple-evals/">https://mokin1104.github.io/2026/05/13/2026-05-13-claude-simple-evals/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Claude/">Claude</a><a class="post-meta__tags" href="/tags/Evals/">Evals</a><a class="post-meta__tags" href="/tags/AI-Workflow/">AI Workflow</a><a class="post-meta__tags" href="/tags/Prompt-Engineering/">Prompt Engineering</a><a class="post-meta__tags" href="/tags/Context-Engineering/">Context Engineering</a><a class="post-meta__tags" href="/tags/QA/">QA</a><a class="post-meta__tags" href="/tags/SDET/">SDET</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/11/english-competencies-vs-abilities/" title="competencies 和 abilities 的区别"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">competencies 和 abilities 的区别</div></div><div class="info-2"><div class="info-item-1">Questioncompetencies 和 abilities 的区别是什么？ 原句：  identifies four core competencies that, when combined, can help you make the most of your AI interactions  为什么这里使用 competencies，而不是 abilities？ Conclusion这里用 competencies 更准确，因为它强调的是一组可以被培养、组合、应用到实际场景中的“综合能力模块”。 Abilities...</div></div></div></a><a class="pagination-related" href="/2026/05/13/2026-05-13-excel-at/" title="English Vocabulary: excel at"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">English Vocabulary: excel at</div></div><div class="info-2"><div class="info-item-1">English Vocabulary: excel atSource Sentence Claude might excel at drafting marketing copy but need more guidance for technical documentation in your specific domain.  Core MeaningHere, excel is a verb. It means:  to be very good at something; to perform especially well in...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/18/claude-101-skills-folder-structure-analysis/" title="Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-18</div><div class="info-item-2">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解</div></div><div class="info-2"><div class="info-item-1">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解1. 背景 &#x2F; Background最近我在学习 Claude 101 中的 Skills。这篇文章整理我对 Skills、Projects、Project Knowledge、Project Instructions，以及 Skill 文件夹结构的理解。 This article summarizes my understanding of Claude Skills, Projects, Project Knowledge, Project...</div></div></div></a><a class="pagination-related" href="/2026/05/14/claude-cowork-ai-workspace-learning-notes/" title="Claude Cowork：从普通聊天到桌面级 AI 工作空间"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-14</div><div class="info-item-2">Claude Cowork：从普通聊天到桌面级 AI 工作空间</div></div><div class="info-2"><div class="info-item-1">系统拆解 Claude Cowork 的核心能力：文件夹访问、定时任务、Subagents、Dispatch、Projects、Browser Use、Computer Use、Plugins 与 Protected Environment，并从 SDET/QA 视角分析它的工程价值。</div></div></div></a><a class="pagination-related" href="/2026/05/13/claude-chat-cowork-code-mode-comparison/" title="Claude Chat、Cowork、Code 三种模式对比与选择方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Claude Chat、Cowork、Code 三种模式对比与选择方法</div></div><div class="info-2"><div class="info-item-1">核心结论Claude 的 Chat、Cowork、Code 可以理解为三种不同层级的工作模式： 123Chat  = 快速对话、学习、想法探索Cowork = 复杂信息工作、文件整理、交付物生成Code  = 软件工程、代码修改、测试、运行、部署  最简单的判断方法是：    问题 应该选择    我是在学习、讨论、快速问答吗？ Chat   我是在整理大量信息，并希望生成完整交付物吗？ Cowork   我是在修改代码、运行测试、查看 diff 或部署项目吗？ Code   一句话记忆：  Chat 负责对话，Cowork 负责交付物，Code 负责代码工程。   1....</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-contained-workspace-constrain-guardrail/" title="Contained Workspace, Constrain, and Guardrail"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Contained Workspace, Constrain, and Guardrail</div></div><div class="info-2"><div class="info-item-1">Contained Workspace, Constrain, and GuardrailUUID019e2515-c249-7304-9de4-9dcb80c15462 Question a contained workspace limited to the folders you shareconstrainguardrail  Do these three expressions all mean “restriction”?In the first sentence, does contain mean “include”?   ConclusionYes, all...</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-cowork-claude-code-vocabulary/" title="Cowork and Claude Code Vocabulary Notes"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Cowork and Claude Code Vocabulary Notes</div></div><div class="info-2"><div class="info-item-1">Cowork and Claude Code Vocabulary NotesUUID019e207d-8e02-72a1-8b5a-9ab657edb528 Source Sentences With Cowork, Claude has the reach and the room to do more. This broader scope allows it to conduct more thorough research and analysis, and produce more complex documents and deliverables.   Cowork...</div></div></div></a><a class="pagination-related" href="/2026/05/15/software-design-philosophy/aposd-00-learning-strategy/" title="A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-15</div><div class="info-item-2">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力</div></div><div class="info-2"><div class="info-item-1">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力1. 学习定位《A Philosophy of Software Design》不应该只被当成一本“教人写代码”的书。对我当前的发展目标来说，它更适合作为一本软件设计判断力训练手册。 我的主要目标不是单纯提升 Python 语法熟练度，而是围绕以下三类能力展开：    优先级 能力目标 说明    Primary 架构设计能力 学会判断模块边界、抽象层次、接口稳定性、复杂度来源   Primary SDET &#x2F;...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Mokin</div><div class="author-info-description">System QA Engineer · Dell EMC PowerStore</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Working on Dell PowerStore system QA. Here I document storage, hardware debugging, automation tools, and learning notes.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Claude-Evals-A-Simple-Evaluation-Approach"><span class="toc-number">1.</span> <span class="toc-text">Claude Evals: A Simple Evaluation Approach</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Source-Text"><span class="toc-number">1.1.</span> <span class="toc-text">Source Text</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Core-Understanding"><span class="toc-number">1.2.</span> <span class="toc-text">Core Understanding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Does-evals-Mean"><span class="toc-number">1.3.</span> <span class="toc-text">What Does evals Mean?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-Evals-Matter"><span class="toc-number">1.4.</span> <span class="toc-text">Why Evals Matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Your-Work-Is-Unique"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. Your Work Is Unique</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Claude-May-Excel-in-One-Task-but-Need-Guidance-in-Another"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. Claude May Excel in One Task but Need Guidance in Another</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Simple-Evals-Help-You-Do"><span class="toc-number">1.5.</span> <span class="toc-text">What Simple Evals Help You Do</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Understand-Where-Claude-Adds-the-Most-Value"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. Understand Where Claude Adds the Most Value</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Identify-Where-More-Context-or-Examples-Are-Needed"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. Identify Where More Context or Examples Are Needed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Build-Confidence-for-Recurring-Tasks"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. Build Confidence for Recurring Tasks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Simple-Eval-Approach"><span class="toc-number">1.6.</span> <span class="toc-text">A Simple Eval Approach</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-Gather-Examples"><span class="toc-number">1.7.</span> <span class="toc-text">Step 1: Gather Examples</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-Create-Test-Prompts"><span class="toc-number">1.8.</span> <span class="toc-text">Step 2: Create Test Prompts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-Compare-Outputs"><span class="toc-number">1.9.</span> <span class="toc-text">Step 3: Compare Outputs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Does-Claude-Capture-the-Key-Information"><span class="toc-number">1.9.1.</span> <span class="toc-text">Does Claude Capture the Key Information?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Is-the-Tone-and-Style-Appropriate"><span class="toc-number">1.9.2.</span> <span class="toc-text">Is the Tone and Style Appropriate?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-Is-Missing-or-Could-Be-Improved"><span class="toc-number">1.9.3.</span> <span class="toc-text">What Is Missing or Could Be Improved?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-Refine-Your-Approach"><span class="toc-number">1.10.</span> <span class="toc-text">Step 4: Refine Your Approach</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QA-SDET-Analogy"><span class="toc-number">1.11.</span> <span class="toc-text">QA&#x2F;SDET Analogy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lightweight-Scoring-Rubric"><span class="toc-number">1.12.</span> <span class="toc-text">Lightweight Scoring Rubric</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Practical-Eval-Template"><span class="toc-number">1.13.</span> <span class="toc-text">Practical Eval Template</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-Summary"><span class="toc-number">1.14.</span> <span class="toc-text">Final Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#One-Sentence-Takeaway"><span class="toc-number">1.15.</span> <span class="toc-text">One-Sentence Takeaway</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/17/local-llm-qwen38-27b-on-24gb-macbook/" title="在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构">在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构</a><time datetime="2026-08-17T04:40:00.000Z" title="Created 2026-08-17 12:40:00">2026-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/spatiotemporal-composability-architecture-review/" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability">架构师解读：A Programming Paradigm for Spatiotemporal Composability</a><time datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/date%20format/" title="how to use date format in Linux/MacOS">how to use date format in Linux/MacOS</a><time datetime="2026-08-14T02:11:28.376Z" title="Created 2026-08-14 10:11:28">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/18/claude-101-skills-folder-structure-analysis/" title="Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解</a><time datetime="2026-05-17T16:00:00.000Z" title="Created 2026-05-18 00:00:00">2026-05-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/15/software-design-philosophy/aposd-00-learning-strategy/" title="A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力</a><time datetime="2026-05-14T17:45:00.000Z" title="Created 2026-05-15 01:45:00">2026-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 - 2026 By Mokin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search posts..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

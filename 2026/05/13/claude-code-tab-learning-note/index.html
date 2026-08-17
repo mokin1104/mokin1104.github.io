@@ -1,0 +1,773 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Claude Code Tab 学习笔记：Local、Remote 与三种交互模式 | MOKIN · Storage SDET Notes</title><meta name="author" content="Mokin"><meta name="copyright" content="Mokin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="f8fafc"><meta name="description" content="核心结论Claude Desktop App 里的 Code tab，本质上是把 Claude Code 集成进桌面应用，让 Claude 可以直接进入真实代码项目中工作。 它不只是“聊天式写代码”，而是更接近一个 AI 开发环境：Claude 可以读取代码库、修改文件、运行命令、查看 diff，并通过 git 保留版本，方便回滚。 一句话记忆：  Cowork 偏 information wor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Code Tab 学习笔记：Local、Remote 与三种交互模式">
+<meta property="og:url" content="https://mokin1104.github.io/2026/05/13/claude-code-tab-learning-note/">
+<meta property="og:site_name" content="MOKIN · Storage SDET Notes">
+<meta property="og:description" content="核心结论Claude Desktop App 里的 Code tab，本质上是把 Claude Code 集成进桌面应用，让 Claude 可以直接进入真实代码项目中工作。 它不只是“聊天式写代码”，而是更接近一个 AI 开发环境：Claude 可以读取代码库、修改文件、运行命令、查看 diff，并通过 git 保留版本，方便回滚。 一句话记忆：  Cowork 偏 information wor">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
+<meta property="article:published_time" content="2026-05-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-12T16:00:00.000Z">
+<meta property="article:author" content="Mokin">
+<meta property="article:tag" content="AI Agent">
+<meta property="article:tag" content="Claude Code">
+<meta property="article:tag" content="Claude Desktop">
+<meta property="article:tag" content="Developer Tools">
+<meta property="article:tag" content="Workflow">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mokin1104.github.io/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Claude Code Tab 学习笔记：Local、Remote 与三种交互模式",
+  "url": "https://mokin1104.github.io/2026/05/13/claude-code-tab-learning-note/",
+  "image": "https://mokin1104.github.io/img/avatar.svg",
+  "datePublished": "2026-05-12T16:00:00.000Z",
+  "dateModified": "2026-05-12T16:00:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mokin",
+      "url": "https://mokin1104.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://mokin1104.github.io/2026/05/13/claude-code-tab-learning-note/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1117')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'f8fafc')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Claude Code Tab 学习笔记：Local、Remote 与三种交互模式',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="MOKIN · Storage SDET Notes" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">Claude Code Tab 学习笔记：Local、Remote 与三种交互模式</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Claude Code Tab 学习笔记：Local、Remote 与三种交互模式</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-05-12T16:00:00.000Z" title="Created 2026-05-13 00:00:00">2026-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-05-12T16:00:00.000Z" title="Updated 2026-05-13 00:00:00">2026-05-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI-Tools/">AI Tools</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/AI-Tools/Agent-Workflow/">Agent Workflow</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>9mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h2 id="核心结论"><a href="#核心结论" class="headerlink" title="核心结论"></a>核心结论</h2><p><strong>Claude Desktop App 里的 Code tab，本质上是把 Claude Code 集成进桌面应用，让 Claude 可以直接进入真实代码项目中工作。</strong></p>
+<p>它不只是“聊天式写代码”，而是更接近一个 AI 开发环境：Claude 可以读取代码库、修改文件、运行命令、查看 diff，并通过 git 保留版本，方便回滚。</p>
+<p>一句话记忆：</p>
+<blockquote>
+<p><strong>Cowork 偏 information work；Code 偏 software engineering work。</strong></p>
+</blockquote>
+<hr>
+<h2 id="1-Code-tab-是什么？"><a href="#1-Code-tab-是什么？" class="headerlink" title="1. Code tab 是什么？"></a>1. Code tab 是什么？</h2><p>原文：</p>
+<blockquote>
+<p>The Code tab gives you access to the power of Claude Code, running directly inside the desktop app. This gives you a full development environment for building software.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Code tab 让你可以在 Claude 桌面 App 里直接使用 Claude Code，并获得一个完整的软件开发环境。</strong></p>
+<p>关键词：</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+<th>中文理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Code tab</td>
+<td>a section&#x2F;page in the app</td>
+<td>App 里的“代码”标签页</td>
+</tr>
+<tr>
+<td>gives you access to</td>
+<td>allows you to use</td>
+<td>让你可以使用</td>
+</tr>
+<tr>
+<td>the power of Claude Code</td>
+<td>Claude Code 的能力</td>
+<td>Claude Code 的开发能力</td>
+</tr>
+<tr>
+<td>full development environment</td>
+<td>complete coding workspace</td>
+<td>完整开发环境</td>
+</tr>
+<tr>
+<td>building software</td>
+<td>creating apps&#x2F;tools&#x2F;projects</td>
+<td>构建软件</td>
+</tr>
+</tbody></table>
+<p>这里的重点是 <strong>full development environment</strong>。它不只是回答代码问题，而是能参与真实开发流程：</p>
+<ul>
+<li>读取项目文件</li>
+<li>修改代码</li>
+<li>运行终端命令</li>
+<li>查看 visual diff</li>
+<li>使用 git 跟踪版本</li>
+<li>必要时启动本地开发服务</li>
+</ul>
+<hr>
+<h2 id="2-Claude-在-Code-里能做什么？"><a href="#2-Claude-在-Code-里能做什么？" class="headerlink" title="2. Claude 在 Code 里能做什么？"></a>2. Claude 在 Code 里能做什么？</h2><p>原文：</p>
+<blockquote>
+<p>Via Code, Claude works directly in your codebase: reading what’s there, writing and modifying code, running commands.</p>
+</blockquote>
+<p>理解：</p>
+<p>通过 Code tab，Claude 可以直接在你的代码库里工作。</p>
+<p>它可以做四类事情：</p>
+<ol>
+<li><strong>read what’s there</strong>：读取已有代码</li>
+<li><strong>write code</strong>：写新代码</li>
+<li><strong>modify code</strong>：修改已有代码</li>
+<li><strong>run commands</strong>：运行命令</li>
+</ol>
+<p>这里的 <strong>codebase</strong> 指的是一个项目的完整代码集合，包括：</p>
+<ul>
+<li>源代码</li>
+<li>配置文件</li>
+<li>测试文件</li>
+<li>脚本</li>
+<li>文档</li>
+<li>CI&#x2F;CD 配置</li>
+</ul>
+<p>例如：</p>
+<ul>
+<li>Hexo 博客源码仓库</li>
+<li>Python 自动化工具仓库</li>
+<li>Jenkins polling skill 仓库</li>
+<li>TUIC monitor 项目</li>
+<li>存储系统测试框架项目</li>
+</ul>
+<p>这些都可以叫 <strong>codebase</strong>。</p>
+<hr>
+<h2 id="3-Visual-diffs、terminal、git-如何理解？"><a href="#3-Visual-diffs、terminal、git-如何理解？" class="headerlink" title="3. Visual diffs、terminal、git 如何理解？"></a>3. Visual diffs、terminal、git 如何理解？</h2><p>原文：</p>
+<blockquote>
+<p>Visual diffs show what changed, a built-in terminal shows commands as they run, and git tracks every version so you can always roll back.</p>
+</blockquote>
+<p>逐句理解：</p>
+<table>
+<thead>
+<tr>
+<th>原文</th>
+<th>中文意思</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visual diffs show what changed</td>
+<td>可视化 diff 显示哪些地方被改了</td>
+</tr>
+<tr>
+<td>a built-in terminal shows commands as they run</td>
+<td>内置终端显示命令执行过程</td>
+</tr>
+<tr>
+<td>git tracks every version</td>
+<td>git 记录每个版本</td>
+</tr>
+<tr>
+<td>roll back</td>
+<td>回滚到之前版本</td>
+</tr>
+</tbody></table>
+<h3 id="diff-是什么？"><a href="#diff-是什么？" class="headerlink" title="diff 是什么？"></a>diff 是什么？</h3><p><strong>diff &#x3D; difference</strong>，表示修改前和修改后的差异。</p>
+<p>例如：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- timeout = 5</span></span><br><span class="line"><span class="addition">+ timeout = 10</span></span><br></pre></td></tr></table></figure>
+
+<p>这说明 <code>timeout</code> 从 <code>5</code> 被改成了 <code>10</code>。</p>
+<p>在 AI 编程场景中，visual diff 很重要，因为它可以让你快速判断：</p>
+<ul>
+<li>Claude 改了哪些文件</li>
+<li>改动是否符合预期</li>
+<li>有没有误删或误改</li>
+<li>是否需要接受、拒绝或继续调整</li>
+</ul>
+<hr>
+<h2 id="4-Code-和-Cowork-的核心区别"><a href="#4-Code-和-Cowork-的核心区别" class="headerlink" title="4. Code 和 Cowork 的核心区别"></a>4. Code 和 Cowork 的核心区别</h2><p>原文：</p>
+<blockquote>
+<p>Where Cowork runs in a contained workspace limited to the folders you share, Code runs directly in your project with full access to your file system, terminal, and development tools.</p>
+</blockquote>
+<p>这是整段最关键的一句话。</p>
+<p>理解：</p>
+<p><strong>Cowork 运行在受限工作区里，只能访问你共享的文件夹；Code 则直接进入你的项目，并可以使用文件系统、终端和开发工具。</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Cowork</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Main purpose</td>
+<td>research, documents, multi-source work</td>
+<td>software development</td>
+</tr>
+<tr>
+<td>Workspace</td>
+<td>contained workspace</td>
+<td>real project folder</td>
+</tr>
+<tr>
+<td>File access</td>
+<td>limited to shared folders</td>
+<td>broader project&#x2F;file-system access</td>
+</tr>
+<tr>
+<td>Terminal</td>
+<td>not the main focus</td>
+<td>central capability</td>
+</tr>
+<tr>
+<td>Git workflow</td>
+<td>not core</td>
+<td>core</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>reports, analysis, briefs, slides</td>
+<td>coding, refactoring, testing, debugging</td>
+</tr>
+</tbody></table>
+<h3 id="简单记忆"><a href="#简单记忆" class="headerlink" title="简单记忆"></a>简单记忆</h3><ul>
+<li><strong>Cowork</strong>：更适合资料整理、跨来源分析、生成报告、做研究任务。</li>
+<li><strong>Code</strong>：更适合进入 repo，修改代码、运行测试、调试问题、做重构。</li>
+</ul>
+<p>从 SDET &#x2F; DevOps &#x2F; QA 的角度看：</p>
+<ul>
+<li>如果你要 Claude 读会议记录、Slack、邮件、文档并整理结论，使用 Cowork 更合适。</li>
+<li>如果你要 Claude 修改 Python 脚本、修 Jenkins integration、跑 pytest、分析 git diff，使用 Code 更合适。</li>
+</ul>
+<hr>
+<h2 id="5-Local-模式"><a href="#5-Local-模式" class="headerlink" title="5. Local 模式"></a>5. Local 模式</h2><p>原文：</p>
+<blockquote>
+<p>Local: You select a folder on your computer and Claude works directly with those files.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Local 模式下，你选择电脑上的一个文件夹，Claude 直接操作这个文件夹里的项目。</strong></p>
+<p>适合场景：</p>
+<ul>
+<li>本地 Hexo 博客项目</li>
+<li>本地 Python 自动化脚本</li>
+<li>本地测试工具</li>
+<li>需要访问本机依赖或环境变量的项目</li>
+<li>需要启动本地开发服务并在浏览器预览的项目</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>能访问本机工具链</li>
+<li>能使用本地终端</li>
+<li>能运行本地 dev server</li>
+<li>适合贴近真实开发环境</li>
+</ul>
+<p>风险：</p>
+<ul>
+<li>权限更大</li>
+<li>可能接触本地敏感文件</li>
+<li>可能运行影响系统状态的命令</li>
+<li>需要更谨慎地审查 diff 和 terminal command</li>
+</ul>
+<hr>
+<h2 id="6-Remote-模式"><a href="#6-Remote-模式" class="headerlink" title="6. Remote 模式"></a>6. Remote 模式</h2><p>原文：</p>
+<blockquote>
+<p>Remote: You connect a GitHub repository and Claude works in a cloud environment.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Remote 模式下，你连接 GitHub 仓库，Claude 在云端环境中工作。</strong></p>
+<p>适合场景：</p>
+<ul>
+<li>大型代码库</li>
+<li>不想污染本地环境</li>
+<li>长时间重构任务</li>
+<li>希望会话在关闭 App 后继续运行</li>
+<li>希望把开发任务隔离到云端环境</li>
+</ul>
+<p>关键词：</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+<th>中文理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cloud environment</td>
+<td>cloud-based workspace</td>
+<td>云端开发环境</td>
+</tr>
+<tr>
+<td>sessions continue</td>
+<td>sessions keep running</td>
+<td>会话继续运行</td>
+</tr>
+<tr>
+<td>close the app</td>
+<td>exit the desktop app</td>
+<td>关闭 App</td>
+</tr>
+<tr>
+<td>check back later</td>
+<td>return later to review</td>
+<td>之后回来查看</td>
+</tr>
+</tbody></table>
+<h3 id="Local-vs-Remote-简表"><a href="#Local-vs-Remote-简表" class="headerlink" title="Local vs Remote 简表"></a>Local vs Remote 简表</h3><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Local</th>
+<th>Remote</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Code location</td>
+<td>your computer</td>
+<td>cloud environment</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>local folder</td>
+<td>GitHub repository</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>local dev, preview, machine-specific tools</td>
+<td>larger repo, long-running work, isolated environment</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>local file&#x2F;system exposure</td>
+<td>cloud environment trust and repo permission</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-三种交互模式"><a href="#7-三种交互模式" class="headerlink" title="7. 三种交互模式"></a>7. 三种交互模式</h2><p>原文：</p>
+<blockquote>
+<p>Three interaction modes let you control how much Claude does on its own.</p>
+</blockquote>
+<p>意思是：</p>
+<p><strong>三种交互模式决定 Claude 可以自主做到什么程度。</strong></p>
+<hr>
+<h3 id="7-1-Ask-Mode"><a href="#7-1-Ask-Mode" class="headerlink" title="7.1 Ask Mode"></a>7.1 Ask Mode</h3><p>原文：</p>
+<blockquote>
+<p>Ask: Claude proposes every change and waits for your approval.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Ask mode 下，Claude 每次修改前都会提出建议，并等待你批准。</strong></p>
+<p>适合：</p>
+<ul>
+<li>高风险项目</li>
+<li>生产项目</li>
+<li>你还不完全信任 Claude 自动修改代码时</li>
+<li>你想通过 review diff 学习代码改动逻辑时</li>
+</ul>
+<p>关键词：</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Meaning</th>
+<th>中文理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>propose</td>
+<td>suggest</td>
+<td>提议</td>
+</tr>
+<tr>
+<td>approval</td>
+<td>permission</td>
+<td>批准</td>
+</tr>
+<tr>
+<td>accept or reject</td>
+<td>approve or refuse</td>
+<td>接受或拒绝</td>
+</tr>
+</tbody></table>
+<p>一句话：</p>
+<blockquote>
+<p><strong>Ask mode &#x3D; Claude 先提议，你批准后才改。</strong></p>
+</blockquote>
+<hr>
+<h3 id="7-2-Code-Mode"><a href="#7-2-Code-Mode" class="headerlink" title="7.2 Code Mode"></a>7.2 Code Mode</h3><p>原文：</p>
+<blockquote>
+<p>Code: Claude applies file changes automatically but checks before running terminal commands.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Code mode 下，Claude 可以自动修改文件，但在运行终端命令前会先询问你。</strong></p>
+<p>适合：</p>
+<ul>
+<li>小范围 bug fix</li>
+<li>中等风险代码修改</li>
+<li>普通开发任务</li>
+<li>你愿意让 Claude 自动改文件，但仍想控制命令执行时</li>
+</ul>
+<p>一句话：</p>
+<blockquote>
+<p><strong>Code mode &#x3D; 文件自动改，命令先确认。</strong></p>
+</blockquote>
+<hr>
+<h3 id="7-3-Plan-Mode"><a href="#7-3-Plan-Mode" class="headerlink" title="7.3 Plan Mode"></a>7.3 Plan Mode</h3><p>原文：</p>
+<blockquote>
+<p>Plan: Claude outlines its full approach before touching anything.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Plan mode 下，Claude 在修改任何内容之前，会先给出完整方案。</strong></p>
+<p>适合：</p>
+<ul>
+<li>大重构</li>
+<li>复杂 bug 分析</li>
+<li>CI&#x2F;CD 改造</li>
+<li>测试框架设计</li>
+<li>存储系统问题排查</li>
+<li>需要先明确风险、边界和验证策略的任务</li>
+</ul>
+<p>关键词：</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+<th>中文理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>outlines</td>
+<td>summarizes or lists</td>
+<td>概述、列出</td>
+</tr>
+<tr>
+<td>full approach</td>
+<td>complete strategy</td>
+<td>完整方法</td>
+</tr>
+<tr>
+<td>before touching anything</td>
+<td>before modifying anything</td>
+<td>在动任何东西之前</td>
+</tr>
+</tbody></table>
+<p>一句话：</p>
+<blockquote>
+<p><strong>Plan mode &#x3D; 先计划，再动手。</strong></p>
+</blockquote>
+<hr>
+<h2 id="8-多会话管理"><a href="#8-多会话管理" class="headerlink" title="8. 多会话管理"></a>8. 多会话管理</h2><p>原文：</p>
+<blockquote>
+<p>You can run multiple sessions across projects and filter them by status and environment.</p>
+</blockquote>
+<p>理解：</p>
+<p>你可以在不同项目中同时运行多个 Claude Code 会话，并按状态或环境筛选。</p>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Meaning</th>
+<th>中文理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Active</td>
+<td>currently running</td>
+<td>正在进行</td>
+</tr>
+<tr>
+<td>Archived</td>
+<td>saved but inactive</td>
+<td>已归档</td>
+</tr>
+<tr>
+<td>Local</td>
+<td>local machine environment</td>
+<td>本地环境</td>
+</tr>
+<tr>
+<td>Cloud</td>
+<td>remote&#x2F;cloud environment</td>
+<td>云端环境</td>
+</tr>
+</tbody></table>
+<p>例如你可以同时开：</p>
+<ul>
+<li>一个 session 改 Hexo 博客</li>
+<li>一个 session 修 Python monitor</li>
+<li>一个 session 重构 Jenkins polling skill</li>
+<li>一个 session 分析测试框架失败日志</li>
+</ul>
+<hr>
+<h2 id="9-谁可以使用-Code-tab？"><a href="#9-谁可以使用-Code-tab？" class="headerlink" title="9. 谁可以使用 Code tab？"></a>9. 谁可以使用 Code tab？</h2><p>原文：</p>
+<blockquote>
+<p>The Code tab is available on Pro, Max, Team, and Enterprise users.</p>
+</blockquote>
+<p>理解：</p>
+<p><strong>Code tab 面向 Pro、Max、Team、Enterprise 用户开放。</strong></p>
+<p>这里的 <strong>available on</strong> 表示“对某些套餐或平台可用”。</p>
+<hr>
+<h2 id="10-实际使用建议"><a href="#10-实际使用建议" class="headerlink" title="10. 实际使用建议"></a>10. 实际使用建议</h2><p>由于 Code tab 的权限比普通聊天更大，建议采用以下使用策略：</p>
+<h3 id="低风险任务"><a href="#低风险任务" class="headerlink" title="低风险任务"></a>低风险任务</h3><p>例如：</p>
+<ul>
+<li>修改 README</li>
+<li>写小脚本</li>
+<li>修复 typo</li>
+<li>添加注释</li>
+</ul>
+<p>可以使用：</p>
+<blockquote>
+<p><strong>Code mode</strong></p>
+</blockquote>
+<h3 id="中风险任务"><a href="#中风险任务" class="headerlink" title="中风险任务"></a>中风险任务</h3><p>例如：</p>
+<ul>
+<li>修改业务逻辑</li>
+<li>添加新功能</li>
+<li>修改 CI 配置</li>
+<li>改测试框架</li>
+</ul>
+<p>建议使用：</p>
+<blockquote>
+<p><strong>Ask mode</strong></p>
+</blockquote>
+<h3 id="高风险任务"><a href="#高风险任务" class="headerlink" title="高风险任务"></a>高风险任务</h3><p>例如：</p>
+<ul>
+<li>大规模重构</li>
+<li>删除文件</li>
+<li>修改部署流程</li>
+<li>变更认证、token、权限、网络配置</li>
+<li>改生产相关脚本</li>
+</ul>
+<p>建议使用：</p>
+<blockquote>
+<p><strong>Plan mode → Ask mode → 手动 review diff → 再执行命令</strong></p>
+</blockquote>
+<hr>
+<h2 id="11-对-SDET-QA-DevOps-的使用价值"><a href="#11-对-SDET-QA-DevOps-的使用价值" class="headerlink" title="11. 对 SDET &#x2F; QA &#x2F; DevOps 的使用价值"></a>11. 对 SDET &#x2F; QA &#x2F; DevOps 的使用价值</h2><p>对于测试、存储系统、DevOps 和自动化场景，Code tab 的价值不只是“写代码”，更重要的是：</p>
+<ol>
+<li><strong>让 Claude 直接理解真实项目结构</strong></li>
+<li><strong>基于代码上下文修复问题</strong></li>
+<li><strong>运行测试命令验证修改</strong></li>
+<li><strong>通过 diff 审查每一步变化</strong></li>
+<li><strong>通过 git 保留回滚能力</strong></li>
+<li><strong>适合构建长期维护的工具和 skill</strong></li>
+</ol>
+<p>典型任务：</p>
+<ul>
+<li>修复 pytest case</li>
+<li>重构自动化脚本</li>
+<li>编写 Jenkins polling tool</li>
+<li>添加日志和状态机</li>
+<li>生成 README &#x2F; AGENTS.md</li>
+<li>调整 Hexo 博客项目</li>
+<li>分析失败测试并补充验证步骤</li>
+</ul>
+<hr>
+<h2 id="12-我的记忆模型"><a href="#12-我的记忆模型" class="headerlink" title="12. 我的记忆模型"></a>12. 我的记忆模型</h2><p>可以用下面这个模型记住：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cowork = Research / Documents / Cross-source work</span><br><span class="line">Code   = Repo / Terminal / Git / Test / Debug</span><br></pre></td></tr></table></figure>
+
+<p>进一步压缩：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cowork 解决“信息整合”。</span><br><span class="line">Code 解决“工程执行”。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="13-最小实践流程"><a href="#13-最小实践流程" class="headerlink" title="13. 最小实践流程"></a>13. 最小实践流程</h2><p>如果我要用 Claude Code 处理一个真实项目，我会这样做：</p>
+<ol>
+<li>先确保 git 工作区干净</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>用 Plan mode 让 Claude 先说明方案</li>
+<li>确认改动边界</li>
+<li>切到 Ask mode 或 Code mode</li>
+<li>查看 visual diff</li>
+<li>运行测试</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pytest</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>再次查看 git diff</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>确认后提交</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;docs: add Claude Code tab learning note&quot;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="14-小练习"><a href="#14-小练习" class="headerlink" title="14. 小练习"></a>14. 小练习</h2><p>请用一句话分别解释下面三个模式：</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Your explanation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ask</td>
+<td>Claude 先提出修改建议，等用户批准后再改。</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Claude 可以自动改文件，但运行终端命令前需要确认。</td>
+</tr>
+<tr>
+<td>Plan</td>
+<td>Claude 先给完整方案，不会直接修改任何东西。</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="15-总结"><a href="#15-总结" class="headerlink" title="15. 总结"></a>15. 总结</h2><p>这段文字的真正重点不是“Claude 又多了一个 tab”，而是：</p>
+<blockquote>
+<p><strong>Claude 正在从聊天助手变成可以进入真实工程环境的 AI coding agent。</strong></p>
+</blockquote>
+<p>对开发者、SDET、QA、DevOps 来说，关键能力不是让它“回答代码问题”，而是让它：</p>
+<ul>
+<li>理解代码库</li>
+<li>修改代码</li>
+<li>运行命令</li>
+<li>展示 diff</li>
+<li>保留 git 回滚能力</li>
+<li>在 Local 或 Remote 环境中完成工程任务</li>
+</ul>
+<p>因此，Code tab 更适合用于真实软件工程；Cowork 更适合用于复杂信息工作。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io">Mokin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io/2026/05/13/claude-code-tab-learning-note/">https://mokin1104.github.io/2026/05/13/claude-code-tab-learning-note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Claude-Code/">Claude Code</a><a class="post-meta__tags" href="/tags/AI-Agent/">AI Agent</a><a class="post-meta__tags" href="/tags/Workflow/">Workflow</a><a class="post-meta__tags" href="/tags/Claude-Desktop/">Claude Desktop</a><a class="post-meta__tags" href="/tags/Developer-Tools/">Developer Tools</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/13/claude-chat-cowork-code-mode-comparison/" title="Claude Chat、Cowork、Code 三种模式对比与选择方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Claude Chat、Cowork、Code 三种模式对比与选择方法</div></div><div class="info-2"><div class="info-item-1">核心结论Claude 的 Chat、Cowork、Code 可以理解为三种不同层级的工作模式： 123Chat  = 快速对话、学习、想法探索Cowork = 复杂信息工作、文件整理、交付物生成Code  = 软件工程、代码修改、测试、运行、部署  最简单的判断方法是：    问题 应该选择    我是在学习、讨论、快速问答吗？ Chat   我是在整理大量信息，并希望生成完整交付物吗？ Cowork   我是在修改代码、运行测试、查看 diff 或部署项目吗？ Code   一句话记忆：  Chat 负责对话，Cowork 负责交付物，Code 负责代码工程。   1....</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-cowork-claude-code-vocabulary/" title="Cowork and Claude Code Vocabulary Notes"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Cowork and Claude Code Vocabulary Notes</div></div><div class="info-2"><div class="info-item-1">Cowork and Claude Code Vocabulary NotesUUID019e207d-8e02-72a1-8b5a-9ab657edb528 Source Sentences With Cowork, Claude has the reach and the room to do more. This broader scope allows it to conduct more thorough research and analysis, and produce more complex documents and deliverables.   Cowork...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/13/claude-chat-cowork-code-mode-comparison/" title="Claude Chat、Cowork、Code 三种模式对比与选择方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Claude Chat、Cowork、Code 三种模式对比与选择方法</div></div><div class="info-2"><div class="info-item-1">核心结论Claude 的 Chat、Cowork、Code 可以理解为三种不同层级的工作模式： 123Chat  = 快速对话、学习、想法探索Cowork = 复杂信息工作、文件整理、交付物生成Code  = 软件工程、代码修改、测试、运行、部署  最简单的判断方法是：    问题 应该选择    我是在学习、讨论、快速问答吗？ Chat   我是在整理大量信息，并希望生成完整交付物吗？ Cowork   我是在修改代码、运行测试、查看 diff 或部署项目吗？ Code   一句话记忆：  Chat 负责对话，Cowork 负责交付物，Code 负责代码工程。   1....</div></div></div></a><a class="pagination-related" href="/2026/05/14/claude-cowork-ai-workspace-learning-notes/" title="Claude Cowork：从普通聊天到桌面级 AI 工作空间"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-14</div><div class="info-item-2">Claude Cowork：从普通聊天到桌面级 AI 工作空间</div></div><div class="info-2"><div class="info-item-1">系统拆解 Claude Cowork 的核心能力：文件夹访问、定时任务、Subagents、Dispatch、Projects、Browser Use、Computer Use、Plugins 与 Protected Environment，并从 SDET/QA 视角分析它的工程价值。</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Mokin</div><div class="author-info-description">System QA Engineer · Dell EMC PowerStore</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Working on Dell PowerStore system QA. Here I document storage, hardware debugging, automation tools, and learning notes.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%BB%93%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">核心结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Code-tab-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">1. Code tab 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Claude-%E5%9C%A8-Code-%E9%87%8C%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">2. Claude 在 Code 里能做什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Visual-diffs%E3%80%81terminal%E3%80%81git-%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">3. Visual diffs、terminal、git 如何理解？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#diff-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">diff 是什么？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Code-%E5%92%8C-Cowork-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB"><span class="toc-number">5.</span> <span class="toc-text">4. Code 和 Cowork 的核心区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BF%86"><span class="toc-number">5.1.</span> <span class="toc-text">简单记忆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Local-%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">5. Local 模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Remote-%E6%A8%A1%E5%BC%8F"><span class="toc-number">7.</span> <span class="toc-text">6. Remote 模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-vs-Remote-%E7%AE%80%E8%A1%A8"><span class="toc-number">7.1.</span> <span class="toc-text">Local vs Remote 简表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%B8%89%E7%A7%8D%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F"><span class="toc-number">8.</span> <span class="toc-text">7. 三种交互模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-Ask-Mode"><span class="toc-number">8.1.</span> <span class="toc-text">7.1 Ask Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-Code-Mode"><span class="toc-number">8.2.</span> <span class="toc-text">7.2 Code Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-Plan-Mode"><span class="toc-number">8.3.</span> <span class="toc-text">7.3 Plan Mode</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%A4%9A%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-number">9.</span> <span class="toc-text">8. 多会话管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%B0%81%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8-Code-tab%EF%BC%9F"><span class="toc-number">10.</span> <span class="toc-text">9. 谁可以使用 Code tab？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%AE%9E%E9%99%85%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE"><span class="toc-number">11.</span> <span class="toc-text">10. 实际使用建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8E%E9%A3%8E%E9%99%A9%E4%BB%BB%E5%8A%A1"><span class="toc-number">11.1.</span> <span class="toc-text">低风险任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E9%A3%8E%E9%99%A9%E4%BB%BB%E5%8A%A1"><span class="toc-number">11.2.</span> <span class="toc-text">中风险任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E9%A3%8E%E9%99%A9%E4%BB%BB%E5%8A%A1"><span class="toc-number">11.3.</span> <span class="toc-text">高风险任务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%AF%B9-SDET-QA-DevOps-%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BB%B7%E5%80%BC"><span class="toc-number">12.</span> <span class="toc-text">11. 对 SDET &#x2F; QA &#x2F; DevOps 的使用价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86%E6%A8%A1%E5%9E%8B"><span class="toc-number">13.</span> <span class="toc-text">12. 我的记忆模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E6%9C%80%E5%B0%8F%E5%AE%9E%E8%B7%B5%E6%B5%81%E7%A8%8B"><span class="toc-number">14.</span> <span class="toc-text">13. 最小实践流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%B0%8F%E7%BB%83%E4%B9%A0"><span class="toc-number">15.</span> <span class="toc-text">14. 小练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%80%BB%E7%BB%93"><span class="toc-number">16.</span> <span class="toc-text">15. 总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/17/local-llm-qwen38-27b-on-24gb-macbook/" title="在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构">在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构</a><time datetime="2026-08-17T04:40:00.000Z" title="Created 2026-08-17 12:40:00">2026-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/spatiotemporal-composability-architecture-review/" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability">架构师解读：A Programming Paradigm for Spatiotemporal Composability</a><time datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/date%20format/" title="how to use date format in Linux/MacOS">how to use date format in Linux/MacOS</a><time datetime="2026-08-14T02:11:28.376Z" title="Created 2026-08-14 10:11:28">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/18/claude-101-skills-folder-structure-analysis/" title="Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解</a><time datetime="2026-05-17T16:00:00.000Z" title="Created 2026-05-18 00:00:00">2026-05-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/15/software-design-philosophy/aposd-00-learning-strategy/" title="A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力</a><time datetime="2026-05-14T17:45:00.000Z" title="Created 2026-05-15 01:45:00">2026-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 - 2026 By Mokin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search posts..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
