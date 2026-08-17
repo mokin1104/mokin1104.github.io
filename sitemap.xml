@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mokin1104.github.io/2026/05/12/2026-05-12-by-the-end-of/</loc>
+    
+    <lastmod>2026-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mokin1104.github.io/2026/05/13/english/2026-05-13-understanding-claude-cowork-scope-sources-stamina/</loc>
+    
+    <lastmod>2026-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mokin1104.github.io/2026/08/17/local-llm-qwen38-27b-on-24gb-macbook/</loc>
     
     <lastmod>2026-08-17</lastmod>
@@ -47,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/about/</loc>
+    <loc>https://mokin1104.github.io/categories/</loc>
     
     <lastmod>2026-08-14</lastmod>
     
@@ -56,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/categories/</loc>
+    <loc>https://mokin1104.github.io/about/</loc>
     
     <lastmod>2026-08-14</lastmod>
     
@@ -692,6 +710,13 @@
   </url>
   
   <url>
+    <loc>https://mokin1104.github.io/tags/English-Learning/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mokin1104.github.io/tags/APOSD/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -736,13 +761,6 @@
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/categories/AI/</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mokin1104.github.io/categories/English/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -750,7 +768,7 @@
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/categories/Testing-Automation/</loc>
+    <loc>https://mokin1104.github.io/categories/AI/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -764,6 +782,13 @@
   </url>
   
   <url>
+    <loc>https://mokin1104.github.io/categories/Testing-Automation/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mokin1104.github.io/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -771,14 +796,14 @@
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/categories/AI/English/</loc>
+    <loc>https://mokin1104.github.io/categories/AI/Claude-101/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/categories/AI/Claude-101/</loc>
+    <loc>https://mokin1104.github.io/categories/AI/English/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -820,13 +845,6 @@
   </url>
   
   <url>
-    <loc>https://mokin1104.github.io/categories/AI/English/Workflow/</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://mokin1104.github.io/categories/Software-Architecture/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -841,7 +859,21 @@
   </url>
   
   <url>
+    <loc>https://mokin1104.github.io/categories/AI/English/Workflow/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://mokin1104.github.io/categories/AI-Tools/Agent-Workflow/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mokin1104.github.io/categories/English/AI-Tools/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

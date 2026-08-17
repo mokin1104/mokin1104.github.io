@@ -554,3 +554,107 @@ blockquote {
 #progress-bar, .pace .pace-progress {
   background: linear-gradient(90deg, #0ea5e9, #38bdf8) !important;
 }
+
+/* ----------------------------------------------------------
+   Sidenotes  —  {% sidenote %}…{% endsidenote %}
+   Markup comes from scripts/sidenote.js. The aside occupies the
+   right of the layout, so notes float inside the article column
+   rather than out in the page margin.
+   ---------------------------------------------------------- */
+#article-container {
+  counter-reset: sidenote-counter;
+}
+
+/* Marker in the running text. Doubles as the tap target on narrow screens. */
+.sidenote-number {
+  counter-increment: sidenote-counter;
+  cursor: pointer;
+}
+
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+  vertical-align: super;
+  font-size: 0.68em;
+  line-height: 0;
+  padding-left: 2px;
+  color: #0ea5e9;
+}
+
+/* Checkbox drives the narrow-screen toggle; never shown itself. */
+.sidenote-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.sidenote {
+  float: right;
+  clear: right;
+  width: 32%;
+  max-width: 250px;
+  margin: 0.35rem 0 1.1rem 1.6rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba(14, 165, 233, 0.45);
+  font-size: 0.84em;
+  line-height: 1.65;
+  text-align: left;
+  color: #5a6472;
+}
+
+.sidenote::before {
+  content: counter(sidenote-counter);
+  display: inline-block;
+  margin-right: 0.4em;
+  vertical-align: super;
+  font-size: 0.72em;
+  line-height: 0;
+  color: #0ea5e9;
+}
+
+.sidenote > :last-child {
+  margin-bottom: 0;
+}
+
+/* Keep long code and links inside the narrow column. */
+.sidenote code {
+  font-size: 0.92em;
+  word-break: break-word;
+}
+
+[data-theme="dark"] .sidenote {
+  border-left-color: rgba(56, 189, 248, 0.45);
+  color: #9aa4b2;
+}
+
+[data-theme="dark"] .sidenote::before,
+[data-theme="dark"] .sidenote-number::after {
+  color: #38bdf8;
+}
+
+/* Below the aside breakpoint the column is too narrow to float into:
+   collapse notes and let the marker expand them in place. */
+@media screen and (max-width: 900px) {
+  .sidenote {
+    display: none;
+    float: none;
+    width: auto;
+    max-width: none;
+    margin: 0.7rem 0;
+  }
+
+  .sidenote-toggle:checked + .sidenote {
+    display: block;
+  }
+
+  .sidenote-number::after {
+    padding: 0 3px;
+    border-radius: 3px;
+    background: rgba(14, 165, 233, 0.12);
+  }
+}

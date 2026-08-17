@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Understanding Claude Cowork: Scope, Sources, and Stamina | MOKIN · Storage SDET Notes</title><meta name="author" content="Mokin"><meta name="copyright" content="Mokin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="f8fafc"><meta name="description" content="Understanding the SentenceOriginal Sentence In Cowork, Claude can multitask, tackling different parts of a project at a time, so it has the scope to draw from more sources and the stamina to see thing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Claude Cowork: Scope, Sources, and Stamina">
+<meta property="og:url" content="https://mokin1104.github.io/2026/05/13/english/2026-05-13-understanding-claude-cowork-scope-sources-stamina/">
+<meta property="og:site_name" content="MOKIN · Storage SDET Notes">
+<meta property="og:description" content="Understanding the SentenceOriginal Sentence In Cowork, Claude can multitask, tackling different parts of a project at a time, so it has the scope to draw from more sources and the stamina to see thing">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mokin1104.github.io/img/avatar.svg">
+<meta property="article:published_time" content="2026-05-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-17T04:11:08.688Z">
+<meta property="article:author" content="Mokin">
+<meta property="article:tag" content="AI Agent">
+<meta property="article:tag" content="Claude">
+<meta property="article:tag" content="Cowork">
+<meta property="article:tag" content="English Learning">
+<meta property="article:tag" content="Vocabulary">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mokin1104.github.io/img/avatar.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding Claude Cowork: Scope, Sources, and Stamina",
+  "url": "https://mokin1104.github.io/2026/05/13/english/2026-05-13-understanding-claude-cowork-scope-sources-stamina/",
+  "image": "https://mokin1104.github.io/img/avatar.svg",
+  "datePublished": "2026-05-12T16:00:00.000Z",
+  "dateModified": "2026-08-17T04:11:08.688Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mokin",
+      "url": "https://mokin1104.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://mokin1104.github.io/2026/05/13/english/2026-05-13-understanding-claude-cowork-scope-sources-stamina/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d1117')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'f8fafc')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Understanding Claude Cowork: Scope, Sources, and Stamina',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="MOKIN · Storage SDET Notes" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background: linear-gradient(135deg, #020617 0%, #0d1117 40%, #1a2332 100%);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">21</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">MOKIN · Storage SDET Notes</span></a><a class="nav-page-title" href="/"><span class="site-name">Understanding Claude Cowork: Scope, Sources, and Stamina</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Understanding Claude Cowork: Scope, Sources, and Stamina</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-05-12T16:00:00.000Z" title="Created 2026-05-13 00:00:00">2026-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-17T04:11:08.688Z" title="Updated 2026-08-17 12:11:08">2026-08-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/English/">English</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/English/AI-Tools/">AI Tools</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>6mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="Understanding-the-Sentence"><a href="#Understanding-the-Sentence" class="headerlink" title="Understanding the Sentence"></a>Understanding the Sentence</h1><h2 id="Original-Sentence"><a href="#Original-Sentence" class="headerlink" title="Original Sentence"></a>Original Sentence</h2><blockquote>
+<p>In Cowork, Claude can multitask, tackling different parts of a project at a time, so it has the scope to draw from more sources and the stamina to see things through. Thorough research briefs, cross-source financial analysis, end-to-end contract review, polished slide decks from material spread across sources.</p>
+</blockquote>
+<h2 id="Core-Meaning"><a href="#Core-Meaning" class="headerlink" title="Core Meaning"></a>Core Meaning</h2><p>This paragraph means that <strong>Claude in Cowork is positioned as a project-level assistant, not just a chat assistant</strong>.</p>
+<p>In this context, Claude can handle multiple parts of a project, use information from more sources, and continue working until a complex task is completed.</p>
+<p>A natural Chinese understanding is:</p>
+<blockquote>
+<p>在 Cowork 中，Claude 可以多任务处理，同时推进项目中的不同部分。因此，它有更大的工作范围，可以参考和整合更多信息来源，也有足够的持续处理能力把复杂任务完整做完。例如，它可以生成深入的研究简报、进行跨来源财务分析、完成端到端合同审查，或者把分散在多个来源中的材料整理成专业幻灯片。</p>
+</blockquote>
+<h2 id="Key-Idea"><a href="#Key-Idea" class="headerlink" title="Key Idea"></a>Key Idea</h2><p>The sentence is emphasizing three abilities:</p>
+<ol>
+<li><strong>Multitasking</strong>: Claude can work on different parts of a project.</li>
+<li><strong>Broader source coverage</strong>: Claude can draw from more documents, data, and connected sources.</li>
+<li><strong>Long-task completion</strong>: Claude can keep working through a complex workflow until the deliverable is finished.</li>
+</ol>
+<p>A simple formula:</p>
+<blockquote>
+<p><strong>Cowork &#x3D; broader project scope + more sources + long-task completion</strong></p>
+</blockquote>
+<h2 id="Phrase-by-Phrase-Explanation"><a href="#Phrase-by-Phrase-Explanation" class="headerlink" title="Phrase-by-Phrase Explanation"></a>Phrase-by-Phrase Explanation</h2><h3 id="1-“Claude-can-multitask”"><a href="#1-“Claude-can-multitask”" class="headerlink" title="1. “Claude can multitask”"></a>1. “Claude can multitask”</h3><p><strong>multitask</strong> means to handle multiple tasks at the same time or within the same workflow.</p>
+<p>Here, it means Claude can manage several project sub-tasks, such as research, analysis, summarization, drafting, and formatting.</p>
+<h3 id="2-“tackling-different-parts-of-a-project”"><a href="#2-“tackling-different-parts-of-a-project”" class="headerlink" title="2. “tackling different parts of a project”"></a>2. “tackling different parts of a project”</h3><p><strong>tackle</strong> means to deal with, handle, or solve something difficult.</p>
+<p>So this phrase means:</p>
+<blockquote>
+<p>handling different components of a project</p>
+</blockquote>
+<p>For example, in a research project, Claude may handle source collection, topic analysis, outline design, and final writing.</p>
+<h3 id="3-“at-a-time”"><a href="#3-“at-a-time”" class="headerlink" title="3. “at a time”"></a>3. “at a time”</h3><p>Strictly speaking, <strong>at a time</strong> usually means “each time” or “one occasion at once.”</p>
+<p>However, because the sentence says <strong>multitask</strong>, the intended meaning is closer to:</p>
+<blockquote>
+<p>at the same time &#x2F; within the same project workflow</p>
+</blockquote>
+<p>So the sentence is product-marketing language rather than strict technical language.</p>
+<h3 id="4-“it-has-the-scope-to-draw-from-more-sources”"><a href="#4-“it-has-the-scope-to-draw-from-more-sources”" class="headerlink" title="4. “it has the scope to draw from more sources”"></a>4. “it has the scope to draw from more sources”</h3><p><strong>scope</strong> here means work range, capability range, or coverage.</p>
+<p><strong>draw from</strong> means to use, refer to, or extract information from something.</p>
+<p><strong>sources</strong> means information sources, such as:</p>
+<ul>
+<li>documents</li>
+<li>PDFs</li>
+<li>spreadsheets</li>
+<li>emails</li>
+<li>Slack messages</li>
+<li>Notion pages</li>
+<li>web pages</li>
+<li>internal files</li>
+</ul>
+<p>So this phrase means:</p>
+<blockquote>
+<p>Claude has a broader capability range, so it can use information from more sources.</p>
+</blockquote>
+<h3 id="5-“the-stamina-to-see-things-through”"><a href="#5-“the-stamina-to-see-things-through”" class="headerlink" title="5. “the stamina to see things through”"></a>5. “the stamina to see things through”</h3><p><strong>stamina</strong> means endurance or the ability to continue for a long time.</p>
+<p>In this context, it refers to the ability to keep working on a long and complex task.</p>
+<p><strong>see things through</strong> is a fixed expression meaning:</p>
+<blockquote>
+<p>to continue until something is completely finished</p>
+</blockquote>
+<p>So the phrase means:</p>
+<blockquote>
+<p>Claude has enough long-task capability to complete the work from beginning to end.</p>
+</blockquote>
+<h2 id="Examples-Mentioned-in-the-Sentence"><a href="#Examples-Mentioned-in-the-Sentence" class="headerlink" title="Examples Mentioned in the Sentence"></a>Examples Mentioned in the Sentence</h2><h3 id="Thorough-research-briefs"><a href="#Thorough-research-briefs" class="headerlink" title="Thorough research briefs"></a>Thorough research briefs</h3><p><strong>thorough</strong> means detailed, complete, and careful.</p>
+<p><strong>research brief</strong> means a concise but structured research report.</p>
+<p>So <strong>thorough research briefs</strong> means:</p>
+<blockquote>
+<p>detailed and well-structured research summaries</p>
+</blockquote>
+<h3 id="Cross-source-financial-analysis"><a href="#Cross-source-financial-analysis" class="headerlink" title="Cross-source financial analysis"></a>Cross-source financial analysis</h3><p><strong>cross-source</strong> means across multiple information sources.</p>
+<p>So <strong>cross-source financial analysis</strong> means financial analysis based on multiple sources, such as financial statements, spreadsheets, news, investor reports, and market data.</p>
+<h3 id="End-to-end-contract-review"><a href="#End-to-end-contract-review" class="headerlink" title="End-to-end contract review"></a>End-to-end contract review</h3><p><strong>end-to-end</strong> means from beginning to end.</p>
+<p><strong>contract review</strong> means checking a contract for obligations, risks, key terms, and possible revisions.</p>
+<p>So <strong>end-to-end contract review</strong> means:</p>
+<blockquote>
+<p>a complete review of the whole contract workflow or document</p>
+</blockquote>
+<h3 id="Polished-slide-decks-from-material-spread-across-sources"><a href="#Polished-slide-decks-from-material-spread-across-sources" class="headerlink" title="Polished slide decks from material spread across sources"></a>Polished slide decks from material spread across sources</h3><p><strong>polished</strong> means refined, professional, and well-presented.</p>
+<p><strong>slide deck</strong> means a presentation or PPT.</p>
+<p><strong>material spread across sources</strong> means the useful information is distributed across different places.</p>
+<p>So this phrase means:</p>
+<blockquote>
+<p>Claude can turn scattered materials from multiple sources into a professional presentation.</p>
+</blockquote>
+<h2 id="Vocabulary-Table"><a href="#Vocabulary-Table" class="headerlink" title="Vocabulary Table"></a>Vocabulary Table</h2><table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+<th>Chinese Understanding</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>multitask</td>
+<td>handle multiple tasks</td>
+<td>多任务处理</td>
+</tr>
+<tr>
+<td>tackle</td>
+<td>deal with or solve</td>
+<td>处理、解决</td>
+</tr>
+<tr>
+<td>project parts</td>
+<td>components of a project</td>
+<td>项目的不同组成部分</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>range of work or capability</td>
+<td>工作范围、能力范围</td>
+</tr>
+<tr>
+<td>draw from</td>
+<td>use information from</td>
+<td>从……中提取&#x2F;参考</td>
+</tr>
+<tr>
+<td>source</td>
+<td>origin of information</td>
+<td>信息来源</td>
+</tr>
+<tr>
+<td>stamina</td>
+<td>ability to continue</td>
+<td>持续能力、耐力</td>
+</tr>
+<tr>
+<td>see things through</td>
+<td>finish completely</td>
+<td>把事情完整做完</td>
+</tr>
+<tr>
+<td>thorough</td>
+<td>detailed and complete</td>
+<td>全面细致的</td>
+</tr>
+<tr>
+<td>brief</td>
+<td>concise report</td>
+<td>简报</td>
+</tr>
+<tr>
+<td>cross-source</td>
+<td>across multiple sources</td>
+<td>跨来源的</td>
+</tr>
+<tr>
+<td>end-to-end</td>
+<td>complete from start to finish</td>
+<td>端到端的、完整流程的</td>
+</tr>
+<tr>
+<td>polished</td>
+<td>refined and professional</td>
+<td>打磨过的、专业精致的</td>
+</tr>
+<tr>
+<td>slide deck</td>
+<td>presentation slides</td>
+<td>PPT &#x2F; 幻灯片</td>
+</tr>
+<tr>
+<td>material spread across sources</td>
+<td>information scattered in different places</td>
+<td>分散在多个来源中的资料</td>
+</tr>
+</tbody></table>
+<h2 id="Better-English-Paraphrase"><a href="#Better-English-Paraphrase" class="headerlink" title="Better English Paraphrase"></a>Better English Paraphrase</h2><p>A clearer version of the original sentence would be:</p>
+<blockquote>
+<p>In Cowork, Claude can work on multiple parts of a project in parallel. This gives it a broader working scope, allowing it to use more sources and sustain longer tasks until completion. It can produce detailed research briefs, cross-source financial analyses, full contract reviews, and polished presentation decks from materials scattered across different sources.</p>
+</blockquote>
+<h2 id="Practical-Understanding"><a href="#Practical-Understanding" class="headerlink" title="Practical Understanding"></a>Practical Understanding</h2><p>The paragraph is essentially saying:</p>
+<blockquote>
+<p>Claude Cowork is designed for complex, multi-step project work.</p>
+</blockquote>
+<p>It is not only for answering isolated questions. It is positioned for larger workflows that require source gathering, analysis, synthesis, writing, and final deliverable generation.</p>
+<h2 id="Risk-Critical-Note"><a href="#Risk-Critical-Note" class="headerlink" title="Risk &#x2F; Critical Note"></a>Risk &#x2F; Critical Note</h2><p>This is product-marketing language. It does not mean Claude can always complete complex work accurately without human review.</p>
+<p>For high-stakes tasks such as financial analysis or contract review, human verification is still necessary.</p>
+<p>Key limitations:</p>
+<ol>
+<li>Claude can only use sources it has permission to access.</li>
+<li>More sources do not automatically mean better accuracy.</li>
+<li>Contract and financial work require human review.</li>
+<li>Long-task capability does not eliminate the risk of hallucination or missed details.</li>
+</ol>
+<h2 id="Memory-Hook"><a href="#Memory-Hook" class="headerlink" title="Memory Hook"></a>Memory Hook</h2><p>Remember this sentence as:</p>
+<blockquote>
+<p><strong>Cowork turns Claude from a chat assistant into a project assistant.</strong></p>
+</blockquote>
+<p>Or in Chinese:</p>
+<blockquote>
+<p>Cowork 让 Claude 从“回答问题的聊天助手”变成“可以处理复杂项目的工作助手”。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io">Mokin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://mokin1104.github.io/2026/05/13/english/2026-05-13-understanding-claude-cowork-scope-sources-stamina/">https://mokin1104.github.io/2026/05/13/english/2026-05-13-understanding-claude-cowork-scope-sources-stamina/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Vocabulary/">Vocabulary</a><a class="post-meta__tags" href="/tags/Claude/">Claude</a><a class="post-meta__tags" href="/tags/AI-Agent/">AI Agent</a><a class="post-meta__tags" href="/tags/Cowork/">Cowork</a><a class="post-meta__tags" href="/tags/English-Learning/">English Learning</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/13/claude-code-tab-learning-note/" title="Claude Code Tab 学习笔记：Local、Remote 与三种交互模式"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Claude Code Tab 学习笔记：Local、Remote 与三种交互模式</div></div><div class="info-2"><div class="info-item-1">核心结论Claude Desktop App 里的 Code tab，本质上是把 Claude Code 集成进桌面应用，让 Claude 可以直接进入真实代码项目中工作。 它不只是“聊天式写代码”，而是更接近一个 AI 开发环境：Claude 可以读取代码库、修改文件、运行命令、查看 diff，并通过 git 保留版本，方便回滚。 一句话记忆：  Cowork 偏 information work；Code 偏 software engineering work。   1. Code tab 是什么？原文：  The Code tab gives you access to the...</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-cowork-claude-code-vocabulary/" title="Cowork and Claude Code Vocabulary Notes"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Cowork and Claude Code Vocabulary Notes</div></div><div class="info-2"><div class="info-item-1">Cowork and Claude Code Vocabulary NotesUUID019e207d-8e02-72a1-8b5a-9ab657edb528 Source Sentences With Cowork, Claude has the reach and the room to do more. This broader scope allows it to conduct more thorough research and analysis, and produce more complex documents and deliverables.   Cowork...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/14/claude-cowork-ai-workspace-learning-notes/" title="Claude Cowork：从普通聊天到桌面级 AI 工作空间"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-14</div><div class="info-item-2">Claude Cowork：从普通聊天到桌面级 AI 工作空间</div></div><div class="info-2"><div class="info-item-1">系统拆解 Claude Cowork 的核心能力：文件夹访问、定时任务、Subagents、Dispatch、Projects、Browser Use、Computer Use、Plugins 与 Protected Environment，并从 SDET/QA 视角分析它的工程价值。</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-contained-workspace-constrain-guardrail/" title="Contained Workspace, Constrain, and Guardrail"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Contained Workspace, Constrain, and Guardrail</div></div><div class="info-2"><div class="info-item-1">Contained Workspace, Constrain, and GuardrailUUID019e2515-c249-7304-9de4-9dcb80c15462 Question a contained workspace limited to the folders you shareconstrainguardrail  Do these three expressions all mean “restriction”?In the first sentence, does contain mean “include”?   ConclusionYes, all...</div></div></div></a><a class="pagination-related" href="/2026/05/13/english-learning/2026-05-13-cowork-claude-code-vocabulary/" title="Cowork and Claude Code Vocabulary Notes"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Cowork and Claude Code Vocabulary Notes</div></div><div class="info-2"><div class="info-item-1">Cowork and Claude Code Vocabulary NotesUUID019e207d-8e02-72a1-8b5a-9ab657edb528 Source Sentences With Cowork, Claude has the reach and the room to do more. This broader scope allows it to conduct more thorough research and analysis, and produce more complex documents and deliverables.   Cowork...</div></div></div></a><a class="pagination-related" href="/2026/05/13/claude-chat-cowork-code-mode-comparison/" title="Claude Chat、Cowork、Code 三种模式对比与选择方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-13</div><div class="info-item-2">Claude Chat、Cowork、Code 三种模式对比与选择方法</div></div><div class="info-2"><div class="info-item-1">核心结论Claude 的 Chat、Cowork、Code 可以理解为三种不同层级的工作模式： 123Chat  = 快速对话、学习、想法探索Cowork = 复杂信息工作、文件整理、交付物生成Code  = 软件工程、代码修改、测试、运行、部署  最简单的判断方法是：    问题 应该选择    我是在学习、讨论、快速问答吗？ Chat   我是在整理大量信息，并希望生成完整交付物吗？ Cowork   我是在修改代码、运行测试、查看 diff 或部署项目吗？ Code   一句话记忆：  Chat 负责对话，Cowork 负责交付物，Code 负责代码工程。   1....</div></div></div></a><a class="pagination-related" href="/2026/05/11/2026-05-11-english-vocabulary-instruction-introduction-effective-efficiency/" title="English Vocabulary Notes: instruction, introduction, effective, efficiency"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-11</div><div class="info-item-2">English Vocabulary Notes: instruction, introduction, effective, efficiency</div></div><div class="info-2"><div class="info-item-1">学习目标本文整理今天学习的四个核心词：instruction、introduction、effective、efficiency。重点不是只记中文意思，而是理解它们在真实工作、学习和技术表达中的使用边界。 核心结论：    Word 词性 核心含义 关注点 常见中文    instruction noun telling someone what to do or how to do it 怎么做 &#x2F; 要求做什么 指令；说明；操作步骤   introduction noun presenting basic information about a person, topic,...</div></div></div></a><a class="pagination-related" href="/2026/05/12/2026-05-12-by-the-end-of/" title="English Phrase: By the end of"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-12</div><div class="info-item-2">English Phrase: By the end of</div></div><div class="info-2"><div class="info-item-1">By the end ofMeaningBy the end of … means:  到……结束之前 &#x2F; 截至……结束时  It emphasizes that something should happen or be completed no later than the end of a specific time period, event, or stage. Core Pattern1by the end of + time period / event / stage  Common examples:    English 中文    by the end...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Mokin</div><div class="author-info-description">System QA Engineer · Dell EMC PowerStore</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">21</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Working on Dell PowerStore system QA. Here I document storage, hardware debugging, automation tools, and learning notes.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Understanding-the-Sentence"><span class="toc-number">1.</span> <span class="toc-text">Understanding the Sentence</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Original-Sentence"><span class="toc-number">1.1.</span> <span class="toc-text">Original Sentence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Core-Meaning"><span class="toc-number">1.2.</span> <span class="toc-text">Core Meaning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Idea"><span class="toc-number">1.3.</span> <span class="toc-text">Key Idea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Phrase-by-Phrase-Explanation"><span class="toc-number">1.4.</span> <span class="toc-text">Phrase-by-Phrase Explanation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E2%80%9CClaude-can-multitask%E2%80%9D"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. “Claude can multitask”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E2%80%9Ctackling-different-parts-of-a-project%E2%80%9D"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. “tackling different parts of a project”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E2%80%9Cat-a-time%E2%80%9D"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. “at a time”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E2%80%9Cit-has-the-scope-to-draw-from-more-sources%E2%80%9D"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. “it has the scope to draw from more sources”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E2%80%9Cthe-stamina-to-see-things-through%E2%80%9D"><span class="toc-number">1.4.5.</span> <span class="toc-text">5. “the stamina to see things through”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples-Mentioned-in-the-Sentence"><span class="toc-number">1.5.</span> <span class="toc-text">Examples Mentioned in the Sentence</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Thorough-research-briefs"><span class="toc-number">1.5.1.</span> <span class="toc-text">Thorough research briefs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cross-source-financial-analysis"><span class="toc-number">1.5.2.</span> <span class="toc-text">Cross-source financial analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#End-to-end-contract-review"><span class="toc-number">1.5.3.</span> <span class="toc-text">End-to-end contract review</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Polished-slide-decks-from-material-spread-across-sources"><span class="toc-number">1.5.4.</span> <span class="toc-text">Polished slide decks from material spread across sources</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vocabulary-Table"><span class="toc-number">1.6.</span> <span class="toc-text">Vocabulary Table</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Better-English-Paraphrase"><span class="toc-number">1.7.</span> <span class="toc-text">Better English Paraphrase</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Practical-Understanding"><span class="toc-number">1.8.</span> <span class="toc-text">Practical Understanding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Risk-Critical-Note"><span class="toc-number">1.9.</span> <span class="toc-text">Risk &#x2F; Critical Note</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Memory-Hook"><span class="toc-number">1.10.</span> <span class="toc-text">Memory Hook</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/17/local-llm-qwen38-27b-on-24gb-macbook/" title="在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构">在 24GB MacBook Pro 上跑 Qwen3.8-27B：从部署到架构</a><time datetime="2026-08-17T04:40:00.000Z" title="Created 2026-08-17 12:40:00">2026-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/spatiotemporal-composability-architecture-review/" title="架构师解读：A Programming Paradigm for Spatiotemporal Composability">架构师解读：A Programming Paradigm for Spatiotemporal Composability</a><time datetime="2026-08-14T02:30:00.000Z" title="Created 2026-08-14 10:30:00">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/14/date%20format/" title="how to use date format in Linux/MacOS">how to use date format in Linux/MacOS</a><time datetime="2026-08-14T02:11:28.376Z" title="Created 2026-08-14 10:11:28">2026-08-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/18/claude-101-skills-folder-structure-analysis/" title="Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解">Claude 101 Analysis：Skills、Projects 与 Skill 文件夹结构的系统理解</a><time datetime="2026-05-17T16:00:00.000Z" title="Created 2026-05-18 00:00:00">2026-05-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/15/software-design-philosophy/aposd-00-learning-strategy/" title="A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力">A Philosophy of Software Design 精读计划：从架构判断力到 SDET 框架能力</a><time datetime="2026-05-14T17:45:00.000Z" title="Created 2026-05-15 01:45:00">2026-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 - 2026 By Mokin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search posts..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
