@@ -12,7 +12,7 @@
     <![CDATA[SDET (Software Development Engineer in Test) & Storage Engineer · Python, test automation, hardware debugging]]>
   </subtitle>
   <title>MOKIN · Storage SDET Notes</title>
-  <updated>2026-08-20T11:40:09.140Z</updated>
+  <updated>2026-08-21T01:56:03.475Z</updated>
   <entry>
     <author>
       <name>Mokin</name>
@@ -38,7 +38,7 @@
     <published>2026-08-20T11:30:00.000Z</published>
     <summary>Linux Sandbox 不是某一个内核功能，而是 Namespace、cgroups、capabilities、seccomp、LSM 组合出来的一套进程隔离与权限约束体系。本文逐层拆解这五种机制各自控制什么，澄清 chroot 与 Sandbox、Container 与 VM 的区别，并给出测试 Sandbox 边界的验证清单。</summary>
     <title>Linux Sandbox（沙箱）：从 Namespace 到 seccomp 的隔离体系</title>
-    <updated>2026-08-20T11:40:09.140Z</updated>
+    <updated>2026-08-21T01:56:03.475Z</updated>
   </entry>
   <entry>
     <author>
